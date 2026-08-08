@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Pipeline Infrastructure | Growth Loop</title>
+    <meta name="description" content="Growth Loop builds proprietary deal sourcing infrastructure for VCs, PE firms, family offices, and angel networks — AI-powered startup intelligence, founder signal tracking, and automated outreach systems.">
+    <meta name="keywords" content="AI deal sourcing, venture capital pipeline, proprietary deal flow, startup intelligence, investment sourcing automation, private equity origination, how to find startups to invest in, deal flow management, founder outreach for investors, alternative data investing">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FFFFFF;
+            overflow-x: hidden;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .cta-button {
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: 0.5s;
+        }
+        .cta-button:hover::after {
+            left: 100%;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ffffff;
+            min-width: 260px;
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 8px;
+            z-index: 60;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+            animation: fadeIn 0.3s ease forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+            to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+        }
+        .dropdown-item {
+            display: block;
+            padding: 12px 16px;
+            color: #475569;
+            text-decoration: none;
+            transition: all 0.2s;
+            border-radius: 8px;
+        }
+        .dropdown-item:hover {
+            background: #eff6ff;
+            color: #1d4ed8;
+            padding-left: 20px;
+        }
+        .glow-card:hover {
+            box-shadow: 0 10px 30px -5px rgba(37, 99, 235, 0.06);
+            border-color: rgba(37, 99, 235, 0.2);
+        }
+        /* FAQ accordion — CSS class toggle, bypasses Tailwind max-h-0 conflict */
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease;
+        }
+        .faq-content.faq-open {
+            max-height: 600px;
+        }
+    </style>
+</head>
+<body class="text-slate-600 antialiased bg-white">
+
+    <!-- NAV — identical to homepage -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex-shrink-0 cursor-pointer group no-underline">
+                    <span class="text-2xl font-bold tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors inline-flex items-center gap-2">
+                        <svg class="h-7 w-7 shrink-0 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></svg>
+                        GROWTH LOOP
+                    </span>
+                </a>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <div class="dropdown relative group inline-block">
+                            <button class="text-sm font-medium text-slate-600 group-hover:text-blue-600 transition-colors flex items-center gap-1 py-4">
+                                Our Expertise
+                                <i data-lucide="chevron-down" class="h-4 w-4 transition-transform group-hover:rotate-180"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="inbound.html" class="dropdown-item">Inbound Optimisation</a>
+                                <a href="outbound.html" class="dropdown-item">Outbound Optimisation</a>
+                            </div>
+                        </div>
+                        <div class="dropdown relative group inline-block">
+                            <button class="text-sm font-medium text-slate-600 group-hover:text-blue-600 transition-colors flex items-center gap-1 py-4">
+                                Who We Help
+                                <i data-lucide="chevron-down" class="h-4 w-4 transition-transform group-hover:rotate-180"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="speaker.html" class="dropdown-item">Thought Leaders &amp; Speakers</a>
+                                <a href="ecommerce.html" class="dropdown-item">Ecommerce Brands</a>
+                                <a href="investors.html" class="dropdown-item">Investors</a>
+                            </div>
+                        </div>
+                        <a href="index.html#about" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About Us</a>
+                        <a href="index.html#approach" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Approach</a>
+                        <a href="https://calendly.com/prabal-panda-growthloopconsulting" target="_blank" class="cta-button bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-blue-500/20">
+                            Partner With Us
+                        </a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="hidden md:hidden bg-white border-b border-slate-200" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <div class="border-t border-slate-200 my-2 pt-2">
+                    <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Our Expertise</p>
+                    <a href="inbound.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Inbound Optimisation</a>
+                    <a href="outbound.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Outbound Optimisation</a>
+                </div>
+                <div class="border-t border-slate-200 my-2 pt-2">
+                    <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Who We Help</p>
+                    <a href="speaker.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Thought Leaders &amp; Speakers</a>
+                    <a href="ecommerce.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Ecommerce Brands</a>
+                    <a href="investors.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Investors</a>
+                </div>
+                <a href="index.html#about" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="index.html#approach" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Approach</a>
+                <a href="https://calendly.com/prabal-panda-growthloopconsulting" target="_blank" class="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium mt-4 text-center">Partner With Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="relative pt-32 pb-24 md:pt-48 md:pb-40 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] pointer-events-none opacity-30 mix-blend-screen">
+            <div class="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-indigo-600/40 blur-[120px]"></div>
+            <div class="absolute top-[10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-violet-600/30 blur-[100px]"></div>
+        </div>
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#1f293710_1px,transparent_1px),linear-gradient(to_bottom,#1f293710_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+        <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-8 leading-[1.15]">
+                Build a Smarter <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Investment Pipeline</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto mb-10 leading-relaxed">
+                We install proprietary startup intelligence systems, multi-layered deal filtration protocols, and automated sourcing models that help institutional investors find high-potential companies before markets price them in.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://calendly.com/prabal-panda-growthloopconsulting" target="_blank" rel="noopener" class="w-full sm:w-auto px-8 py-4 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-md shadow-blue-500/10 hover:-translate-y-0.5 transition-all duration-200 text-center">
+                    Book a Strategy Call <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                </a>
+                <a href="#allocators" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-slate-600 font-semibold border border-slate-200 hover:bg-slate-50 transition-all duration-200 text-center">
+                    View Sourcing Models
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHO WE SERVE -->
+    <section id="allocators" class="py-24 border-t border-slate-100 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-sm font-bold uppercase tracking-wider text-blue-600 block mb-2">Fund Allocation Focus</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Sourcing Frameworks by Fund Type</h2>
+                <p class="text-slate-500 mt-2">Infrastructure mapped to your specific investment mandate and stage thesis.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-blue-200 hover:shadow-md transition-all duration-300">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block mb-3">Venture Capital</span>
+                    <h4 class="text-base font-bold text-slate-900 mb-2">Early Stage Sourcing</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">We track early founder signals and alternative market data to identify top-tier pipeline targets before competitive seed pricing escalates.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-blue-200 hover:shadow-md transition-all duration-300">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block mb-3">Private Equity</span>
+                    <h4 class="text-base font-bold text-slate-900 mb-2">Proprietary Origination</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">We map business profiles against proven growth indicators to build direct outbound relationships, bypassing expensive banking intermediaries.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-blue-200 hover:shadow-md transition-all duration-300">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block mb-3">Family Offices</span>
+                    <h4 class="text-base font-bold text-slate-900 mb-2">Direct Investments</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">We build private startup intelligence nodes matched to your direct investment criteria, with full confidentiality and zero network disclosure.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-blue-200 hover:shadow-md transition-all duration-300">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block mb-3">Angel Networks</span>
+                    <h4 class="text-base font-bold text-slate-900 mb-2">Co-Investment Volume</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">We filter and score incoming applications against your thesis, surfacing the highest-signal deals for member review and reducing manual sorting load.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-blue-200 hover:shadow-md transition-all duration-300">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block mb-3">Strategic Funds</span>
+                    <h4 class="text-base font-bold text-slate-900 mb-2">Corporate M&amp;A Synergy</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">We scan industry ecosystems to identify technology assets and business targets that complement your existing corporate structure and acquisition roadmap.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHALLENGES -->
+    <section id="challenges" class="py-24 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <span class="text-sm font-bold uppercase tracking-wider text-blue-600 block mb-2">Sourcing Bottlenecks</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mb-4">The Problem with Reactive Pipeline Models</h2>
+                <p class="text-slate-500 text-sm md:text-base">Relying on inbound decks, broker lists, and saturated institutional networks means discovering opportunities after competitive processes have already formed — paying higher multiples for lower alpha.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
+                    <div class="w-8 h-8 rounded-lg bg-rose-50 text-rose-500 flex items-center justify-center font-bold mb-3 text-sm">1</div>
+                    <h4 class="text-sm font-bold text-slate-900 mb-2">Low Quality Volume Noise</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">Manually sorting hundreds of misaligned inbound decks drains analyst bandwidth and pulls focus away from high-conviction targets.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
+                    <div class="w-8 h-8 rounded-lg bg-rose-50 text-rose-500 flex items-center justify-center font-bold mb-3 text-sm">2</div>
+                    <h4 class="text-sm font-bold text-slate-900 mb-2">Fragmented Intelligence</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">Separate database subscriptions and crawl lists operate in silos, making unified thesis-driven targeting slow and inconsistent.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
+                    <div class="w-8 h-8 rounded-lg bg-rose-50 text-rose-500 flex items-center justify-center font-bold mb-3 text-sm">3</div>
+                    <h4 class="text-sm font-bold text-slate-900 mb-2">Delayed Growth Detection</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">Lagging self-reported financials mean high-growth companies are only visible once competitive rounds are already forming around them.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
+                    <div class="w-8 h-8 rounded-lg bg-rose-50 text-rose-500 flex items-center justify-center font-bold mb-3 text-sm">4</div>
+                    <h4 class="text-sm font-bold text-slate-900 mb-2">Manual Qualification Load</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">Chasing founder metrics across disconnected channels slows conviction speed and delays execution on time-sensitive opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INFRASTRUCTURE -->
+    <section id="infrastructure" class="py-24 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-sm font-bold uppercase tracking-wider text-blue-600 block mb-2">Engineered Deliverables</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Sourcing Infrastructure Components</h2>
+                <p class="text-slate-500 mt-2 text-sm">Proprietary systems that shift your deal flow from reactive inbound to programmatic outbound.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm glow-card transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-bolt text-xl"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">AI-Powered Sourcing</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">Continuous monitoring across alternative datasets, tracking early structural growth signals before companies seek formal institutional backing.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm glow-card transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-user-check text-xl"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Founder Signal Tracking</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">Algorithmic indexing of executive movements, technology stack changes, and stealth asset registrations to surface hidden momentum early.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm glow-card transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-chart-line text-xl"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Growth Indicator Analysis</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">Correlation mapping that measures hiring depth, organic user footprint momentum, and early structural scale anomalies against your thesis.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm glow-card transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-server text-xl"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Investment Dashboarding</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">A unified workspace consolidating all sourcing metrics, deal scores, and pipeline status into a single view for investment partners.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm glow-card transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-arrow-up-1-9 text-xl"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Automated Lead Scoring</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">Custom ranking logic that grades companies against your investment parameters and prioritizes the highest-signal targets for internal review.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm glow-card transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-brain text-xl"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Startup Intelligence Systems</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">Classification models that verify real underlying performance metrics from secondary market data before any deal origination path begins.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm glow-card transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-paper-plane text-xl"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Outbound Founder Outreach</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">Automated outreach infrastructure that initiates targeted conversations with qualified founders ahead of formal fundraising cycles.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm glow-card transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-eye text-xl"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Market Monitoring Systems</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">Persistent data harvesting that maps entire vertical niches to detect emerging macro patterns and category leaders before they're broadly visible.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FRAMEWORK -->
+    <section id="framework" class="py-24 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <span class="text-sm font-bold uppercase tracking-wider text-blue-600 block mb-2">Operational Execution</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Four Steps to Programmatic Origination</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="relative group">
+                    <div class="absolute -top-5 left-6 text-7xl font-extrabold text-slate-100 pointer-events-none z-0">01</div>
+                    <div class="p-6 rounded-2xl bg-white border border-slate-200 relative z-10 hover:-translate-y-1 hover:border-blue-200 hover:shadow-md transition-all duration-300 shadow-sm">
+                        <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 font-bold mb-4">I</div>
+                        <h3 class="text-base font-bold text-slate-900 mb-2">Thesis Mapping</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">We codify your investment mandate — target size, sector focus, stage preference, and deal structure — into system-level filtering rules.</p>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="absolute -top-5 left-6 text-7xl font-extrabold text-slate-100 pointer-events-none z-0">02</div>
+                    <div class="p-6 rounded-2xl bg-white border border-slate-200 relative z-10 hover:-translate-y-1 hover:border-blue-200 hover:shadow-md transition-all duration-300 shadow-sm">
+                        <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 font-bold mb-4">II</div>
+                        <h3 class="text-base font-bold text-slate-900 mb-2">Infrastructure Deployment</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">We install alternative data harvesting nodes, configure extraction pipelines, and set up your investment dashboarding environment.</p>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="absolute -top-5 left-6 text-7xl font-extrabold text-slate-100 pointer-events-none z-0">03</div>
+                    <div class="p-6 rounded-2xl bg-white border border-slate-200 relative z-10 hover:-translate-y-1 hover:border-blue-200 hover:shadow-md transition-all duration-300 shadow-sm">
+                        <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 font-bold mb-4">III</div>
+                        <h3 class="text-base font-bold text-slate-900 mb-2">Signal Calibration</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">Tracking modules evaluate real-time growth indicators, company footprints, and founder actions to generate scored, prioritized internal alerts.</p>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="absolute -top-5 left-6 text-7xl font-extrabold text-slate-100 pointer-events-none z-0">04</div>
+                    <div class="p-6 rounded-2xl bg-white border border-slate-200 relative z-10 hover:-translate-y-1 hover:border-blue-200 hover:shadow-md transition-all duration-300 shadow-sm">
+                        <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 font-bold mb-4">IV</div>
+                        <h3 class="text-base font-bold text-slate-900 mb-2">Automated Outreach</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">Verified targets receive personalised outreach, logging deal pathways and scheduling first conversations directly into your investment workflow.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-24 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-sm font-bold uppercase tracking-wider text-blue-600 block mb-2">Common Questions</span>
+                <h2 class="text-3xl font-extrabold text-slate-900">Frequently Asked Questions</h2>
+            </div>
+            <div class="space-y-4">
+
+                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
+                        <span class="font-semibold text-sm md:text-base">What is AI-powered deal sourcing and how is it different from traditional methods?</span>
+                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
+                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed">Traditional deal origination relies on inbound pitch decks, broker-intermediated processes, and personal network referrals — all of which are reactive, slow, and shared across the entire market simultaneously. By the time a company reaches your inbox through conventional channels, multiple competing funds are already evaluating the same opportunity, compressing your negotiating position and driving up entry multiples.</p>
+                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed mt-3">AI-powered deal sourcing replaces this reactive posture with continuous, programmatic data capture. We install active monitoring systems that track early-stage company signals across web infrastructure, hiring databases, product usage footprints, and regulatory filings. This surfaces high-potential targets weeks or months before they seek formal institutional backing — giving your fund a direct, low-competition path to first conversation. The result is a proprietary deal flow engine that runs independently of market noise and belongs entirely to your firm.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
+                        <span class="font-semibold text-sm md:text-base">How does startup intelligence work in practice?</span>
+                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
+                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed">Our startup intelligence framework monitors secondary indicators across fragmented data sources that most investment teams do not have the infrastructure to track systematically. This includes corporate filings, job posting velocity and seniority patterns, technology stack migrations, domain registration activity, app store momentum, and organic web traffic growth — all of which reveal real operational traction before any financial metrics are self-reported or audited.</p>
+                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed mt-3">These raw signals are cross-referenced and scored against your specific investment thesis parameters in real time. The output is a continuously refreshed, ranked list of companies exhibiting the growth characteristics your mandate is looking for — presented through a unified dashboard rather than scattered across spreadsheets. Your investment team receives actionable intelligence, not raw data, allowing analysts to spend time on high-conviction diligence rather than manual research and scanning.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
+                        <span class="font-semibold text-sm md:text-base">Can Growth Loop help filter and prioritise inbound deal flow as well?</span>
+                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
+                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed">Yes. Inbound deal flow management is a significant part of what we build. Most funds receive far more applications than their team can meaningfully evaluate — leading to either blanket rejections that damage founder relationships or indiscriminate deep dives that burn analyst capacity on misaligned opportunities. Neither approach scales.</p>
+                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed mt-3">We deploy custom AI filtering layers that automatically score every incoming submission against your thesis parameters: geography, sector, revenue stage, business model, team background, and technology alignment. High-signal submissions are flagged and queued for partner review. Mid-tier opportunities are logged and monitored for future relevance. Clearly misaligned submissions are filtered out without manual intervention. This allows your team to focus institutional attention precisely where conviction is highest, while maintaining a professional, structured process for every inbound founder interaction.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
+                        <span class="font-semibold text-sm md:text-base">How do automated outreach workflows improve deal sourcing velocity?</span>
+                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
+                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed">Speed is a competitive advantage in early-stage deal sourcing. Even when a fund identifies a strong target ahead of the market, delays in initial outreach — caused by manual research, CRM data entry, or partner availability — can allow competing funds to establish the first relationship. First mover in founder conversations correlates directly with better deal terms and allocation priority.</p>
+                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed mt-3">Our automated outreach infrastructure triggers personalised, contextually relevant messages to qualified targets the moment growth signals cross your scoring threshold. These are not generic templated emails — they reference specific company milestones, product developments, or market events that make the outreach feel researched and credible. All interactions are logged directly into your deal pipeline, with responses routed to the appropriate partner or analyst for follow-up. This compresses the time from signal detection to first founder conversation from weeks to days.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
+                        <span class="font-semibold text-sm md:text-base">What types of investment firms does this infrastructure work for?</span>
+                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
+                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed">The infrastructure is mandate-agnostic and configures to match the specific sourcing requirements of each fund type. Early-stage venture capital funds use our startup intelligence and founder signal tracking to identify breakthrough companies at pre-seed and seed stage — before round pricing becomes competitive. Growth equity and private equity firms deploy our outbound origination systems to find off-market acquisition and minority investment targets, avoiding auction processes entirely.</p>
+                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed mt-3">Family offices leverage our private market monitoring to build long-term direct investment positions aligned to specific wealth preservation and sector concentration rules, with full confidentiality. Angel networks and syndicates use our filtering and scoring layers to manage high application volume efficiently and surface the strongest co-investment opportunities for member review. Strategic corporate venture and M&amp;A teams configure our market scanning to track synergistic technology assets and emerging category leaders relevant to their core business roadmap.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="contact" class="py-24 relative overflow-hidden bg-slate-900">
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-950/30 via-transparent to-transparent pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">
+                Build a Smarter Investment Pipeline
+            </h2>
+            <p class="text-slate-400 max-w-xl mx-auto mb-10 text-sm md:text-base leading-relaxed">
+                Connect with our team to configure direct deal filtering architecture and integrate startup intelligence into your fund sourcing engine.
+            </p>
+            <div class="flex justify-center">
+                <a href="https://calendly.com/prabal-panda-growthloopconsulting" target="_blank" rel="noopener" class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold text-base shadow-xl shadow-blue-500/20 hover:-translate-y-0.5 transition-all duration-200">
+                    <i class="fa-solid fa-calendar-days mr-2.5 text-sm"></i> Book a Strategy Call
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER — identical to homepage -->
+    <footer class="py-12 border-t border-slate-900 bg-slate-950 text-center text-xs text-slate-600">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-2">
+                <span class="font-bold text-slate-400 inline-flex items-center gap-2">
+                    <svg class="h-5 w-5 shrink-0 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></svg>
+                    GROWTH LOOP
+                </span>
+                <span>&copy; 2026. All rights reserved.</span>
+            </div>
+            <div class="flex gap-6 text-slate-500">
+                <a href="#" class="hover:text-slate-400 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-slate-400 transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            const toggles = document.querySelectorAll('.faq-toggle');
+            toggles.forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const content = toggle.nextElementSibling;
+                    const icon = toggle.querySelector('i');
+                    const isOpen = content.classList.contains('faq-open');
+
+                    document.querySelectorAll('.faq-content').forEach(c => c.classList.remove('faq-open'));
+                    document.querySelectorAll('.faq-toggle i').forEach(ic => ic.style.transform = 'rotate(0deg)');
+
+                    if (!isOpen) {
+                        content.classList.add('faq-open');
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

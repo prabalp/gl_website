@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speakers & Experts Pipeline | Growth Loop</title>
+    <meta name="description" content="Growth Loop helps professional keynote speakers, domain experts, leadership coaches, and thought leaders build scalable B2B pipelines, secure corporate speaking engagements, and generate consistent high-ticket opportunities beyond word-of-mouth.">
+    <meta name="keywords" content="how to get more speaking gigs, keynote speaker marketing, professional speaker lead generation, corporate speaking engagements, speaker booking pipeline, thought leader personal brand, B2B speaker outreach, how to land corporate clients as a speaker, speaking bureau alternative, executive coach lead generation, speaker business development, how to grow a speaking business">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Lucide icons — required for nav dropdown chevron and mobile menu icon -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+            overflow-x: hidden;
+        }
+        /* Exact glass-nav from homepage */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        /* Exact cta-button shimmer from homepage */
+        .cta-button {
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: 0.5s;
+        }
+        .cta-button:hover::after {
+            left: 100%;
+        }
+        /* Exact dropdown styles from homepage */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ffffff;
+            min-width: 260px;
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 8px;
+            z-index: 60;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+            animation: fadeIn 0.3s ease forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+            to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+        }
+        .dropdown-item {
+            display: block;
+            padding: 12px 16px;
+            color: #475569;
+            text-decoration: none;
+            transition: all 0.2s;
+            border-radius: 8px;
+        }
+        .dropdown-item:hover {
+            background: #eff6ff;
+            color: #1d4ed8;
+            padding-left: 20px;
+        }
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease;
+        }
+        .faq-content.faq-open {
+            max-height: 600px;
+        }
+        #who-we-work-with .voice-card h3 {
+            color: #0f172a;
+        }
+        #who-we-work-with .voice-card p {
+            color: #475569;
+        }
+    </style>
+</head>
+<body class="text-slate-600 antialiased overflow-x-hidden bg-white">
+
+    <!-- NAV — pixel-perfect match to homepage -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex-shrink-0 cursor-pointer group no-underline">
+                    <span class="text-2xl font-bold tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors inline-flex items-center gap-2">
+                        <svg class="h-7 w-7 shrink-0 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></svg>
+                        GROWTH LOOP
+                    </span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <div class="dropdown relative group inline-block">
+                            <button class="text-sm font-medium text-slate-600 group-hover:text-blue-600 transition-colors flex items-center gap-1 py-4">
+                                Our Expertise
+                                <i data-lucide="chevron-down" class="h-4 w-4 transition-transform group-hover:rotate-180"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="inbound.html" class="dropdown-item">Inbound Optimisation</a>
+                                <a href="outbound.html" class="dropdown-item">Outbound Optimisation</a>
+                            </div>
+                        </div>
+                        <div class="dropdown relative group inline-block">
+                            <button class="text-sm font-medium text-slate-600 group-hover:text-blue-600 transition-colors flex items-center gap-1 py-4">
+                                Who We Help
+                                <i data-lucide="chevron-down" class="h-4 w-4 transition-transform group-hover:rotate-180"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="speaker.html" class="dropdown-item">Thought Leaders &amp; Speakers</a>
+                                <a href="ecommerce.html" class="dropdown-item">Ecommerce Brands</a>
+                                <a href="investors.html" class="dropdown-item">Investors</a>
+                            </div>
+                        </div>
+                        <a href="index.html#about" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About Us</a>
+                        <a href="index.html#approach" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Approach</a>
+                        <a href="https://calendly.com/prabal-panda-growthloopconsulting" target="_blank" class="cta-button bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-blue-500/20">
+                            Partner With Us
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden bg-white border-b border-slate-200" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <div class="border-t border-slate-200 my-2 pt-2">
+                    <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Our Expertise</p>
+                    <a href="inbound.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Inbound Optimisation</a>
+                    <a href="outbound.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Outbound Optimisation</a>
+                </div>
+                <div class="border-t border-slate-200 my-2 pt-2">
+                    <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Who We Help</p>
+                    <a href="speaker.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Thought Leaders &amp; Speakers</a>
+                    <a href="ecommerce.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Ecommerce Brands</a>
+                    <a href="investors.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Investors</a>
+                </div>
+                <a href="index.html#about" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="index.html#approach" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Approach</a>
+                <a href="https://calendly.com/prabal-panda-growthloopconsulting" target="_blank" class="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium mt-4 text-center">Partner With Us</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="relative pt-32 pb-24 md:pt-48 md:pb-40 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] pointer-events-none opacity-30 mix-blend-screen">
+            <div class="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-indigo-600/40 blur-[120px]"></div>
+            <div class="absolute top-[10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-violet-600/30 blur-[100px]"></div>
+        </div>
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#1f293710_1px,transparent_1px),linear-gradient(to_bottom,#1f293710_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+        <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-8 leading-[1.15]">
+                Scale Your Expertise <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Beyond Word-of-Mouth</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto mb-10 leading-relaxed">
+                We help speakers, domain experts, leadership coaches, wellness experts, and thought leaders build scalable pipelines, omnipresent visibility, and high-value qualified opportunities consistently.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-lg shadow-blue-500/20 hover:-translate-y-0.5 transition-all duration-200 text-center">
+                    Build Your Pipeline <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                </a>
+                <a href="#how-we-help" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-slate-600 font-semibold border border-slate-200 hover:bg-slate-50 hover:text-slate-900 transition-all duration-200 text-center">
+                    Explore Solutions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHO WE WORK WITH — grid is now a direct child of the outer container, full width -->
+    <section id="who-we-work-with" class="py-24 border-t border-slate-100 relative bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <p class="text-blue-600 font-bold tracking-wide uppercase text-sm mb-3">Who We Serve</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Tailored for Elite Voices</h2>
+                <p class="text-slate-500">We partner with the world's most impactful speakers and experts to systematically grow their corporate opportunities.</p>
+            </div>
+            <!-- Full-width grid, not nested inside the narrow text div -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="voice-card p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-200 hover:shadow-md transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600">
+                        <i class="fa-solid fa-brain text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Domain Experts</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Turn niche complex knowledge into commercially structured enterprise programs.</p>
+                </div>
+                <div class="voice-card p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-200 hover:shadow-md transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600">
+                        <i class="fa-solid fa-fire text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Motivational Speakers</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Secure high-visibility mainstages and stadium keynotes systematically.</p>
+                </div>
+                <div class="voice-card p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-200 hover:shadow-md transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600">
+                        <i class="fa-solid fa-chart-line text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Leadership Coaches</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Fill long-term high-ticket executive retainer pipelines with Fortune 500 accounts.</p>
+                </div>
+                <div class="voice-card p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-200 hover:shadow-md transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600">
+                        <i class="fa-solid fa-heart-pulse text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Wellness Experts</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Connect scientific wellbeing and mindful health architecture to modern corporate structures.</p>
+                </div>
+                <div class="voice-card p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-200 hover:shadow-md transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600">
+                        <i class="fa-solid fa-microchip text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">AI & Technology Experts</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Position your technical insights at the forefront of boardrooms leading digital revolution.</p>
+                </div>
+                <div class="voice-card p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-200 hover:shadow-md transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600">
+                        <i class="fa-solid fa-lightbulb text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Founders & Entrepreneurs</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Leverage personal brand systems to drive organic incoming dealflow to your core startup business.</p>
+                </div>
+                <div class="voice-card p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-200 hover:shadow-md transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600">
+                        <i class="fa-solid fa-chalkboard-user text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Corporate Trainers</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Build repeatable multi-day learning frameworks scaled across internal business divisions.</p>
+                </div>
+                <div class="voice-card p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-200 hover:shadow-md transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600">
+                        <i class="fa-solid fa-microphone-lines text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Keynote Speakers</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Consistently align booking profiles with premium corporate event organizers internationally.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW WE HELP -->
+    <section id="how-we-help" class="py-24 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <p class="text-blue-600 font-bold tracking-wide uppercase text-sm mb-3">Our Infrastructure</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Complete Growth Infrastructure</h2>
+                <p class="text-slate-500">Everything required to convert specialized domain authority into an active corporate opportunity stream.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-200 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="text-blue-200 text-4xl font-bold mb-6">01</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Outreach Pipelines</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-6">Personalized B2B multi-channel client generation systems directly target economic buyers.</p>
+                    </div>
+                    <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-200 pt-4">
+                        <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Prospect Identification</li>
+                        <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Lead Generation</li>
+                    </ul>
+                </div>
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-200 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="text-blue-200 text-4xl font-bold mb-6">02</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Authority Engines</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-6">Elevate your insight delivery matrix to stay highly visible with core corporate audiences.</p>
+                    </div>
+                    <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-200 pt-4">
+                        <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Thought Leadership</li>
+                        <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Authority Positioning</li>
+                    </ul>
+                </div>
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-200 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="text-blue-200 text-4xl font-bold mb-6">03</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">B2B Monetization</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-6">Transition from irregular single workshops to high-value annual corporate partnerships.</p>
+                    </div>
+                    <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-200 pt-4">
+                        <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Corporate Partnerships</li>
+                        <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Retainer Structures</li>
+                    </ul>
+                </div>
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-200 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="text-blue-200 text-4xl font-bold mb-6">04</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Global Ecosystem</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-6">Consistently scale macro audience visibility numbers alongside qualified individual target loops.</p>
+                    </div>
+                    <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-200 pt-4">
+                        <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Audience Growth</li>
+                        <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Speaker Visibility</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY US -->
+    <section id="why-us" class="py-24 relative overflow-hidden bg-slate-50 border-t border-slate-100">
+        <div class="absolute right-0 top-1/2 -translate-y-1/2 w-96 h-96 bg-blue-600/5 blur-[100px] pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <p class="text-blue-600 font-bold tracking-wide uppercase text-sm mb-3">
+                        Systematized Growth Model
+                    </p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
+                        We Help Experts Scale Beyond the "Network Trap"
+                    </h2>
+                    <p class="text-slate-500 mb-8 leading-relaxed">
+                        Relying purely on referrals, unpredictable word-of-mouth recommendations, and finite immediate personal networks caps your scalability limits. Growth Loop develops robust inbound and structured outbound models engineered for recurring elite enterprise engagement.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-6 h-6 rounded-full bg-rose-500/10 text-rose-400 flex items-center justify-center shrink-0 mt-1">
+                                <i class="fa-solid fa-xmark text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-slate-900 font-semibold">The Old Way</h4>
+                                <p class="text-sm text-slate-500">Waiting for connections to ping your inbox, variable cashflow, and seasonal event dependency.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-6 h-6 rounded-full bg-emerald-500/10 text-emerald-500 flex items-center justify-center shrink-0 mt-1">
+                                <i class="fa-solid fa-check text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-slate-900 font-semibold">The Growth Loop Way</h4>
+                                <p class="text-sm text-slate-500">Data-driven target positioning maps coupled to a programmatic business development setup for constant pipeline visibility.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-slate-200 p-8 rounded-3xl relative shadow-sm">
+                    <h3 class="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-chart-pie text-blue-600"></i> Pipeline Architecture Metrics
+                    </h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between text-xs font-medium text-slate-500 mb-2">
+                                <span>SYSTEMATIZED OUTBOUND STABILITY</span>
+                                <span class="text-slate-900 font-bold">94%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                                <div class="bg-gradient-to-r from-blue-500 to-indigo-500 h-full rounded-full" style="width: 94%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs font-medium text-slate-500 mb-2">
+                                <span>RELIANCE ON WORD-OF-MOUTH</span>
+                                <span class="text-slate-900 font-bold">DOWN TO &lt;15%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                                <div class="bg-rose-500 h-full rounded-full" style="width: 15%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs font-medium text-slate-500 mb-2">
+                                <span>ENTERPRISE DEAL SCALE</span>
+                                <span class="text-slate-900 font-bold">3.5X AVERAGE INCREASE</span>
+                            </div>
+                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                                <div class="bg-gradient-to-r from-blue-500 to-indigo-500 h-full rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 p-4 rounded-xl bg-blue-50 border border-blue-100 text-xs text-blue-700 leading-relaxed">
+                        <i class="fa-solid fa-circle-info mr-1 text-blue-500"></i> Predictable customer acquisition infrastructure eliminates income volatility spikes entirely.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="py-24 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <p class="text-blue-600 font-bold tracking-wide uppercase text-sm mb-3">How It Works</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">The 4-Step Velocity Engine</h2>
+                <p class="text-slate-500">Our structured progression sequence converts complex abstract expertise assets into standardized market revenue metrics.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+                <div class="relative group">
+                    <div class="absolute -top-5 left-6 text-7xl font-extrabold text-slate-100 pointer-events-none z-0">01</div>
+                    <div class="p-6 rounded-2xl bg-white border border-slate-200 relative z-10 hover:-translate-y-1 transition-all duration-300 hover:shadow-md hover:border-blue-200">
+                        <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 font-bold mb-4">I</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Positioning</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">Refining raw core capabilities framework blueprints directly matching specific enterprise buyer corporate needs profiles.</p>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="absolute -top-5 left-6 text-7xl font-extrabold text-slate-100 pointer-events-none z-0">02</div>
+                    <div class="p-6 rounded-2xl bg-white border border-slate-200 relative z-10 hover:-translate-y-1 transition-all duration-300 hover:shadow-md hover:border-blue-200">
+                        <div class="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-indigo-600 font-bold mb-4">II</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Targeting</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">Building hyper-granular clean database registers identifying qualified event buyers and continuous corporate executive partners.</p>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="absolute -top-5 left-6 text-7xl font-extrabold text-slate-100 pointer-events-none z-0">03</div>
+                    <div class="p-6 rounded-2xl bg-white border border-slate-200 relative z-10 hover:-translate-y-1 transition-all duration-300 hover:shadow-md hover:border-blue-200">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600 font-bold mb-4">III</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Personalized Outreach</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">Launching targeted relational interactions presenting specific tailored concept structures avoiding generic mass platform spam.</p>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="absolute -top-5 left-6 text-7xl font-extrabold text-slate-100 pointer-events-none z-0">04</div>
+                    <div class="p-6 rounded-2xl bg-white border border-slate-200 relative z-10 hover:-translate-y-1 transition-all duration-300 hover:shadow-md hover:border-blue-200">
+                        <div class="w-10 h-10 rounded-xl bg-rose-50 border border-rose-100 flex items-center justify-center text-rose-500 font-bold mb-4">IV</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Scaling Opportunities</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">Securing recurrent baseline structures converting standalone bookings directly into long term retainers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA 1 -->
+    <section id="contact" class="py-24 relative overflow-hidden bg-slate-900">
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-950/30 via-transparent to-transparent pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+                Ready to Scale Your Speaking Opportunities?
+            </h2>
+            <p class="text-slate-400 max-w-xl mx-auto mb-10 text-sm md:text-base leading-relaxed">
+                Schedule a customized framework session to audit your current market positioning matrix and deploy your dedicated pipeline infrastructure.
+            </p>
+            <div class="flex justify-center">
+                <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold text-base shadow-xl shadow-blue-500/20 hover:-translate-y-0.5 transition-all duration-200">
+                    <i class="fa-solid fa-calendar-days mr-2.5 text-sm"></i> Book a Strategy Call
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ — 120+ word SEO-optimised answers -->
+    <section id="faq" class="py-24 bg-white border-t border-slate-100">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <p class="text-blue-600 font-bold tracking-wide uppercase text-sm mb-3">Common Questions</p>
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
+                <p class="text-slate-500 text-sm">Clear operational clarifications regarding pipeline architecture building execution models.</p>
+            </div>
+
+            <div class="space-y-4">
+
+                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
+                        <span class="font-semibold text-sm md:text-base">How does this differ from traditional talent management agencies or speaker bureaus?</span>
+                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
+                            <p class="text-sm text-slate-500 leading-relaxed">Traditional speaker bureaus and talent management agencies operate as passive listing directories. They wait for inbound calls from event organizers, represent dozens or hundreds of speakers simultaneously, and earn a significant commission cut on every single booking — often 20 to 30 percent. Your visibility depends entirely on how prominently they feature you in their catalog, which means you have little control over your own pipeline or brand positioning.</p>
+                            <p class="text-sm text-slate-500 leading-relaxed mt-3">Growth Loop operates completely differently. We function as your dedicated proactive outbound business development engine. We build proprietary prospect databases, craft personalized outreach sequences, and target corporate decision-makers on your behalf every single week. The data, relationships, and pipeline we build belong entirely to you — not to an agency. You gain a predictable, scalable speaking engagement system rather than a passive listing competing for attention among hundreds of other speakers. This is not speaker representation; it is speaker business development at scale.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
+                        <span class="font-semibold text-sm md:text-base">What specific corporate buyer profiles and decision-makers do you target?</span>
+                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
+                            <p class="text-sm text-slate-500 leading-relaxed">We design precision outreach targeting the exact roles that hold speaking, training, and coaching budgets inside mid-market and enterprise organizations. Our campaigns reach Chief Human Resources Officers, Directors of People Operations, Chief Learning Officers, Learning and Development Managers, Employee Experience Leaders, Event Marketing Directors, and Enterprise Business Unit Heads who are responsible for performance and program purchasing decisions throughout the year.</p>
+                            <p class="text-sm text-slate-500 leading-relaxed mt-3">We go well beyond job titles. Our targeting methodology layers in company size, industry vertical, technology stack signals, recent hiring activity, and organizational change triggers — such as rapid headcount growth, leadership transitions, or culture transformation initiatives — to identify accounts most likely to need your expertise right now. Every outreach message lands in front of the right person at the right time, significantly improving response rates and shortening the sales cycle to your first paid corporate speaking or coaching engagement.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
+                        <span class="font-semibold text-sm md:text-base">Do I need to already be a well-known speaker or have a large social media following?</span>
+                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
+                            <p class="text-sm text-slate-500 leading-relaxed">No. You do not need to be a globally recognized speaker, a bestselling author, or have hundreds of thousands of social media followers to generate consistent corporate speaking income. The B2B corporate market does not buy based on fame — it buys based on relevance, credibility, and the demonstrated ability to solve a specific business problem. A well-defined niche expertise combined with a clear, results-oriented message is far more valuable to a corporate buyer than a large public following.</p>
+                            <p class="text-sm text-slate-500 leading-relaxed mt-3">Our strategic positioning transformation process takes your existing knowledge frameworks — regardless of where you are in your speaking career — and packages them into commercially structured proposals optimized for corporate purchasing decisions. We have helped emerging speakers land their first five-figure corporate keynote, and we have helped established experts move from one-off bookings to multi-year enterprise retainer arrangements. Your concrete domain expertise is the asset. We build the pipeline system that consistently monetizes it.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
+                        <span class="font-semibold text-sm md:text-base">How quickly does the system go live and when can I expect speaking opportunities?</span>
+                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
+                            <p class="text-sm text-slate-500 leading-relaxed">Our baseline system configuration and setup phase takes approximately 21 to 30 days from kickoff. This foundation phase includes deep positioning workshops, ideal client profile definition, prospect database construction, multi-channel outreach sequence architecture, and full technical infrastructure warmup — all designed to ensure deliverability and maximize open rates before the first outbound message is sent to any corporate buyer.</p>
+                            <p class="text-sm text-slate-500 leading-relaxed mt-3">Once the system is live, most clients begin receiving qualified responses and booking discovery calls within the first 30 to 60 days of active outreach. The pipeline compounds over time: the longer the system runs, the more relationship touchpoints accumulate with key decision-makers, increasing conversion rates with every outreach cycle. Corporate sales cycles for speaking and training engagements typically run 30 to 90 days from first contact to signed contract, so a full pipeline with consistently booked engagements is typically visible within 60 to 90 days of the system going live.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
+                        <span class="font-semibold text-sm md:text-base">Is there a long-term contract requirement or can I start with a pilot program?</span>
+                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
+                            <p class="text-sm text-slate-500 leading-relaxed">We offer flexible engagement models designed to build confidence before committing to longer-term arrangements. New clients begin with a fixed initial pilot program that covers the full system setup, technical infrastructure launch, and first active outreach phase. This gives you the opportunity to see the pipeline working, evaluate response quality from corporate buyers, and assess early momentum before making any extended commitment or additional investment.</p>
+                            <p class="text-sm text-slate-500 leading-relaxed mt-3">Once the pilot validates pipeline traction — defined by specific response volume and qualified call targets we set together at the start — engagements transition into flexible monthly optimization agreements with clear and transparent renewal terms. There are no high-pressure, multi-year lock-in contracts. We believe our results should earn your continued partnership every single month. Our incentive is to keep your pipeline consistently producing qualified speaking, coaching, and corporate training opportunities, which means our success is directly tied to yours. We grow when you grow.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA 2 -->
+    <section class="py-24 relative overflow-hidden bg-slate-900">
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-950/30 via-transparent to-transparent pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+                Ready to Scale Your Speaking Opportunities?
+            </h2>
+            <p class="text-slate-400 max-w-xl mx-auto mb-10 text-sm md:text-base leading-relaxed">
+                Schedule a customized framework session to audit your current market positioning matrix and deploy your dedicated pipeline infrastructure.
+            </p>
+            <div class="flex justify-center">
+                <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold text-base shadow-xl shadow-blue-500/20 hover:-translate-y-0.5 transition-all duration-200">
+                    <i class="fa-solid fa-calendar-days mr-2.5 text-sm"></i> Book a Strategy Call
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER — matches homepage -->
+    <footer class="py-12 border-t border-slate-900 bg-slate-950 text-center text-xs text-slate-600">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-2">
+                <span class="font-bold text-slate-400 inline-flex items-center gap-2">
+                    <svg class="h-5 w-5 shrink-0 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></svg>
+                    GROWTH LOOP
+                </span>
+                <span>&copy; 2026. All rights reserved.</span>
+            </div>
+            <div class="flex gap-6 text-slate-500">
+                <a href="#" class="hover:text-slate-400 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-slate-400 transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            const toggles = document.querySelectorAll('.faq-toggle');
+            toggles.forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const content = toggle.nextElementSibling;
+                    const icon = toggle.querySelector('i');
+                    const isOpen = content.classList.contains('faq-open');
+
+                    document.querySelectorAll('.faq-content').forEach(c => c.classList.remove('faq-open'));
+                    document.querySelectorAll('.faq-toggle i').forEach(ic => ic.style.transform = 'rotate(0deg)');
+
+                    if (!isOpen) {
+                        content.classList.add('faq-open');
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

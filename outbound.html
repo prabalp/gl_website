@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outbound Optimisation | Growth Loop</title>
+    <meta name="description" content="Growth Loop runs personalised outbound — cold email, LinkedIn, cold calling, and CRM campaigns that put your business in front of decision-makers without feeling like a mass blast.">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #FFFFFF; }
+        .glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+        .cta-button { position: relative; overflow: hidden; }
+        .cta-button::after { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent); transition: 0.5s; }
+        .cta-button:hover::after { left: 100%; }
+        .dropdown-content { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: #ffffff; min-width: 260px; box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.1); border: 1px solid #e2e8f0; border-radius: 12px; padding: 8px; z-index: 60; opacity: 0; transition: opacity 0.3s ease; }
+        .dropdown:hover .dropdown-content { display: block; opacity: 1; animation: fadeIn 0.3s ease forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateX(-50%) translateY(10px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
+        .dropdown-item { display: block; padding: 12px 16px; color: #475569; text-decoration: none; transition: all 0.2s; border-radius: 8px; }
+        .dropdown-item:hover { background: #eff6ff; color: #1d4ed8; padding-left: 20px; }
+        .faq-content { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+        .faq-content.faq-open { max-height: 600px; }
+        .graphic-container { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 40px; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; box-shadow: 0 10px 30px -10px rgba(0,0,0,0.08); min-height: 280px; position: relative; overflow: hidden; }
+        .shimmer-effect { position: relative; overflow: hidden; }
+        .shimmer-effect::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent); transform: translateX(-100%); animation: shimmer 3s infinite; }
+        @keyframes shimmer { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        .animate-float-delayed { animation: float 6s ease-in-out 3s infinite; }
+        .animate-spin-slow { animation: spin 12s linear infinite; }
+    </style>
+</head>
+<body class="text-slate-600 antialiased overflow-x-hidden bg-white">
+
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex-shrink-0 cursor-pointer group no-underline">
+                    <span class="text-2xl font-bold tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors inline-flex items-center gap-2">
+                        <svg class="h-7 w-7 shrink-0 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></svg>
+                        GROWTH LOOP
+                    </span>
+                </a>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <div class="dropdown relative group inline-block">
+                            <button class="text-sm font-medium text-slate-600 group-hover:text-blue-600 transition-colors flex items-center gap-1 py-4">
+                                Our Expertise
+                                <i data-lucide="chevron-down" class="h-4 w-4 transition-transform group-hover:rotate-180"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="inbound.html" class="dropdown-item">Inbound Optimisation</a>
+                                <a href="outbound.html" class="dropdown-item">Outbound Optimisation</a>
+                            </div>
+                        </div>
+                        <div class="dropdown relative group inline-block">
+                            <button class="text-sm font-medium text-slate-600 group-hover:text-blue-600 transition-colors flex items-center gap-1 py-4">
+                                Who We Help
+                                <i data-lucide="chevron-down" class="h-4 w-4 transition-transform group-hover:rotate-180"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="speaker.html" class="dropdown-item">Thought Leaders &amp; Speakers</a>
+                                <a href="ecommerce.html" class="dropdown-item">Ecommerce Brands</a>
+                                <a href="investors.html" class="dropdown-item">Investors</a>
+                            </div>
+                        </div>
+                        <a href="index.html#about" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About Us</a>
+                        <a href="index.html#approach" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Approach</a>
+                        <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="cta-button bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-blue-500/20">Partner With Us</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="hidden md:hidden bg-white border-b border-slate-200" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <div class="border-t border-slate-200 my-2 pt-2">
+                    <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Our Expertise</p>
+                    <a href="inbound.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Inbound Optimisation</a>
+                    <a href="outbound.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Outbound Optimisation</a>
+                </div>
+                <div class="border-t border-slate-200 my-2 pt-2">
+                    <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Who We Help</p>
+                    <a href="speaker.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Thought Leaders &amp; Speakers</a>
+                    <a href="ecommerce.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Ecommerce Brands</a>
+                    <a href="investors.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Investors</a>
+                </div>
+                <a href="index.html#about" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="index.html#approach" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Approach</a>
+                <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium mt-4 text-center">Partner With Us</a>
+            </div>
+        </div>
+    </nav>
+
+        <section class="relative pt-32 pb-24 md:pt-48 md:pb-40 overflow-hidden">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] pointer-events-none opacity-30 mix-blend-screen">
+                <div class="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-indigo-600/40 blur-[120px]"></div>
+                <div class="absolute top-[10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-violet-600/30 blur-[100px]"></div>
+            </div>
+            <div class="absolute inset-0 bg-[linear-gradient(to_right,#1f293710_1px,transparent_1px),linear-gradient(to_bottom,#1f293710_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+            <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-8 leading-[1.15]">Go Find the People Who Need You</h1>
+            <p class="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto mb-10 leading-relaxed">
+                Personalised, multi-channel outreach that puts your business directly in front of decision-makers, without ever feeling like a mass blast.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="group inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 font-semibold text-white transition-all duration-200 bg-blue-600 rounded-full hover:bg-blue-700 shadow-lg shadow-blue-500/20">
+                    Book a Pipeline Call <i data-lucide="arrow-right" class="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <a href="inbound.html" class="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 font-semibold text-slate-600 transition-all duration-200 bg-white border border-slate-200 rounded-full hover:bg-slate-50 hover:text-slate-900 focus:outline-none hover:border-slate-300">
+                    See Inbound Instead
+                </a>
+            </div>
+            </div>
+        </section>
+
+        <!-- Why Outbound -->
+        <section class="py-20 bg-white border-t border-slate-100">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-8">Why it matters to leadership</h2>
+                <div class="grid sm:grid-cols-3 gap-6 text-left">
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                        <i data-lucide="zap" class="h-6 w-6 text-blue-600 mb-3"></i>
+                        <p class="text-slate-600 text-sm leading-relaxed">It produces the fastest first conversations, often within the first two weeks.</p>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                        <i data-lucide="crosshair" class="h-6 w-6 text-blue-600 mb-3"></i>
+                        <p class="text-slate-600 text-sm leading-relaxed">You choose exactly who gets contacted, no waiting on algorithms to decide.</p>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                        <i data-lucide="calendar-check" class="h-6 w-6 text-blue-600 mb-3"></i>
+                        <p class="text-slate-600 text-sm leading-relaxed">It fills the pipeline gap while inbound assets are still ramping up.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4 CHANNELS: card grid layout (distinct from Inbound's zigzag) -->
+        <section class="py-24 bg-slate-50 border-t border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-20">
+                    <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Four Outbound Channels</h2>
+                    <p class="max-w-2xl mx-auto text-slate-500 text-lg font-light">Sequenced together, so a prospect sees your name more than once before you ever ask for their time.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Cold Email -->
+                    <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                        <div class="flex items-center mb-5">
+                            <div class="bg-blue-100 p-3 rounded-xl mr-4 text-blue-600"><i data-lucide="mail" class="h-6 w-6"></i></div>
+                            <h3 class="text-xl font-bold text-slate-900">Cold Email</h3>
+                        </div>
+                        <ul class="text-slate-600 text-sm space-y-2.5">
+                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0"></i> Verified, ICP-matched prospect lists</li>
+                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0"></i> Researched, personalised sequences</li>
+                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0"></i> Deliverability protection and warmup</li>
+                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0"></i> Reply handling and meeting booking</li>
+                        </ul>
+                    </div>
+
+                    <!-- LinkedIn -->
+                    <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                        <div class="flex items-center mb-5">
+                            <div class="bg-blue-100 p-3 rounded-xl mr-4 text-blue-600"><i data-lucide="linkedin" class="h-6 w-6"></i></div>
+                            <h3 class="text-xl font-bold text-slate-900">LinkedIn Outreach</h3>
+                        </div>
+                        <ul class="text-slate-600 text-sm space-y-2.5">
+                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0"></i> Personalised connection sequences</li>
+                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0"></i> Profile and content positioning for authority</li>
+                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0"></i> Context-aware messaging, not templates</li>
+                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0"></i> Warm handoff into direct conversation</li>
+                        </ul>
+                    </div>
+
+                    <!-- Cold Calling -->
+                    <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                        <div class="flex items-center mb-5">
+                            <div class="bg-blue-100 p-3 rounded-xl mr-4 text-blue-600"><i data-lucide="phone-call" class="h-6 w-6"></i></div>
+                            <h3 class="text-xl font-bold text-slate-900">Cold Calling</h3>
+                        </div>
+                        <ul class="text-slate-600 text-sm space-y-2.5">
+                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0"></i> Researched calling lists and scripts</li>
+                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0"></i> Sequenced after a prior email or LinkedIn touch</li>
+                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0"></i> Lands as a follow-up, not an interruption</li>
+                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0"></i> Outcomes logged directly into your CRM</li>
+                        </ul>
+                    </div>
+
+                    <!-- CRM -->
+                    <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                        <div class="flex items-center mb-5">
+                            <div class="bg-blue-100 p-3 rounded-xl mr-4 text-blue-600"><i data-lucide="workflow" class="h-6 w-6"></i></div>
+                            <h3 class="text-xl font-bold text-slate-900">CRM Campaigns: WhatsApp & Messaging</h3>
+                        </div>
+                        <ul class="text-slate-600 text-sm space-y-2.5">
+                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0"></i> WhatsApp and SMS nurture sequences</li>
+                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0"></i> CRM automation and lead scoring</li>
+                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0"></i> Timely, relevant follow-up on the channel they check daily</li>
+                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0"></i> Re-engagement flows for cold, stalled leads</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW A SEQUENCE RUNS -->
+        <section class="py-24 bg-white border-t border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">How a sequence runs</h2>
+                </div>
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200">
+                        <div class="text-blue-600 font-bold text-sm uppercase tracking-widest mb-4">01</div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-3">List Building</h4>
+                        <ul class="text-slate-600 text-sm space-y-2">
+                            <li>• Verified contacts matched to your ICP</li>
+                            <li>• Enriched with real, usable context</li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200">
+                        <div class="text-blue-600 font-bold text-sm uppercase tracking-widest mb-4">02</div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-3">Sequence Design</h4>
+                        <ul class="text-slate-600 text-sm space-y-2">
+                            <li>• Email, LinkedIn, and call touches ordered</li>
+                            <li>• Messaging personalised, not templated</li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200">
+                        <div class="text-blue-600 font-bold text-sm uppercase tracking-widest mb-4">03</div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-3">Launch & Reply</h4>
+                        <ul class="text-slate-600 text-sm space-y-2">
+                            <li>• Outreach goes live across channels</li>
+                            <li>• Replies routed straight to you</li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200">
+                        <div class="text-blue-600 font-bold text-sm uppercase tracking-widest mb-4">04</div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-3">Log & Optimise</h4>
+                        <ul class="text-slate-600 text-sm space-y-2">
+                            <li>• Every touch logged in your CRM</li>
+                            <li>• Weekly tuning on what gets replies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHO ITS FOR -->
+        <section class="py-24 bg-slate-50 border-t border-slate-100">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-14">
+                    <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Best fit for</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-5 text-blue-600"><i data-lucide="mic" class="h-6 w-6"></i></div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Thought Leaders & Lean Teams</h3>
+                        <ul class="text-slate-600 text-sm space-y-2">
+                            <li>• Direct access to decision-makers, no gatekeepers</li>
+                            <li>• Speaking, partnership, and client conversations</li>
+                            <li>• Pipeline that does not depend on your calendar alone</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-5 text-blue-600"><i data-lucide="shopping-bag" class="h-6 w-6"></i></div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Ecommerce Brands</h3>
+                        <ul class="text-slate-600 text-sm space-y-2">
+                            <li>• Wholesale and B2B partnership outreach</li>
+                            <li>• Direct lines to affiliates, press, and collaborators</li>
+                            <li>• CRM re-engagement for lapsed customers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="py-24 bg-white border-t border-slate-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-14">
+                    <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Outbound questions we get most</h2>
+                </div>
+                <div class="space-y-4">
+                    <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
+                        <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-base">How do you keep this from feeling like spam?</span>
+                            <i data-lucide="chevron-down" class="h-4 w-4 text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="px-6 pb-6 border-t border-slate-100 pt-4">
+                                <ul class="text-sm text-slate-500 space-y-2 leading-relaxed">
+                                    <li>• Every list is filtered against your actual ICP first</li>
+                                    <li>• Messaging references real, specific context, never a merge tag</li>
+                                    <li>• Channels are sequenced so a touch always feels like a follow-up</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
+                        <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-base">How fast can we expect conversations to start?</span>
+                            <i data-lucide="chevron-down" class="h-4 w-4 text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="px-6 pb-6 border-t border-slate-100 pt-4">
+                                <ul class="text-sm text-slate-500 space-y-2 leading-relaxed">
+                                    <li>• List building and sequence setup take about one week</li>
+                                    <li>• First replies typically arrive within the second week</li>
+                                    <li>• Volume and quality improve every week as sequences are tuned</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
+                        <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-base">Who owns the leads and data generated?</span>
+                            <i data-lucide="chevron-down" class="h-4 w-4 text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="px-6 pb-6 border-t border-slate-100 pt-4">
+                                <ul class="text-sm text-slate-500 space-y-2 leading-relaxed">
+                                    <li>• You do, fully and always</li>
+                                    <li>• Every contact and reply is logged in your own CRM</li>
+                                    <li>• Nothing sits in a system you cannot access</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-16 text-center bg-slate-50 border border-slate-200 rounded-3xl p-10">
+                    <p class="text-slate-500 mb-4">Want to pair this with a compounding inbound engine?</p>
+                    <a href="inbound.html" class="text-blue-600 font-bold hover:text-blue-700 transition-colors inline-flex items-center text-lg group">
+                        Explore Inbound Optimisation <i data-lucide="arrow-right" class="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    <section id="contact" class="py-32 bg-slate-900 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-5xl font-bold text-white mb-8">Ready to Scale?</h2>
+            <p class="text-slate-400 text-xl font-light mb-12">
+                Let's discuss how we can build your outbound pipeline and put your business directly in front of the decision-makers who need you.
+            </p>
+            <form class="max-w-md mx-auto space-y-6 text-left bg-slate-800 p-10 rounded-3xl border border-slate-700 shadow-2xl">
+                <div>
+                    <label for="email" class="block text-sm font-medium text-slate-400 mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" required class="w-full bg-slate-700 border border-slate-600 rounded-xl px-6 py-4 text-white focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all" placeholder="you@company.com">
+                </div>
+                <div>
+                    <label for="interest" class="block text-sm font-medium text-slate-400 mb-2">Area of Interest</label>
+                    <select id="interest" name="interest" class="w-full bg-slate-700 border border-slate-600 rounded-xl px-6 py-4 text-white focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all">
+                        <option value="Inbound Optimisation">Inbound Optimisation</option>
+                        <option value="Outbound Optimisation" selected>Outbound Optimisation</option>
+                        <option value="Cold Email">Cold Email</option>
+                        <option value="LinkedIn Outreach">LinkedIn Outreach</option>
+                        <option value="Cold Calling">Cold Calling</option>
+                        <option value="CRM Campaigns">CRM Campaigns</option>
+                    </select>
+                </div>
+                <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="w-full inline-flex justify-center items-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-blue-500/25 transition-all transform hover:scale-[1.02] text-lg">
+                    Book Free Consultation
+                </a>
+            </form>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-slate-900 bg-slate-950 text-center text-xs text-slate-600">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-2">
+                <span class="font-bold text-slate-400 inline-flex items-center gap-2">
+                    <svg class="h-5 w-5 shrink-0 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></svg>
+                    GROWTH LOOP
+                </span>
+                <span>&copy; 2026. All rights reserved.</span>
+            </div>
+            <div class="flex gap-6 text-slate-500">
+                <a href="#" class="hover:text-slate-400 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-slate-400 transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            document.querySelectorAll('.faq-toggle').forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const content = toggle.nextElementSibling;
+                    const icon = toggle.querySelector('i');
+                    const isOpen = content.classList.contains('faq-open');
+                    document.querySelectorAll('.faq-content').forEach(c => c.classList.remove('faq-open'));
+                    document.querySelectorAll('.faq-toggle i').forEach(ic => ic.style.transform = 'rotate(0deg)');
+                    if (!isOpen) {
+                        content.classList.add('faq-open');
+                        if (icon) icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

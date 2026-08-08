@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inbound Optimisation | Growth Loop</title>
+    <meta name="description" content="Growth Loop builds inbound discovery systems — GEO, SEO, performance marketing, lead magnets, and chatbots that turn search and AI channels into compounding qualified traffic.">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #FFFFFF; }
+        .glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+        .cta-button { position: relative; overflow: hidden; }
+        .cta-button::after { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent); transition: 0.5s; }
+        .cta-button:hover::after { left: 100%; }
+        .dropdown-content { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: #ffffff; min-width: 260px; box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.1); border: 1px solid #e2e8f0; border-radius: 12px; padding: 8px; z-index: 60; opacity: 0; transition: opacity 0.3s ease; }
+        .dropdown:hover .dropdown-content { display: block; opacity: 1; animation: fadeIn 0.3s ease forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateX(-50%) translateY(10px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
+        .dropdown-item { display: block; padding: 12px 16px; color: #475569; text-decoration: none; transition: all 0.2s; border-radius: 8px; }
+        .dropdown-item:hover { background: #eff6ff; color: #1d4ed8; padding-left: 20px; }
+        .faq-content { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+        .faq-content.faq-open { max-height: 600px; }
+        .graphic-container { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 40px; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; box-shadow: 0 10px 30px -10px rgba(0,0,0,0.08); min-height: 280px; position: relative; overflow: hidden; }
+        .shimmer-effect { position: relative; overflow: hidden; }
+        .shimmer-effect::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent); transform: translateX(-100%); animation: shimmer 3s infinite; }
+        @keyframes shimmer { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        .animate-float-delayed { animation: float 6s ease-in-out 3s infinite; }
+        .animate-spin-slow { animation: spin 12s linear infinite; }
+    </style>
+</head>
+<body class="text-slate-600 antialiased overflow-x-hidden bg-white">
+
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex-shrink-0 cursor-pointer group no-underline">
+                    <span class="text-2xl font-bold tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors inline-flex items-center gap-2">
+                        <svg class="h-7 w-7 shrink-0 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></svg>
+                        GROWTH LOOP
+                    </span>
+                </a>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <div class="dropdown relative group inline-block">
+                            <button class="text-sm font-medium text-slate-600 group-hover:text-blue-600 transition-colors flex items-center gap-1 py-4">
+                                Our Expertise
+                                <i data-lucide="chevron-down" class="h-4 w-4 transition-transform group-hover:rotate-180"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="inbound.html" class="dropdown-item">Inbound Optimisation</a>
+                                <a href="outbound.html" class="dropdown-item">Outbound Optimisation</a>
+                            </div>
+                        </div>
+                        <div class="dropdown relative group inline-block">
+                            <button class="text-sm font-medium text-slate-600 group-hover:text-blue-600 transition-colors flex items-center gap-1 py-4">
+                                Who We Help
+                                <i data-lucide="chevron-down" class="h-4 w-4 transition-transform group-hover:rotate-180"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="speaker.html" class="dropdown-item">Thought Leaders &amp; Speakers</a>
+                                <a href="ecommerce.html" class="dropdown-item">Ecommerce Brands</a>
+                                <a href="investors.html" class="dropdown-item">Investors</a>
+                            </div>
+                        </div>
+                        <a href="index.html#about" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About Us</a>
+                        <a href="index.html#approach" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Approach</a>
+                        <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="cta-button bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-blue-500/20">Partner With Us</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="hidden md:hidden bg-white border-b border-slate-200" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <div class="border-t border-slate-200 my-2 pt-2">
+                    <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Our Expertise</p>
+                    <a href="inbound.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Inbound Optimisation</a>
+                    <a href="outbound.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Outbound Optimisation</a>
+                </div>
+                <div class="border-t border-slate-200 my-2 pt-2">
+                    <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Who We Help</p>
+                    <a href="speaker.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Thought Leaders &amp; Speakers</a>
+                    <a href="ecommerce.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Ecommerce Brands</a>
+                    <a href="investors.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Investors</a>
+                </div>
+                <a href="index.html#about" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="index.html#approach" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Approach</a>
+                <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium mt-4 text-center">Partner With Us</a>
+            </div>
+        </div>
+    </nav>
+
+        <section class="relative pt-32 pb-24 md:pt-48 md:pb-40 overflow-hidden">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] pointer-events-none opacity-30 mix-blend-screen">
+                <div class="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-indigo-600/40 blur-[120px]"></div>
+                <div class="absolute top-[10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-violet-600/30 blur-[100px]"></div>
+            </div>
+            <div class="absolute inset-0 bg-[linear-gradient(to_right,#1f293710_1px,transparent_1px),linear-gradient(to_bottom,#1f293710_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+            <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-8 leading-[1.15]">Make the Market Find You</h1>
+            <p class="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto mb-10 leading-relaxed">
+                We build the discovery systems that turn search engines, AI assistants, and paid channels into a steady, compounding stream of qualified traffic.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="group inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 font-semibold text-white transition-all duration-200 bg-blue-600 rounded-full hover:bg-blue-700 shadow-lg shadow-blue-500/20">
+                    Book a Growth Audit <i data-lucide="arrow-right" class="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <a href="outbound.html" class="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 font-semibold text-slate-600 transition-all duration-200 bg-white border border-slate-200 rounded-full hover:bg-slate-50 hover:text-slate-900 focus:outline-none hover:border-slate-300">
+                    See Outbound Instead
+                </a>
+            </div>
+            </div>
+        </section>
+
+        <!-- Why Inbound -->
+        <section class="py-20 bg-white border-t border-slate-100">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-8">Why it matters to leadership</h2>
+                <div class="grid sm:grid-cols-3 gap-6 text-left">
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                        <i data-lucide="trending-up" class="h-6 w-6 text-blue-600 mb-3"></i>
+                        <p class="text-slate-600 text-sm leading-relaxed">Organic traffic compounds. Every asset you build keeps working long after paid spend stops.</p>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                        <i data-lucide="shield-check" class="h-6 w-6 text-blue-600 mb-3"></i>
+                        <p class="text-slate-600 text-sm leading-relaxed">It builds category authority, the kind buyers trust before a sales conversation even starts.</p>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                        <i data-lucide="wallet" class="h-6 w-6 text-blue-600 mb-3"></i>
+                        <p class="text-slate-600 text-sm leading-relaxed">It lowers your cost per lead over time, reducing dependence on rising ad costs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5 PILLARS -->
+        <section class="py-24 bg-slate-50 border-t border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-20">
+                    <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">The Five Inbound Pillars</h2>
+                    <p class="max-w-2xl mx-auto text-slate-500 text-lg font-light">Each one is a standalone system. Together, they cover every way a buyer discovers you today.</p>
+                </div>
+
+                <div class="space-y-24">
+                    <!-- GEO -->
+                    <div class="grid md:grid-cols-2 gap-16 items-center">
+                        <div>
+                            <div class="flex items-center mb-6">
+                                <div class="bg-blue-100 p-4 rounded-2xl mr-6 text-blue-600"><i data-lucide="sparkles" class="h-8 w-8"></i></div>
+                                <h3 class="text-3xl font-bold text-slate-900">GEO: Generative Engine Optimisation</h3>
+                            </div>
+                            <p class="text-slate-600 text-lg leading-relaxed mb-5">Getting your brand cited inside ChatGPT, Perplexity, and Gemini answers, not just Google rankings.</p>
+                            <ul class="space-y-3 text-slate-700">
+                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i> AI answer engine visibility audits</li>
+                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i> Content structured for citation, not just clicks</li>
+                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i> Third-party mention and authority building</li>
+                            </ul>
+                        </div>
+                        <div class="graphic-container">
+                            <div class="w-full space-y-4 px-4">
+                                <div class="bg-white p-5 rounded-xl border border-blue-600/20 shadow-lg shadow-blue-500/10 animate-float">
+                                    <div class="text-xs text-blue-600 font-bold uppercase tracking-wider mb-2">AI Assistant Response</div>
+                                    <div class="h-2.5 bg-slate-100 rounded w-full mb-2 shimmer-effect"></div>
+                                    <div class="h-2.5 bg-slate-100 rounded w-5/6 mb-2 shimmer-effect"></div>
+                                    <div class="h-2.5 bg-blue-100 rounded w-2/3 shimmer-effect"></div>
+                                </div>
+                                <div class="text-center text-sm text-slate-400 font-bold uppercase tracking-widest">Your Brand, Cited</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SEO -->
+                    <div class="grid md:grid-cols-2 gap-16 items-center">
+                        <div class="graphic-container order-2 md:order-1">
+                            <div class="w-full px-6 space-y-3">
+                                <div class="flex items-center justify-between p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
+                                    <span class="text-slate-500 text-sm font-bold">You</span>
+                                    <div class="h-2 w-24 bg-blue-600 rounded-full"></div>
+                                </div>
+                                <div class="flex items-center justify-between p-4 bg-white rounded-xl border border-slate-200 shadow-sm opacity-70">
+                                    <span class="text-slate-500 text-sm font-bold">Competitor A</span>
+                                    <div class="h-2 w-16 bg-slate-300 rounded-full"></div>
+                                </div>
+                                <div class="flex items-center justify-between p-4 bg-white rounded-xl border border-slate-200 shadow-sm opacity-50">
+                                    <span class="text-slate-500 text-sm font-bold">Competitor B</span>
+                                    <div class="h-2 w-10 bg-slate-300 rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-1 md:order-2">
+                            <div class="flex items-center mb-6">
+                                <div class="bg-blue-100 p-4 rounded-2xl mr-6 text-blue-600"><i data-lucide="search" class="h-8 w-8"></i></div>
+                                <h3 class="text-3xl font-bold text-slate-900">SEO: Ranked Authority Reports</h3>
+                            </div>
+                            <p class="text-slate-600 text-lg leading-relaxed mb-5">Content built to be the reference point in your category, not just another blog post.</p>
+                            <ul class="space-y-3 text-slate-700">
+                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i> Ranked Authority (RA) reports for your category</li>
+                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i> Industry and competitor comparison pages</li>
+                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i> Technical SEO and on-page optimisation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Perf Marketing -->
+                    <div class="grid md:grid-cols-2 gap-16 items-center">
+                        <div>
+                            <div class="flex items-center mb-6">
+                                <div class="bg-blue-100 p-4 rounded-2xl mr-6 text-blue-600"><i data-lucide="megaphone" class="h-8 w-8"></i></div>
+                                <h3 class="text-3xl font-bold text-slate-900">Performance Marketing</h3>
+                            </div>
+                            <p class="text-slate-600 text-lg leading-relaxed mb-5">Paid that accelerates what already works, targeted with data from your own organic traffic.</p>
+                            <ul class="space-y-3 text-slate-700">
+                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i> Meta ads strategy, creative, and management</li>
+                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i> Audience targeting built on organic signal data</li>
+                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i> Continuous creative testing and spend optimisation</li>
+                            </ul>
+                        </div>
+                        <div class="graphic-container">
+                            <div class="flex items-end justify-between h-48 gap-3 w-full px-6">
+                                <div class="w-full bg-blue-100 rounded-t h-[35%] shimmer-effect"></div>
+                                <div class="w-full bg-blue-200 rounded-t h-[55%] shimmer-effect" style="animation-delay:0.2s"></div>
+                                <div class="w-full bg-blue-300 rounded-t h-[45%] shimmer-effect" style="animation-delay:0.4s"></div>
+                                <div class="w-full bg-blue-600 rounded-t h-[85%] shadow-lg shadow-blue-500/30 shimmer-effect" style="animation-delay:0.6s"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lead Magnets -->
+                    <div class="grid md:grid-cols-2 gap-16 items-center">
+                        <div class="graphic-container order-2 md:order-1">
+                            <div class="relative h-56 w-full flex items-center justify-center">
+                                <div class="w-40 h-40 border-2 border-dashed border-slate-300 rounded-full flex items-center justify-center animate-spin-slow">
+                                    <div class="w-24 h-24 bg-blue-50 rounded-full flex items-center justify-center">
+                                        <i data-lucide="magnet" class="h-12 w-12 text-blue-600"></i>
+                                    </div>
+                                </div>
+                                <div class="absolute top-2 right-2 bg-white px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-200 text-slate-700 shadow-lg animate-float">Free Report</div>
+                                <div class="absolute bottom-2 left-2 bg-white px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-200 text-slate-700 shadow-lg animate-float-delayed">Calculator</div>
+                            </div>
+                        </div>
+                        <div class="order-1 md:order-2">
+                            <div class="flex items-center mb-6">
+                                <div class="bg-blue-100 p-4 rounded-2xl mr-6 text-blue-600"><i data-lucide="magnet" class="h-8 w-8"></i></div>
+                                <h3 class="text-3xl font-bold text-slate-900">Lead Magnets</h3>
+                            </div>
+                            <p class="text-slate-600 text-lg leading-relaxed mb-5">Traffic without capture is wasted. We turn visitors into contacts you can nurture.</p>
+                            <ul class="space-y-3 text-slate-700">
+                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i> Research-backed guides, reports, and toolkits</li>
+                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i> Conversion-optimised capture pages</li>
+                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i> Direct integration into your nurture and CRM flows</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Chatbots -->
+                    <div class="grid md:grid-cols-2 gap-16 items-center">
+                        <div>
+                            <div class="flex items-center mb-6">
+                                <div class="bg-blue-100 p-4 rounded-2xl mr-6 text-blue-600"><i data-lucide="message-circle" class="h-8 w-8"></i></div>
+                                <h3 class="text-3xl font-bold text-slate-900">Website Chatbots</h3>
+                            </div>
+                            <p class="text-slate-600 text-lg leading-relaxed mb-5">Turning passive website traffic into an active, trackable conversation, instantly.</p>
+                            <ul class="space-y-3 text-slate-700">
+                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i> Always-on visitor qualification</li>
+                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i> Instant answers to common buyer questions</li>
+                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i> Direct handoff to your sales or CRM pipeline</li>
+                            </ul>
+                        </div>
+                        <div class="graphic-container">
+                            <div class="w-full px-6 space-y-3">
+                                <div class="bg-slate-100 p-4 rounded-xl rounded-tl-none w-4/5 shimmer-effect">
+                                    <div class="h-2 bg-slate-300 rounded w-full"></div>
+                                </div>
+                                <div class="bg-blue-600/10 p-4 rounded-xl rounded-tr-none w-4/5 ml-auto shimmer-effect" style="animation-delay:0.2s">
+                                    <div class="h-2 bg-blue-600/40 rounded w-full"></div>
+                                </div>
+                                <div class="bg-slate-100 p-4 rounded-xl rounded-tl-none w-3/5 shimmer-effect" style="animation-delay:0.4s">
+                                    <div class="h-2 bg-slate-300 rounded w-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW IT RUNS -->
+        <section class="py-24 bg-white border-t border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">How the inbound engine runs</h2>
+                </div>
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200">
+                        <div class="text-blue-600 font-bold text-sm uppercase tracking-widest mb-4">01</div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-3">Discovery Audit</h4>
+                        <ul class="text-slate-600 text-sm space-y-2">
+                            <li>• Search and GEO visibility scan</li>
+                            <li>• Competitor content gap map</li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200">
+                        <div class="text-blue-600 font-bold text-sm uppercase tracking-widest mb-4">02</div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-3">Build Assets</h4>
+                        <ul class="text-slate-600 text-sm space-y-2">
+                            <li>• RA reports, lead magnets, chatbot</li>
+                            <li>• GEO and SEO content structure</li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200">
+                        <div class="text-blue-600 font-bold text-sm uppercase tracking-widest mb-4">03</div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-3">Publish & Promote</h4>
+                        <ul class="text-slate-600 text-sm space-y-2">
+                            <li>• Content goes live and indexes</li>
+                            <li>• Meta ads amplify top performers</li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200">
+                        <div class="text-blue-600 font-bold text-sm uppercase tracking-widest mb-4">04</div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-3">Rank & Refine</h4>
+                        <ul class="text-slate-600 text-sm space-y-2">
+                            <li>• Monthly ranking and traffic review</li>
+                            <li>• Double down on what compounds</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHO ITS FOR -->
+        <section class="py-24 bg-slate-50 border-t border-slate-100">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-14">
+                    <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Best fit for</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-5 text-blue-600"><i data-lucide="mic" class="h-6 w-6"></i></div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Thought Leaders & Lean Teams</h3>
+                        <ul class="text-slate-600 text-sm space-y-2">
+                            <li>• Founder-led credibility that compounds</li>
+                            <li>• Content that works without a large team</li>
+                            <li>• Authority before the first sales call</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-5 text-blue-600"><i data-lucide="shopping-bag" class="h-6 w-6"></i></div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Ecommerce Brands</h3>
+                        <ul class="text-slate-600 text-sm space-y-2">
+                            <li>• Organic traffic that reduces ad dependence</li>
+                            <li>• Product discovery through search and GEO</li>
+                            <li>• Lead capture on every high-intent page</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="py-24 bg-white border-t border-slate-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-14">
+                    <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Inbound questions we get most</h2>
+                </div>
+                <div class="space-y-4">
+                    <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
+                        <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-base">How long before inbound produces real traffic?</span>
+                            <i data-lucide="chevron-down" class="h-4 w-4 text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="px-6 pb-6 border-t border-slate-100 pt-4">
+                                <ul class="text-sm text-slate-500 space-y-2 leading-relaxed">
+                                    <li>• GEO and lead magnets can show early signal within four to six weeks</li>
+                                    <li>• SEO and RA reports typically compound over two to four months</li>
+                                    <li>• Performance marketing fills the gap with immediate volume while organic ramps</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
+                        <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-base">What does GEO actually change about our content?</span>
+                            <i data-lucide="chevron-down" class="h-4 w-4 text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="px-6 pb-6 border-t border-slate-100 pt-4">
+                                <ul class="text-sm text-slate-500 space-y-2 leading-relaxed">
+                                    <li>• Content is structured for AI citation, not just ranked links</li>
+                                    <li>• Claims are made verifiable with original data</li>
+                                    <li>• Brand mentions are built consistently across the web</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
+                        <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-base">Do we need a large content team to run this?</span>
+                            <i data-lucide="chevron-down" class="h-4 w-4 text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="px-6 pb-6 border-t border-slate-100 pt-4">
+                                <ul class="text-sm text-slate-500 space-y-2 leading-relaxed">
+                                    <li>• No. We build and run the system end to end</li>
+                                    <li>• Built specifically for one to five person teams</li>
+                                    <li>• You approve direction, we handle execution</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-16 text-center bg-slate-50 border border-slate-200 rounded-3xl p-10">
+                    <p class="text-slate-500 mb-4">Ready to put the same energy into outbound pipeline?</p>
+                    <a href="outbound.html" class="text-blue-600 font-bold hover:text-blue-700 transition-colors inline-flex items-center text-lg group">
+                        Explore Outbound Optimisation <i data-lucide="arrow-right" class="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    <section id="contact" class="py-32 bg-slate-900 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-5xl font-bold text-white mb-8">Ready to Scale?</h2>
+            <p class="text-slate-400 text-xl font-light mb-12">
+                Let's discuss how we can build your inbound discovery engine and turn search, AI, and paid channels into compounding qualified traffic.
+            </p>
+            <form class="max-w-md mx-auto space-y-6 text-left bg-slate-800 p-10 rounded-3xl border border-slate-700 shadow-2xl">
+                <div>
+                    <label for="email" class="block text-sm font-medium text-slate-400 mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" required class="w-full bg-slate-700 border border-slate-600 rounded-xl px-6 py-4 text-white focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all" placeholder="you@company.com">
+                </div>
+                <div>
+                    <label for="interest" class="block text-sm font-medium text-slate-400 mb-2">Area of Interest</label>
+                    <select id="interest" name="interest" class="w-full bg-slate-700 border border-slate-600 rounded-xl px-6 py-4 text-white focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all">
+                        <option value="Inbound Optimisation" selected>Inbound Optimisation</option>
+                        <option value="Outbound Optimisation">Outbound Optimisation</option>
+                        <option value="GEO">GEO</option>
+                        <option value="SEO">SEO</option>
+                        <option value="Performance Marketing">Performance Marketing</option>
+                        <option value="Lead Magnets">Lead Magnets</option>
+                        <option value="Website Chatbots">Website Chatbots</option>
+                    </select>
+                </div>
+                <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="w-full inline-flex justify-center items-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-blue-500/25 transition-all transform hover:scale-[1.02] text-lg">
+                    Book Free Consultation
+                </a>
+            </form>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-slate-900 bg-slate-950 text-center text-xs text-slate-600">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-2">
+                <span class="font-bold text-slate-400 inline-flex items-center gap-2">
+                    <svg class="h-5 w-5 shrink-0 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></svg>
+                    GROWTH LOOP
+                </span>
+                <span>&copy; 2026. All rights reserved.</span>
+            </div>
+            <div class="flex gap-6 text-slate-500">
+                <a href="#" class="hover:text-slate-400 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-slate-400 transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            document.querySelectorAll('.faq-toggle').forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const content = toggle.nextElementSibling;
+                    const icon = toggle.querySelector('i');
+                    const isOpen = content.classList.contains('faq-open');
+                    document.querySelectorAll('.faq-content').forEach(c => c.classList.remove('faq-open'));
+                    document.querySelectorAll('.faq-toggle i').forEach(ic => ic.style.transform = 'rotate(0deg)');
+                    if (!isOpen) {
+                        content.classList.add('faq-open');
+                        if (icon) icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

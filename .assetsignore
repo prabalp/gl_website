@@ -1,0 +1,5 @@
+.wrangler/
+deploy.sh
+wrangler.toml
+.git/
+.DS_Store

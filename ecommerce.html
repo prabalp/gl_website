@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Growth Infrastructure | Growth Loop</title>
+    <meta name="description" content="Growth Loop builds predictable ecommerce growth infrastructure — AI SEO, automated campaigns, retention systems, and revenue analytics engineered for sustainable scaling beyond inconsistent ad performance.">
+    <meta name="keywords" content="ecommerce growth strategy, how to scale an ecommerce brand, ecommerce SEO agency, reduce customer acquisition cost ecommerce, ecommerce retention strategy, shopify growth consulting, ecommerce ROAS improvement, ecommerce analytics dashboard, AI ecommerce marketing, ecommerce conversion optimization">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Lucide icons — required for nav dropdown chevron and mobile menu icon -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FFFFFF;
+        }
+        /* Exact glass-nav from homepage */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        /* Exact cta-button shimmer from homepage */
+        .cta-button {
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: 0.5s;
+        }
+        .cta-button:hover::after {
+            left: 100%;
+        }
+        /* Exact dropdown styles from homepage */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ffffff;
+            min-width: 260px;
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 8px;
+            z-index: 60;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+            animation: fadeIn 0.3s ease forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+            to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+        }
+        .dropdown-item {
+            display: block;
+            padding: 12px 16px;
+            color: #475569;
+            text-decoration: none;
+            transition: all 0.2s;
+            border-radius: 8px;
+        }
+        .dropdown-item:hover {
+            background: #eff6ff;
+            color: #1d4ed8;
+            padding-left: 20px;
+        }
+        .glow-card:hover {
+            box-shadow: 0 10px 30px -5px rgba(37, 99, 235, 0.06);
+            border-color: rgba(37, 99, 235, 0.2);
+        }
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease;
+        }
+        .faq-content.faq-open {
+            max-height: 600px;
+        }
+    </style>
+</head>
+<body class="text-slate-600 antialiased overflow-x-hidden bg-white">
+
+    <!-- NAV — pixel-perfect match to homepage -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex-shrink-0 cursor-pointer group no-underline">
+                    <span class="text-2xl font-bold tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors inline-flex items-center gap-2">
+                        <svg class="h-7 w-7 shrink-0 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></svg>
+                        GROWTH LOOP
+                    </span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <div class="dropdown relative group inline-block">
+                            <button class="text-sm font-medium text-slate-600 group-hover:text-blue-600 transition-colors flex items-center gap-1 py-4">
+                                Our Expertise
+                                <i data-lucide="chevron-down" class="h-4 w-4 transition-transform group-hover:rotate-180"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="inbound.html" class="dropdown-item">Inbound Optimisation</a>
+                                <a href="outbound.html" class="dropdown-item">Outbound Optimisation</a>
+                            </div>
+                        </div>
+                        <div class="dropdown relative group inline-block">
+                            <button class="text-sm font-medium text-slate-600 group-hover:text-blue-600 transition-colors flex items-center gap-1 py-4">
+                                Who We Help
+                                <i data-lucide="chevron-down" class="h-4 w-4 transition-transform group-hover:rotate-180"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="speaker.html" class="dropdown-item">Thought Leaders &amp; Speakers</a>
+                                <a href="ecommerce.html" class="dropdown-item">Ecommerce Brands</a>
+                                <a href="investors.html" class="dropdown-item">Investors</a>
+                            </div>
+                        </div>
+                        <a href="index.html#about" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About Us</a>
+                        <a href="index.html#approach" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Approach</a>
+                        <a href="https://calendly.com/prabal-panda-growthloopconsulting" target="_blank" class="cta-button bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-blue-500/20">
+                            Partner With Us
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden bg-white border-b border-slate-200" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <div class="border-t border-slate-200 my-2 pt-2">
+                    <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Our Expertise</p>
+                    <a href="inbound.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Inbound Optimisation</a>
+                    <a href="outbound.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Outbound Optimisation</a>
+                </div>
+                <div class="border-t border-slate-200 my-2 pt-2">
+                    <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Who We Help</p>
+                    <a href="speaker.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Thought Leaders &amp; Speakers</a>
+                    <a href="ecommerce.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Ecommerce Brands</a>
+                    <a href="investors.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Investors</a>
+                </div>
+                <a href="index.html#about" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="index.html#approach" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Approach</a>
+                <a href="https://calendly.com/prabal-panda-growthloopconsulting" target="_blank" class="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium mt-4 text-center">Partner With Us</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="relative pt-32 pb-24 md:pt-48 md:pb-40 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] pointer-events-none opacity-30 mix-blend-screen">
+            <div class="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-indigo-600/40 blur-[120px]"></div>
+            <div class="absolute top-[10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-violet-600/30 blur-[100px]"></div>
+        </div>
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#1f293710_1px,transparent_1px),linear-gradient(to_bottom,#1f293710_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+
+        <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-8 leading-[1.15]">
+                Build Predictable <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Ecommerce Growth Infrastructure</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto mb-10 leading-relaxed">
+                Scale your brand beyond inconsistent ad performance and fragmented tracking. We install advanced customer acquisition mechanics, algorithmic optimizations, and automated retention systems designed for systemic capital efficiency.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="w-full sm:w-auto px-8 py-4 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-md shadow-blue-500/10 hover:shadow-blue-500/20 hover:-translate-y-0.5 transition-all duration-200 text-center">
+                    Book a Strategy Call <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                </a>
+                <a href="#capabilities" class="w-full sm:w-auto px-8 py-4 rounded-full bg-slate-50 text-slate-600 font-semibold border border-slate-200 hover:bg-slate-100 transition-all duration-200 text-center">
+                    View System Metrics
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CAPABILITIES -->
+    <section id="capabilities" class="py-24 border-t border-slate-100 bg-slate-50/50 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-sm font-bold uppercase tracking-wider text-blue-600 block mb-2">Engineered Modules</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Enterprise Scale Architecture</h2>
+                <p class="text-slate-500 mt-2">Integrated operations configured to eliminate baseline operational dependency and stabilize margins.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-6 rounded-2xl bg-white border border-slate-200/60 shadow-sm glow-card transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-magnifying-glass-chart text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">AI SEO</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Algorithmic collection targeting, semantic layout indexing, and search mapping architectures built to seize persistent commercial traffic volume.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white border border-slate-200/60 shadow-sm glow-card transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-table-columns text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Dashboarding</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Unified cross-channel tracking views connecting raw operational actions directly to executive business health metrics instantly.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white border border-slate-200/60 shadow-sm glow-card transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-wand-magic-sparkles text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">AI Automated Campaigns</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Dynamic testing systems adjusting micro budgets, creative layouts, and placements based on real time margin performance variables.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white border border-slate-200/60 shadow-sm glow-card transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-bullseye text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">High Intent Traffic</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Precision target modeling setups engineered to screen out casual clicks and capture customers demonstrating imminent purchase intent.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white border border-slate-200/60 shadow-sm glow-card transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-retweet text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Retention Systems</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Algorithmic behavior parameters triggering personalized secondary offers to extend cohort lifecycles safely.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white border border-slate-200/60 shadow-sm glow-card transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-chart-pie text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Revenue Analytics</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Granular calculation engines filtering true net margins back from core baseline attribution and blended ad platform reporting noise.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white border border-slate-200/60 shadow-sm glow-card transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-sliders text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Conversion Optimization</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Systematic interface refinement testing cart mechanisms, asset load speeds, and friction nodes to optimize purchase pathways.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white border border-slate-200/60 shadow-sm glow-card transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-envelopes-bulk text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Lifecycle Marketing</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Contextual messaging schedules tracking active fulfillment touchpoints to maximize lifetime average value metrics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHALLENGES -->
+    <section id="challenges" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <div class="lg:col-span-1">
+                    <span class="text-sm font-bold uppercase tracking-wider text-blue-600 block mb-2">Market Reality</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 leading-tight">The Bottlenecks Limiting Growth</h2>
+                    <p class="text-slate-500 mt-4 leading-relaxed">
+                        Most brands try to balance scale on legacy ad channel paradigms. When foundational structural configuration tracking elements are unstable, scaling simply compounds existing internal inefficiencies.
+                    </p>
+                </div>
+                <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="p-6 rounded-xl bg-slate-50 border border-slate-200/80">
+                        <h4 class="text-base font-bold text-slate-900 mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-arrow-trend-up text-rose-500"></i> Rising Customer Acquisition Cost
+                        </h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Platform competition and shifting privacy changes trigger steep customer acquisition cost updates, rapidly reducing gross margins.</p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-slate-50 border border-slate-200/80">
+                        <h4 class="text-base font-bold text-slate-900 mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-triangle-exclamation text-rose-500"></i> Inconsistent ROAS Trackers
+                        </h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Ad spend swings erratically as single tracking pixel performance data deteriorates, making structural asset investments difficult to forecast.</p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-slate-50 border border-slate-200/80">
+                        <h4 class="text-base font-bold text-slate-900 mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-link-slash text-rose-500"></i> Poor Data Attribution Modality
+                        </h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Fragmented analytics and platform conflicts show contradictory data points, leading to misallocated capital distributions.</p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-slate-50 border border-slate-200/80">
+                        <h4 class="text-base font-bold text-slate-900 mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-users-slash text-rose-500"></i> Weak Customer Retention Systems
+                        </h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Heavy reliance on initial product purchases without integrated behavioral lifecycle setups forces brands to buy back their own audience repeatedly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- APPROACH -->
+    <section id="approach" class="py-24 bg-slate-50 border-y border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="bg-white border border-slate-200 p-8 rounded-3xl shadow-sm">
+                    <h3 class="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-circle-nodes text-blue-600"></i> Integrated Infrastructure Map
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/60">
+                            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider block mb-1">Data Layer</span>
+                            <p class="text-sm font-semibold text-slate-900">Centralized Dashboarding Implementation</p>
+                            <p class="text-xs text-slate-500 mt-1">Consolidates fragmented attribution markers to secure immediate data tracking visibility across funnels.</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/60">
+                            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider block mb-1">Acquisition Layer</span>
+                            <p class="text-sm font-semibold text-slate-900">High Intent Traffic Pipelines</p>
+                            <p class="text-xs text-slate-500 mt-1">Combines AI SEO scaling mechanisms with highly controlled performance marketing deployment matrix blocks.</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/60">
+                            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider block mb-1">Automation Layer</span>
+                            <p class="text-sm font-semibold text-slate-900">AI Powered Content Workflows</p>
+                            <p class="text-xs text-slate-500 mt-1">Configures automated creative iteration logic to maximize real time cost adjustments safely.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <p class="text-blue-600 font-bold tracking-wide uppercase text-sm mb-3">
+                        Systemic Advantage
+                    </p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 tracking-tight">
+                        We Engineer Assets, Not Temporary Campaign Spike Fixes
+                    </h2>
+                    <p class="text-slate-500 mb-6 leading-relaxed">
+                        Relying on ad performance optimization loops without supporting core asset architecture elements leaves brands exposed to regular algorithm updates. Growth Loop builds reliable growth infrastructure directly into your operation.
+                    </p>
+                    <p class="text-slate-500 mb-8 leading-relaxed">
+                        By integrating data-backed campaign optimization rules, structured high intent traffic funnels, and retention infrastructure components, we help your business build a sustainable, self-reinforcing customer acquisition strategy.
+                    </p>
+                    <div class="flex items-center gap-4 border-t border-slate-200 pt-6">
+                        <div class="text-center">
+                            <span class="text-2xl font-extrabold text-slate-900 block">100%</span>
+                            <span class="text-xs text-slate-400 font-medium uppercase tracking-wider">Data Ownership</span>
+                        </div>
+                        <div class="w-px h-8 bg-slate-200"></div>
+                        <div class="text-center">
+                            <span class="text-2xl font-extrabold text-slate-900 block">Zero</span>
+                            <span class="text-xs text-slate-400 font-medium uppercase tracking-wider">Ad Platform Bias</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <span class="text-sm font-bold uppercase tracking-wider text-blue-600 block mb-2">The Setup Sequence</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Four Phases to Operational Stability</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+                <div class="relative group">
+                    <div class="absolute -top-5 left-6 text-7xl font-extrabold text-slate-100 pointer-events-none z-0">01</div>
+                    <div class="p-6 rounded-2xl bg-white border border-slate-200/80 relative z-10 hover:-translate-y-1 transition-all duration-300 shadow-sm hover:border-blue-200 hover:shadow-md">
+                        <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 font-bold mb-4">I</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Audit Phase</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">We extract historical performance parameters, tracking leaks, attribution discrepancies, and cohort behavior realities to isolate structural bottlenecks.</p>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="absolute -top-5 left-6 text-7xl font-extrabold text-slate-100 pointer-events-none z-0">02</div>
+                    <div class="p-6 rounded-2xl bg-white border border-slate-200/80 relative z-10 hover:-translate-y-1 transition-all duration-300 shadow-sm hover:border-blue-200 hover:shadow-md">
+                        <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 font-bold mb-4">II</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Infrastructure Setup</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">We build custom dashboarding modules, configure direct server side attribution tracking, and align clean analytics data layers.</p>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="absolute -top-5 left-6 text-7xl font-extrabold text-slate-100 pointer-events-none z-0">03</div>
+                    <div class="p-6 rounded-2xl bg-white border border-slate-200/80 relative z-10 hover:-translate-y-1 transition-all duration-300 shadow-sm hover:border-blue-200 hover:shadow-md">
+                        <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 font-bold mb-4">III</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">AI Campaign Systems</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">We launch automated search clustering routines alongside AI automated campaigns to capture high intent organic and paid customer volume variants.</p>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="absolute -top-5 left-6 text-7xl font-extrabold text-slate-100 pointer-events-none z-0">04</div>
+                    <div class="p-6 rounded-2xl bg-white border border-slate-200/80 relative z-10 hover:-translate-y-1 transition-all duration-300 shadow-sm hover:border-blue-200 hover:shadow-md">
+                        <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 font-bold mb-4">IV</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Scaling & Optimization</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">We fine tune active behavioral retention loops and install structural conversion optimization parameters to secure sustainable margin ratios.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-24 bg-slate-50 border-t border-slate-200/60">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-sm font-bold uppercase tracking-wider text-blue-600 block mb-2">Search Insights</span>
+                <h2 class="text-3xl font-extrabold text-slate-900">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="space-y-4">
+
+                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
+                        <span class="font-bold text-sm md:text-base">What is AI SEO for ecommerce brands?</span>
+                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
+                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed">AI SEO for ecommerce brands represents a systemic evolution beyond basic manual keyword tracking and standard product meta descriptions. Our architecture leverages advanced algorithmic models to map, organize, and build semantic site structures across thousands of product categories instantly. This framework reads changing buyer search behavior trends to scale highly relevant landing pages automatically, satisfying the complex ranking parameters set by modern search engines.</p>
+                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed mt-3">By targeting transactional, high-commercial-intent queries — the searches people make when they are ready to buy rather than just browse — this infrastructure drives sustainable organic traffic directly to your storefront. This significantly lowers long-term customer acquisition costs and creates a permanent, compounding search asset that steadily decreases your brand's dependency on paid performance marketing channels. Unlike paid ads that stop the moment budgets are cut, organic search equity accumulates over time and continues generating revenue without incremental spend.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
+                        <span class="font-bold text-sm md:text-base">How does dashboarding improve ecommerce growth?</span>
+                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
+                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed">Centralized dashboarding acts as the core visibility command layer for modern ecommerce growth operations. Most scaling retail brands manage metrics across scattered tracking platforms — Meta Ads Manager, Google Analytics, Shopify reports, email platforms — resulting in distorted channel attribution, duplicate purchase counting, and unreliable blended ROAS percentages. These inconsistencies make it nearly impossible to know which channels are actually profitable.</p>
+                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed mt-3">Our custom engineering builds server-side data pipeline infrastructure that maps every marketing dollar cleanly back to true net financial outputs, bypassing browser-based pixel limitations caused by iOS privacy changes and cookie restrictions. By consolidating all channel indicators into a single clean reporting layer, your team gains immediate clarity on actual customer acquisition costs, true channel contribution weight, and real margin performance. Accurate data models enable faster, more confident budget decisions that protect overall margins from the systematic over-reporting errors built into standard ad platform dashboards.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
+                        <span class="font-bold text-sm md:text-base">What are AI automated campaigns and how do they work?</span>
+                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
+                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed">AI automated campaigns are real-time performance marketing systems engineered to optimize budgets continuously without constant manual intervention. Standard marketing campaigns rely on static rules and weekly human adjustments, which results in slow creative testing cycles, wasted ad spend during suboptimal windows, and missed scaling opportunities when top-performing creatives hit their stride.</p>
+                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed mt-3">Our integrated infrastructure applies precise algorithmic rule sets across your entire marketing mix, constantly balancing creative asset variations, audience targeting hooks, and bid levels based on actual real-time margin performance data — not lagging vanity metrics. By matching algorithmic patterns directly to buyer behavior signals, the framework automatically shifts budget toward top-performing combinations and pauses underperformers before they drain spend. This ongoing data-backed structure reduces ad creative fatigue, lowers cost per acquisition over time, and keeps your customer acquisition loops highly efficient as you scale ad spend upward.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
+                        <span class="font-bold text-sm md:text-base">How do you drive high intent ecommerce traffic that actually converts?</span>
+                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
+                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed">Driving consistent high-intent traffic requires moving away from broad, untargeted audience pools toward precision behavioral targeting models built around active purchase signals. Most ecommerce brands waste significant ad spend buying cheap, unqualified web traffic that generates impressions without conversions, inflating apparent reach while suppressing actual ROAS.</p>
+                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed mt-3">Growth Loop builds data architectures that filter specifically for shoppers showing clear, active buying signals — people searching commercial-intent keywords, engaging with competitor product pages, or exhibiting behavioral patterns consistent with near-term purchase decisions. We coordinate advanced search optimization loops alongside exact-match and shopping network advertising to position your products precisely at the moment of consumer need. This structural approach filters out casual browsing traffic and concentrates your acquisition budget purely on audiences with demonstrated purchase readiness, measurably improving conversion rates and lifting ROAS across the entire ecommerce growth engine.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
+                        <span class="font-bold text-sm md:text-base">How does Growth Loop help improve customer retention and lifetime value?</span>
+                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
+                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed">Growth Loop improves customer retention and lifetime value by installing automated behavioral tracking systems that map individual customer journeys after the initial purchase — rather than treating every buyer as a new acquisition target. Relying solely on calendar-based broadcast email campaigns leads to list fatigue, rising unsubscribe rates, and eroded sender reputation over time, all of which reduce the long-term value of your owned customer database.</p>
+                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed mt-3">Our retention infrastructure tracks exact buyer timelines, product lifecycle lengths, purchase frequency patterns, and historical interaction data to deploy personally relevant lifecycle marketing offers at precisely the right moment — automatically. This method surfaces replenishment reminders, complementary product recommendations, and win-back sequences without requiring constant manual campaign management. By encouraging repeat purchases through relevance rather than blanket discounting, we extend customer lifetime value, reduce overall customer acquisition cost exposure, and strengthen net revenue margins across your entire ecommerce operation.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="contact" class="py-24 relative overflow-hidden bg-slate-900">
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-950/30 via-transparent to-transparent pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">
+                Build Predictable Ecommerce Growth Infrastructure
+            </h2>
+            <p class="text-slate-400 max-w-xl mx-auto mb-10 text-sm md:text-base leading-relaxed">
+                Connect with our team to run a complete tracking audit and deploy performance optimization architecture for your business operations.
+            </p>
+            <div class="flex justify-center">
+                <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold text-base shadow-lg shadow-blue-500/20 hover:-translate-y-0.5 transition-all duration-200">
+                    <i class="fa-solid fa-calendar-days mr-2.5 text-sm"></i> Book a Strategy Call
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER — matches homepage -->
+    <footer class="py-12 border-t border-slate-900 bg-slate-950 text-center text-xs text-slate-600">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-2">
+                <span class="font-bold text-slate-400 inline-flex items-center gap-2">
+                    <svg class="h-5 w-5 shrink-0 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></svg>
+                    GROWTH LOOP
+                </span>
+                <span>&copy; 2026. All rights reserved.</span>
+            </div>
+            <div class="flex gap-6 text-slate-500">
+                <a href="#" class="hover:text-slate-400 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-slate-400 transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            const toggles = document.querySelectorAll('.faq-toggle');
+            toggles.forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const content = toggle.nextElementSibling;
+                    const icon = toggle.querySelector('i');
+                    const isOpen = content.classList.contains('faq-open');
+
+                    document.querySelectorAll('.faq-content').forEach(c => c.classList.remove('faq-open'));
+                    document.querySelectorAll('.faq-toggle i').forEach(ic => ic.style.transform = 'rotate(0deg)');
+
+                    if (!isOpen) {
+                        content.classList.add('faq-open');
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
