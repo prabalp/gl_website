@@ -6,6 +6,10 @@
     <title>Growth Loop | Inbound & Outbound Growth Consulting</title>
     <meta name="description" content="Growth Loop is the growth operating platform for thought leaders and ecommerce brands. We run inbound optimisation (GEO, SEO, performance marketing, lead magnets, chatbots) and outbound optimisation (cold email, LinkedIn, cold calling, CRM campaigns) as one connected system to grow your traffic.">
     
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -155,6 +159,24 @@
         
         .cta-button:hover::after {
             left: 100%;
+        }
+
+        /* Home hero — pixel forest background */
+        .home-hero {
+            min-height: 88vh;
+            background-color: #f8fafc; /* slate-50 fallback */
+            background-image:
+                linear-gradient(
+                    to bottom,
+                    rgba(248, 250, 252, 0.92) 0%,
+                    rgba(248, 250, 252, 0.6) 40%,
+                    rgba(248, 250, 252, 0.15) 70%,
+                    transparent 100%
+                ),
+                url('growthloop-pixel-forest-bold.png');
+            background-size: 100% 100%, cover;
+            background-position: center, bottom center;
+            background-repeat: no-repeat, no-repeat;
         }
 
         /* Dropdown Styles */
@@ -376,7 +398,7 @@
     <main id="view-home" class="page-view active">
         
         <!-- Hero Section -->
-        <section class="relative pt-32 pb-24 md:pt-48 md:pb-40 overflow-hidden">
+        <section class="home-hero relative pt-32 pb-40 md:pt-48 md:pb-56 lg:pb-64 overflow-hidden">
             <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] pointer-events-none opacity-30 mix-blend-screen">
                 <div class="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-indigo-600/40 blur-[120px]"></div>
                 <div class="absolute top-[10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-violet-600/30 blur-[100px]"></div>
