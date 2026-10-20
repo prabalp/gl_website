@@ -1,5 +1,6 @@
 .wrangler/
 deploy.sh
 wrangler.toml
+worker.js
 .git/
 .DS_Store

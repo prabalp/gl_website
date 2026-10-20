@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Growth Loop Cycle | Growth Loop</title>
+    <meta name="description" content="How Growth Loop partners with you to engineer sustainable success through discovery, strategic architecture, agile execution, and continuous optimization.">
+    <link rel="canonical" href="https://mygrowthloop.com/approach">
+    <meta property="og:site_name" content="Growth Loop">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mygrowthloop.com/approach">
+    <meta property="og:title" content="The Growth Loop Cycle | Growth Loop">
+    <meta property="og:description" content="How Growth Loop partners with you to engineer sustainable success through discovery, strategic architecture, agile execution, and continuous optimization.">
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #FFFFFF; }
+        .glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+        .cta-button { position: relative; overflow: hidden; }
+        .cta-button::after { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent); transition: 0.5s; }
+        .cta-button:hover::after { left: 100%; }
+        .dropdown-content { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: #ffffff; min-width: 260px; box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.1); border: 1px solid #e2e8f0; border-radius: 12px; padding: 8px; z-index: 60; opacity: 0; transition: opacity 0.3s ease; }
+        .dropdown:hover .dropdown-content { display: block; opacity: 1; animation: fadeIn 0.3s ease forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateX(-50%) translateY(10px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
+        .dropdown-item { display: block; padding: 12px 16px; color: #475569; text-decoration: none; transition: all 0.2s; border-radius: 8px; }
+        .dropdown-item:hover { background: #eff6ff; color: #1d4ed8; padding-left: 20px; }
+    </style>
+</head>
+<body class="text-slate-600 antialiased overflow-x-hidden bg-white">
+
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex-shrink-0 cursor-pointer group no-underline">
+                    <span class="text-2xl font-bold tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors inline-flex items-center gap-2">
+                        <svg class="h-7 w-7 shrink-0 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></svg>
+                        GROWTH LOOP
+                    </span>
+                </a>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <div class="dropdown relative group inline-block">
+                            <button class="text-sm font-medium text-slate-600 group-hover:text-blue-600 transition-colors flex items-center gap-1 py-4">
+                                Our Expertise
+                                <i data-lucide="chevron-down" class="h-4 w-4 transition-transform group-hover:rotate-180"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="inbound.html" class="dropdown-item">Inbound Optimisation</a>
+                                <a href="outbound.html" class="dropdown-item">Outbound Optimisation</a>
+                                <a href="geo.html" class="dropdown-item">Generative Engine Optimisation</a>
+                            </div>
+                        </div>
+                        <div class="dropdown relative group inline-block">
+                            <button class="text-sm font-medium text-slate-600 group-hover:text-blue-600 transition-colors flex items-center gap-1 py-4">
+                                Who We Help
+                                <i data-lucide="chevron-down" class="h-4 w-4 transition-transform group-hover:rotate-180"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="speaker.html" class="dropdown-item">Thought Leaders &amp; Speakers</a>
+                                <a href="ecommerce.html" class="dropdown-item">Ecommerce Brands</a>
+                                <a href="b2b.html" class="dropdown-item">B2B Teams</a>
+                                <a href="investors.html" class="dropdown-item">Investors</a>
+                            </div>
+                        </div>
+                        <a href="index.html#about" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About Us</a>
+                        <a href="approach.html" class="text-sm font-medium text-blue-600 transition-colors">Approach</a>
+                        <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="cta-button bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-blue-500/20">Partner With Us</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="hidden md:hidden bg-white border-b border-slate-200" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <div class="border-t border-slate-200 my-2 pt-2">
+                    <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Our Expertise</p>
+                    <a href="inbound.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Inbound Optimisation</a>
+                    <a href="outbound.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Outbound Optimisation</a>
+                    <a href="geo.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Generative Engine Optimisation</a>
+                </div>
+                <div class="border-t border-slate-200 my-2 pt-2">
+                    <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Who We Help</p>
+                    <a href="speaker.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Thought Leaders &amp; Speakers</a>
+                    <a href="ecommerce.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Ecommerce Brands</a>
+                    <a href="b2b.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">B2B Teams</a>
+                    <a href="investors.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Investors</a>
+                </div>
+                <a href="index.html#about" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="approach.html" class="text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Approach</a>
+                <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium mt-4 text-center">Partner With Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-32 pb-24 md:pt-48 md:pb-40 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] pointer-events-none opacity-30 mix-blend-screen">
+            <div class="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-indigo-600/40 blur-[120px]"></div>
+            <div class="absolute top-[10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-violet-600/30 blur-[100px]"></div>
+        </div>
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#1f293710_1px,transparent_1px),linear-gradient(to_bottom,#1f293710_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+        <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-8 leading-[1.15]">The Growth Loop Cycle</h1>
+            <p class="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto mb-10 leading-relaxed">
+                We don't do "one-and-done" projects. We build systems that get smarter over time. Here is how we partner with you to engineer sustainable success.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-32 bg-slate-50 relative">
+        <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-slate-200 z-0"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-32">
+            <div class="grid md:grid-cols-2 gap-24 items-center">
+                <div class="text-right md:pr-12">
+                    <h2 class="text-6xl font-bold text-slate-200 mb-4">01</h2>
+                    <h3 class="text-4xl font-bold text-slate-900 mb-6">Discovery & Diagnostic</h3>
+                    <p class="text-slate-600 text-lg leading-relaxed">
+                        We begin by immersing ourselves in your business. We audit your data, interview your stakeholders, and map your current processes. We identify not just the symptoms, but the root causes of your stagnation.
+                    </p>
+                </div>
+                <div class="md:pl-12">
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-md">
+                        <ul class="space-y-4 text-base text-slate-600">
+                            <li>• Stakeholder Interviews</li>
+                            <li>• Tech Stack Audit</li>
+                            <li>• Competitor Analysis</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-24 items-center">
+                <div class="md:pr-12 md:text-right md:order-1 order-2">
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-md">
+                        <ul class="space-y-4 text-base text-slate-600">
+                            <li>• 3-Year Strategic Roadmap</li>
+                            <li>• Financial Modeling</li>
+                            <li>• KPI Definition</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="md:pl-12 md:order-2 order-1">
+                    <h2 class="text-6xl font-bold text-slate-200 mb-4">02</h2>
+                    <h3 class="text-4xl font-bold text-slate-900 mb-6">Strategic Architecture</h3>
+                    <p class="text-slate-600 text-lg leading-relaxed">
+                        We design the future state. This isn't just a slide deck; it's a blueprint. We define the specific OKRs, resource requirements, and technological changes needed to achieve your growth targets.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-24 items-center">
+                <div class="text-right md:pr-12">
+                    <h2 class="text-6xl font-bold text-slate-200 mb-4">03</h2>
+                    <h3 class="text-4xl font-bold text-slate-900 mb-6">Agile Execution</h3>
+                    <p class="text-slate-600 text-lg leading-relaxed">
+                        We work alongside your teams to implement the changes. Whether it's standing up a new data warehouse, training your sales team, or launching a new product line, we are in the trenches with you.
+                    </p>
+                </div>
+                <div class="md:pl-12">
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-md">
+                        <ul class="space-y-4 text-base text-slate-600">
+                            <li>• Sprint-based Implementation</li>
+                            <li>• Change Management</li>
+                            <li>• Regular Progress Reviews</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-24 items-center">
+                <div class="md:pr-12 md:text-right md:order-1 order-2">
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-md">
+                        <ul class="space-y-4 text-base text-slate-600">
+                            <li>• Automated Dashboards</li>
+                            <li>• Quarterly Business Reviews</li>
+                            <li>• New Opportunity Identification</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="md:pl-12 md:order-2 order-1">
+                    <h2 class="text-6xl font-bold text-slate-200 mb-4">04</h2>
+                    <h3 class="text-4xl font-bold text-slate-900 mb-6">Optimization Loop</h3>
+                    <p class="text-slate-600 text-lg leading-relaxed">
+                        Launch is just the beginning. We use the data generated from the execution phase to refine the strategy. This feedback loop ensures that your business becomes more efficient and more profitable with every cycle.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 bg-slate-900 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-5xl font-bold text-white mb-8">Ready to Scale?</h2>
+            <p class="text-slate-400 text-xl font-light mb-12">
+                Let's discuss how the Growth Loop methodology can turn insight into compounding growth for your business.
+            </p>
+            <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="inline-flex justify-center items-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg shadow-blue-500/25 transition-all transform hover:scale-[1.02] text-lg">
+                Book Free Consultation
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-slate-900 bg-slate-950 text-center text-xs text-slate-600">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-2">
+                <span class="font-bold text-slate-400 inline-flex items-center gap-2">
+                    <svg class="h-5 w-5 shrink-0 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></svg>
+                    GROWTH LOOP
+                </span>
+                <span>&copy; 2026. All rights reserved.</span>
+            </div>
+            <div class="flex gap-6 text-slate-500">
+                <a href="#" class="hover:text-slate-400 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-slate-400 transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>

@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Growth Loop | Inbound & Outbound Growth Consulting</title>
     <meta name="description" content="Growth Loop is the growth operating platform for thought leaders and ecommerce brands. We run inbound optimisation (GEO, SEO, performance marketing, lead magnets, chatbots) and outbound optimisation (cold email, LinkedIn, cold calling, CRM campaigns) as one connected system to grow your traffic.">
+    <link rel="canonical" href="https://mygrowthloop.com/">
+    <meta property="og:site_name" content="Growth Loop">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mygrowthloop.com/">
+    <meta property="og:title" content="Growth Loop | Inbound & Outbound Growth Consulting">
+    <meta property="og:description" content="Growth Loop is the growth operating platform for thought leaders and ecommerce brands. We run inbound optimisation (GEO, SEO, performance marketing, lead magnets, chatbots) and outbound optimisation (cold email, LinkedIn, cold calling, CRM campaigns) as one connected system to grow your traffic.">
     
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -120,7 +127,6 @@
             border: 1px solid #e2e8f0;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
             transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-            cursor: pointer;
         }
 
         .service-card:hover {
@@ -161,7 +167,7 @@
             left: 100%;
         }
 
-        /* Home hero — pixel forest background */
+        /* Home hero, pixel forest background */
         .home-hero {
             min-height: 88vh;
             background-color: #f8fafc; /* slate-50 fallback */
@@ -330,6 +336,7 @@
                             <div class="dropdown-content">
                                 <a href="inbound.html" class="dropdown-item">Inbound Optimisation</a>
                                 <a href="outbound.html" class="dropdown-item">Outbound Optimisation</a>
+                                <a href="geo.html" class="dropdown-item">Generative Engine Optimisation</a>
                             </div>
                         </div>
 
@@ -340,9 +347,10 @@
                                 <i data-lucide="chevron-down" class="h-4 w-4 transition-transform group-hover:rotate-180"></i>
                             </button>
                             <div class="dropdown-content">
-                                <a href="#speaker" onclick="event.preventDefault(); navigateTo('speaker')" class="dropdown-item">Thought Leaders & Speakers</a>
-                                <a href="#ecom" onclick="event.preventDefault(); navigateTo('ecom')" class="dropdown-item">Ecommerce Brands</a>
-                                <a href="#investors" onclick="event.preventDefault(); navigateTo('investors')" class="dropdown-item">Investors</a>
+                                <a href="speaker.html" class="dropdown-item">Thought Leaders & Speakers</a>
+                                <a href="ecommerce.html" class="dropdown-item">Ecommerce Brands</a>
+                                <a href="b2b.html" class="dropdown-item">B2B Teams</a>
+                                <a href="investors.html" class="dropdown-item">Investors</a>
                             </div>
                         </div>
 
@@ -375,12 +383,14 @@
                     <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Our Expertise</p>
                     <a href="inbound.html" class="text-slate-600 hover:text-primary block px-3 py-2 rounded-md text-sm pl-6">Inbound Optimisation</a>
                     <a href="outbound.html" class="text-slate-600 hover:text-primary block px-3 py-2 rounded-md text-sm pl-6">Outbound Optimisation</a>
+                    <a href="geo.html" class="text-slate-600 hover:text-primary block px-3 py-2 rounded-md text-sm pl-6">Generative Engine Optimisation</a>
                 </div>
                 <div class="border-t border-slate-200 my-2 pt-2">
                     <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Who We Help</p>
-                    <a href="#speaker" onclick="event.preventDefault(); navigateTo('speaker'); toggleMobileMenu()" class="text-slate-600 hover:text-primary block px-3 py-2 rounded-md text-sm pl-6">Thought Leaders & Speakers</a>
-                    <a href="#ecom" onclick="event.preventDefault(); navigateTo('ecom'); toggleMobileMenu()" class="text-slate-600 hover:text-primary block px-3 py-2 rounded-md text-sm pl-6">Ecommerce Brands</a>
-                    <a href="#investors" onclick="event.preventDefault(); navigateTo('investors'); toggleMobileMenu()" class="text-slate-600 hover:text-primary block px-3 py-2 rounded-md text-sm pl-6">Investors</a>
+                    <a href="speaker.html" class="text-slate-600 hover:text-primary block px-3 py-2 rounded-md text-sm pl-6">Thought Leaders & Speakers</a>
+                    <a href="ecommerce.html" class="text-slate-600 hover:text-primary block px-3 py-2 rounded-md text-sm pl-6">Ecommerce Brands</a>
+                    <a href="b2b.html" class="text-slate-600 hover:text-primary block px-3 py-2 rounded-md text-sm pl-6">B2B Teams</a>
+                    <a href="investors.html" class="text-slate-600 hover:text-primary block px-3 py-2 rounded-md text-sm pl-6">Investors</a>
                 </div>
                 <a href="#about" onclick="event.preventDefault(); navigateTo('about-us'); toggleMobileMenu()" class="text-slate-600 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">About Us</a>
                 <a href="#approach" onclick="navigateToSection('home', 'approach'); toggleMobileMenu()" class="text-slate-600 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Approach</a>
@@ -435,15 +445,26 @@
                     <h2 class="text-primary font-bold tracking-wide uppercase text-sm mb-4">Our Expertise</h2>
                     <p class="text-4xl md:text-6xl font-bold text-slate-900 mb-6">Core Services Designed for Scale</p>
                     <p class="max-w-2xl mx-auto text-slate-500 text-xl font-light">
-                        We provide a holistic approach to business transformation, focusing on the five pillars of modern operational success.
+                        We provide a holistic approach to business transformation, focusing on the six pillars of modern operational success.
                     </p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10">
-                    <!-- Service 1: Growth -->
-                    <div onclick="navigateTo('strategic-growth')" class="service-card p-10 rounded-3xl relative group overflow-hidden lg:col-span-2">
+                    <!-- Service 1: AI Visibility -->
+                    <div class="service-card p-10 rounded-3xl relative group overflow-hidden lg:col-span-2">
                         <div class="relative z-10">
                             <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-8 text-primary group-hover:bg-primary group-hover:text-white transition-colors animate-float">
+                                <i data-lucide="scan-eye" class="h-7 w-7"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-900 mb-4">AI Visibility</h3>
+                            <p class="text-slate-500 leading-relaxed text-base">Get found where buyers search today. We optimize your brand for AI-driven discovery across search engines, answer engines, and generative platforms.</p>
+                        </div>
+                    </div>
+
+                    <!-- Service 2: Growth -->
+                    <div class="service-card p-10 rounded-3xl relative group overflow-hidden lg:col-span-2">
+                        <div class="relative z-10">
+                            <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-8 text-primary group-hover:bg-primary group-hover:text-white transition-colors animate-float-delayed">
                                 <i data-lucide="trending-up" class="h-7 w-7"></i>
                             </div>
                             <h3 class="text-2xl font-bold text-slate-900 mb-4">Strategic Growth</h3>
@@ -451,32 +472,10 @@
                         </div>
                     </div>
 
-                    <!-- Service 2: GTM -->
-                    <div onclick="navigateTo('gtm')" class="service-card p-10 rounded-3xl relative group overflow-hidden lg:col-span-2">
-                        <div class="relative z-10">
-                            <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-8 text-primary group-hover:bg-primary group-hover:text-white transition-colors animate-float-delayed">
-                                <i data-lucide="rocket" class="h-7 w-7"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold text-slate-900 mb-4">Go-To-Market</h3>
-                            <p class="text-slate-500 leading-relaxed text-base">Launch with confidence. From positioning to sales enablement, we orchestrate GTM plans that penetrate markets effectively.</p>
-                        </div>
-                    </div>
-
-                    <!-- Service 3: Operational Efficiency -->
-                    <div onclick="navigateTo('operational-efficiency')" class="service-card p-10 rounded-3xl relative group overflow-hidden lg:col-span-2">
+                    <!-- Service 3: Data Decisions -->
+                    <div class="service-card p-10 rounded-3xl relative group overflow-hidden lg:col-span-2">
                         <div class="relative z-10">
                             <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-8 text-primary group-hover:bg-primary group-hover:text-white transition-colors animate-float">
-                                <i data-lucide="settings-2" class="h-7 w-7"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold text-slate-900 mb-4">Operational Efficiency</h3>
-                            <p class="text-slate-500 leading-relaxed text-base">Streamline processes and eliminate bottlenecks. Maximize output with optimal resource utilization.</p>
-                        </div>
-                    </div>
-
-                    <!-- Service 4: Data Decisions -->
-                    <div onclick="navigateTo('data-decisions')" class="service-card p-10 rounded-3xl relative group overflow-hidden lg:col-span-3">
-                        <div class="relative z-10">
-                            <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-8 text-primary group-hover:bg-primary group-hover:text-white transition-colors animate-float-delayed">
                                 <i data-lucide="bar-chart-3" class="h-7 w-7"></i>
                             </div>
                             <h3 class="text-2xl font-bold text-slate-900 mb-4">Data Decisions</h3>
@@ -484,10 +483,32 @@
                         </div>
                     </div>
 
-                    <!-- Service 5: Product Enrichment -->
-                    <div onclick="navigateTo('product-enrichment')" class="service-card p-10 rounded-3xl relative group overflow-hidden lg:col-span-3">
+                    <!-- Service 4: Operational Efficiency -->
+                    <div class="service-card p-10 rounded-3xl relative group overflow-hidden lg:col-span-2">
+                        <div class="relative z-10">
+                            <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-8 text-primary group-hover:bg-primary group-hover:text-white transition-colors animate-float-delayed">
+                                <i data-lucide="settings-2" class="h-7 w-7"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-900 mb-4">Operational Efficiency</h3>
+                            <p class="text-slate-500 leading-relaxed text-base">Streamline processes and eliminate bottlenecks. Maximize output with optimal resource utilization.</p>
+                        </div>
+                    </div>
+
+                    <!-- Service 5: GTM -->
+                    <div class="service-card p-10 rounded-3xl relative group overflow-hidden lg:col-span-2">
                         <div class="relative z-10">
                             <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-8 text-primary group-hover:bg-primary group-hover:text-white transition-colors animate-float">
+                                <i data-lucide="rocket" class="h-7 w-7"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-900 mb-4">Go-To-Market</h3>
+                            <p class="text-slate-500 leading-relaxed text-base">Launch with confidence. From positioning to sales enablement, we orchestrate GTM plans that penetrate markets effectively.</p>
+                        </div>
+                    </div>
+
+                    <!-- Service 6: Product Enrichment -->
+                    <div class="service-card p-10 rounded-3xl relative group overflow-hidden lg:col-span-2">
+                        <div class="relative z-10">
+                            <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-8 text-primary group-hover:bg-primary group-hover:text-white transition-colors animate-float-delayed">
                                 <i data-lucide="layers" class="h-7 w-7"></i>
                             </div>
                             <h3 class="text-2xl font-bold text-slate-900 mb-4">Product Enrichment</h3>
@@ -501,18 +522,22 @@
         <!-- Stats / Trust Section -->
         <section class="py-24 border-y border-slate-100 bg-slate-50">
             <div class="w-full px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-center">
                     <div class="stat-item">
-                        <div class="text-5xl font-bold text-slate-900 mb-4 counter animate-pulse-slow" data-target="150">0</div>
-                        <div class="text-sm text-slate-500 uppercase tracking-widest font-bold">Growth Strategies Delivered</div>
+                        <div class="text-5xl font-bold text-slate-900 mb-4 counter animate-pulse-slow" data-target="32">0</div>
+                        <div class="text-sm text-slate-500 uppercase tracking-widest font-bold">Client Engagements Completed</div>
                     </div>
                     <div class="stat-item">
-                        <div class="text-5xl font-bold text-slate-900 mb-4 counter animate-pulse-slow" style="animation-delay: 0.5s;" data-target="30">0</div>
-                        <div class="text-sm text-slate-500 uppercase tracking-widest font-bold">Product Launches Optimized</div>
+                        <div class="text-5xl font-bold text-slate-900 mb-4 counter animate-pulse-slow" style="animation-delay: 0.5s;" data-target="18">0</div>
+                        <div class="text-sm text-slate-500 uppercase tracking-widest font-bold">Growth Systems Built</div>
                     </div>
                     <div class="stat-item">
-                        <div class="text-5xl font-bold text-slate-900 mb-4 counter animate-pulse-slow" style="animation-delay: 1s;" data-target="200">0</div>
-                        <div class="text-sm text-slate-500 uppercase tracking-widest font-bold">Data Frameworks Built</div>
+                        <div class="text-5xl font-bold text-slate-900 mb-4 counter animate-pulse-slow" style="animation-delay: 1s;" data-target="24">0</div>
+                        <div class="text-sm text-slate-500 uppercase tracking-widest font-bold">Analytics Frameworks Deployed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="text-5xl font-bold text-slate-900 mb-4 counter animate-pulse-slow" style="animation-delay: 1.5s;" data-target="28" data-suffix="%">0</div>
+                        <div class="text-sm text-slate-500 uppercase tracking-widest font-bold">Average Revenue Uplift</div>
                     </div>
                 </div>
             </div>
@@ -525,7 +550,7 @@
                     <div class="order-2 lg:order-1 opacity-0 translate-x-[-30px]" id="approach-text">
                         <h2 class="text-4xl md:text-6xl font-bold text-slate-900 mb-8">The Growth Loop Approach</h2>
                         <p class="text-xl text-slate-500 mb-10 leading-relaxed font-light">
-                            We believe that growth isn't linear—it's a loop. Insight feeds strategy, strategy fuels execution, and data from execution refines the insight. Our methodology creates a self-reinforcing cycle of improvement.
+                            We believe that growth isn't linear, it's a loop. Insight feeds strategy, strategy fuels execution, and data from execution refines the insight. Our methodology creates a self-reinforcing cycle of improvement.
                         </p>
                         <ul class="space-y-6 mb-12">
                             <li class="flex items-start">
@@ -541,9 +566,9 @@
                                 <span class="text-slate-600 text-lg">Continuous optimization loops</span>
                             </li>
                         </ul>
-                        <button onclick="navigateTo('approach-detail')" class="text-primary font-bold hover:text-primary-dark transition-colors inline-flex items-center text-lg group">
+                        <a href="approach.html" class="text-primary font-bold hover:text-primary-dark transition-colors inline-flex items-center text-lg group">
                             Read Our Full Methodology <i data-lucide="arrow-right" class="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"></i>
-                        </button>
+                        </a>
                     </div>
                     
                     <!-- Abstract Graphic Representation -->
@@ -558,13 +583,20 @@
                                 <div class="w-full bg-blue-400 rounded-t h-[70%] shimmer-effect" style="animation-delay: 0.6s"></div>
                                 <div class="w-full bg-primary rounded-t h-[90%] shadow-lg shadow-blue-500/30 shimmer-effect" style="animation-delay: 0.8s"></div>
                             </div>
-                            <div class="space-y-4">
-                                <div class="h-3 w-3/4 bg-slate-100 rounded shimmer-effect"></div>
-                                <div class="h-3 w-1/2 bg-slate-100 rounded shimmer-effect"></div>
+                            <div class="space-y-3">
+                                <p class="text-sm text-slate-600 leading-relaxed">
+                                    <span class="font-semibold text-slate-800">+28%</span> average revenue uplift within the first 6 months
+                                </p>
+                                <p class="text-sm text-slate-600 leading-relaxed">
+                                    <span class="font-semibold text-slate-800">3.2×</span> qualified pipeline growth after one full loop
+                                </p>
+                                <p class="text-sm text-slate-600 leading-relaxed">
+                                    <span class="font-semibold text-slate-800">+45%</span> traffic increase through AI visibility
+                                </p>
                             </div>
                             <div class="mt-8 flex justify-between items-center border-t border-slate-100 pt-6">
-                                <span class="text-sm text-slate-400 uppercase tracking-widest font-bold">Efficiency Metric</span>
-                                <span class="text-lg text-green-600 font-mono font-bold animate-pulse-slow">Significant Increase</span>
+                                <span class="text-sm text-slate-400 uppercase tracking-widest font-bold">Avg. Revenue Uplift</span>
+                                <span class="text-lg text-green-600 font-mono font-bold animate-pulse-slow">+28%</span>
                             </div>
                         </div>
                     </div>
@@ -637,107 +669,6 @@
 
     </main>
 
-
-    <main id="view-approach-detail" class="page-view">
-        <section class="relative pt-32 pb-24 md:pt-48 md:pb-40 overflow-hidden">
-            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] pointer-events-none opacity-30 mix-blend-screen">
-                <div class="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-indigo-600/40 blur-[120px]"></div>
-                <div class="absolute top-[10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-violet-600/30 blur-[100px]"></div>
-            </div>
-            <div class="absolute inset-0 bg-[linear-gradient(to_right,#1f293710_1px,transparent_1px),linear-gradient(to_bottom,#1f293710_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
-            <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
-            <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-8 leading-[1.15]">The Growth Loop Cycle</h1>
-            <p class="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto mb-10 leading-relaxed">
-                We don't do "one-and-done" projects. We build systems that get smarter over time. Here is how we partner with you to engineer sustainable success.
-            </p>
-            </div>
-        </section>
-        
-        <section class="py-32 bg-slate-50 relative">
-             <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-slate-200 z-0"></div>
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-32">
-                <!-- Phase 1 -->
-                <div class="grid md:grid-cols-2 gap-24 items-center">
-                    <div class="text-right md:pr-12">
-                        <h2 class="text-6xl font-bold text-slate-200 mb-4">01</h2>
-                        <h3 class="text-4xl font-bold text-slate-900 mb-6">Discovery & Diagnostic</h3>
-                        <p class="text-slate-600 text-lg leading-relaxed">
-                            We begin by immersing ourselves in your business. We audit your data, interview your stakeholders, and map your current processes. We identify not just the symptoms, but the root causes of your stagnation.
-                        </p>
-                    </div>
-                    <div class="md:pl-12">
-                        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-md">
-                            <ul class="space-y-4 text-base text-slate-600">
-                                <li>• Stakeholder Interviews</li>
-                                <li>• Tech Stack Audit</li>
-                                <li>• Competitor Analysis</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Phase 2 -->
-                <div class="grid md:grid-cols-2 gap-24 items-center">
-                    <div class="md:pr-12 md:text-right md:order-1 order-2">
-                         <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-md">
-                            <ul class="space-y-4 text-base text-slate-600">
-                                <li>• 3-Year Strategic Roadmap</li>
-                                <li>• Financial Modeling</li>
-                                <li>• KPI Definition</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="md:pl-12 md:order-2 order-1">
-                        <h2 class="text-6xl font-bold text-slate-200 mb-4">02</h2>
-                        <h3 class="text-4xl font-bold text-slate-900 mb-6">Strategic Architecture</h3>
-                        <p class="text-slate-600 text-lg leading-relaxed">
-                            We design the future state. This isn't just a slide deck; it's a blueprint. We define the specific OKRs, resource requirements, and technological changes needed to achieve your growth targets.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Phase 3 -->
-                <div class="grid md:grid-cols-2 gap-24 items-center">
-                    <div class="text-right md:pr-12">
-                        <h2 class="text-6xl font-bold text-slate-200 mb-4">03</h2>
-                        <h3 class="text-4xl font-bold text-slate-900 mb-6">Agile Execution</h3>
-                        <p class="text-slate-600 text-lg leading-relaxed">
-                            We work alongside your teams to implement the changes. Whether it's standing up a new data warehouse, training your sales team, or launching a new product line, we are in the trenches with you.
-                        </p>
-                    </div>
-                    <div class="md:pl-12">
-                         <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-md">
-                            <ul class="space-y-4 text-base text-slate-600">
-                                <li>• Sprint-based Implementation</li>
-                                <li>• Change Management</li>
-                                <li>• Regular Progress Reviews</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Phase 4 -->
-                <div class="grid md:grid-cols-2 gap-24 items-center">
-                    <div class="md:pr-12 md:text-right md:order-1 order-2">
-                         <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-md">
-                            <ul class="space-y-4 text-base text-slate-600">
-                                <li>• Automated Dashboards</li>
-                                <li>• Quarterly Business Reviews</li>
-                                <li>• New Opportunity Identification</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="md:pl-12 md:order-2 order-1">
-                        <h2 class="text-6xl font-bold text-slate-200 mb-4">04</h2>
-                        <h3 class="text-4xl font-bold text-slate-900 mb-6">Optimization Loop</h3>
-                        <p class="text-slate-600 text-lg leading-relaxed">
-                            Launch is just the beginning. We use the data generated from the execution phase to refine the strategy. This feedback loop ensures that your business becomes more efficient and more profitable with every cycle.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
 
     <!-- VIEW: ABOUT US -->
     <main id="view-about-us" class="page-view">
@@ -1630,7 +1561,7 @@
 <div class="p-6 rounded-2xl bg-white border border-slate-200 relative z-10 hover:-translate-y-1 hover:border-blue-200 hover:shadow-md transition-all duration-300 shadow-sm">
 <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 font-bold mb-4">I</div>
 <h3 class="text-base font-bold text-slate-900 mb-2">Thesis Mapping</h3>
-<p class="text-xs text-slate-500 leading-relaxed">We codify your investment mandate, target size, sector focus, stage preference, and deal structure, into system-level filtering rules.</p>
+<p class="text-xs text-slate-500 leading-relaxed">We codify your investment mandate (target size, sector focus, stage preference, and deal structure) into system-level filtering rules.</p>
 </div>
 </div>
 <div class="relative group">
@@ -1711,7 +1642,7 @@
 <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
 <div class="px-6 pb-6 border-t border-slate-100 pt-4">
 <p class="text-xs md:text-sm text-slate-500 leading-relaxed">Speed is a competitive advantage in early-stage deal sourcing. Even when a fund identifies a strong target ahead of the market, delays in initial outreach caused by manual research, CRM data entry, or partner availability, can allow competing funds to establish the first relationship. First mover in founder conversations correlates directly with better deal terms and allocation priority.</p>
-<p class="text-xs md:text-sm text-slate-500 leading-relaxed mt-3">Our automated outreach infrastructure triggers personalised, contextually relevant messages to qualified targets the moment growth signals cross your scoring threshold. These are not generic templated emails, they reference specific company milestones, product developments, or market events that make the outreach feel researched and credible. All interactions are logged directly into your deal pipeline, with responses routed to the appropriate partner or analyst for follow-up. This compresses the time from signal detection to first founder conversation from weeks to days.</p>
+<p class="text-xs md:text-sm text-slate-500 leading-relaxed mt-3">Our automated outreach infrastructure triggers personalised, contextually relevant messages to qualified targets the moment growth signals cross your scoring threshold. These are not generic templated emails. They reference specific company milestones, product developments, or market events that make the outreach feel researched and credible. All interactions are logged directly into your deal pipeline, with responses routed to the appropriate partner or analyst for follow-up. This compresses the time from signal detection to first founder conversation from weeks to days.</p>
 </div>
 </div>
 </div>
@@ -1804,7 +1735,6 @@
         function navigateToSection(viewId, sectionId) {
             const viewMap = {
                 'home': 'view-home',
-                'approach-detail': 'view-approach-detail',
                 'about-us': 'view-about-us',
                 'ecom': 'view-ecom',
                 'speaker': 'view-speaker',
@@ -1849,8 +1779,16 @@
                 window.location.href = 'outbound.html';
                 return;
             }
+            if (hash === 'geo') {
+                window.location.href = 'geo.html';
+                return;
+            }
+            if (hash === 'approach-detail') {
+                window.location.href = 'approach.html';
+                return;
+            }
             if(hash) {
-                if (['approach-detail', 'about-us', 'ecom', 'speaker', 'investors'].includes(hash)) {
+                if (['about-us', 'ecom', 'speaker', 'investors'].includes(hash)) {
                     navigateTo(hash);
                 } else {
                     navigateToSection('home', hash);
@@ -1939,13 +1877,18 @@
             const counters = document.querySelectorAll('.counter');
             counters.forEach(counter => {
                 const target = +counter.getAttribute('data-target');
-                gsap.to(counter, {
-                    innerHTML: target + "+",
+                const suffix = counter.getAttribute('data-suffix') || '+';
+                const counterState = { value: 0 };
+                gsap.to(counterState, {
+                    value: target,
                     duration: 2,
-                    snap: { innerHTML: 1 },
+                    snap: { value: 1 },
                     scrollTrigger: {
                         trigger: counter,
                         start: "top 85%",
+                    },
+                    onUpdate: () => {
+                        counter.textContent = Math.round(counterState.value) + suffix;
                     }
                 });
             });
@@ -2018,8 +1961,16 @@
                 window.location.href = 'outbound.html';
                 return;
             }
+            if (hash === 'geo') {
+                window.location.href = 'geo.html';
+                return;
+            }
+            if (hash === 'approach-detail') {
+                window.location.href = 'approach.html';
+                return;
+            }
             if(hash) {
-                if (['approach-detail', 'about-us', 'ecom', 'speaker', 'investors'].includes(hash)) {
+                if (['about-us', 'ecom', 'speaker', 'investors'].includes(hash)) {
                     navigateTo(hash);
                 } else {
                     navigateToSection('home', hash);

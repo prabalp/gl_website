@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generative Engine Optimisation (GEO) | Growth Loop</title>
+    <meta name="description" content="Growth Loop helps brands get cited in ChatGPT, Perplexity, Gemini, and Google AI answers. Our GEO framework covers citation baselines, technical access, content structure, entity authority, and ongoing monitoring.">
+    <link rel="canonical" href="https://mygrowthloop.com/geo">
+    <meta property="og:site_name" content="Growth Loop">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mygrowthloop.com/geo">
+    <meta property="og:title" content="Generative Engine Optimisation (GEO) | Growth Loop">
+    <meta property="og:description" content="Growth Loop helps brands get cited in ChatGPT, Perplexity, Gemini, and Google AI answers. Our GEO framework covers citation baselines, technical access, content structure, entity authority, and ongoing monitoring.">
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #FFFFFF; }
+        .glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+        .cta-button { position: relative; overflow: hidden; }
+        .cta-button::after { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent); transition: 0.5s; }
+        .cta-button:hover::after { left: 100%; }
+        .dropdown-content { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: #ffffff; min-width: 300px; box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.1); border: 1px solid #e2e8f0; border-radius: 12px; padding: 8px; z-index: 60; opacity: 0; transition: opacity 0.3s ease; }
+        .dropdown:hover .dropdown-content { display: block; opacity: 1; animation: fadeIn 0.3s ease forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateX(-50%) translateY(10px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
+        .dropdown-item { display: block; padding: 12px 16px; color: #475569; text-decoration: none; transition: all 0.2s; border-radius: 8px; }
+        .dropdown-item:hover { background: #eff6ff; color: #1d4ed8; padding-left: 20px; }
+        .faq-content { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+        .faq-content.faq-open { max-height: 800px; }
+        .graphic-container { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 40px; box-shadow: 0 10px 30px -10px rgba(0,0,0,0.08); min-height: 280px; position: relative; overflow: hidden; }
+        .shimmer-effect { position: relative; overflow: hidden; }
+        .shimmer-effect::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent); transform: translateX(-100%); animation: shimmer 3s infinite; }
+        @keyframes shimmer { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+    </style>
+</head>
+<body class="text-slate-600 antialiased overflow-x-hidden bg-white">
+
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex-shrink-0 cursor-pointer group no-underline">
+                    <span class="text-2xl font-bold tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors inline-flex items-center gap-2">
+                        <svg class="h-7 w-7 shrink-0 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></svg>
+                        GROWTH LOOP
+                    </span>
+                </a>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <div class="dropdown relative group inline-block">
+                            <button class="text-sm font-medium text-blue-600 transition-colors flex items-center gap-1 py-4">
+                                Our Expertise
+                                <i data-lucide="chevron-down" class="h-4 w-4 transition-transform group-hover:rotate-180"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="inbound.html" class="dropdown-item">Inbound Optimisation</a>
+                                <a href="outbound.html" class="dropdown-item">Outbound Optimisation</a>
+                                <a href="geo.html" class="dropdown-item">Generative Engine Optimisation</a>
+                            </div>
+                        </div>
+                        <div class="dropdown relative group inline-block">
+                            <button class="text-sm font-medium text-slate-600 group-hover:text-blue-600 transition-colors flex items-center gap-1 py-4">
+                                Who We Help
+                                <i data-lucide="chevron-down" class="h-4 w-4 transition-transform group-hover:rotate-180"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="speaker.html" class="dropdown-item">Thought Leaders &amp; Speakers</a>
+                                <a href="ecommerce.html" class="dropdown-item">Ecommerce Brands</a>
+                                <a href="b2b.html" class="dropdown-item">B2B Teams</a>
+                                <a href="investors.html" class="dropdown-item">Investors</a>
+                            </div>
+                        </div>
+                        <a href="index.html#about" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About Us</a>
+                        <a href="approach.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Approach</a>
+                        <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="cta-button bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-blue-500/20">Partner With Us</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="hidden md:hidden bg-white border-b border-slate-200" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <div class="border-t border-slate-200 my-2 pt-2">
+                    <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Our Expertise</p>
+                    <a href="inbound.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Inbound Optimisation</a>
+                    <a href="outbound.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Outbound Optimisation</a>
+                    <a href="geo.html" class="text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Generative Engine Optimisation</a>
+                </div>
+                <div class="border-t border-slate-200 my-2 pt-2">
+                    <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Who We Help</p>
+                    <a href="speaker.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Thought Leaders &amp; Speakers</a>
+                    <a href="ecommerce.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Ecommerce Brands</a>
+                    <a href="b2b.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">B2B Teams</a>
+                    <a href="investors.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Investors</a>
+                </div>
+                <a href="index.html#about" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="approach.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Approach</a>
+                <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium mt-4 text-center">Partner With Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-32 pb-24 md:pt-48 md:pb-40 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] pointer-events-none opacity-30 mix-blend-screen">
+            <div class="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-indigo-600/40 blur-[120px]"></div>
+            <div class="absolute top-[10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-violet-600/30 blur-[100px]"></div>
+        </div>
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#1f293710_1px,transparent_1px),linear-gradient(to_bottom,#1f293710_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+        <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-8 leading-[1.15]">
+                Get Cited in <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">AI-Generated Answers</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto mb-10 leading-relaxed">
+                Generative Engine Optimisation (GEO) is how your brand earns a footnote in ChatGPT, Perplexity, Gemini, and Google AI responses, not just a ranking on page one.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="group inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 font-semibold text-white transition-all duration-200 bg-blue-600 rounded-full hover:bg-blue-700 shadow-lg shadow-blue-500/20">
+                    Book a GEO Audit <i data-lucide="arrow-right" class="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <a href="#framework" class="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 font-semibold text-slate-600 transition-all duration-200 bg-white border border-slate-200 rounded-full hover:bg-slate-50 hover:text-slate-900 hover:border-slate-300">
+                    See Our Framework
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white border-t border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="text-sm font-bold uppercase tracking-wider text-blue-600 block mb-3">What GEO Is</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">SEO Gets You Found. GEO Gets You Quoted.</h2>
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        Traditional SEO optimises for ten blue links. GEO optimises for the single answer a user reads without clicking. When someone asks an AI assistant which platform, vendor, or approach to trust, you want your brand in that response, with a citation back to you.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed">
+                        Research on generative answer engines shows that pages adding clear statistics, expert quotes, and authoritative citations can see materially higher inclusion in AI responses, even when they do not rank first in classic search. GEO is how you capture that gap.
+                    </p>
+                </div>
+                <div class="graphic-container flex flex-col justify-center">
+                    <div class="w-full space-y-4 px-2">
+                        <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 text-left">
+                            <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">User prompt</p>
+                            <p class="text-sm text-slate-700">"What is the best way to improve B2B pipeline in 2026?"</p>
+                        </div>
+                        <div class="bg-white border border-blue-200 rounded-xl p-5 shadow-lg shadow-blue-500/10 animate-float text-left">
+                            <p class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-3">AI answer excerpt</p>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-3">Leading firms combine inbound discovery with structured outbound and AI visibility…</p>
+                            <p class="text-xs text-blue-600 font-semibold">yourbrand.com, cited source</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white border-t border-slate-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Why leadership should care</h2>
+            <p class="text-slate-500 max-w-2xl mx-auto mb-10">Buyers now research in AI before they ever hit your site. If you are absent from those answers, competitors define the category for you.</p>
+            <div class="grid sm:grid-cols-3 gap-6 text-left">
+                <div class="bg-white p-6 rounded-2xl border border-slate-200">
+                    <i data-lucide="message-square-quote" class="h-6 w-6 text-blue-600 mb-3"></i>
+                    <h3 class="font-bold text-slate-900 mb-2">Citation is the new click</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Being named in an AI answer builds trust before a prospect visits your homepage.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200">
+                    <i data-lucide="shield-check" class="h-6 w-6 text-blue-600 mb-3"></i>
+                    <h3 class="font-bold text-slate-900 mb-2">Category ownership</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Brands cited early in a category tend to stay referenced as models refresh their source pools.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200">
+                    <i data-lucide="layers" class="h-6 w-6 text-blue-600 mb-3"></i>
+                    <h3 class="font-bold text-slate-900 mb-2">Compounds with SEO</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">GEO sits on top of solid technical SEO, it does not replace crawlability, speed, or structure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="framework" class="py-32 bg-slate-50 relative border-t border-slate-100">
+        <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-slate-200 z-0"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-24">
+                <span class="text-sm font-bold uppercase tracking-wider text-blue-600 block mb-2">Our Methodology</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">The Five-Phase GEO Framework</h2>
+                <p class="text-slate-500 text-lg font-light max-w-2xl mx-auto">A repeatable process from baseline audit to ongoing citation monitoring. Each phase builds on the last.</p>
+            </div>
+
+            <div class="space-y-32">
+                <div class="grid md:grid-cols-2 gap-24 items-center">
+                    <div class="text-right md:pr-12">
+                        <h2 class="text-6xl font-bold text-slate-200 mb-4">01</h2>
+                        <h3 class="text-4xl font-bold text-slate-900 mb-6">Baselining &amp; Discovery</h3>
+                        <p class="text-slate-600 text-lg leading-relaxed">
+                            You cannot improve what you have not measured. We map the questions your buyers ask AI and record where you appear today across ChatGPT, Gemini, Perplexity, and Google AI Overviews.
+                        </p>
+                    </div>
+                    <div class="md:pl-12">
+                        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-md">
+                            <ul class="space-y-4 text-base text-slate-600">
+                                <li>• Prompt universe mapping</li>
+                                <li>• Cross-platform citation scan</li>
+                                <li>• AI share of voice scoring</li>
+                                <li>• Competitive gap analysis</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-24 items-center">
+                    <div class="md:pr-12 md:text-right md:order-1 order-2">
+                        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-md">
+                            <ul class="space-y-4 text-base text-slate-600">
+                                <li>• Crawlability &amp; Core Web Vitals</li>
+                                <li>• AI crawler access (robots.txt)</li>
+                                <li>• llms.txt manifest (optional)</li>
+                                <li>• Structured data / schema markup</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:pl-12 md:order-2 order-1">
+                        <h2 class="text-6xl font-bold text-slate-200 mb-4">02</h2>
+                        <h3 class="text-4xl font-bold text-slate-900 mb-6">Technical Foundation</h3>
+                        <p class="text-slate-600 text-lg leading-relaxed">
+                            AI systems can only cite content they can crawl, parse, and trust. We fix the infrastructure first so your pages are accessible to GPTBot, ClaudeBot, PerplexityBot, and Google-Extended.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-24 items-center">
+                    <div class="text-right md:pr-12">
+                        <h2 class="text-6xl font-bold text-slate-200 mb-4">03</h2>
+                        <h3 class="text-4xl font-bold text-slate-900 mb-6">Content Structuring</h3>
+                        <p class="text-slate-600 text-lg leading-relaxed">
+                            AI models quote extractable passages, not marketing fluff. We reshape pages so the right facts are easy to lift, with clear headings, direct answers, and the statistics models prefer to cite.
+                        </p>
+                    </div>
+                    <div class="md:pl-12">
+                        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-md">
+                            <ul class="space-y-4 text-base text-slate-600">
+                                <li>• Extractable answer blocks</li>
+                                <li>• Semantic H2/H3 formatting</li>
+                                <li>• Factual density &amp; expert quotes</li>
+                                <li>• Comparison &amp; FAQ pages</li>
+                                <li>• On-page credibility signals</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-24 items-center">
+                    <div class="md:pr-12 md:text-right md:order-1 order-2">
+                        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-md">
+                            <ul class="space-y-4 text-base text-slate-600">
+                                <li>• Entity profile alignment</li>
+                                <li>• Earned media &amp; digital PR</li>
+                                <li>• Review &amp; reputation monitoring</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:pl-12 md:order-2 order-1">
+                        <h2 class="text-6xl font-bold text-slate-200 mb-4">04</h2>
+                        <h3 class="text-4xl font-bold text-slate-900 mb-6">Entity &amp; Off-Site Authority</h3>
+                        <p class="text-slate-600 text-lg leading-relaxed">
+                            Models trust brands that exist beyond their own website. We strengthen how the web describes you through consistent entity profiles, third-party mentions, and reputation signals AI already references.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-24 items-center">
+                    <div class="text-right md:pr-12">
+                        <h2 class="text-6xl font-bold text-slate-200 mb-4">05</h2>
+                        <h3 class="text-4xl font-bold text-slate-900 mb-6">Testing, Monitoring &amp; Iteration</h3>
+                        <p class="text-slate-600 text-lg leading-relaxed">
+                            GEO is not a one-time project. Models update, competitors publish, and prompt behaviour shifts. We re-run citation scans, test content formats, and keep your team aligned on a recurring cadence.
+                        </p>
+                    </div>
+                    <div class="md:pl-12">
+                        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-md">
+                            <ul class="space-y-4 text-base text-slate-600">
+                                <li>• Monthly prompt panel re-runs</li>
+                                <li>• Content format A/B testing</li>
+                                <li>• 3–6 month refresh cadence</li>
+                                <li>• Cross-functional alignment</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="text-sm font-bold uppercase tracking-wider text-blue-600 block mb-2">Surfaces We Optimise For</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Where Your Buyers Ask AI Today</h2>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                <div class="bg-white border border-slate-200 rounded-2xl p-5 text-center">
+                    <p class="font-bold text-slate-900 mb-1">ChatGPT</p>
+                    <p class="text-xs text-slate-500 leading-relaxed">Search-grounded answers via OAI-SearchBot</p>
+                </div>
+                <div class="bg-white border border-slate-200 rounded-2xl p-5 text-center">
+                    <p class="font-bold text-slate-900 mb-1">Perplexity</p>
+                    <p class="text-xs text-slate-500 leading-relaxed">Cited answers on every query; fastest to measure</p>
+                </div>
+                <div class="bg-white border border-slate-200 rounded-2xl p-5 text-center">
+                    <p class="font-bold text-slate-900 mb-1">Google Gemini</p>
+                    <p class="text-xs text-slate-500 leading-relaxed">Integrated AI across Search and Workspace</p>
+                </div>
+                <div class="bg-white border border-slate-200 rounded-2xl p-5 text-center">
+                    <p class="font-bold text-slate-900 mb-1">AI Overviews</p>
+                    <p class="text-xs text-slate-500 leading-relaxed">Google's generative results above organic links</p>
+                </div>
+                <div class="bg-white border border-slate-200 rounded-2xl p-5 text-center sm:col-span-2 lg:col-span-1">
+                    <p class="font-bold text-slate-900 mb-1">Claude</p>
+                    <p class="text-xs text-slate-500 leading-relaxed">Enterprise research and evaluation queries</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-24 bg-white border-t border-slate-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Common Questions</h2>
+            </div>
+            <div class="space-y-4">
+                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
+                        <span class="font-semibold text-base">How is GEO different from SEO?</span>
+                        <i data-lucide="chevron-down" class="h-4 w-4 text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
+                            <p class="text-sm text-slate-500 leading-relaxed">SEO targets rankings in traditional search results. GEO targets inclusion and citation inside AI-generated answers. You still need fast pages, clean URLs, and indexability, but GEO adds answer blocks, schema markup, entity authority, and prompt-level monitoring on top.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
+                        <span class="font-semibold text-base">How long until we see citation improvements?</span>
+                        <i data-lucide="chevron-down" class="h-4 w-4 text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
+                            <p class="text-sm text-slate-500 leading-relaxed">Perplexity often reflects structural fixes within days because it cites transparently on every answer. ChatGPT search-grounded responses typically shift over two to six weeks as crawlers re-index updated pages. Off-site authority work can take longer but has durable impact across all engines.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
+                        <span class="font-semibold text-base">Do we need llms.txt?</span>
+                        <i data-lucide="chevron-down" class="h-4 w-4 text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
+                            <p class="text-sm text-slate-500 leading-relaxed">It is optional. llms.txt is a lightweight convention that points AI tools to your most important pages. It takes minutes to publish and may help as adoption grows, but it is not a replacement for robots.txt crawler rules, structured data, or high-quality crawlable content, which are the levers that matter most today.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
+                        <span class="font-semibold text-base">How does GEO fit with your other services?</span>
+                        <i data-lucide="chevron-down" class="h-4 w-4 text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
+                            <p class="text-sm text-slate-500 leading-relaxed">GEO is the AI visibility layer inside our inbound system. It works alongside SEO, content, and performance marketing so discovery compounds. Outbound then converts the demand GEO and inbound create. Most clients run GEO as part of a connected growth programme, not in isolation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center bg-slate-50 border border-slate-200 rounded-3xl p-10">
+                <p class="text-slate-500 mb-4">GEO is one pillar of a full inbound engine.</p>
+                <a href="inbound.html" class="text-blue-600 font-bold hover:text-blue-700 transition-colors inline-flex items-center text-lg group">
+                    Explore Inbound Optimisation <i data-lucide="arrow-right" class="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-32 bg-slate-900 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-5xl font-bold text-white mb-8">Ready to Scale?</h2>
+            <p class="text-slate-400 text-xl font-light mb-12">
+                Book a GEO audit. We will baseline your AI citation share, identify gaps, and outline a practical roadmap for the engines your buyers use most.
+            </p>
+            <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="inline-flex justify-center items-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg shadow-blue-500/25 transition-all transform hover:scale-[1.02] text-lg">
+                Book Free Consultation
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-slate-900 bg-slate-950 text-center text-xs text-slate-600">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-2">
+                <span class="font-bold text-slate-400 inline-flex items-center gap-2">
+                    <svg class="h-5 w-5 shrink-0 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></svg>
+                    GROWTH LOOP
+                </span>
+                <span>&copy; 2026. All rights reserved.</span>
+            </div>
+            <div class="flex gap-6 text-slate-500">
+                <a href="#" class="hover:text-slate-400 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-slate-400 transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            document.querySelectorAll('.faq-toggle').forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const content = toggle.nextElementSibling;
+                    const icon = toggle.querySelector('i');
+                    const isOpen = content.classList.contains('faq-open');
+                    document.querySelectorAll('.faq-content').forEach(c => c.classList.remove('faq-open'));
+                    document.querySelectorAll('.faq-toggle i').forEach(ic => ic.style.transform = 'rotate(0deg)');
+                    if (!isOpen) {
+                        content.classList.add('faq-open');
+                        if (icon) icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

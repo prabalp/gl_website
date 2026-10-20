@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B2B Growth Infrastructure | Growth Loop</title>
+    <meta name="description" content="Growth Loop helps B2B teams build predictable pipeline by connecting inbound discovery, outbound outreach, AI visibility, and CRM-ready demand systems.">
+    <link rel="canonical" href="https://mygrowthloop.com/b2b">
+    <meta property="og:site_name" content="Growth Loop">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mygrowthloop.com/b2b">
+    <meta property="og:title" content="B2B Growth Infrastructure | Growth Loop">
+    <meta property="og:description" content="Growth Loop helps B2B teams build predictable pipeline by connecting inbound discovery, outbound outreach, AI visibility, and CRM-ready demand systems.">
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #FFFFFF; }
+        .glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+        .cta-button { position: relative; overflow: hidden; }
+        .cta-button::after { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent); transition: 0.5s; }
+        .cta-button:hover::after { left: 100%; }
+        .dropdown-content { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: #ffffff; min-width: 260px; box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.1); border: 1px solid #e2e8f0; border-radius: 12px; padding: 8px; z-index: 60; opacity: 0; transition: opacity 0.3s ease; }
+        .dropdown:hover .dropdown-content { display: block; opacity: 1; animation: fadeIn 0.3s ease forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateX(-50%) translateY(10px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
+        .dropdown-item { display: block; padding: 12px 16px; color: #475569; text-decoration: none; transition: all 0.2s; border-radius: 8px; }
+        .dropdown-item:hover { background: #eff6ff; color: #1d4ed8; padding-left: 20px; }
+        .faq-content { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+        .faq-content.faq-open { max-height: 600px; }
+        .glow-card { transition: box-shadow 0.3s ease, border-color 0.3s ease; }
+        .glow-card:hover { box-shadow: 0 10px 30px -5px rgba(37, 99, 235, 0.06); border-color: rgba(37, 99, 235, 0.2); }
+    </style>
+</head>
+<body class="text-slate-600 antialiased overflow-x-hidden bg-white">
+
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex-shrink-0 cursor-pointer group no-underline">
+                    <span class="text-2xl font-bold tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors inline-flex items-center gap-2">
+                        <svg class="h-7 w-7 shrink-0 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></svg>
+                        GROWTH LOOP
+                    </span>
+                </a>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <div class="dropdown relative group inline-block">
+                            <button class="text-sm font-medium text-slate-600 group-hover:text-blue-600 transition-colors flex items-center gap-1 py-4">
+                                Our Expertise
+                                <i data-lucide="chevron-down" class="h-4 w-4 transition-transform group-hover:rotate-180"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="inbound.html" class="dropdown-item">Inbound Optimisation</a>
+                                <a href="outbound.html" class="dropdown-item">Outbound Optimisation</a>
+                                <a href="geo.html" class="dropdown-item">Generative Engine Optimisation</a>
+                            </div>
+                        </div>
+                        <div class="dropdown relative group inline-block">
+                            <button class="text-sm font-medium text-slate-600 group-hover:text-blue-600 transition-colors flex items-center gap-1 py-4">
+                                Who We Help
+                                <i data-lucide="chevron-down" class="h-4 w-4 transition-transform group-hover:rotate-180"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="speaker.html" class="dropdown-item">Thought Leaders &amp; Speakers</a>
+                                <a href="ecommerce.html" class="dropdown-item">Ecommerce Brands</a>
+                                <a href="b2b.html" class="dropdown-item">B2B Teams</a>
+                                <a href="investors.html" class="dropdown-item">Investors</a>
+                            </div>
+                        </div>
+                        <a href="index.html#about" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About Us</a>
+                        <a href="approach.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Approach</a>
+                        <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="cta-button bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-blue-500/20">Partner With Us</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="hidden md:hidden bg-white border-b border-slate-200" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <div class="border-t border-slate-200 my-2 pt-2">
+                    <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Our Expertise</p>
+                    <a href="inbound.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Inbound Optimisation</a>
+                    <a href="outbound.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Outbound Optimisation</a>
+                    <a href="geo.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Generative Engine Optimisation</a>
+                </div>
+                <div class="border-t border-slate-200 my-2 pt-2">
+                    <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Who We Help</p>
+                    <a href="speaker.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Thought Leaders &amp; Speakers</a>
+                    <a href="ecommerce.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Ecommerce Brands</a>
+                    <a href="b2b.html" class="text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">B2B Teams</a>
+                    <a href="investors.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Investors</a>
+                </div>
+                <a href="index.html#about" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="approach.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Approach</a>
+                <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium mt-4 text-center">Partner With Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-32 pb-24 md:pt-48 md:pb-40 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] pointer-events-none opacity-30 mix-blend-screen">
+            <div class="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-indigo-600/40 blur-[120px]"></div>
+            <div class="absolute top-[10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-violet-600/30 blur-[100px]"></div>
+        </div>
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#1f293710_1px,transparent_1px),linear-gradient(to_bottom,#1f293710_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+        <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-8 leading-[1.15]">
+                Build Predictable <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">B2B Pipeline</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto mb-10 leading-relaxed">
+                We help B2B teams connect inbound discovery, outbound outreach, and AI visibility into one demand system so sales talks to the right accounts at the right time.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="w-full sm:w-auto px-8 py-4 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-lg shadow-blue-500/20 hover:-translate-y-0.5 transition-all duration-200 text-center">
+                    Book a Strategy Call <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                </a>
+                <a href="#teams" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-slate-600 font-semibold border border-slate-200 hover:bg-slate-50 transition-all duration-200 text-center">
+                    See Who We Help
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="teams" class="py-24 border-t border-slate-100 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-sm font-bold uppercase tracking-wider text-blue-600 block mb-2">Who We Work With</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Built for B2B Revenue Teams</h2>
+                <p class="text-slate-500 mt-2">Whether you sell software, services, or complex solutions, the goal is the same: qualified conversations that close.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-blue-200 hover:shadow-md transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600">
+                        <i class="fa-solid fa-cloud text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">SaaS Companies</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Turn product expertise into demand from accounts that match your ICP and buying stage.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-blue-200 hover:shadow-md transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600">
+                        <i class="fa-solid fa-briefcase text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Professional Services</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Replace feast-or-famine referrals with a repeatable way to reach decision-makers who need your expertise now.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-blue-200 hover:shadow-md transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600">
+                        <i class="fa-solid fa-building text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Enterprise Sales Teams</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Give reps better-targeted accounts, clearer messaging, and warmer entry points into long-cycle deals.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-blue-200 hover:shadow-md transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600">
+                        <i class="fa-solid fa-chart-line text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">RevOps-Led Orgs</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Unify marketing and sales data so pipeline reporting reflects reality, not platform guesswork.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="challenges" class="py-24 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <span class="text-sm font-bold uppercase tracking-wider text-blue-600 block mb-2">Common Bottlenecks</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mb-4">Why B2B Pipeline Stalls</h2>
+                <p class="text-slate-500 text-sm md:text-base">Most teams have activity. Few have a system that consistently produces qualified opportunities.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
+                    <h4 class="text-sm font-bold text-slate-900 mb-2">Weak ICP Focus</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">Broad targeting fills the CRM with names that never convert, wasting SDR and AE time.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
+                    <h4 class="text-sm font-bold text-slate-900 mb-2">Siloed Channels</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">Inbound, outbound, and paid run separately, so no one sees the full path from first touch to closed deal.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
+                    <h4 class="text-sm font-bold text-slate-900 mb-2">Long Sales Cycles</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">Without the right signals and follow-up, promising accounts go quiet before a second meeting happens.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
+                    <h4 class="text-sm font-bold text-slate-900 mb-2">Invisible in AI Search</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">Buyers now research in ChatGPT and answer engines. If you are not cited there, you are not in the shortlist.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="systems" class="py-24 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-sm font-bold uppercase tracking-wider text-blue-600 block mb-2">What We Build</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">One Connected Demand System</h2>
+                <p class="text-slate-500 mt-2">Inbound brings them in. Outbound starts the conversation. AI visibility keeps you discoverable. Data ties it together.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm glow-card">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600">
+                        <i class="fa-solid fa-magnet text-xl"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Inbound Discovery</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">SEO, content, lead magnets, and landing pages that attract buyers already searching for your category.</p>
+                    <a href="inbound.html" class="inline-block mt-4 text-xs font-semibold text-blue-600 hover:text-blue-700">Explore inbound →</a>
+                </div>
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm glow-card">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600">
+                        <i class="fa-solid fa-paper-plane text-xl"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Outbound Outreach</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">Cold email, LinkedIn, and CRM campaigns that reach decision-makers with messaging that feels researched, not bulk.</p>
+                    <a href="outbound.html" class="inline-block mt-4 text-xs font-semibold text-blue-600 hover:text-blue-700">Explore outbound →</a>
+                </div>
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm glow-card">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600">
+                        <i class="fa-solid fa-eye text-xl"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">AI Visibility</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">GEO and authority content so your brand shows up when buyers ask AI tools who to trust in your space.</p>
+                    <a href="geo.html" class="inline-block mt-4 text-xs font-semibold text-blue-600 hover:text-blue-700">Explore GEO →</a>
+                </div>
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm glow-card">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600">
+                        <i class="fa-solid fa-filter text-xl"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Pipeline Intelligence</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">Clear reporting on which accounts, messages, and channels produce meetings and revenue, not vanity metrics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="approach" class="py-24 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="text-sm font-bold uppercase tracking-wider text-blue-600 block mb-2">How We Work</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6">From ICP to Qualified Meetings</h2>
+                    <p class="text-slate-500 mb-6 leading-relaxed">
+                        We start with who you should sell to, then build the channels and workflows that reach those accounts consistently. No disconnected campaigns. No guessing what worked.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-6 h-6 rounded-full bg-rose-500/10 text-rose-400 flex items-center justify-center shrink-0 mt-1">
+                                <i class="fa-solid fa-xmark text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-slate-900 font-semibold">The Old Way</h4>
+                                <p class="text-sm text-slate-500">Random lists, generic outreach, and marketing numbers that never match what sales actually closes.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-6 h-6 rounded-full bg-emerald-500/10 text-emerald-500 flex items-center justify-center shrink-0 mt-1">
+                                <i class="fa-solid fa-check text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-slate-900 font-semibold">The Growth Loop Way</h4>
+                                <p class="text-sm text-slate-500">Defined ICP, connected inbound and outbound, and a pipeline your team can forecast against.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+                        <div class="text-blue-200 text-3xl font-bold mb-4">01</div>
+                        <h3 class="text-base font-bold text-slate-900 mb-2">Define the ICP</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">Clarify firmographics, triggers, and buyer roles so every channel points at the same target accounts.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+                        <div class="text-blue-200 text-3xl font-bold mb-4">02</div>
+                        <h3 class="text-base font-bold text-slate-900 mb-2">Build the Channels</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">Stand up inbound assets, outbound sequences, and AI visibility work that reinforce the same positioning.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+                        <div class="text-blue-200 text-3xl font-bold mb-4">03</div>
+                        <h3 class="text-base font-bold text-slate-900 mb-2">Activate Pipeline</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">Launch outreach and capture inbound interest into one CRM workflow sales can actually use.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+                        <div class="text-blue-200 text-3xl font-bold mb-4">04</div>
+                        <h3 class="text-base font-bold text-slate-900 mb-2">Improve What Converts</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">Review meeting quality, reply rates, and deal progression, then refine targeting and messaging monthly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-24 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-sm font-bold uppercase tracking-wider text-blue-600 block mb-2">FAQ</span>
+                <h2 class="text-3xl font-extrabold text-slate-900">Questions B2B Teams Ask</h2>
+            </div>
+            <div class="space-y-4">
+                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
+                        <span class="font-bold text-sm md:text-base">Do you work with both marketing and sales teams?</span>
+                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
+                            <p class="text-sm text-slate-500 leading-relaxed">Yes. B2B growth breaks when marketing generates leads sales will not touch, or sales runs outreach with no alignment to positioning. We design the system so both teams work from the same ICP, messaging, and pipeline definitions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
+                        <span class="font-bold text-sm md:text-base">Can you help if we already have a CRM and SDR team?</span>
+                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
+                            <p class="text-sm text-slate-500 leading-relaxed">That is often the best starting point. We are not replacing your stack. We improve targeting, messaging, channel mix, and reporting so the team you already have produces better meetings and shorter cycles.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
+                        <span class="font-bold text-sm md:text-base">How is this different from a typical lead gen agency?</span>
+                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
+                            <p class="text-sm text-slate-500 leading-relaxed">Most agencies sell leads or ad management in isolation. We build the full demand engine: discovery, outreach, AI visibility, and pipeline clarity. The goal is predictable revenue conversations, not a spreadsheet of unqualified contacts.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-32 bg-slate-900 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-5xl font-bold text-white mb-8">Ready to Scale?</h2>
+            <p class="text-slate-400 text-xl font-light mb-12">
+                Let's map your ICP, review your current pipeline gaps, and outline a B2B growth system your team can run with confidence.
+            </p>
+            <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="inline-flex justify-center items-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg shadow-blue-500/25 transition-all transform hover:scale-[1.02] text-lg">
+                Book Free Consultation
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-slate-900 bg-slate-950 text-center text-xs text-slate-600">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-2">
+                <span class="font-bold text-slate-400 inline-flex items-center gap-2">
+                    <svg class="h-5 w-5 shrink-0 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></svg>
+                    GROWTH LOOP
+                </span>
+                <span>&copy; 2026. All rights reserved.</span>
+            </div>
+            <div class="flex gap-6 text-slate-500">
+                <a href="#" class="hover:text-slate-400 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-slate-400 transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            document.querySelectorAll('.faq-toggle').forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const content = toggle.nextElementSibling;
+                    const icon = toggle.querySelector('i');
+                    const isOpen = content.classList.contains('faq-open');
+                    document.querySelectorAll('.faq-content').forEach(c => c.classList.remove('faq-open'));
+                    document.querySelectorAll('.faq-toggle i').forEach(ic => ic.style.transform = 'rotate(0deg)');
+                    if (!isOpen) {
+                        content.classList.add('faq-open');
+                        if (icon) icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
