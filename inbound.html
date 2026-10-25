@@ -47,7 +47,7 @@
     {
       "@type": "WebSite",
       "@id": "https://mygrowthloop.com/#website",
-      "name": "Inbound Optimisation",
+      "name": "Growth Loop",
       "url": "https://mygrowthloop.com/",
       "description": "Growth Loop builds inbound systems: GEO, SEO, paid media, lead magnets, and chatbots that turn search and AI into pipeline.",
       "publisher": {
@@ -79,7 +79,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #FFFFFF; }
         .glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
@@ -103,8 +103,9 @@
         .animate-float-delayed { animation: float 6s ease-in-out 3s infinite; }
         .animate-spin-slow { animation: spin 12s linear infinite; }
     </style>
+    <link rel="stylesheet" href="studio.css">
 </head>
-<body class="text-slate-600 antialiased overflow-x-hidden bg-white">
+<body class="studio text-slate-600 antialiased overflow-x-hidden bg-white">
 
     <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -126,6 +127,8 @@
                                 <a href="inbound.html" class="dropdown-item">Inbound Optimisation</a>
                                 <a href="outbound.html" class="dropdown-item">Outbound Optimisation</a>
                                 <a href="geo.html" class="dropdown-item">Generative Engine Optimisation</a>
+                                <a href="voice-agents.html" class="dropdown-item">AI Voice Agents</a>
+                                <a href="ai-infrastructure.html" class="dropdown-item">Internal AI Infrastructure</a>
                             </div>
                         </div>
                         <div class="dropdown relative group inline-block">
@@ -149,7 +152,7 @@
                                 <a href="ai-readiness-tool.html" class="dropdown-item">AI Readiness Checker</a>
                             </div>
                         </div>
-                        <a href="index.html#about" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About Us</a>
+                        <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About Us</a><a href="blog/" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Blog</a>
                         <a href="index.html#approach" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Approach</a>
                         <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="cta-button bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-blue-500/20">Partner With Us</a>
                     </div>
@@ -169,6 +172,8 @@
                     <a href="inbound.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Inbound Optimisation</a>
                     <a href="outbound.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Outbound Optimisation</a>
                     <a href="geo.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Generative Engine Optimisation</a>
+                    <a href="voice-agents.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">AI Voice Agents</a>
+                    <a href="ai-infrastructure.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Internal AI Infrastructure</a>
                 </div>
                 <div class="border-t border-slate-200 my-2 pt-2">
                     <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Who We Help</p>
@@ -181,405 +186,433 @@
                     <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Products</p>
                     <a href="ai-readiness-tool.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">AI Readiness Checker</a>
                 </div>
-                <a href="index.html#about" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="about.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About Us</a><a href="blog/" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Blog</a>
                 <a href="index.html#approach" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Approach</a>
                 <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium mt-4 text-center">Partner With Us</a>
             </div>
         </div>
     </nav>
 
-        <section class="relative pt-32 pb-24 md:pt-48 md:pb-40 overflow-hidden">
-            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] pointer-events-none opacity-30 mix-blend-screen">
-                <div class="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-indigo-600/40 blur-[120px]"></div>
-                <div class="absolute top-[10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-violet-600/30 blur-[100px]"></div>
-            </div>
-            <div class="absolute inset-0 bg-[linear-gradient(to_right,#1f293710_1px,transparent_1px),linear-gradient(to_bottom,#1f293710_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
-            <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
-            <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-8 leading-[1.15]">Make the Market Find You</h1>
-            <p class="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto mb-10 leading-relaxed">
-                We build the discovery systems that turn search engines, AI assistants, and paid channels into a steady, compounding stream of qualified traffic.
-            </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="group inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 font-semibold text-white transition-all duration-200 bg-blue-600 rounded-full hover:bg-blue-700 shadow-lg shadow-blue-500/20">
-                    Book a Growth Audit <i data-lucide="arrow-right" class="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"></i>
-                </a>
-                <a href="outbound.html" class="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 font-semibold text-slate-600 transition-all duration-200 bg-white border border-slate-200 rounded-full hover:bg-slate-50 hover:text-slate-900 focus:outline-none hover:border-slate-300">
-                    See Outbound Instead
-                </a>
-            </div>
-            </div>
-        </section>
+    <main>
 
-        <!-- Why Inbound -->
-        <section class="py-20 bg-white border-t border-slate-100">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-8">Why it matters to leadership</h2>
-                <div class="grid sm:grid-cols-3 gap-6 text-left">
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
-                        <i data-lucide="trending-up" class="h-6 w-6 text-blue-600 mb-3"></i>
-                        <p class="text-slate-600 text-sm leading-relaxed">Organic traffic compounds. Every asset you build keeps working long after paid spend stops.</p>
+        <!-- Hero -->
+        <section class="st-phero">
+            <div class="st-wrap">
+                <span class="st-label">Inbound Systems</span>
+                <h1>Make the market <span class="st-mark">find you.</span></h1>
+                <div class="st-hero-foot">
+                    <p class="st-muted">We build the discovery systems that turn search engines, AI assistants and paid channels into a steady, compounding stream of qualified traffic, then capture and route every serious visitor to your sales pipeline.</p>
+                    <div class="st-hero-ctas">
+                        <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="st-btn st-btn-ink">Book a Growth Audit <i data-lucide="arrow-right"></i></a>
+                        <a href="#pillars" class="st-btn st-btn-line">See the five pillars</a>
                     </div>
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
-                        <i data-lucide="shield-check" class="h-6 w-6 text-blue-600 mb-3"></i>
-                        <p class="text-slate-600 text-sm leading-relaxed">It builds category authority, the kind buyers trust before a sales conversation even starts.</p>
-                    </div>
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
-                        <i data-lucide="wallet" class="h-6 w-6 text-blue-600 mb-3"></i>
-                        <p class="text-slate-600 text-sm leading-relaxed">It lowers your cost per lead over time, reducing dependence on rising ad costs.</p>
-                    </div>
+                </div>
+                <div class="st-facts">
+                    <div class="st-fact"><b>5 pillars</b><span>GEO, SEO, paid, lead magnets, chatbots</span></div>
+                    <div class="st-fact"><b>4–6 weeks</b><span>Early signal from GEO and lead magnets</span></div>
+                    <div class="st-fact"><b>2–4 months</b><span>For SEO and RA reports to compound</span></div>
+                    <div class="st-fact"><b>1–5 people</b><span>The team size it's built for</span></div>
                 </div>
             </div>
         </section>
 
-        <!-- 5 PILLARS -->
-        <section class="py-24 bg-slate-50 border-t border-slate-100">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-20">
-                    <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">The Five Inbound Pillars</h2>
-                    <p class="max-w-2xl mx-auto text-slate-500 text-lg font-light">Each one is a standalone system. Together, they cover every way a buyer discovers you today.</p>
+        <nav class="st-toc" aria-label="On this page">
+            <div class="st-wrap">
+                <ul>
+                    <li><a href="#what">What it is</a></li>
+                    <li><a href="#why">Why it matters</a></li>
+                    <li><a href="#pillars">Five pillars</a></li>
+                    <li><a href="#journey">Buyer journey</a></li>
+                    <li><a href="#compare">Compared</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#deliverables">What you get</a></li>
+                    <li><a href="#fit">Who it's for</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- What it is -->
+        <section id="what" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(01) What it is</span>
+                    <h2>An engine, not a content calendar</h2>
+                    <p class="st-muted">Inbound works when discovery, capture and handoff are built as one connected system.</p>
                 </div>
-
-                <div class="space-y-24">
-                    <!-- GEO -->
-                    <div class="grid md:grid-cols-2 gap-16 items-center">
-                        <div>
-                            <div class="flex items-center mb-6">
-                                <div class="bg-blue-100 p-4 rounded-2xl mr-6 text-blue-600"><i data-lucide="sparkles" class="h-8 w-8"></i></div>
-                                <h3 class="text-3xl font-bold text-slate-900">GEO: Generative Engine Optimisation</h3>
-                            </div>
-                            <p class="text-slate-600 text-lg leading-relaxed mb-5">Getting your brand cited inside ChatGPT, Perplexity, and Gemini answers, not just Google rankings.</p>
-                            <ul class="space-y-3 text-slate-700">
-                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i> AI answer engine visibility audits</li>
-                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i> Content structured for citation, not just clicks</li>
-                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i> Third-party mention and authority building</li>
-                            </ul>
-                            <a href="geo.html" class="inline-block mt-6 text-sm font-semibold text-blue-600 hover:text-blue-700">Explore our full GEO framework →</a>
-                        </div>
-                        <div class="graphic-container">
-                            <div class="w-full space-y-4 px-4">
-                                <div class="bg-white p-5 rounded-xl border border-blue-600/20 shadow-lg shadow-blue-500/10 animate-float">
-                                    <div class="text-xs text-blue-600 font-bold uppercase tracking-wider mb-2">AI Assistant Response</div>
-                                    <div class="h-2.5 bg-slate-100 rounded w-full mb-2 shimmer-effect"></div>
-                                    <div class="h-2.5 bg-slate-100 rounded w-5/6 mb-2 shimmer-effect"></div>
-                                    <div class="h-2.5 bg-blue-100 rounded w-2/3 shimmer-effect"></div>
-                                </div>
-                                <div class="text-center text-sm text-slate-400 font-bold uppercase tracking-widest">Your Brand, Cited</div>
-                            </div>
-                        </div>
+                <div class="st-split">
+                    <div class="st-prose">
+                        <p>Most inbound efforts stall for the same reasons: content that nobody finds, traffic that leaves without a trace, and leads that sit in an inbox until they go cold. An <strong>inbound system</strong> connects every step so none of that happens.</p>
+                        <p>First, we make you discoverable wherever buyers look today: in Google results, inside the answers of AI assistants such as ChatGPT, Perplexity and Gemini, and in paid placements targeted with data from your own organic traffic.</p>
+                        <p>Then we make sure that attention turns into pipeline. Lead magnets give visitors a reason to share their details, a website chatbot answers questions and qualifies them on the spot, and every lead is handed straight to your sales team or CRM.</p>
                     </div>
-
-                    <!-- SEO -->
-                    <div class="grid md:grid-cols-2 gap-16 items-center">
-                        <div class="graphic-container order-2 md:order-1">
-                            <div class="w-full px-6 space-y-3">
-                                <div class="flex items-center justify-between p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
-                                    <span class="text-slate-500 text-sm font-bold">You</span>
-                                    <div class="h-2 w-24 bg-blue-600 rounded-full"></div>
-                                </div>
-                                <div class="flex items-center justify-between p-4 bg-white rounded-xl border border-slate-200 shadow-sm opacity-70">
-                                    <span class="text-slate-500 text-sm font-bold">Competitor A</span>
-                                    <div class="h-2 w-16 bg-slate-300 rounded-full"></div>
-                                </div>
-                                <div class="flex items-center justify-between p-4 bg-white rounded-xl border border-slate-200 shadow-sm opacity-50">
-                                    <span class="text-slate-500 text-sm font-bold">Competitor B</span>
-                                    <div class="h-2 w-10 bg-slate-300 rounded-full"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="order-1 md:order-2">
-                            <div class="flex items-center mb-6">
-                                <div class="bg-blue-100 p-4 rounded-2xl mr-6 text-blue-600"><i data-lucide="search" class="h-8 w-8"></i></div>
-                                <h3 class="text-3xl font-bold text-slate-900">SEO: Ranked Authority Reports</h3>
-                            </div>
-                            <p class="text-slate-600 text-lg leading-relaxed mb-5">Content built to be the reference point in your category, not just another blog post.</p>
-                            <ul class="space-y-3 text-slate-700">
-                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i> Ranked Authority (RA) reports for your category</li>
-                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i> Industry and competitor comparison pages</li>
-                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i> Technical SEO and on-page optimisation</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Perf Marketing -->
-                    <div class="grid md:grid-cols-2 gap-16 items-center">
-                        <div>
-                            <div class="flex items-center mb-6">
-                                <div class="bg-blue-100 p-4 rounded-2xl mr-6 text-blue-600"><i data-lucide="megaphone" class="h-8 w-8"></i></div>
-                                <h3 class="text-3xl font-bold text-slate-900">Performance Marketing</h3>
-                            </div>
-                            <p class="text-slate-600 text-lg leading-relaxed mb-5">Paid that accelerates what already works, targeted with data from your own organic traffic.</p>
-                            <ul class="space-y-3 text-slate-700">
-                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i> Meta ads strategy, creative, and management</li>
-                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i> Audience targeting built on organic signal data</li>
-                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i> Continuous creative testing and spend optimisation</li>
-                            </ul>
-                        </div>
-                        <div class="graphic-container">
-                            <div class="flex items-end justify-between h-48 gap-3 w-full px-6">
-                                <div class="w-full bg-blue-100 rounded-t h-[35%] shimmer-effect"></div>
-                                <div class="w-full bg-blue-200 rounded-t h-[55%] shimmer-effect" style="animation-delay:0.2s"></div>
-                                <div class="w-full bg-blue-300 rounded-t h-[45%] shimmer-effect" style="animation-delay:0.4s"></div>
-                                <div class="w-full bg-blue-600 rounded-t h-[85%] shadow-lg shadow-blue-500/30 shimmer-effect" style="animation-delay:0.6s"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Lead Magnets -->
-                    <div class="grid md:grid-cols-2 gap-16 items-center">
-                        <div class="graphic-container order-2 md:order-1">
-                            <div class="relative h-56 w-full flex items-center justify-center">
-                                <div class="w-40 h-40 border-2 border-dashed border-slate-300 rounded-full flex items-center justify-center animate-spin-slow">
-                                    <div class="w-24 h-24 bg-blue-50 rounded-full flex items-center justify-center">
-                                        <i data-lucide="magnet" class="h-12 w-12 text-blue-600"></i>
-                                    </div>
-                                </div>
-                                <div class="absolute top-2 right-2 bg-white px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-200 text-slate-700 shadow-lg animate-float">Free Report</div>
-                                <div class="absolute bottom-2 left-2 bg-white px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-200 text-slate-700 shadow-lg animate-float-delayed">Calculator</div>
-                            </div>
-                        </div>
-                        <div class="order-1 md:order-2">
-                            <div class="flex items-center mb-6">
-                                <div class="bg-blue-100 p-4 rounded-2xl mr-6 text-blue-600"><i data-lucide="magnet" class="h-8 w-8"></i></div>
-                                <h3 class="text-3xl font-bold text-slate-900">Lead Magnets</h3>
-                            </div>
-                            <p class="text-slate-600 text-lg leading-relaxed mb-5">Traffic without capture is wasted. We turn visitors into contacts you can nurture.</p>
-                            <ul class="space-y-3 text-slate-700">
-                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i> Research-backed guides, reports, and toolkits</li>
-                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i> Conversion-optimised capture pages</li>
-                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i> Direct integration into your nurture and CRM flows</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Chatbots -->
-                    <div class="grid md:grid-cols-2 gap-16 items-center">
-                        <div>
-                            <div class="flex items-center mb-6">
-                                <div class="bg-blue-100 p-4 rounded-2xl mr-6 text-blue-600"><i data-lucide="message-circle" class="h-8 w-8"></i></div>
-                                <h3 class="text-3xl font-bold text-slate-900">Website Chatbots</h3>
-                            </div>
-                            <p class="text-slate-600 text-lg leading-relaxed mb-5">Turning passive website traffic into an active, trackable conversation, instantly.</p>
-                            <ul class="space-y-3 text-slate-700">
-                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i> Always-on visitor qualification</li>
-                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i> Instant answers to common buyer questions</li>
-                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i> Direct handoff to your sales or CRM pipeline</li>
-                            </ul>
-                        </div>
-                        <div class="graphic-container">
-                            <div class="w-full px-6 space-y-3">
-                                <div class="bg-slate-100 p-4 rounded-xl rounded-tl-none w-4/5 shimmer-effect">
-                                    <div class="h-2 bg-slate-300 rounded w-full"></div>
-                                </div>
-                                <div class="bg-blue-600/10 p-4 rounded-xl rounded-tr-none w-4/5 ml-auto shimmer-effect" style="animation-delay:0.2s">
-                                    <div class="h-2 bg-blue-600/40 rounded w-full"></div>
-                                </div>
-                                <div class="bg-slate-100 p-4 rounded-xl rounded-tl-none w-3/5 shimmer-effect" style="animation-delay:0.4s">
-                                    <div class="h-2 bg-slate-300 rounded w-full"></div>
-                                </div>
-                            </div>
+                    <div class="st-visual">
+                        <p class="st-visual-title"><span>How the engine flows</span><span>Fig. 01</span></p>
+                        <div class="st-flow st-flow-v">
+                            <div><small>Discover</small><b>Search, AI and paid</b><p>SEO, GEO and Meta ads put you in front of buyers who are already researching.</p></div>
+                            <div><small>Engage</small><b>Content worth landing on</b><p>Ranked Authority reports and comparison pages that answer the buyer's real questions.</p></div>
+                            <div><small>Capture</small><b>Lead magnets and chatbot</b><p>Guides, reports and an always-on chatbot turn anonymous visits into contacts.</p></div>
+                            <div class="is-key"><small>Outcome</small><b>Qualified leads in your CRM</b><p>Handed to sales with context, ready to nurture or call.</p></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- HOW IT RUNS -->
-        <section class="py-24 bg-white border-t border-slate-100">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">How the inbound engine runs</h2>
+        <!-- Why it matters -->
+        <section id="why" class="st-section st-dark">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(02) Why it matters to leadership</span>
+                    <h2>Growth that keeps compounding</h2>
+                    <p>Paid reach stops the day the budget does. Inbound assets keep working, and get cheaper per lead the longer they run.</p>
                 </div>
-                <div class="grid md:grid-cols-4 gap-8">
-                    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200">
-                        <div class="text-blue-600 font-bold text-sm uppercase tracking-widest mb-4">01</div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-3">Discovery Audit</h3>
-                        <ul class="text-slate-600 text-sm space-y-2">
-                            <li>• Search and GEO visibility scan</li>
-                            <li>• Competitor content gap map</li>
-                        </ul>
-                    </div>
-                    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200">
-                        <div class="text-blue-600 font-bold text-sm uppercase tracking-widest mb-4">02</div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-3">Build Assets</h3>
-                        <ul class="text-slate-600 text-sm space-y-2">
-                            <li>• RA reports, lead magnets, chatbot</li>
-                            <li>• GEO and SEO content structure</li>
-                        </ul>
-                    </div>
-                    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200">
-                        <div class="text-blue-600 font-bold text-sm uppercase tracking-widest mb-4">03</div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-3">Publish & Promote</h3>
-                        <ul class="text-slate-600 text-sm space-y-2">
-                            <li>• Content goes live and indexes</li>
-                            <li>• Meta ads amplify top performers</li>
-                        </ul>
-                    </div>
-                    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200">
-                        <div class="text-blue-600 font-bold text-sm uppercase tracking-widest mb-4">04</div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-3">Rank & Refine</h3>
-                        <ul class="text-slate-600 text-sm space-y-2">
-                            <li>• Monthly ranking and traffic review</li>
-                            <li>• Double down on what compounds</li>
-                        </ul>
+                <div class="st-split">
+                    <ol class="st-points">
+                        <li><span>01</span><div><h3>It compounds</h3><p>Organic traffic compounds. Every asset you build keeps working long after paid spend stops.</p></div></li>
+                        <li><span>02</span><div><h3>It builds authority</h3><p>It builds category authority, the kind buyers trust before a sales conversation even starts.</p></div></li>
+                        <li><span>03</span><div><h3>It lowers cost per lead</h3><p>It lowers your cost per lead over time, reducing dependence on rising ad costs.</p></div></li>
+                    </ol>
+                    <div class="st-callout">
+                        Ads rent attention. Inbound assets own it.
+                        <small>Pair inbound with outbound for a pipeline that is both fast and compounding</small>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- WHO ITS FOR -->
-        <section class="py-24 bg-slate-50 border-t border-slate-100">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-14">
-                    <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Best fit for</h2>
+        <!-- Pillars -->
+        <section id="pillars" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(03) The five inbound pillars</span>
+                    <h2>Every way buyers discover you</h2>
+                    <p class="st-muted">Each pillar is a standalone system. Together, they cover every way a buyer discovers you today.</p>
                 </div>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-                        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-5 text-blue-600"><i data-lucide="mic" class="h-6 w-6"></i></div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3">Thought Leaders & Lean Teams</h3>
-                        <ul class="text-slate-600 text-sm space-y-2">
-                            <li>• Founder-led credibility that compounds</li>
-                            <li>• Content that works without a large team</li>
-                            <li>• Authority before the first sales call</li>
+                <div class="st-grid">
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>01</span><span class="st-cell-icon"><i data-lucide="sparkles"></i></span></div>
+                        <h3>GEO</h3>
+                        <p>Generative Engine Optimisation: getting your brand cited inside ChatGPT, Perplexity and Gemini answers, not just Google rankings.</p>
+                        <ul class="st-checks">
+                            <li>AI answer engine visibility audits</li>
+                            <li>Content structured for citation, not just clicks</li>
+                            <li>Third-party mention and authority building</li>
+                        </ul>
+                        <a href="geo.html" class="st-cell-more" style="color:inherit">Explore our full GEO framework <i data-lucide="arrow-right"></i></a>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>02</span><span class="st-cell-icon"><i data-lucide="search"></i></span></div>
+                        <h3>SEO &amp; RA Reports</h3>
+                        <p>Content built to be the reference point in your category, not just another blog post.</p>
+                        <ul class="st-checks">
+                            <li>Ranked Authority (RA) reports for your category</li>
+                            <li>Industry and competitor comparison pages</li>
+                            <li>Technical SEO and on-page optimisation</li>
                         </ul>
                     </div>
-                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-                        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-5 text-blue-600"><i data-lucide="shopping-bag" class="h-6 w-6"></i></div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3">Ecommerce Brands</h3>
-                        <ul class="text-slate-600 text-sm space-y-2">
-                            <li>• Organic traffic that reduces ad dependence</li>
-                            <li>• Product discovery through search and GEO</li>
-                            <li>• Lead capture on every high-intent page</li>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>03</span><span class="st-cell-icon"><i data-lucide="megaphone"></i></span></div>
+                        <h3>Performance Marketing</h3>
+                        <p>Paid that accelerates what already works, targeted with data from your own organic traffic.</p>
+                        <ul class="st-checks">
+                            <li>Meta ads strategy, creative and management</li>
+                            <li>Audience targeting built on organic signal data</li>
+                            <li>Continuous creative testing and spend optimisation</li>
                         </ul>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ -->
-        <section class="py-24 bg-white border-t border-slate-100">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-14">
-                    <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Inbound questions we get most</h2>
-                </div>
-                <div class="space-y-4">
-                    <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
-                        <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-base">How long before inbound produces real traffic?</span>
-                            <i data-lucide="chevron-down" class="h-4 w-4 text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
-                        </button>
-                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                            <div class="px-6 pb-6 border-t border-slate-100 pt-4">
-                                <ul class="text-sm text-slate-500 space-y-2 leading-relaxed">
-                                    <li>• GEO and lead magnets can show early signal within four to six weeks</li>
-                                    <li>• SEO and RA reports typically compound over two to four months</li>
-                                    <li>• Performance marketing fills the gap with immediate volume while organic ramps</li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>04</span><span class="st-cell-icon"><i data-lucide="file-down"></i></span></div>
+                        <h3>Lead Magnets</h3>
+                        <p>Traffic without capture is wasted. We turn visitors into contacts you can nurture.</p>
+                        <ul class="st-checks">
+                            <li>Research-backed guides, reports and toolkits</li>
+                            <li>Conversion-optimised capture pages</li>
+                            <li>Direct integration into your nurture and CRM flows</li>
+                        </ul>
                     </div>
-                    <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
-                        <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-base">What does GEO actually change about our content?</span>
-                            <i data-lucide="chevron-down" class="h-4 w-4 text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
-                        </button>
-                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                            <div class="px-6 pb-6 border-t border-slate-100 pt-4">
-                                <ul class="text-sm text-slate-500 space-y-2 leading-relaxed">
-                                    <li>• Content is structured for AI citation, not just ranked links</li>
-                                    <li>• Claims are made verifiable with original data</li>
-                                    <li>• Brand mentions are built consistently across the web</li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>05</span><span class="st-cell-icon"><i data-lucide="bot"></i></span></div>
+                        <h3>Website Chatbots</h3>
+                        <p>Turning passive website traffic into an active, trackable conversation, instantly.</p>
+                        <ul class="st-checks">
+                            <li>Always-on visitor qualification</li>
+                            <li>Instant answers to common buyer questions</li>
+                            <li>Direct handoff to your sales or CRM pipeline</li>
+                        </ul>
                     </div>
-                    <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
-                        <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-base">Do we need a large content team to run this?</span>
-                            <i data-lucide="chevron-down" class="h-4 w-4 text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
-                        </button>
-                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                            <div class="px-6 pb-6 border-t border-slate-100 pt-4">
-                                <ul class="text-sm text-slate-500 space-y-2 leading-relaxed">
-                                    <li>• No. We build and run the system end to end</li>
-                                    <li>• Built specifically for one to five person teams</li>
-                                    <li>• You approve direction, we handle execution</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-16 text-center bg-slate-50 border border-slate-200 rounded-3xl p-10">
-                    <p class="text-slate-500 mb-4">Ready to put the same energy into outbound pipeline?</p>
-                    <a href="outbound.html" class="text-blue-600 font-bold hover:text-blue-700 transition-colors inline-flex items-center text-lg group">
-                        Explore Outbound Optimisation <i data-lucide="arrow-right" class="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"></i>
+                    <a class="st-cell st-cell-auto" href="ai-readiness-tool.html" style="background:var(--lime)">
+                        <div class="st-cell-top"><span>Free tool</span><span class="st-cell-icon"><i data-lucide="gauge"></i></span></div>
+                        <h3>Not sure where to start?</h3>
+                        <p style="color:var(--ink)">Run our free AI readiness checker. It shows whether ChatGPT, Perplexity, Claude and Google AI can find, read and cite your website, plus a classic SEO health check. No signup.</p>
+                        <span class="st-cell-more">Check your site <i data-lucide="arrow-right"></i></span>
                     </a>
                 </div>
             </div>
         </section>
 
-    <section id="contact" class="py-32 bg-slate-900 border-t border-slate-800">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-5xl font-bold text-white mb-8">Ready to Scale?</h2>
-            <p class="text-slate-400 text-xl font-light mb-12">
-                Let's discuss how we can build your inbound discovery engine and turn search, AI, and paid channels into compounding qualified traffic.
-            </p>
-            <form class="max-w-md mx-auto space-y-6 text-left bg-slate-800 p-10 rounded-3xl border border-slate-700 shadow-2xl">
-                <div>
-                    <label for="email" class="block text-sm font-medium text-slate-400 mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" required class="w-full bg-slate-700 border border-slate-600 rounded-xl px-6 py-4 text-white focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all" placeholder="you@company.com">
+        <!-- Buyer journey -->
+        <section id="journey" class="st-section st-white">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(04) How the pillars connect</span>
+                    <h2>One buyer, five touchpoints</h2>
+                    <p class="st-muted">Buyers rarely convert on a single visit. Here is how the pillars hand a prospect from one to the next.</p>
                 </div>
-                <div>
-                    <label for="interest" class="block text-sm font-medium text-slate-400 mb-2">Area of Interest</label>
-                    <select id="interest" name="interest" class="w-full bg-slate-700 border border-slate-600 rounded-xl px-6 py-4 text-white focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all">
-                        <option value="Inbound Optimisation" selected>Inbound Optimisation</option>
-                        <option value="Outbound Optimisation">Outbound Optimisation</option>
-                        <option value="GEO">GEO</option>
-                        <option value="SEO">SEO</option>
-                        <option value="Performance Marketing">Performance Marketing</option>
-                        <option value="Lead Magnets">Lead Magnets</option>
-                        <option value="Website Chatbots">Website Chatbots</option>
-                    </select>
+                <div class="st-split">
+                    <div class="st-prose">
+                        <p>A modern buyer might first meet you inside an AI answer, check you out on Google a week later, see an ad, and only then download something or ask a question. If each channel is run in isolation, that path breaks at every step.</p>
+                        <p><strong>In an inbound system, each pillar feeds the next.</strong> GEO and SEO create the first impression. Performance marketing retargets the people who showed interest, using what your organic traffic tells us about them. Lead magnets and the chatbot capture intent the moment it appears.</p>
+                        <p>By the time someone reaches your sales team, they already know who you are, they have read your thinking, and their questions and history are in your CRM.</p>
+                        <a href="#process" class="st-btn st-btn-line" style="margin-top:8px">How we build it <i data-lucide="arrow-right"></i></a>
+                    </div>
+                    <div class="st-visual">
+                        <p class="st-visual-title"><span>Illustrative buyer journey</span><span>Fig. 02</span></p>
+                        <ol class="st-timeline">
+                            <li><span class="st-dot"><i data-lucide="sparkles"></i></span><div><small>GEO · AI assistant</small><b>Your brand is cited</b><p>They ask ChatGPT for options in your category and see you named as a source.</p></div></li>
+                            <li><span class="st-dot"><i data-lucide="search"></i></span><div><small>SEO · Google</small><b>They find your RA report</b><p>A follow-up search lands them on your category reference page.</p></div></li>
+                            <li><span class="st-dot"><i data-lucide="megaphone"></i></span><div><small>Performance · Meta</small><b>A relevant ad, not a random one</b><p>Targeted using signals from your organic visitors.</p></div></li>
+                            <li><span class="st-dot"><i data-lucide="file-down"></i></span><div><small>Lead magnet</small><b>They download your guide</b><p>Now a named contact, entered into your nurture flow.</p></div></li>
+                            <li><span class="st-dot"><i data-lucide="bot"></i></span><div><small>Chatbot</small><b>They ask a buying question</b><p>Answered instantly, qualified and flagged for sales.</p></div></li>
+                            <li class="is-goal"><span class="st-dot"><i data-lucide="calendar-check"></i></span><div><small>Goal</small><b>Sales conversation</b><p>Handed to your team with the full history in your CRM.</p></div></li>
+                        </ol>
+                    </div>
                 </div>
-                <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="w-full inline-flex justify-center items-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-blue-500/25 transition-all transform hover:scale-[1.02] text-lg">
-                    Book Free Consultation
-                </a>
-            </form>
+            </div>
+        </section>
+
+        <!-- Compare -->
+        <section id="compare" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(05) Compared</span>
+                    <h2>Not just more content</h2>
+                    <p class="st-muted">How an engineered inbound system differs from the usual mix of blog posts and boosted ads.</p>
+                </div>
+                <div class="st-table-wrap">
+                    <table class="st-compare">
+                        <thead><tr><th scope="col">&nbsp;</th><th scope="col">Typical content &amp; ads</th><th scope="col">Growth Loop inbound</th></tr></thead>
+                        <tbody>
+                            <tr><th scope="row">Discovery</th><td>Aims for Google rankings only</td><td>Visible in search results and inside AI assistant answers</td></tr>
+                            <tr><th scope="row">Content</th><td>Generic blog posts on a publishing schedule</td><td>RA reports and comparison pages built to be the category reference</td></tr>
+                            <tr><th scope="row">Paid</th><td>Run separately, with broad targeting</td><td>Amplifies top performers, targeted on organic signal data</td></tr>
+                            <tr><th scope="row">Capture</th><td>Visitors read and leave without a trace</td><td>Lead magnets and a chatbot on every high-intent page</td></tr>
+                            <tr><th scope="row">Handoff</th><td>Form emails land in a shared inbox</td><td>Direct handoff to your sales team or CRM pipeline</td></tr>
+                            <tr><th scope="row">Cost over time</th><td>Rises with ad prices</td><td>Cost per lead falls as organic assets compound</td></tr>
+                            <tr><th scope="row">Team needed</th><td>An in-house content team</td><td>Built and run end to end for one to five person teams</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process -->
+        <section id="process" class="st-section st-white">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(06) How the inbound engine runs</span>
+                    <h2>Audit, build, publish, refine</h2>
+                    <p class="st-muted">Four stages, then a monthly loop of review. You approve direction; we handle execution.</p>
+                </div>
+                <div class="st-loop">
+                    <ol class="st-steps">
+                        <li><span>01</span><div><h3>Discovery audit</h3><p>A search and GEO visibility scan shows where you appear today, in Google and in AI answers. A competitor content gap map shows the topics and questions your rivals own and you don't.</p></div></li>
+                        <li><span>02</span><div><h3>Build assets</h3><p>We create the RA reports, lead magnets and chatbot, and set up the GEO and SEO content structure so every page is easy to rank, cite and convert from.</p></div></li>
+                        <li><span>03</span><div><h3>Publish &amp; promote</h3><p>Content goes live and gets indexed. Meta ads then amplify the top performers, so paid budget only goes behind what is already proving itself.</p></div></li>
+                        <li><span>04</span><div><h3>Rank &amp; refine</h3><p>A monthly ranking and traffic review shows what is working. We double down on what compounds and cut what doesn't.</p></div></li>
+                    </ol>
+                    <div class="st-visual">
+                        <p class="st-visual-title"><span>When to expect signal</span><span>Fig. 03</span></p>
+                        <ol class="st-timeline">
+                            <li><span class="st-dot"><i data-lucide="zap"></i></span><div><small>From launch</small><b>Performance marketing</b><p>Fills the gap with immediate volume while organic ramps up.</p></div></li>
+                            <li><span class="st-dot"><i data-lucide="sparkles"></i></span><div><small>Weeks 4–6</small><b>GEO and lead magnets</b><p>Can show early signal: first citations and first captured contacts.</p></div></li>
+                            <li><span class="st-dot"><i data-lucide="trending-up"></i></span><div><small>Months 2–4</small><b>SEO and RA reports</b><p>Typically begin to compound as rankings and authority build.</p></div></li>
+                            <li class="is-goal"><span class="st-dot"><i data-lucide="repeat"></i></span><div><small>Every month</small><b>Review and double down</b><p>Rankings, traffic and leads reviewed; budget moves to what compounds.</p></div></li>
+                        </ol>
+                        <p class="st-muted" style="font-size:.85rem;margin:18px 0 0">Typical ranges, not guarantees. Your audit sets realistic expectations for your category and starting point.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deliverables -->
+        <section id="deliverables" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(07) What you get</span>
+                    <h2>Deliverables and your part</h2>
+                    <p class="st-muted">A clear split of work: we build and run the system, you bring the expertise only you have.</p>
+                </div>
+                <div class="st-grid st-grid-2">
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>We deliver</span><span class="st-cell-icon"><i data-lucide="package-check"></i></span></div>
+                        <h3>Built and run for you</h3>
+                        <ul class="st-checks">
+                            <li>Search and GEO visibility audit, plus a competitor content gap map</li>
+                            <li>Ranked Authority reports and comparison pages for your category</li>
+                            <li>GEO and SEO content structure and technical fixes</li>
+                            <li>Lead magnets with conversion-optimised capture pages</li>
+                            <li>A website chatbot connected to your sales or CRM pipeline</li>
+                            <li>Meta ads strategy, creative and management</li>
+                            <li>A monthly ranking, traffic and lead review</li>
+                        </ul>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>We need from you</span><span class="st-cell-icon"><i data-lucide="handshake"></i></span></div>
+                        <h3>Your part</h3>
+                        <ul class="st-checks">
+                            <li>A kickoff session on your buyers, offer and competitors</li>
+                            <li>Your expertise and opinions, so content carries real authority</li>
+                            <li>Approval of direction and key assets before they go live</li>
+                            <li>Access to your website, analytics, ad account and CRM</li>
+                            <li>A short monthly review to agree what to double down on</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fit -->
+        <section id="fit" class="st-section st-white">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(08) Who it's for</span>
+                    <h2>Best fit for</h2>
+                    <p class="st-muted">Inbound suits any business whose buyers research before they buy. These are the teams we build it for most.</p>
+                </div>
+                <div class="st-grid">
+                    <a class="st-cell st-cell-auto" href="speaker.html">
+                        <div class="st-cell-top"><span>01</span><span class="st-cell-icon"><i data-lucide="mic"></i></span></div>
+                        <h3>Thought Leaders &amp; Lean Teams</h3>
+                        <ul class="st-checks"><li>Founder-led credibility that compounds</li><li>Content that works without a large team</li><li>Authority before the first sales call</li></ul>
+                        <span class="st-cell-more">Speakers &amp; founders <i data-lucide="arrow-right"></i></span>
+                    </a>
+                    <a class="st-cell st-cell-auto" href="ecommerce.html">
+                        <div class="st-cell-top"><span>02</span><span class="st-cell-icon"><i data-lucide="shopping-bag"></i></span></div>
+                        <h3>Ecommerce Brands</h3>
+                        <ul class="st-checks"><li>Organic traffic that reduces ad dependence</li><li>Product discovery through search and GEO</li><li>Lead capture on every high-intent page</li></ul>
+                        <span class="st-cell-more">Ecommerce growth <i data-lucide="arrow-right"></i></span>
+                    </a>
+                    <a class="st-cell st-cell-auto" href="b2b.html">
+                        <div class="st-cell-top"><span>03</span><span class="st-cell-icon"><i data-lucide="building-2"></i></span></div>
+                        <h3>B2B Teams</h3>
+                        <ul class="st-checks"><li>Category reference content buyers find while researching</li><li>Visibility in the AI answers your buyers now rely on</li><li>Qualified leads routed straight into your CRM</li></ul>
+                        <span class="st-cell-more">B2B growth <i data-lucide="arrow-right"></i></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(09) FAQ</span>
+                    <h2>Inbound questions we get most</h2>
+                    <p class="st-muted">Still unsure? Book a call and we'll answer them for your business specifically.</p>
+                </div>
+                <div class="st-faq">
+                    <details open>
+                        <summary>How long before inbound produces real traffic?</summary>
+                        <div class="st-faq-a"><ul><li>GEO and lead magnets can show early signal within four to six weeks.</li><li>SEO and RA reports typically compound over two to four months.</li><li>Performance marketing fills the gap with immediate volume while organic ramps.</li></ul></div>
+                    </details>
+                    <details>
+                        <summary>What does GEO actually change about our content?</summary>
+                        <div class="st-faq-a"><ul><li>Content is structured for AI citation, not just ranked links.</li><li>Claims are made verifiable with original data.</li><li>Brand mentions are built consistently across the web.</li></ul><p>See the full <a href="geo.html">five-phase GEO framework</a>.</p></div>
+                    </details>
+                    <details>
+                        <summary>Do we need a large content team to run this?</summary>
+                        <div class="st-faq-a"><ul><li>No. We build and run the system end to end.</li><li>It is built specifically for one to five person teams.</li><li>You approve direction, we handle execution.</li></ul></div>
+                    </details>
+                    <details>
+                        <summary>What is a Ranked Authority (RA) report?</summary>
+                        <div class="st-faq-a"><p>It is a piece of content built to be the reference point in your category, not just another blog post. It is designed to be the page buyers land on when they research your category, alongside industry and competitor comparison pages, so they meet your thinking before they meet a salesperson.</p></div>
+                    </details>
+                    <details>
+                        <summary>Do we have to run paid ads?</summary>
+                        <div class="st-faq-a"><p>No, but it helps. Organic assets take time to compound, and performance marketing fills the gap with immediate volume while they ramp. Because we target ads using data from your own organic traffic and only amplify content that is already performing, the budget goes behind what works.</p></div>
+                    </details>
+                    <details>
+                        <summary>Should we do inbound or outbound first?</summary>
+                        <div class="st-faq-a"><p>Usually both. <a href="outbound.html">Outbound</a> starts conversations this month with the accounts you choose; inbound compounds over months and lowers your cost per lead. Running them together gives you speed now and a pipeline that grows on its own later.</p></div>
+                    </details>
+                    <details>
+                        <summary>Who owns the content, leads and data?</summary>
+                        <div class="st-faq-a"><p>You do. Content is published on your website, ads run in your account, and every captured lead and chatbot conversation is handed into your own CRM.</p></div>
+                    </details>
+                    <details>
+                        <summary>How do you measure success?</summary>
+                        <div class="st-faq-a"><p>By qualified leads and the sales conversations they create, not by page views alone. The monthly review covers rankings, AI visibility, traffic and captured leads, so it is clear what is compounding and where we are shifting effort.</p></div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next -->
+        <section class="st-section st-white" style="padding-top:72px;padding-bottom:72px">
+            <div class="st-wrap">
+                <span class="st-label" style="margin-bottom:24px">Pairs well with</span>
+                <div class="st-next">
+                    <a href="outbound.html"><small>Outbound Systems</small><b>Go find your buyers</b><p>Personalised, multi-channel outreach that starts conversations this month.</p></a>
+                    <a href="geo.html"><small>AI Visibility</small><b>Get cited by AI</b><p>The five-phase framework behind the GEO pillar, in full.</p></a>
+                    <a href="ai-readiness-tool.html"><small>Free tool</small><b>Check your AI readiness</b><p>See how easily AI assistants can read and cite your website today.</p></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <section id="contact" class="st-dark st-section st-cta">
+        <div class="st-wrap">
+            <span class="st-label">Start a project</span>
+            <h2>Build an engine<br>that <span class="st-mark">compounds.</span></h2>
+            <p class="st-muted">Let's discuss how we can build your inbound discovery engine and turn search, AI and paid channels into compounding qualified traffic. In 30 minutes we'll show you where you're visible today and where the quickest wins are.</p>
+            <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="st-btn st-btn-lime">Book a free consultation <i data-lucide="arrow-right"></i></a>
         </div>
     </section>
 
-    <footer class="py-12 border-t border-slate-900 bg-slate-950 text-center text-xs text-slate-600">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div class="flex items-center gap-2">
-                <span class="font-bold text-slate-400 inline-flex items-center gap-2">
-                    <svg class="h-5 w-5 shrink-0 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></svg>
-                    GROWTH LOOP
-                </span>
-                <span>&copy; 2026. All rights reserved.</span>
+    <footer class="st-footer">
+        <div class="st-wrap">
+            <div class="st-footer-grid">
+                <div>
+                    <h4>Growth Loop</h4>
+                    <p class="st-muted" style="max-width:34ch;line-height:1.55;margin:0 0 16px">We engineer automated systems that grow your revenue.</p>
+                    <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="st-btn st-btn-lime" style="padding:12px 20px">Book a call <i data-lucide="arrow-right"></i></a>
+                </div>
+                <div>
+                    <h4>Expertise</h4>
+                    <ul><li><a href="outbound.html">Outbound</a></li><li><a href="inbound.html">Inbound</a></li><li><a href="geo.html">AI Visibility (GEO)</a></li><li><a href="voice-agents.html">AI Voice Agents</a></li><li><a href="ai-infrastructure.html">AI Infrastructure</a></li><li><a href="approach.html">Approach</a></li></ul>
+                </div>
+                <div>
+                    <h4>Who we help</h4>
+                    <ul><li><a href="speaker.html">Speakers &amp; Founders</a></li><li><a href="ecommerce.html">Ecommerce</a></li><li><a href="b2b.html">B2B Teams</a></li><li><a href="investors.html">Investors</a></li></ul>
+                </div>
+                <div>
+                    <h4>Resources</h4>
+                    <ul><li><a href="blog/">Blog</a></li><li><a href="ai-readiness-tool.html">AI Readiness Checker</a></li><li><a href="about.html">About Us</a></li></ul>
+                </div>
             </div>
-            <div class="flex gap-6 text-slate-500">
-                <a href="#" class="hover:text-slate-400 transition-colors">Privacy Policy</a>
-                <a href="#" class="hover:text-slate-400 transition-colors">Terms of Service</a>
+            <p class="st-wordmark" aria-hidden="true">Growth Loop</p>
+            <div class="st-footer-base">
+                <span>© 2026 Growth Loop. All rights reserved.</span>
+                <span>Published by <span class="author">Growth Loop</span>. Updated 21 October 2026.</span>
             </div>
         </div>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            lucide.createIcons();
-            document.querySelectorAll('.faq-toggle').forEach(toggle => {
-                toggle.addEventListener('click', () => {
-                    const content = toggle.nextElementSibling;
-                    const icon = toggle.querySelector('i');
-                    const isOpen = content.classList.contains('faq-open');
-                    document.querySelectorAll('.faq-content').forEach(c => c.classList.remove('faq-open'));
-                    document.querySelectorAll('.faq-toggle i').forEach(ic => ic.style.transform = 'rotate(0deg)');
-                    if (!isOpen) {
-                        content.classList.add('faq-open');
-                        if (icon) icon.style.transform = 'rotate(180deg)';
-                    }
-                });
-            });
+            if (window.lucide) lucide.createIcons();
+            // Highlight the current section in the sticky "on this page" bar
+            const links = [...document.querySelectorAll('.st-toc a')];
+            const byId = new Map(links.map((a) => [a.getAttribute('href').slice(1), a]));
+            const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+                if (!e.isIntersecting) return;
+                links.forEach((a) => a.classList.remove('is-active'));
+                const a = byId.get(e.target.id);
+                if (a) { a.classList.add('is-active'); const ul = a.closest('ul'); ul.scrollTo({ left: a.offsetLeft - ul.clientWidth / 2 + a.offsetWidth / 2, behavior: 'smooth' }); }
+            }), { rootMargin: '-45% 0px -50% 0px' });
+            byId.forEach((_, id) => { const el = document.getElementById(id); if (el) io.observe(el); });
         });
     </script>
 </body>

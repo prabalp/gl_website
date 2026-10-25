@@ -47,7 +47,7 @@
     {
       "@type": "WebSite",
       "@id": "https://mygrowthloop.com/#website",
-      "name": "AI Readiness Checker",
+      "name": "Growth Loop",
       "url": "https://mygrowthloop.com/",
       "description": "Check whether ChatGPT, Perplexity, Claude and Google AI can find, read and cite your website, plus a classic SEO health check. Free, no signup.",
       "publisher": {
@@ -91,7 +91,7 @@
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #FFFFFF; }
         .glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
@@ -113,8 +113,9 @@
         .animate-float { animation: float 6s ease-in-out infinite; }
     </style>
     <link rel="stylesheet" href="/ai-readiness.css">
+    <link rel="stylesheet" href="studio.css">
 </head>
-<body class="antialiased bg-slate-50 text-slate-900">
+<body class="studio antialiased bg-slate-50 text-slate-900">
 
     <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -136,6 +137,8 @@
                                 <a href="inbound.html" class="dropdown-item">Inbound Optimisation</a>
                                 <a href="outbound.html" class="dropdown-item">Outbound Optimisation</a>
                                 <a href="geo.html" class="dropdown-item">Generative Engine Optimisation</a>
+                                <a href="voice-agents.html" class="dropdown-item">AI Voice Agents</a>
+                                <a href="ai-infrastructure.html" class="dropdown-item">Internal AI Infrastructure</a>
                             </div>
                         </div>
                         <div class="dropdown relative group inline-block">
@@ -159,7 +162,7 @@
                                 <a href="ai-readiness-tool.html" class="dropdown-item">AI Readiness Checker</a>
                             </div>
                         </div>
-                        <a href="index.html#about" class="text-sm font-medium text-slate-600 hover:text-primary transition-colors">About Us</a>
+                        <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-primary transition-colors">About Us</a><a href="blog/" class="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Blog</a>
                         <a href="index.html#approach" class="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Approach</a>
                         <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="cta-button bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-blue-500/20">Partner With Us</a>
                     </div>
@@ -179,6 +182,8 @@
                     <a href="inbound.html" class="text-slate-600 hover:text-primary block px-3 py-2 rounded-md text-sm pl-6">Inbound Optimisation</a>
                     <a href="outbound.html" class="text-slate-600 hover:text-primary block px-3 py-2 rounded-md text-sm pl-6">Outbound Optimisation</a>
                     <a href="geo.html" class="text-slate-600 hover:text-primary block px-3 py-2 rounded-md text-sm pl-6">Generative Engine Optimisation</a>
+                    <a href="voice-agents.html" class="text-slate-600 hover:text-primary block px-3 py-2 rounded-md text-sm pl-6">AI Voice Agents</a>
+                    <a href="ai-infrastructure.html" class="text-slate-600 hover:text-primary block px-3 py-2 rounded-md text-sm pl-6">Internal AI Infrastructure</a>
                 </div>
                 <div class="border-t border-slate-200 my-2 pt-2">
                     <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Who We Help</p>
@@ -191,7 +196,7 @@
                     <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Products</p>
                     <a href="ai-readiness-tool.html" class="text-slate-600 hover:text-primary block px-3 py-2 rounded-md text-sm pl-6">AI Readiness Checker</a>
                 </div>
-                <a href="index.html#about" class="text-slate-600 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="about.html" class="text-slate-600 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">About Us</a><a href="blog/" class="text-slate-600 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Blog</a>
                 <a href="index.html#approach" class="text-slate-600 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Approach</a>
                 <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="bg-primary text-white block px-3 py-2 rounded-md text-base font-medium mt-4 text-center">Partner With Us</a>
             </div>
@@ -252,18 +257,31 @@
     </main>
     </div>
 
-    <footer class="py-12 border-t border-slate-200 bg-white text-center text-xs text-slate-500">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div class="flex items-center gap-2">
-                <span class="font-bold text-slate-700 inline-flex items-center gap-2">
-                    <svg class="h-5 w-5 shrink-0 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></svg>
-                    GROWTH LOOP
-                </span>
-                <span>&copy; 2026. All rights reserved.</span>
+    <footer class="st-footer">
+        <div class="st-wrap">
+            <div class="st-footer-grid">
+                <div>
+                    <h4>Growth Loop</h4>
+                    <p class="st-muted" style="max-width:34ch;line-height:1.55;margin:0 0 16px">We engineer automated systems that grow your revenue.</p>
+                    <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="st-btn st-btn-lime" style="padding:12px 20px">Book a call <i data-lucide="arrow-right"></i></a>
+                </div>
+                <div>
+                    <h4>Expertise</h4>
+                    <ul><li><a href="outbound.html">Outbound</a></li><li><a href="inbound.html">Inbound</a></li><li><a href="geo.html">AI Visibility (GEO)</a></li><li><a href="voice-agents.html">AI Voice Agents</a></li><li><a href="ai-infrastructure.html">AI Infrastructure</a></li><li><a href="approach.html">Approach</a></li></ul>
+                </div>
+                <div>
+                    <h4>Who we help</h4>
+                    <ul><li><a href="speaker.html">Speakers &amp; Founders</a></li><li><a href="ecommerce.html">Ecommerce</a></li><li><a href="b2b.html">B2B Teams</a></li><li><a href="investors.html">Investors</a></li></ul>
+                </div>
+                <div>
+                    <h4>Resources</h4>
+                    <ul><li><a href="blog/">Blog</a></li><li><a href="ai-readiness-tool.html">AI Readiness Checker</a></li><li><a href="about.html">About Us</a></li></ul>
+                </div>
             </div>
-            <div class="flex gap-6">
-                <a href="geo.html" class="hover:text-blue-600 transition-colors">Generative Engine Optimisation</a>
-                <a href="approach.html" class="hover:text-blue-600 transition-colors">Approach</a>
+            <p class="st-wordmark" aria-hidden="true">Growth Loop</p>
+            <div class="st-footer-base">
+                <span>© 2026 Growth Loop. All rights reserved.</span>
+                <span>Published by <span class="author">Growth Loop</span>. Updated 21 October 2026.</span>
             </div>
         </div>
     </footer>

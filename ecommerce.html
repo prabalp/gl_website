@@ -48,7 +48,7 @@
     {
       "@type": "WebSite",
       "@id": "https://mygrowthloop.com/#website",
-      "name": "Ecommerce Growth Infrastructure",
+      "name": "Growth Loop",
       "url": "https://mygrowthloop.com/",
       "description": "Growth Loop builds ecommerce growth infrastructure: AI SEO, campaigns, retention, and analytics for brands past inconsistent ads.",
       "publisher": {
@@ -81,7 +81,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
@@ -164,8 +164,9 @@
             max-height: 600px;
         }
     </style>
+    <link rel="stylesheet" href="studio.css">
 </head>
-<body class="text-slate-600 antialiased overflow-x-hidden bg-white">
+<body class="studio text-slate-600 antialiased overflow-x-hidden bg-white">
 
     <!-- NAV, pixel-perfect match to homepage -->
     <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
@@ -191,6 +192,8 @@
                                 <a href="inbound.html" class="dropdown-item">Inbound Optimisation</a>
                                 <a href="outbound.html" class="dropdown-item">Outbound Optimisation</a>
                                 <a href="geo.html" class="dropdown-item">Generative Engine Optimisation</a>
+                                <a href="voice-agents.html" class="dropdown-item">AI Voice Agents</a>
+                                <a href="ai-infrastructure.html" class="dropdown-item">Internal AI Infrastructure</a>
                             </div>
                         </div>
                         <div class="dropdown relative group inline-block">
@@ -214,9 +217,9 @@
                                 <a href="ai-readiness-tool.html" class="dropdown-item">AI Readiness Checker</a>
                             </div>
                         </div>
-                        <a href="index.html#about" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About Us</a>
+                        <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About Us</a><a href="blog/" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Blog</a>
                         <a href="index.html#approach" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Approach</a>
-                        <a href="https://calendly.com/prabal-panda-growthloopconsulting" target="_blank" class="cta-button bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-blue-500/20">
+                        <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="cta-button bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-blue-500/20">
                             Partner With Us
                         </a>
                     </div>
@@ -240,6 +243,8 @@
                     <a href="inbound.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Inbound Optimisation</a>
                     <a href="outbound.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Outbound Optimisation</a>
                     <a href="geo.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Generative Engine Optimisation</a>
+                    <a href="voice-agents.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">AI Voice Agents</a>
+                    <a href="ai-infrastructure.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Internal AI Infrastructure</a>
                 </div>
                 <div class="border-t border-slate-200 my-2 pt-2">
                     <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Who We Help</p>
@@ -252,385 +257,440 @@
                     <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Products</p>
                     <a href="ai-readiness-tool.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">AI Readiness Checker</a>
                 </div>
-                <a href="index.html#about" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="about.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About Us</a><a href="blog/" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Blog</a>
                 <a href="index.html#approach" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Approach</a>
-                <a href="https://calendly.com/prabal-panda-growthloopconsulting" target="_blank" class="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium mt-4 text-center">Partner With Us</a>
+                <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium mt-4 text-center">Partner With Us</a>
             </div>
         </div>
     </nav>
 
+    <main>
 
-    <!-- HERO -->
-    <section class="relative pt-32 pb-24 md:pt-48 md:pb-40 overflow-hidden">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] pointer-events-none opacity-30 mix-blend-screen">
-            <div class="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-indigo-600/40 blur-[120px]"></div>
-            <div class="absolute top-[10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-violet-600/30 blur-[100px]"></div>
-        </div>
-        <div class="absolute inset-0 bg-[linear-gradient(to_right,#1f293710_1px,transparent_1px),linear-gradient(to_bottom,#1f293710_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
-
-        <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
-            <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-8 leading-[1.15]">
-                Build Predictable <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Ecommerce Growth Infrastructure</span>
-            </h1>
-            <p class="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto mb-10 leading-relaxed">
-                Scale your brand beyond inconsistent ad performance and fragmented tracking. We install advanced customer acquisition mechanics, algorithmic optimizations, and automated retention systems designed for systemic capital efficiency.
-            </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="w-full sm:w-auto px-8 py-4 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-md shadow-blue-500/10 hover:shadow-blue-500/20 hover:-translate-y-0.5 transition-all duration-200 text-center">
-                    Book a Strategy Call <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
-                </a>
-                <a href="#capabilities" class="w-full sm:w-auto px-8 py-4 rounded-full bg-slate-50 text-slate-600 font-semibold border border-slate-200 hover:bg-slate-100 transition-all duration-200 text-center">
-                    View System Metrics
-                </a>
+        <!-- Hero -->
+        <section class="st-phero">
+            <div class="st-wrap">
+                <span class="st-label">Ecommerce Growth Systems</span>
+                <h1>Ecommerce growth you can <span class="st-mark">actually predict.</span></h1>
+                <div class="st-hero-foot">
+                    <p class="st-muted">Grow beyond unpredictable ad results and tracking you can't trust. We build the systems that bring in buyers who are ready to purchase, measure what each channel really earns, and bring customers back automatically, so every part of your budget works harder.</p>
+                    <div class="st-hero-ctas">
+                        <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="st-btn st-btn-ink">Book a Strategy Call <i data-lucide="arrow-right"></i></a>
+                        <a href="#system" class="st-btn st-btn-line">See the system</a>
+                    </div>
+                </div>
+                <div class="st-facts">
+                    <div class="st-fact"><b>8 modules</b><span>Working as one connected system</span></div>
+                    <div class="st-fact"><b>3 layers</b><span>Data, acquisition and automation</span></div>
+                    <div class="st-fact"><b>100%</b><span>Data ownership, always yours</span></div>
+                    <div class="st-fact"><b>Zero</b><span>Ad platform bias in your reporting</span></div>
+                </div>
             </div>
+        </section>
+
+        <nav class="st-toc" aria-label="On this page">
+            <div class="st-wrap">
+                <ul>
+                    <li><a href="#system">What it is</a></li>
+                    <li><a href="#why">Why it matters</a></li>
+                    <li><a href="#modules">Modules</a></li>
+                    <li><a href="#measure">Measurement</a></li>
+                    <li><a href="#retention">Retention</a></li>
+                    <li><a href="#compare">Compared</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#fit">Who it's for</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- What it is -->
+        <section id="system" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(01) What it is</span>
+                    <h2>Growth infrastructure, not campaigns</h2>
+                    <p class="st-muted">Three connected layers that find buyers, measure what they're worth and keep them coming back, each one feeding the next.</p>
+                </div>
+                <div class="st-visual">
+                    <p class="st-visual-title"><span>Integrated infrastructure map</span><span>Fig. 01</span></p>
+                    <div class="st-flow" style="--n:4">
+                        <div><small>Layer 1 · Data</small><b>One dashboard you can trust</b><p>Brings scattered tracking into a single view, so you can see what's happening across the whole funnel straight away.</p></div>
+                        <div><small>Layer 2 · Acquisition</small><b>High-intent traffic</b><p>AI SEO working alongside tightly controlled paid campaigns, aimed at people who are ready to buy.</p></div>
+                        <div><small>Layer 3 · Automation</small><b>AI-powered content and campaigns</b><p>New creative tested automatically, with budgets adjusted in real time and within safe limits.</p></div>
+                        <div class="is-key"><small>Outcome</small><b>Growth that feeds itself</b><p>Better data sharpens targeting, and returning customers lower what each sale costs you.</p></div>
+                    </div>
+                </div>
+                <div class="st-split" style="margin-top:56px">
+                    <div class="st-prose">
+                        <p>Most ecommerce brands grow by renting attention: more ad spend in, more sales out, until costs rise or tracking breaks. We take a different approach. We <strong>build growth infrastructure into your business</strong>, a set of systems you own that keep working when ad platforms change their rules.</p>
+                        <p>It starts with data. Once you can see what each channel really earns after costs, every other decision gets easier: where to put budget, which products to push in search, which customers to bring back and when.</p>
+                    </div>
+                    <div class="st-prose">
+                        <p>On top of that foundation we add the acquisition and automation layers: AI SEO and high-intent paid traffic to bring in ready-to-buy shoppers, automated campaigns that move budget towards what is actually profitable, and retention systems that turn first orders into repeat customers.</p>
+                        <p>Together they form a <strong>self-reinforcing way of acquiring customers</strong> rather than a series of short-lived campaign spikes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why it matters -->
+        <section id="why" class="st-section st-dark">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(02) Why it matters</span>
+                    <h2>What's holding growth back</h2>
+                    <p>Most brands try to scale on ad channels alone. If tracking is shaky underneath, more spend just multiplies the problems you already have.</p>
+                </div>
+                <div class="st-split">
+                    <ol class="st-points">
+                        <li><span>01</span><div><h3>Rising acquisition costs</h3><p>More competition on the ad platforms and ongoing privacy changes keep pushing up the cost of each new customer, eating straight into gross margin.</p></div></li>
+                        <li><span>02</span><div><h3>ROAS you can't rely on</h3><p>As single-pixel tracking data gets worse, reported return on ad spend swings wildly, which makes it hard to plan or invest with confidence.</p></div></li>
+                        <li><span>03</span><div><h3>Attribution nobody agrees on</h3><p>Each platform reports different numbers for the same sales. Budget ends up following whichever dashboard shouts loudest, not what really works.</p></div></li>
+                        <li><span>04</span><div><h3>Weak retention</h3><p>Without systems that respond to customer behaviour after the first purchase, brands end up paying again and again to win back customers they already had.</p></div></li>
+                    </ol>
+                    <div class="st-callout">
+                        If your foundations are unstable, scaling ad spend doesn't fix them. It makes them more expensive.
+                        <small>Fix the data first, then grow on top of it</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modules -->
+        <section id="modules" class="st-section st-white">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(03) The modules</span>
+                    <h2>Eight modules, one system</h2>
+                    <p class="st-muted">Each module solves one specific problem. Connected together, they help steady your margins and cut your reliance on any single channel.</p>
+                </div>
+                <div class="st-grid st-grid-4">
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>01</span><span class="st-cell-icon"><i data-lucide="search"></i></span></div>
+                        <h3 style="font-size:1.4rem">AI SEO</h3>
+                        <p>Organises your collections and product pages around the searches people make when they're ready to buy, building organic traffic that lasts.</p>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>02</span><span class="st-cell-icon"><i data-lucide="layout-dashboard"></i></span></div>
+                        <h3 style="font-size:1.4rem">Dashboarding</h3>
+                        <p>One view that connects day-to-day activity in every channel to the business numbers leadership cares about, updated instantly.</p>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>03</span><span class="st-cell-icon"><i data-lucide="sparkles"></i></span></div>
+                        <h3 style="font-size:1.4rem">AI Automated Campaigns</h3>
+                        <p>Tests and adjusts small budgets, creative and placements automatically, based on real-time margin, not vanity metrics.</p>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>04</span><span class="st-cell-icon"><i data-lucide="crosshair"></i></span></div>
+                        <h3 style="font-size:1.4rem">High Intent Traffic</h3>
+                        <p>Targeting built to filter out casual clicks and reach shoppers who are showing clear signs they're about to buy.</p>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>05</span><span class="st-cell-icon"><i data-lucide="repeat"></i></span></div>
+                        <h3 style="font-size:1.4rem">Retention Systems</h3>
+                        <p>Triggers personalised follow-on offers based on how each customer behaves, so customers stay longer without heavy discounting.</p>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>06</span><span class="st-cell-icon"><i data-lucide="calculator"></i></span></div>
+                        <h3 style="font-size:1.4rem">Revenue Analytics</h3>
+                        <p>Works out your true net margin by stripping the noise out of blended reporting and ad platform attribution.</p>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>07</span><span class="st-cell-icon"><i data-lucide="mouse-pointer-click"></i></span></div>
+                        <h3 style="font-size:1.4rem">Conversion Optimisation</h3>
+                        <p>Ongoing testing of your cart, page load speed and every point of friction on the path to purchase.</p>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>08</span><span class="st-cell-icon"><i data-lucide="mail"></i></span></div>
+                        <h3 style="font-size:1.4rem">Lifecycle Marketing</h3>
+                        <p>Messages timed around each order and delivery, designed to raise average lifetime value.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Measurement -->
+        <section id="measure" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(04) Measurement</span>
+                    <h2>One version of the truth</h2>
+                    <p class="st-muted">Dashboarding and revenue analytics show which channels are actually profitable, not which ones are best at claiming credit.</p>
+                </div>
+                <div class="st-split">
+                    <div class="st-prose">
+                        <p>Most growing brands read their numbers in four or five places: Meta Ads Manager, Google Analytics, Shopify reports, the email platform. Each counts sales differently. The result is <strong>double-counted purchases, distorted attribution and a blended ROAS nobody fully trusts</strong>.</p>
+                        <p>We build server-side tracking that links every unit of marketing spend to real net revenue. Because it doesn't rely on the browser pixel, it isn't knocked out by iOS privacy changes or cookie restrictions.</p>
+                        <p>Everything lands in one clean reporting layer. Your team sees real acquisition cost, how much each channel really contributes and actual margin, so budget decisions are faster, more confident and protected from the over-reporting built into ad platform dashboards.</p>
+                    </div>
+                    <div class="st-visual">
+                        <p class="st-visual-title"><span>Same sales, different stories</span><span>Fig. 02</span></p>
+                        <div class="st-meter">
+                            <div class="st-meter-row"><span>Meta Ads Manager</span><div class="st-meter-track"><div class="st-meter-fill" style="width:72%"></div></div><b>Claims</b></div>
+                            <div class="st-meter-row"><span>Google Analytics</span><div class="st-meter-track"><div class="st-meter-fill" style="width:58%"></div></div><b>Claims</b></div>
+                            <div class="st-meter-row"><span>Email platform</span><div class="st-meter-track"><div class="st-meter-fill" style="width:40%"></div></div><b>Claims</b></div>
+                            <div class="st-meter-row"><span>Shopify orders</span><div class="st-meter-track"><div class="st-meter-fill" style="width:100%"></div></div><b>Actual</b></div>
+                            <div class="st-meter-row is-key"><span>Your dashboard</span><div class="st-meter-track"><div class="st-meter-fill" style="width:100%"></div></div><b>Reconciled</b></div>
+                        </div>
+                        <p class="st-muted" style="font-size:.85rem;margin:18px 0 0">Illustrative. Each platform tends to claim credit for the same orders, so their totals rarely add up. Your dashboard removes the duplicates and ties every channel back to real orders and net margin.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Retention -->
+        <section id="retention" class="st-section st-white">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(05) Retention &amp; lifecycle</span>
+                    <h2>Stop buying back your customers</h2>
+                    <p class="st-muted">After the first order, the system follows each customer's journey and sends the right offer at the right moment, automatically.</p>
+                </div>
+                <div class="st-split">
+                    <div class="st-visual">
+                        <p class="st-visual-title"><span>Example post-purchase journey</span><span>Fig. 03</span></p>
+                        <ol class="st-timeline">
+                            <li><span class="st-dot"><i data-lucide="shopping-bag"></i></span><div><small>Trigger · First order</small><b>Order placed</b><p>The customer's timeline starts: what they bought, when, and how they found you.</p></div></li>
+                            <li><span class="st-dot"><i data-lucide="truck"></i></span><div><small>Trigger · Delivery</small><b>Fulfilment touchpoints</b><p>Messages timed to the order and delivery, not to a marketing calendar.</p></div></li>
+                            <li><span class="st-dot"><i data-lucide="gift"></i></span><div><small>Trigger · Behaviour</small><b>Complementary product</b><p>A recommendation based on what they bought and how they've interacted.</p></div></li>
+                            <li><span class="st-dot"><i data-lucide="refresh-cw"></i></span><div><small>Trigger · Product lifecycle</small><b>Replenishment reminder</b><p>Sent when the product is likely to be running out.</p></div></li>
+                            <li><span class="st-dot"><i data-lucide="rotate-ccw"></i></span><div><small>Trigger · Inactivity</small><b>Win-back sequence</b><p>A relevant reason to return for customers who have gone quiet.</p></div></li>
+                            <li class="is-goal"><span class="st-dot"><i data-lucide="repeat"></i></span><div><small>Goal</small><b>Repeat purchase</b><p>Higher lifetime value, without blanket discounting.</p></div></li>
+                        </ol>
+                    </div>
+                    <div class="st-prose">
+                        <p>Most brands lean on calendar-based broadcast emails. Over time that leads to list fatigue, more unsubscribes and a weaker sender reputation, all of which reduce the value of the customer list you've already paid to build.</p>
+                        <p>Our retention systems treat each buyer as an individual, not as a fresh acquisition target. They track <strong>buyer timelines, how long each product lasts, how often people buy and how they've interacted with you</strong>, then send the relevant offer at the right moment, without anyone managing campaigns by hand.</p>
+                        <p>Repeat purchases come from relevance rather than discounts. That raises lifetime value, reduces how much you depend on buying new customers and strengthens net margin across the business.</p>
+                        <a href="#process" class="st-btn st-btn-line" style="margin-top:8px">How we set it up <i data-lucide="arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compare -->
+        <section id="compare" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(06) Compared</span>
+                    <h2>Assets, not campaign spikes</h2>
+                    <p class="st-muted">Optimising ads with nothing built underneath leaves you exposed to every algorithm update. Here is how we're different.</p>
+                </div>
+                <div class="st-split" style="margin-bottom:56px">
+                    <div class="st-prose">
+                        <p>Campaign tweaks can buy a good month. They don't build anything that lasts. We combine <strong>data-led campaign rules, structured high-intent traffic and retention systems</strong> into growth infrastructure that sits inside your business and gets stronger over time.</p>
+                        <p>Unlike paid ads, which stop the moment budgets are cut, organic search builds up and keeps generating revenue without extra spend. And because the data sits in your systems, nobody is marking their own homework.</p>
+                    </div>
+                    <div class="st-proof">
+                        <div class="st-proof-row"><b>100%</b><span>Data ownership. Your tracking, dashboards and customer data stay in your accounts.</span></div>
+                        <div class="st-proof-row"><b>Zero</b><span>Ad platform bias. Channels are judged on real net margin, not on what each platform reports about itself.</span></div>
+                    </div>
+                </div>
+                <div class="st-table-wrap">
+                    <table class="st-compare">
+                        <thead><tr><th scope="col">&nbsp;</th><th scope="col">Campaign-led growth</th><th scope="col">Growth Loop infrastructure</th></tr></thead>
+                        <tbody>
+                            <tr><th scope="row">Traffic</th><td>Mostly paid, stops when the budget stops</td><td>AI SEO plus high-intent paid traffic, with organic search building up over time</td></tr>
+                            <tr><th scope="row">Measurement</th><td>Browser pixels and each platform's own dashboard</td><td>Server-side tracking feeding one reconciled dashboard</td></tr>
+                            <tr><th scope="row">Budget decisions</th><td>Static rules and weekly manual changes</td><td>Continuous adjustment based on real-time margin data</td></tr>
+                            <tr><th scope="row">Creative testing</th><td>Slow cycles, ads wear out before anyone notices</td><td>Automated testing that scales winners and pauses losers early</td></tr>
+                            <tr><th scope="row">Retention</th><td>Calendar broadcasts and blanket discounts</td><td>Offers triggered by each customer's behaviour and product lifecycle</td></tr>
+                            <tr><th scope="row">Store</th><td>Left as it is while spend goes up</td><td>Cart, page speed and friction points tested continuously</td></tr>
+                            <tr><th scope="row">Data</th><td>Spread across ad platforms and agency tools</td><td>100% owned by you</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process -->
+        <section id="process" class="st-section st-white">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(07) How we set it up</span>
+                    <h2>Four phases to stable growth</h2>
+                    <p class="st-muted">We fix the measurement first, then launch acquisition, then scale what works. Each phase builds on the one before.</p>
+                </div>
+                <div class="st-loop">
+                    <ol class="st-steps">
+                        <li><span>01</span><div><h3>Audit</h3><p>We go through your past performance, tracking gaps, attribution mismatches and how different customer groups behave over time, to find the problems that are actually holding you back.</p></div></li>
+                        <li><span>02</span><div><h3>Infrastructure setup</h3><p>We build your custom dashboards, set up server-side attribution tracking and get your analytics data clean and consistent.</p></div></li>
+                        <li><span>03</span><div><h3>AI campaign systems</h3><p>We launch automated search clustering (grouping related searches into pages that rank) alongside AI-automated campaigns, to win high-intent customers from both organic and paid.</p></div></li>
+                        <li><span>04</span><div><h3>Scaling &amp; optimisation</h3><p>We fine-tune the behaviour-based retention loops and put ongoing conversion optimisation in place to keep margins healthy as you grow.</p></div></li>
+                    </ol>
+                    <div class="st-visual">
+                        <p class="st-visual-title"><span>What we need from you</span><span>Fig. 04</span></p>
+                        <ul class="st-checks">
+                            <li>A kickoff session on your products, margins and growth goals</li>
+                            <li>Access to your store platform, ad accounts and analytics</li>
+                            <li>Access to your email or messaging platform for lifecycle flows</li>
+                            <li>A named person to approve campaigns and creative direction</li>
+                            <li>A short regular review of the dashboard together</li>
+                        </ul>
+                        <p class="st-muted" style="font-size:.85rem;margin:18px 0 0">Everything we build is set up in your own accounts, so you keep full ownership of the data and the systems.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fit -->
+        <section id="fit" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(08) Who it's for</span>
+                    <h2>Best fit for</h2>
+                    <p class="st-muted">Brands that already sell and want growth that holds up when ad costs rise or tracking changes.</p>
+                </div>
+                <div class="st-grid st-grid-2">
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>01</span><span class="st-cell-icon"><i data-lucide="trending-up"></i></span></div>
+                        <h3>Brands scaling paid spend</h3>
+                        <ul class="st-checks"><li>Acquisition costs rising and margins shrinking</li><li>ROAS that swings from week to week</li><li>A need to rely less on any single ad platform</li></ul>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>02</span><span class="st-cell-icon"><i data-lucide="layers"></i></span></div>
+                        <h3>Large catalogues</h3>
+                        <ul class="st-checks"><li>Hundreds or thousands of product categories</li><li>Collection pages that could rank for buying searches</li><li>Organic traffic that hasn't kept up with the range</li></ul>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>03</span><span class="st-cell-icon"><i data-lucide="repeat"></i></span></div>
+                        <h3>Repeat-purchase products</h3>
+                        <ul class="st-checks"><li>Products that run out, get replaced or pair together</li><li>A customer list that mostly hears broadcast emails</li><li>Lifetime value you know could be higher</li></ul>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>04</span><span class="st-cell-icon"><i data-lucide="layout-dashboard"></i></span></div>
+                        <h3>Teams flying blind</h3>
+                        <ul class="st-checks"><li>Numbers that differ across every platform</li><li>Budget decisions made on gut feel</li><li>No clear view of true net margin by channel</li></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="st-section st-white">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(09) FAQ</span>
+                    <h2>Ecommerce questions we get most</h2>
+                    <p class="st-muted">Still unsure? Book a call and we'll answer them for your brand specifically.</p>
+                </div>
+                <div class="st-faq">
+                    <details open>
+                        <summary>What is AI SEO for ecommerce brands?</summary>
+                        <div class="st-faq-a">
+                            <p>It goes well beyond tracking keywords by hand and writing product meta descriptions. We use AI models to map and organise your site structure across thousands of product categories, read how buyer search behaviour is changing, and create relevant landing pages at scale that meet what modern search engines reward.</p>
+                            <p>The focus is on transactional searches, the ones people make when they're ready to buy rather than browse. That brings steady organic traffic to your store, lowers acquisition costs over time and reduces your dependence on paid channels. Unlike paid ads, which stop the moment budgets are cut, organic search builds up and keeps generating revenue without extra spend.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>How does dashboarding improve ecommerce growth?</summary>
+                        <div class="st-faq-a">
+                            <p>It gives leadership one place to see what's really happening. Most scaling brands read metrics across Meta Ads Manager, Google Analytics, Shopify reports and email platforms, which leads to distorted attribution, purchases counted twice and blended ROAS you can't rely on. That makes it nearly impossible to know which channels are actually profitable.</p>
+                            <p>We build server-side data pipelines that link every unit of marketing spend to real net revenue, working around the browser pixel limits caused by iOS privacy changes and cookie restrictions. With everything in one clean reporting layer, your team sees real acquisition cost, how much each channel contributes and true margin, so budget decisions are faster, more confident and protected from the over-reporting built into ad platform dashboards.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>What are AI automated campaigns and how do they work?</summary>
+                        <div class="st-faq-a">
+                            <p>They are paid campaigns that keep optimising budget in real time without someone adjusting them by hand. Standard campaigns run on fixed rules and weekly changes, which means slow creative testing, wasted spend at the wrong times and missed chances to scale when a creative starts winning.</p>
+                            <p>Our system constantly balances creative variations, audience targeting and bids across your marketing mix, based on real-time margin data rather than vanity metrics. It matches patterns to buyer behaviour, moves budget towards the best combinations and pauses weak ones before they waste spend. The result is less creative fatigue, lower cost per acquisition over time and efficient acquisition as you increase spend.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>How do you drive high-intent traffic that actually converts?</summary>
+                        <div class="st-faq-a">
+                            <p>By moving away from broad, untargeted audiences towards targeting built around active purchase signals. Many brands waste a lot of spend on cheap, unqualified traffic that produces impressions but not sales, making reach look good while ROAS suffers.</p>
+                            <p>We filter for shoppers showing clear buying signals: people searching commercial-intent keywords, engaging with competitor product pages, or behaving in ways consistent with buying soon. We combine search optimisation with exact-match and shopping ads so your products appear at the moment of need. Spend is concentrated on audiences who are ready to buy, which lifts conversion rates and ROAS across the whole growth engine.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>How does Growth Loop improve retention and lifetime value?</summary>
+                        <div class="st-faq-a">
+                            <p>We install automated systems that follow each customer's journey after the first purchase, instead of treating every buyer as a new acquisition target. Relying only on calendar-based broadcast emails causes list fatigue, rising unsubscribes and a weaker sender reputation, all of which reduce the value of your customer list.</p>
+                            <p>Our retention systems track buyer timelines, product lifecycles, purchase frequency and past interactions to send relevant offers at the right moment, automatically: replenishment reminders, complementary product recommendations and win-back sequences, with no constant manual campaign work. Encouraging repeat purchases through relevance rather than blanket discounts raises lifetime value, reduces how exposed you are to acquisition costs and strengthens net margin.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Do we have to stop running paid ads?</summary>
+                        <div class="st-faq-a"><p>No. Paid traffic stays part of the acquisition layer, but it is run on high-intent targeting and real margin data. What changes is the dependency: as organic search equity and retention build up, more of your revenue comes from assets you own rather than from spend you have to keep renewing.</p></div>
+                    </details>
+                    <details>
+                        <summary>Who owns the data and dashboards?</summary>
+                        <div class="st-faq-a"><ul><li>You do: 100% data ownership.</li><li>Tracking, dashboards and customer data are set up in your own accounts.</li><li>Reporting is independent of any ad platform, so there is zero platform bias in how channels are judged.</li></ul></div>
+                    </details>
+                    <details>
+                        <summary>Where do we start?</summary>
+                        <div class="st-faq-a"><p>With the audit. We review your historical performance, tracking gaps, attribution mismatches and how customer groups behave over time, then show you which problems are really limiting growth. From there we build the infrastructure in the order that matters for your brand, starting with data.</p></div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next -->
+        <section class="st-section" style="padding-top:72px;padding-bottom:72px;border-top:1px solid var(--ink)">
+            <div class="st-wrap">
+                <span class="st-label" style="margin-bottom:24px">Pairs well with</span>
+                <div class="st-next">
+                    <a href="inbound.html"><small>Inbound Systems</small><b>Make the market find you</b><p>A compounding engine that turns search and AI into qualified traffic.</p></a>
+                    <a href="geo.html"><small>AI Visibility</small><b>Get cited by AI</b><p>Show up when shoppers ask ChatGPT and Perplexity what to buy.</p></a>
+                    <a href="outbound.html"><small>Outbound Systems</small><b>Go find the people who need you</b><p>Wholesale, partnership and affiliate outreach that runs itself.</p></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <section id="contact" class="st-dark st-section st-cta">
+        <div class="st-wrap">
+            <span class="st-label">Start a project</span>
+            <h2>Make growth <span class="st-mark">predictable.</span></h2>
+            <p class="st-muted">Start with a full tracking audit. We'll show you where margin is leaking and which systems to build first.</p>
+            <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="st-btn st-btn-lime">Book a free consultation <i data-lucide="arrow-right"></i></a>
         </div>
     </section>
 
-    <!-- CAPABILITIES -->
-    <section id="capabilities" class="py-24 border-t border-slate-100 bg-slate-50/50 relative">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-sm font-bold uppercase tracking-wider text-blue-600 block mb-2">Engineered Modules</span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Enterprise Scale Architecture</h2>
-                <p class="text-slate-500 mt-2">Integrated operations configured to eliminate baseline operational dependency and stabilize margins.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="p-6 rounded-2xl bg-white border border-slate-200/60 shadow-sm glow-card transition-all duration-300 group">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
-                        <i class="fa-solid fa-magnifying-glass-chart text-xl"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">AI SEO</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed">Algorithmic collection targeting, semantic layout indexing, and search mapping architectures built to seize persistent commercial traffic volume.</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-white border border-slate-200/60 shadow-sm glow-card transition-all duration-300 group">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
-                        <i class="fa-solid fa-table-columns text-xl"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">Dashboarding</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed">Unified cross-channel tracking views connecting raw operational actions directly to executive business health metrics instantly.</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-white border border-slate-200/60 shadow-sm glow-card transition-all duration-300 group">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
-                        <i class="fa-solid fa-wand-magic-sparkles text-xl"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">AI Automated Campaigns</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed">Dynamic testing systems adjusting micro budgets, creative layouts, and placements based on real time margin performance variables.</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-white border border-slate-200/60 shadow-sm glow-card transition-all duration-300 group">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
-                        <i class="fa-solid fa-bullseye text-xl"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">High Intent Traffic</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed">Precision target modeling setups engineered to screen out casual clicks and capture customers demonstrating imminent purchase intent.</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-white border border-slate-200/60 shadow-sm glow-card transition-all duration-300 group">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
-                        <i class="fa-solid fa-retweet text-xl"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">Retention Systems</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed">Algorithmic behavior parameters triggering personalized secondary offers to extend cohort lifecycles safely.</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-white border border-slate-200/60 shadow-sm glow-card transition-all duration-300 group">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
-                        <i class="fa-solid fa-chart-pie text-xl"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">Revenue Analytics</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed">Granular calculation engines filtering true net margins back from core baseline attribution and blended ad platform reporting noise.</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-white border border-slate-200/60 shadow-sm glow-card transition-all duration-300 group">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
-                        <i class="fa-solid fa-sliders text-xl"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">Conversion Optimization</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed">Systematic interface refinement testing cart mechanisms, asset load speeds, and friction nodes to optimize purchase pathways.</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-white border border-slate-200/60 shadow-sm glow-card transition-all duration-300 group">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
-                        <i class="fa-solid fa-envelopes-bulk text-xl"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">Lifecycle Marketing</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed">Contextual messaging schedules tracking active fulfillment touchpoints to maximize lifetime average value metrics.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CHALLENGES -->
-    <section id="challenges" class="py-24 bg-white relative">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-                <div class="lg:col-span-1">
-                    <span class="text-sm font-bold uppercase tracking-wider text-blue-600 block mb-2">Market Reality</span>
-                    <h2 class="text-3xl font-extrabold text-slate-900 leading-tight">The Bottlenecks Limiting Growth</h2>
-                    <p class="text-slate-500 mt-4 leading-relaxed">
-                        Most brands try to balance scale on legacy ad channel paradigms. When foundational structural configuration tracking elements are unstable, scaling simply compounds existing internal inefficiencies.
-                    </p>
-                </div>
-                <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div class="p-6 rounded-xl bg-slate-50 border border-slate-200/80">
-                        <h3 class="text-base font-bold text-slate-900 mb-2 flex items-center gap-2">
-                            <i class="fa-solid fa-arrow-trend-up text-rose-500"></i> Rising Customer Acquisition Cost
-                        </h3>
-                        <p class="text-xs text-slate-500 leading-relaxed">Platform competition and shifting privacy changes trigger steep customer acquisition cost updates, rapidly reducing gross margins.</p>
-                    </div>
-                    <div class="p-6 rounded-xl bg-slate-50 border border-slate-200/80">
-                        <h3 class="text-base font-bold text-slate-900 mb-2 flex items-center gap-2">
-                            <i class="fa-solid fa-triangle-exclamation text-rose-500"></i> Inconsistent ROAS Trackers
-                        </h3>
-                        <p class="text-xs text-slate-500 leading-relaxed">Ad spend swings erratically as single tracking pixel performance data deteriorates, making structural asset investments difficult to forecast.</p>
-                    </div>
-                    <div class="p-6 rounded-xl bg-slate-50 border border-slate-200/80">
-                        <h3 class="text-base font-bold text-slate-900 mb-2 flex items-center gap-2">
-                            <i class="fa-solid fa-link-slash text-rose-500"></i> Poor Data Attribution Modality
-                        </h3>
-                        <p class="text-xs text-slate-500 leading-relaxed">Fragmented analytics and platform conflicts show contradictory data points, leading to misallocated capital distributions.</p>
-                    </div>
-                    <div class="p-6 rounded-xl bg-slate-50 border border-slate-200/80">
-                        <h3 class="text-base font-bold text-slate-900 mb-2 flex items-center gap-2">
-                            <i class="fa-solid fa-users-slash text-rose-500"></i> Weak Customer Retention Systems
-                        </h3>
-                        <p class="text-xs text-slate-500 leading-relaxed">Heavy reliance on initial product purchases without integrated behavioral lifecycle setups forces brands to buy back their own audience repeatedly.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- APPROACH -->
-    <section id="approach" class="py-24 bg-slate-50 border-y border-slate-200/60">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div class="bg-white border border-slate-200 p-8 rounded-3xl shadow-sm">
-                    <h3 class="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
-                        <i class="fa-solid fa-circle-nodes text-blue-600"></i> Integrated Infrastructure Map
-                    </h3>
-                    <div class="space-y-4">
-                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/60">
-                            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider block mb-1">Data Layer</span>
-                            <p class="text-sm font-semibold text-slate-900">Centralized Dashboarding Implementation</p>
-                            <p class="text-xs text-slate-500 mt-1">Consolidates fragmented attribution markers to secure immediate data tracking visibility across funnels.</p>
-                        </div>
-                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/60">
-                            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider block mb-1">Acquisition Layer</span>
-                            <p class="text-sm font-semibold text-slate-900">High Intent Traffic Pipelines</p>
-                            <p class="text-xs text-slate-500 mt-1">Combines AI SEO scaling mechanisms with highly controlled performance marketing deployment matrix blocks.</p>
-                        </div>
-                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/60">
-                            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider block mb-1">Automation Layer</span>
-                            <p class="text-sm font-semibold text-slate-900">AI Powered Content Workflows</p>
-                            <p class="text-xs text-slate-500 mt-1">Configures automated creative iteration logic to maximize real time cost adjustments safely.</p>
-                        </div>
-                    </div>
-                </div>
-
+    <footer class="st-footer">
+        <div class="st-wrap">
+            <div class="st-footer-grid">
                 <div>
-                    <p class="text-blue-600 font-bold tracking-wide uppercase text-sm mb-3">
-                        Systemic Advantage
-                    </p>
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 tracking-tight">
-                        We Engineer Assets, Not Temporary Campaign Spike Fixes
-                    </h2>
-                    <p class="text-slate-500 mb-6 leading-relaxed">
-                        Relying on ad performance optimization loops without supporting core asset architecture elements leaves brands exposed to regular algorithm updates. Growth Loop builds reliable growth infrastructure directly into your operation.
-                    </p>
-                    <p class="text-slate-500 mb-8 leading-relaxed">
-                        By integrating data-backed campaign optimization rules, structured high intent traffic funnels, and retention infrastructure components, we help your business build a sustainable, self-reinforcing customer acquisition strategy.
-                    </p>
-                    <div class="flex items-center gap-4 border-t border-slate-200 pt-6">
-                        <div class="text-center">
-                            <span class="text-2xl font-extrabold text-slate-900 block">100%</span>
-                            <span class="text-xs text-slate-400 font-medium uppercase tracking-wider">Data Ownership</span>
-                        </div>
-                        <div class="w-px h-8 bg-slate-200"></div>
-                        <div class="text-center">
-                            <span class="text-2xl font-extrabold text-slate-900 block">Zero</span>
-                            <span class="text-xs text-slate-400 font-medium uppercase tracking-wider">Ad Platform Bias</span>
-                        </div>
-                    </div>
+                    <h4>Growth Loop</h4>
+                    <p class="st-muted" style="max-width:34ch;line-height:1.55;margin:0 0 16px">We engineer automated systems that grow your revenue.</p>
+                    <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="st-btn st-btn-lime" style="padding:12px 20px">Book a call <i data-lucide="arrow-right"></i></a>
+                </div>
+                <div>
+                    <h4>Expertise</h4>
+                    <ul><li><a href="outbound.html">Outbound</a></li><li><a href="inbound.html">Inbound</a></li><li><a href="geo.html">AI Visibility (GEO)</a></li><li><a href="voice-agents.html">AI Voice Agents</a></li><li><a href="ai-infrastructure.html">AI Infrastructure</a></li><li><a href="approach.html">Approach</a></li></ul>
+                </div>
+                <div>
+                    <h4>Who we help</h4>
+                    <ul><li><a href="speaker.html">Speakers &amp; Founders</a></li><li><a href="ecommerce.html">Ecommerce</a></li><li><a href="b2b.html">B2B Teams</a></li><li><a href="investors.html">Investors</a></li></ul>
+                </div>
+                <div>
+                    <h4>Resources</h4>
+                    <ul><li><a href="blog/">Blog</a></li><li><a href="ai-readiness-tool.html">AI Readiness Checker</a></li><li><a href="about.html">About Us</a></li></ul>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- PROCESS -->
-    <section id="process" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto mb-20">
-                <span class="text-sm font-bold uppercase tracking-wider text-blue-600 block mb-2">The Setup Sequence</span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Four Phases to Operational Stability</h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
-                <div class="relative group">
-                    <div class="absolute -top-5 left-6 text-7xl font-extrabold text-slate-100 pointer-events-none z-0">01</div>
-                    <div class="p-6 rounded-2xl bg-white border border-slate-200/80 relative z-10 hover:-translate-y-1 transition-all duration-300 shadow-sm hover:border-blue-200 hover:shadow-md">
-                        <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 font-bold mb-4">I</div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">Audit Phase</h3>
-                        <p class="text-xs text-slate-500 leading-relaxed">We extract historical performance parameters, tracking leaks, attribution discrepancies, and cohort behavior realities to isolate structural bottlenecks.</p>
-                    </div>
-                </div>
-                <div class="relative group">
-                    <div class="absolute -top-5 left-6 text-7xl font-extrabold text-slate-100 pointer-events-none z-0">02</div>
-                    <div class="p-6 rounded-2xl bg-white border border-slate-200/80 relative z-10 hover:-translate-y-1 transition-all duration-300 shadow-sm hover:border-blue-200 hover:shadow-md">
-                        <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 font-bold mb-4">II</div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">Infrastructure Setup</h3>
-                        <p class="text-xs text-slate-500 leading-relaxed">We build custom dashboarding modules, configure direct server side attribution tracking, and align clean analytics data layers.</p>
-                    </div>
-                </div>
-                <div class="relative group">
-                    <div class="absolute -top-5 left-6 text-7xl font-extrabold text-slate-100 pointer-events-none z-0">03</div>
-                    <div class="p-6 rounded-2xl bg-white border border-slate-200/80 relative z-10 hover:-translate-y-1 transition-all duration-300 shadow-sm hover:border-blue-200 hover:shadow-md">
-                        <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 font-bold mb-4">III</div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">AI Campaign Systems</h3>
-                        <p class="text-xs text-slate-500 leading-relaxed">We launch automated search clustering routines alongside AI automated campaigns to capture high intent organic and paid customer volume variants.</p>
-                    </div>
-                </div>
-                <div class="relative group">
-                    <div class="absolute -top-5 left-6 text-7xl font-extrabold text-slate-100 pointer-events-none z-0">04</div>
-                    <div class="p-6 rounded-2xl bg-white border border-slate-200/80 relative z-10 hover:-translate-y-1 transition-all duration-300 shadow-sm hover:border-blue-200 hover:shadow-md">
-                        <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 font-bold mb-4">IV</div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">Scaling & Optimization</h3>
-                        <p class="text-xs text-slate-500 leading-relaxed">We fine tune active behavioral retention loops and install structural conversion optimization parameters to secure sustainable margin ratios.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="py-24 bg-slate-50 border-t border-slate-200/60">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="text-sm font-bold uppercase tracking-wider text-blue-600 block mb-2">Search Insights</span>
-                <h2 class="text-3xl font-extrabold text-slate-900">Frequently Asked Questions</h2>
-            </div>
-
-            <div class="space-y-4">
-
-                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
-                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
-                        <span class="font-bold text-sm md:text-base">What is AI SEO for ecommerce brands?</span>
-                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
-                    </button>
-                    <div class="faq-content">
-                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
-                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed">AI SEO for ecommerce brands represents a systemic evolution beyond basic manual keyword tracking and standard product meta descriptions. Our architecture leverages advanced algorithmic models to map, organize, and build semantic site structures across thousands of product categories instantly. This framework reads changing buyer search behavior trends to scale highly relevant landing pages automatically, satisfying the complex ranking parameters set by modern search engines.</p>
-                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed mt-3">By targeting transactional, high-commercial-intent queries, the searches people make when they are ready to buy rather than just browse, this infrastructure drives sustainable organic traffic directly to your storefront. This significantly lowers long-term customer acquisition costs and creates a permanent, compounding search asset that steadily decreases your brand's dependency on paid performance marketing channels. Unlike paid ads that stop the moment budgets are cut, organic search equity accumulates over time and continues generating revenue without incremental spend.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
-                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
-                        <span class="font-bold text-sm md:text-base">How does dashboarding improve ecommerce growth?</span>
-                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
-                    </button>
-                    <div class="faq-content">
-                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
-                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed">Centralized dashboarding acts as the core visibility command layer for modern ecommerce growth operations. Most scaling retail brands manage metrics across scattered tracking platforms, Meta Ads Manager, Google Analytics, Shopify reports, email platforms, resulting in distorted channel attribution, duplicate purchase counting, and unreliable blended ROAS percentages. These inconsistencies make it nearly impossible to know which channels are actually profitable.</p>
-                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed mt-3">Our custom engineering builds server-side data pipeline infrastructure that maps every marketing dollar cleanly back to true net financial outputs, bypassing browser-based pixel limitations caused by iOS privacy changes and cookie restrictions. By consolidating all channel indicators into a single clean reporting layer, your team gains immediate clarity on actual customer acquisition costs, true channel contribution weight, and real margin performance. Accurate data models enable faster, more confident budget decisions that protect overall margins from the systematic over-reporting errors built into standard ad platform dashboards.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
-                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
-                        <span class="font-bold text-sm md:text-base">What are AI automated campaigns and how do they work?</span>
-                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
-                    </button>
-                    <div class="faq-content">
-                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
-                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed">AI automated campaigns are real-time performance marketing systems engineered to optimize budgets continuously without constant manual intervention. Standard marketing campaigns rely on static rules and weekly human adjustments, which results in slow creative testing cycles, wasted ad spend during suboptimal windows, and missed scaling opportunities when top-performing creatives hit their stride.</p>
-                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed mt-3">Our integrated infrastructure applies precise algorithmic rule sets across your entire marketing mix, constantly balancing creative asset variations, audience targeting hooks, and bid levels based on actual real-time margin performance data, not lagging vanity metrics. By matching algorithmic patterns directly to buyer behavior signals, the framework automatically shifts budget toward top-performing combinations and pauses underperformers before they drain spend. This ongoing data-backed structure reduces ad creative fatigue, lowers cost per acquisition over time, and keeps your customer acquisition loops highly efficient as you scale ad spend upward.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
-                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
-                        <span class="font-bold text-sm md:text-base">How do you drive high intent ecommerce traffic that actually converts?</span>
-                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
-                    </button>
-                    <div class="faq-content">
-                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
-                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed">Driving consistent high-intent traffic requires moving away from broad, untargeted audience pools toward precision behavioral targeting models built around active purchase signals. Most ecommerce brands waste significant ad spend buying cheap, unqualified web traffic that generates impressions without conversions, inflating apparent reach while suppressing actual ROAS.</p>
-                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed mt-3">Growth Loop builds data architectures that filter specifically for shoppers showing clear, active buying signals, people searching commercial-intent keywords, engaging with competitor product pages, or exhibiting behavioral patterns consistent with near-term purchase decisions. We coordinate advanced search optimization loops alongside exact-match and shopping network advertising to position your products precisely at the moment of consumer need. This structural approach filters out casual browsing traffic and concentrates your acquisition budget purely on audiences with demonstrated purchase readiness, measurably improving conversion rates and lifting ROAS across the entire ecommerce growth engine.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
-                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
-                        <span class="font-bold text-sm md:text-base">How does Growth Loop help improve customer retention and lifetime value?</span>
-                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
-                    </button>
-                    <div class="faq-content">
-                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
-                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed">Growth Loop improves customer retention and lifetime value by installing automated behavioral tracking systems that map individual customer journeys after the initial purchase, rather than treating every buyer as a new acquisition target. Relying solely on calendar-based broadcast email campaigns leads to list fatigue, rising unsubscribe rates, and eroded sender reputation over time, all of which reduce the long-term value of your owned customer database.</p>
-                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed mt-3">Our retention infrastructure tracks exact buyer timelines, product lifecycle lengths, purchase frequency patterns, and historical interaction data to deploy personally relevant lifecycle marketing offers at precisely the right moment, automatically. This method surfaces replenishment reminders, complementary product recommendations, and win-back sequences without requiring constant manual campaign management. By encouraging repeat purchases through relevance rather than blanket discounting, we extend customer lifetime value, reduce overall customer acquisition cost exposure, and strengthen net revenue margins across your entire ecommerce operation.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section id="contact" class="py-24 relative overflow-hidden bg-slate-900">
-        <div class="absolute inset-0 bg-gradient-to-t from-blue-950/30 via-transparent to-transparent pointer-events-none"></div>
-        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
-            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">
-                Build Predictable Ecommerce Growth Infrastructure
-            </h2>
-            <p class="text-slate-400 max-w-xl mx-auto mb-10 text-sm md:text-base leading-relaxed">
-                Connect with our team to run a complete tracking audit and deploy performance optimization architecture for your business operations.
-            </p>
-            <div class="flex justify-center">
-                <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold text-base shadow-lg shadow-blue-500/20 hover:-translate-y-0.5 transition-all duration-200">
-                    <i class="fa-solid fa-calendar-days mr-2.5 text-sm"></i> Book a Strategy Call
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER, matches homepage -->
-    <footer class="py-12 border-t border-slate-900 bg-slate-950 text-center text-xs text-slate-600">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div class="flex items-center gap-2">
-                <span class="font-bold text-slate-400 inline-flex items-center gap-2">
-                    <svg class="h-5 w-5 shrink-0 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></svg>
-                    GROWTH LOOP
-                </span>
-                <span>&copy; 2026. All rights reserved.</span>
-            </div>
-            <div class="flex gap-6 text-slate-500">
-                <a href="#" class="hover:text-slate-400 transition-colors">Privacy Policy</a>
-                <a href="#" class="hover:text-slate-400 transition-colors">Terms of Service</a>
+            <p class="st-wordmark" aria-hidden="true">Growth Loop</p>
+            <div class="st-footer-base">
+                <span>© 2026 Growth Loop. All rights reserved.</span>
+                <span>Published by <span class="author">Growth Loop</span>. Updated 21 October 2026.</span>
             </div>
         </div>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            lucide.createIcons();
-            const toggles = document.querySelectorAll('.faq-toggle');
-            toggles.forEach(toggle => {
-                toggle.addEventListener('click', () => {
-                    const content = toggle.nextElementSibling;
-                    const icon = toggle.querySelector('i');
-                    const isOpen = content.classList.contains('faq-open');
-
-                    document.querySelectorAll('.faq-content').forEach(c => c.classList.remove('faq-open'));
-                    document.querySelectorAll('.faq-toggle i').forEach(ic => ic.style.transform = 'rotate(0deg)');
-
-                    if (!isOpen) {
-                        content.classList.add('faq-open');
-                        icon.style.transform = 'rotate(180deg)';
-                    }
-                });
-            });
+            if (window.lucide) lucide.createIcons();
+            // Highlight the current section in the sticky "on this page" bar
+            const links = [...document.querySelectorAll('.st-toc a')];
+            const byId = new Map(links.map((a) => [a.getAttribute('href').slice(1), a]));
+            const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+                if (!e.isIntersecting) return;
+                links.forEach((a) => a.classList.remove('is-active'));
+                const a = byId.get(e.target.id);
+                if (a) { a.classList.add('is-active'); const ul = a.closest('ul'); ul.scrollTo({ left: a.offsetLeft - ul.clientWidth / 2 + a.offsetWidth / 2, behavior: 'smooth' }); }
+            }), { rootMargin: '-45% 0px -50% 0px' });
+            byId.forEach((_, id) => { const el = document.getElementById(id); if (el) io.observe(el); });
         });
     </script>
 </body>

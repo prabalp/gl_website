@@ -47,7 +47,7 @@
     {
       "@type": "WebSite",
       "@id": "https://mygrowthloop.com/#website",
-      "name": "The Growth Loop Cycle",
+      "name": "Growth Loop",
       "url": "https://mygrowthloop.com/",
       "description": "How Growth Loop partners with you to engineer sustainable success through discovery, strategic architecture, agile execution, and continuous optimization.",
       "publisher": {
@@ -79,7 +79,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #FFFFFF; }
         .glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
@@ -92,8 +92,9 @@
         .dropdown-item { display: block; padding: 12px 16px; color: #475569; text-decoration: none; transition: all 0.2s; border-radius: 8px; }
         .dropdown-item:hover { background: #eff6ff; color: #1d4ed8; padding-left: 20px; }
     </style>
+    <link rel="stylesheet" href="studio.css">
 </head>
-<body class="text-slate-600 antialiased overflow-x-hidden bg-white">
+<body class="studio text-slate-600 antialiased overflow-x-hidden bg-white">
 
     <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -115,6 +116,8 @@
                                 <a href="inbound.html" class="dropdown-item">Inbound Optimisation</a>
                                 <a href="outbound.html" class="dropdown-item">Outbound Optimisation</a>
                                 <a href="geo.html" class="dropdown-item">Generative Engine Optimisation</a>
+                                <a href="voice-agents.html" class="dropdown-item">AI Voice Agents</a>
+                                <a href="ai-infrastructure.html" class="dropdown-item">Internal AI Infrastructure</a>
                             </div>
                         </div>
                         <div class="dropdown relative group inline-block">
@@ -138,7 +141,7 @@
                                 <a href="ai-readiness-tool.html" class="dropdown-item">AI Readiness Checker</a>
                             </div>
                         </div>
-                        <a href="index.html#about" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About Us</a>
+                        <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About Us</a><a href="blog/" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Blog</a>
                         <a href="approach.html" class="text-sm font-medium text-blue-600 transition-colors">Approach</a>
                         <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="cta-button bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-blue-500/20">Partner With Us</a>
                     </div>
@@ -158,6 +161,8 @@
                     <a href="inbound.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Inbound Optimisation</a>
                     <a href="outbound.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Outbound Optimisation</a>
                     <a href="geo.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Generative Engine Optimisation</a>
+                    <a href="voice-agents.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">AI Voice Agents</a>
+                    <a href="ai-infrastructure.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Internal AI Infrastructure</a>
                 </div>
                 <div class="border-t border-slate-200 my-2 pt-2">
                     <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Who We Help</p>
@@ -170,139 +175,394 @@
                     <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Products</p>
                     <a href="ai-readiness-tool.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">AI Readiness Checker</a>
                 </div>
-                <a href="index.html#about" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="about.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About Us</a><a href="blog/" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Blog</a>
                 <a href="approach.html" class="text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Approach</a>
                 <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium mt-4 text-center">Partner With Us</a>
             </div>
         </div>
     </nav>
 
-    <section class="relative pt-32 pb-24 md:pt-48 md:pb-40 overflow-hidden">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] pointer-events-none opacity-30 mix-blend-screen">
-            <div class="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-indigo-600/40 blur-[120px]"></div>
-            <div class="absolute top-[10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-violet-600/30 blur-[100px]"></div>
-        </div>
-        <div class="absolute inset-0 bg-[linear-gradient(to_right,#1f293710_1px,transparent_1px),linear-gradient(to_bottom,#1f293710_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
-        <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
-            <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-8 leading-[1.15]">The Growth Loop Cycle</h1>
-            <p class="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto mb-10 leading-relaxed">
-                We don't do "one-and-done" projects. We build systems that get smarter over time. Here is how we partner with you to engineer sustainable success.
-            </p>
+    <main>
+
+        <!-- Hero -->
+        <section class="st-phero">
+            <div class="st-wrap">
+                <span class="st-label">Our Approach</span>
+                <h1>Growth systems that get <span class="st-mark">smarter every cycle.</span></h1>
+                <div class="st-hero-foot">
+                    <p class="st-muted">We don't do "one-and-done" projects. We build systems that get smarter over time. Here is how we partner with you to engineer sustainable success, one loop at a time.</p>
+                    <div class="st-hero-ctas">
+                        <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="st-btn st-btn-ink">Book a Strategy Call <i data-lucide="arrow-right"></i></a>
+                        <a href="#loop" class="st-btn st-btn-line">See the loop</a>
+                    </div>
+                </div>
+                <div class="st-facts">
+                    <div class="st-fact"><b>4 phases</b><span>Discover, design, execute, optimise</span></div>
+                    <div class="st-fact"><b>3-year</b><span>Horizon of the strategic roadmap</span></div>
+                    <div class="st-fact"><b>Sprints</b><span>How changes are implemented</span></div>
+                    <div class="st-fact"><b>Quarterly</b><span>Business reviews that restart the loop</span></div>
+                </div>
+            </div>
+        </section>
+
+        <nav class="st-toc" aria-label="On this page">
+            <div class="st-wrap">
+                <ul>
+                    <li><a href="#loop">The loop</a></li>
+                    <li><a href="#phases">Four phases</a></li>
+                    <li><a href="#why">Why a loop</a></li>
+                    <li><a href="#roles">Who does what</a></li>
+                    <li><a href="#systems">Six systems</a></li>
+                    <li><a href="#working">Working with us</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- The loop -->
+        <section id="loop" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(01) The loop</span>
+                    <h2>One cycle, four phases</h2>
+                    <p class="st-muted">Every engagement runs the same loop: understand the business, design the future state, build it with your team, then use the results to start the next cycle from a better position.</p>
+                </div>
+                <div class="st-split">
+                    <div class="st-prose">
+                        <p>Most growth work is sold as a project with an end date. A strategy is delivered, something is launched, and the learning stops there. Within months the market moves and the plan is out of date.</p>
+                        <p>The <strong>Growth Loop</strong> is built the other way round. Launch is not the finish line; it is the point where real data starts arriving. We use that data to refine the strategy, then run the loop again.</p>
+                        <p>Each pass through the loop starts with better information than the last, which is why your business becomes <strong>more efficient and more profitable with every cycle</strong>.</p>
+                        <a href="#phases" class="st-btn st-btn-line" style="margin-top:8px">What happens in each phase <i data-lucide="arrow-right"></i></a>
+                    </div>
+                    <div class="st-visual">
+                        <p class="st-visual-title"><span>The Growth Loop cycle</span><span>Fig. 01</span></p>
+                        <svg viewBox="0 0 600 460" role="img" aria-labelledby="loopTitle loopDesc">
+                            <title id="loopTitle">The Growth Loop cycle</title>
+                            <desc id="loopDesc">Four phases in a circle: Discovery and Diagnostic, Strategic Architecture, Agile Execution and the Optimisation Loop, which feeds back into the next Discovery.</desc>
+                            <circle cx="300" cy="230" r="165" style="fill:none;stroke:var(--ink);stroke-width:2;stroke-dasharray:6 6"/>
+                            <g style="fill:var(--ink)"><circle cx="416.7" cy="113.3" r="14"/><circle cx="416.7" cy="346.7" r="14"/><circle cx="183.3" cy="346.7" r="14"/><circle cx="183.3" cy="113.3" r="14"/></g>
+                            <g style="fill:var(--lime)">
+                                <path d="M-5,-5 L6,0 L-5,5 Z" transform="translate(416.7 113.3) rotate(45)"/>
+                                <path d="M-5,-5 L6,0 L-5,5 Z" transform="translate(416.7 346.7) rotate(135)"/>
+                                <path d="M-5,-5 L6,0 L-5,5 Z" transform="translate(183.3 346.7) rotate(225)"/>
+                                <path d="M-5,-5 L6,0 L-5,5 Z" transform="translate(183.3 113.3) rotate(315)"/>
+                            </g>
+                            <g style="stroke:var(--ink);stroke-width:1.5">
+                                <rect x="208" y="33" width="184" height="64" rx="4" style="fill:var(--white)"/>
+                                <rect x="373" y="198" width="184" height="64" rx="4" style="fill:var(--paper)"/>
+                                <rect x="208" y="363" width="184" height="64" rx="4" style="fill:var(--white)"/>
+                                <rect x="43" y="198" width="184" height="64" rx="4" style="fill:var(--lime)"/>
+                            </g>
+                            <g style="font-family:var(--mono);font-size:11px;letter-spacing:.06em;fill:var(--muted)" text-anchor="middle">
+                                <text x="300" y="58">PHASE 01</text>
+                                <text x="465" y="223">PHASE 02</text>
+                                <text x="300" y="388">PHASE 03</text>
+                                <text x="135" y="223" style="fill:var(--ink)">PHASE 04</text>
+                            </g>
+                            <g style="font-family:var(--display);font-size:16px;font-weight:800;fill:var(--ink)" text-anchor="middle">
+                                <text x="300" y="80">Discovery &amp; Diagnostic</text>
+                                <text x="465" y="245">Strategic Architecture</text>
+                                <text x="300" y="410">Agile Execution</text>
+                                <text x="135" y="245">Optimisation Loop</text>
+                            </g>
+                            <g text-anchor="middle">
+                                <text x="300" y="208" style="font-family:var(--mono);font-size:10px;letter-spacing:.08em;fill:var(--muted)">THE LOOP</text>
+                                <text x="300" y="236" style="font-family:var(--display);font-size:17px;font-weight:800;fill:var(--ink)">Better data,</text>
+                                <text x="300" y="258" style="font-family:var(--display);font-size:17px;font-weight:800;fill:var(--ink)">every cycle</text>
+                            </g>
+                        </svg>
+                        <p class="st-muted" style="font-size:.85rem;margin:18px 0 0">Phase 04 feeds straight back into phase 01: results from execution become the evidence for the next round of decisions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phases -->
+        <section id="phases" class="st-section st-white">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(02) The four phases</span>
+                    <h2>What happens, what you get</h2>
+                    <p class="st-muted">Each phase has a clear job and a clear set of outputs, so you always know where we are in the loop and what comes next.</p>
+                </div>
+                <div class="st-grid st-grid-2">
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>Phase 01</span><span class="st-cell-icon"><i data-lucide="search"></i></span></div>
+                        <h3>Discovery &amp; Diagnostic</h3>
+                        <p class="st-muted" style="margin:0 0 18px;line-height:1.55">We begin by immersing ourselves in your business. We audit your data, interview your stakeholders, and map your current processes. We identify not just the symptoms, but the root causes of your stagnation.</p>
+                        <ul class="st-checks">
+                            <li>Stakeholder interviews</li>
+                            <li>Tech stack audit</li>
+                            <li>Competitor analysis</li>
+                            <li>A map of current processes and the root causes holding growth back</li>
+                        </ul>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>Phase 02</span><span class="st-cell-icon"><i data-lucide="drafting-compass"></i></span></div>
+                        <h3>Strategic Architecture</h3>
+                        <p class="st-muted" style="margin:0 0 18px;line-height:1.55">We design the future state. This isn't just a slide deck; it's a blueprint. We define the specific OKRs, resource requirements, and technological changes needed to achieve your growth targets.</p>
+                        <ul class="st-checks">
+                            <li>3-year strategic roadmap</li>
+                            <li>Financial modelling</li>
+                            <li>KPI definition</li>
+                            <li>OKRs, resource requirements and the technology changes needed</li>
+                        </ul>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>Phase 03</span><span class="st-cell-icon"><i data-lucide="hammer"></i></span></div>
+                        <h3>Agile Execution</h3>
+                        <p class="st-muted" style="margin:0 0 18px;line-height:1.55">We work alongside your teams to implement the changes. Whether it's standing up a new data warehouse, training your sales team, or deploying an AI voice agent, we are in the trenches with you.</p>
+                        <ul class="st-checks">
+                            <li>Sprint-based implementation</li>
+                            <li>Change management</li>
+                            <li>Regular progress reviews</li>
+                            <li>Live systems your team is trained to run</li>
+                        </ul>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>Phase 04</span><span class="st-cell-icon"><i data-lucide="refresh-cw"></i></span></div>
+                        <h3>Optimisation Loop</h3>
+                        <p class="st-muted" style="margin:0 0 18px;line-height:1.55">Launch is just the beginning. We use the data generated from the execution phase to refine the strategy. This feedback loop ensures that your business becomes more efficient and more profitable with every cycle.</p>
+                        <ul class="st-checks">
+                            <li>Automated dashboards</li>
+                            <li>Quarterly business reviews</li>
+                            <li>New opportunity identification</li>
+                            <li>A refined strategy that becomes the input to the next cycle</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why a loop -->
+        <section id="why" class="st-section st-dark">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(03) Why a loop</span>
+                    <h2>Projects end. Systems compound.</h2>
+                    <p>A one-off project gives you a snapshot. A loop gives you a business that keeps learning from its own results.</p>
+                </div>
+                <div class="st-split">
+                    <ol class="st-points">
+                        <li><span>01</span><div><h3>Root causes, not symptoms</h3><p>Discovery looks past the visible problem, such as too few meetings, to the cause underneath, such as a weak ICP, disconnected data or a manual process that doesn't scale.</p></div></li>
+                        <li><span>02</span><div><h3>A blueprint, not a deck</h3><p>Strategy is translated into specific OKRs, KPIs, resources and technology changes, so execution starts with clear targets rather than broad ambitions.</p></div></li>
+                        <li><span>03</span><div><h3>Built with your team</h3><p>We implement alongside the people who will run the system, so knowledge stays in your business once a sprint is done.</p></div></li>
+                        <li><span>04</span><div><h3>Every cycle starts higher</h3><p>Real results from execution replace assumptions. The next round of decisions is based on what actually happened in your market.</p></div></li>
+                    </ol>
+                    <div class="st-callout">
+                        Launch is just the beginning.
+                        <small>The data a system generates is the most valuable input to the next version of it</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Who does what -->
+        <section id="roles" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(04) Who does what</span>
+                    <h2>Your part in each phase</h2>
+                    <p class="st-muted">We do the heavy lifting, but the best systems are built with the people who know the business. Here is what each phase asks of your team.</p>
+                </div>
+                <div class="st-table-wrap">
+                    <table class="st-compare">
+                        <thead><tr><th scope="col">Phase</th><th scope="col">What we do</th><th scope="col">What you get</th><th scope="col">What we need from your team</th></tr></thead>
+                        <tbody>
+                            <tr><th scope="row">01 Discovery &amp; Diagnostic</th><td>Audit your data and tech stack, interview stakeholders, map processes, analyse competitors</td><td>A clear diagnosis of root causes, not just symptoms</td><td>Time with key stakeholders and access to the relevant data and tools</td></tr>
+                            <tr><th scope="row">02 Strategic Architecture</th><td>Design the future state: OKRs, resources, technology changes, financial model</td><td>A 3-year strategic roadmap, financial model and defined KPIs</td><td>Leadership input on goals and constraints, and sign-off on the blueprint</td></tr>
+                            <tr><th scope="row">03 Agile Execution</th><td>Implement in sprints alongside your teams, manage the change, train people</td><td>Working systems, a team that knows how to run them, regular progress reviews</td><td>An owner on your side, people available for training, and feedback in each review</td></tr>
+                            <tr><th scope="row">04 Optimisation Loop</th><td>Analyse execution data, refine strategy, spot new opportunities</td><td>Automated dashboards, quarterly business reviews, new opportunities identified</td><td>Attendance at quarterly business reviews and decisions on what to prioritise next</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Six systems -->
+        <section id="systems" class="st-section st-white">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(05) Applied to six systems</span>
+                    <h2>Same loop, every system</h2>
+                    <p class="st-muted">Whether we are building outbound, AI visibility or internal AI tooling, the method is the same: diagnose, design, build, then improve on real data.</p>
+                </div>
+                <div class="st-grid">
+                    <a class="st-cell st-cell-auto" href="outbound.html">
+                        <div class="st-cell-top"><span>01</span><span class="st-cell-icon"><i data-lucide="send"></i></span></div>
+                        <h3>Outbound</h3>
+                        <ul class="st-checks"><li><strong>Discover:</strong> your ICP and current outreach</li><li><strong>Design:</strong> lists, sequences and channel mix</li><li><strong>Execute:</strong> multi-channel outreach, replies routed to you</li><li><strong>Optimise:</strong> targeting and messaging tuned on replies and meetings</li></ul>
+                        <span class="st-cell-more">Outbound systems <i data-lucide="arrow-right"></i></span>
+                    </a>
+                    <a class="st-cell st-cell-auto" href="inbound.html">
+                        <div class="st-cell-top"><span>02</span><span class="st-cell-icon"><i data-lucide="magnet"></i></span></div>
+                        <h3>Inbound</h3>
+                        <ul class="st-checks"><li><strong>Discover:</strong> what your buyers search for and where you rank</li><li><strong>Design:</strong> content, SEO and landing page plan</li><li><strong>Execute:</strong> publish assets and capture leads into your CRM</li><li><strong>Optimise:</strong> double down on the pages that convert</li></ul>
+                        <span class="st-cell-more">Inbound systems <i data-lucide="arrow-right"></i></span>
+                    </a>
+                    <a class="st-cell st-cell-auto" href="geo.html">
+                        <div class="st-cell-top"><span>03</span><span class="st-cell-icon"><i data-lucide="sparkles"></i></span></div>
+                        <h3>AI Visibility</h3>
+                        <ul class="st-checks"><li><strong>Discover:</strong> how AI tools describe you and your competitors today</li><li><strong>Design:</strong> authority content and structure AI can cite</li><li><strong>Execute:</strong> publish and distribute it</li><li><strong>Optimise:</strong> track citations and close the gaps</li></ul>
+                        <span class="st-cell-more">AI visibility (GEO) <i data-lucide="arrow-right"></i></span>
+                    </a>
+                    <a class="st-cell st-cell-auto" href="voice-agents.html">
+                        <div class="st-cell-top"><span>04</span><span class="st-cell-icon"><i data-lucide="phone-call"></i></span></div>
+                        <h3>AI Voice Agents</h3>
+                        <ul class="st-checks"><li><strong>Discover:</strong> which calls are repetitive or missed today</li><li><strong>Design:</strong> scripts, qualification rules and handoffs</li><li><strong>Execute:</strong> deploy the agent, connected to your calendar and CRM</li><li><strong>Optimise:</strong> review call outcomes and refine the agent</li></ul>
+                        <span class="st-cell-more">AI voice agents <i data-lucide="arrow-right"></i></span>
+                    </a>
+                    <a class="st-cell st-cell-auto" href="ai-infrastructure.html">
+                        <div class="st-cell-top"><span>05</span><span class="st-cell-icon"><i data-lucide="cpu"></i></span></div>
+                        <h3>Internal AI Infrastructure</h3>
+                        <ul class="st-checks"><li><strong>Discover:</strong> audit your tech stack and manual workflows</li><li><strong>Design:</strong> where AI and automation will save the most time</li><li><strong>Execute:</strong> build, integrate and train your team</li><li><strong>Optimise:</strong> measure adoption and extend what works</li></ul>
+                        <span class="st-cell-more">AI infrastructure <i data-lucide="arrow-right"></i></span>
+                    </a>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>06</span><span class="st-cell-icon"><i data-lucide="bar-chart-3"></i></span></div>
+                        <h3>Revenue Analytics</h3>
+                        <ul class="st-checks"><li><strong>Discover:</strong> where your data lives and which numbers you trust</li><li><strong>Design:</strong> KPI definitions and the data model behind them</li><li><strong>Execute:</strong> stand up the data warehouse and automated dashboards</li><li><strong>Optimise:</strong> use the dashboards to drive each quarterly review</li></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Working with us -->
+        <section id="working" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(06) Working with us</span>
+                    <h2>A steady, visible rhythm</h2>
+                    <p class="st-muted">You always know what we are working on, what has shipped and what the data says. Here is the cadence of an engagement.</p>
+                </div>
+                <div class="st-loop">
+                    <ol class="st-steps">
+                        <li><span>01</span><div><h3>Kick-off &amp; discovery</h3><p>Stakeholder interviews, a tech stack audit and competitor analysis. We agree the questions the diagnostic needs to answer.</p></div></li>
+                        <li><span>02</span><div><h3>Blueprint sign-off</h3><p>We present the roadmap, financial model and KPIs. Your leadership signs off before any build work starts.</p></div></li>
+                        <li><span>03</span><div><h3>Sprints &amp; progress reviews</h3><p>Implementation runs in sprints. Regular progress reviews show what shipped, what changed and what is next, with change management built in.</p></div></li>
+                        <li><span>04</span><div><h3>Quarterly business reviews</h3><p>Automated dashboards feed a quarterly review of results against KPIs. New opportunities are identified and the next loop is planned.</p></div></li>
+                    </ol>
+                    <div class="st-visual">
+                        <p class="st-visual-title"><span>Mock: automated KPI dashboard</span><span>Fig. 02</span></p>
+                        <div class="st-meter">
+                            <div class="st-meter-row"><span>Pipeline generated</span><div class="st-meter-track"><div class="st-meter-fill" style="width:82%"></div></div><b>vs target</b></div>
+                            <div class="st-meter-row"><span>Meetings booked</span><div class="st-meter-track"><div class="st-meter-fill" style="width:68%"></div></div><b>vs target</b></div>
+                            <div class="st-meter-row"><span>Hours automated</span><div class="st-meter-track"><div class="st-meter-fill" style="width:55%"></div></div><b>vs target</b></div>
+                            <div class="st-meter-row"><span>Sprint items shipped</span><div class="st-meter-track"><div class="st-meter-fill" style="width:90%"></div></div><b>vs plan</b></div>
+                            <div class="st-meter-row is-key"><span>Next opportunities</span><div class="st-meter-track"><div class="st-meter-fill" style="width:35%"></div></div><b>For QBR</b></div>
+                        </div>
+                        <p class="st-muted" style="font-size:.85rem;margin:18px 0 0">Illustrative only. Your dashboard tracks the KPIs defined in your blueprint, updated automatically, so each review starts from the same set of facts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="st-section st-white">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(07) FAQ</span>
+                    <h2>Questions about the approach</h2>
+                    <p class="st-muted">Still unsure? Book a call and we'll walk through how the loop would run in your business.</p>
+                </div>
+                <div class="st-faq">
+                    <details open>
+                        <summary>Do you take on one-off projects?</summary>
+                        <div class="st-faq-a"><p>We don't do "one-and-done" projects. Every engagement is designed as a loop: we build a system, measure what it produces and use that data to improve it. That is how a system keeps getting smarter after launch instead of slowly going out of date.</p></div>
+                    </details>
+                    <details>
+                        <summary>What exactly do we get from the discovery and strategy phases?</summary>
+                        <div class="st-faq-a"><ul><li>From Discovery &amp; Diagnostic: stakeholder interviews, a tech stack audit, competitor analysis and a clear view of the root causes behind your stagnation.</li><li>From Strategic Architecture: a 3-year strategic roadmap, financial modelling and KPI definitions, plus the OKRs, resources and technology changes needed to hit your targets.</li></ul></div>
+                    </details>
+                    <details>
+                        <summary>Is the strategy just a slide deck?</summary>
+                        <div class="st-faq-a"><p>No. It's a blueprint. It defines specific OKRs, resource requirements and technological changes, and it is the plan we then implement with you in sprints. We stay involved through execution, so the strategy is tested against reality rather than handed over and left.</p></div>
+                    </details>
+                    <details>
+                        <summary>What does our team need to do?</summary>
+                        <div class="st-faq-a"><p>Give us access to stakeholders and data during discovery, sign off the blueprint, name an owner for execution and make people available for training. After that, the main commitment is taking part in regular progress reviews and quarterly business reviews.</p></div>
+                    </details>
+                    <details>
+                        <summary>Do you work alongside our existing team?</summary>
+                        <div class="st-faq-a"><p>Yes. We work alongside your teams to implement the changes, whether that's standing up a new data warehouse, training your sales team or deploying an AI voice agent. Change management is part of execution, so new systems are adopted rather than ignored.</p></div>
+                    </details>
+                    <details>
+                        <summary>Do we have to start with all six systems?</summary>
+                        <div class="st-faq-a"><p>No. Discovery shows where the biggest constraint is, and the roadmap sequences the work. Many engagements start with one system, such as outbound or revenue analytics, and add others in later cycles as new opportunities are identified.</p></div>
+                    </details>
+                    <details>
+                        <summary>How do we know it's working?</summary>
+                        <div class="st-faq-a"><p>KPIs are defined in the strategy phase, before anything is built. Automated dashboards track them continuously, regular progress reviews cover each sprint, and quarterly business reviews compare results against the plan and decide what the next cycle should focus on.</p></div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next -->
+        <section class="st-section" style="padding-top:72px;padding-bottom:72px;border-top:1px solid var(--ink)">
+            <div class="st-wrap">
+                <span class="st-label" style="margin-bottom:24px">Where to go next</span>
+                <div class="st-next">
+                    <a href="ai-readiness-tool.html"><small>AI Readiness Checker</small><b>Start with a diagnostic</b><p>A quick self-check on where your business stands with AI today.</p></a>
+                    <a href="ai-infrastructure.html"><small>Internal AI Infrastructure</small><b>Automate the busywork</b><p>AI tools and workflows built into how your team already operates.</p></a>
+                    <a href="b2b.html"><small>B2B Growth</small><b>Predictable pipeline</b><p>Inbound, outbound and AI visibility connected into one demand system.</p></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <section id="contact" class="st-dark st-section st-cta">
+        <div class="st-wrap">
+            <span class="st-label">Start a project</span>
+            <h2>Start your<br>first <span class="st-mark">loop.</span></h2>
+            <p class="st-muted">Let's discuss how the Growth Loop methodology can turn insight into compounding growth for your business.</p>
+            <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="st-btn st-btn-lime">Book a free consultation <i data-lucide="arrow-right"></i></a>
         </div>
     </section>
 
-    <section class="py-32 bg-slate-50 relative">
-        <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-slate-200 z-0"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-32">
-            <div class="grid md:grid-cols-2 gap-24 items-center">
-                <div class="text-right md:pr-12">
-                    <h2 class="text-6xl font-bold text-slate-200 mb-4">01</h2>
-                    <h3 class="text-4xl font-bold text-slate-900 mb-6">Discovery & Diagnostic</h3>
-                    <p class="text-slate-600 text-lg leading-relaxed">
-                        We begin by immersing ourselves in your business. We audit your data, interview your stakeholders, and map your current processes. We identify not just the symptoms, but the root causes of your stagnation.
-                    </p>
+    <footer class="st-footer">
+        <div class="st-wrap">
+            <div class="st-footer-grid">
+                <div>
+                    <h4>Growth Loop</h4>
+                    <p class="st-muted" style="max-width:34ch;line-height:1.55;margin:0 0 16px">We engineer automated systems that grow your revenue.</p>
+                    <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="st-btn st-btn-lime" style="padding:12px 20px">Book a call <i data-lucide="arrow-right"></i></a>
                 </div>
-                <div class="md:pl-12">
-                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-md">
-                        <ul class="space-y-4 text-base text-slate-600">
-                            <li>• Stakeholder Interviews</li>
-                            <li>• Tech Stack Audit</li>
-                            <li>• Competitor Analysis</li>
-                        </ul>
-                    </div>
+                <div>
+                    <h4>Expertise</h4>
+                    <ul><li><a href="outbound.html">Outbound</a></li><li><a href="inbound.html">Inbound</a></li><li><a href="geo.html">AI Visibility (GEO)</a></li><li><a href="voice-agents.html">AI Voice Agents</a></li><li><a href="ai-infrastructure.html">AI Infrastructure</a></li><li><a href="approach.html">Approach</a></li></ul>
                 </div>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-24 items-center">
-                <div class="md:pr-12 md:text-right md:order-1 order-2">
-                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-md">
-                        <ul class="space-y-4 text-base text-slate-600">
-                            <li>• 3-Year Strategic Roadmap</li>
-                            <li>• Financial Modeling</li>
-                            <li>• KPI Definition</li>
-                        </ul>
-                    </div>
+                <div>
+                    <h4>Who we help</h4>
+                    <ul><li><a href="speaker.html">Speakers &amp; Founders</a></li><li><a href="ecommerce.html">Ecommerce</a></li><li><a href="b2b.html">B2B Teams</a></li><li><a href="investors.html">Investors</a></li></ul>
                 </div>
-                <div class="md:pl-12 md:order-2 order-1">
-                    <h2 class="text-6xl font-bold text-slate-200 mb-4">02</h2>
-                    <h3 class="text-4xl font-bold text-slate-900 mb-6">Strategic Architecture</h3>
-                    <p class="text-slate-600 text-lg leading-relaxed">
-                        We design the future state. This isn't just a slide deck; it's a blueprint. We define the specific OKRs, resource requirements, and technological changes needed to achieve your growth targets.
-                    </p>
+                <div>
+                    <h4>Resources</h4>
+                    <ul><li><a href="blog/">Blog</a></li><li><a href="ai-readiness-tool.html">AI Readiness Checker</a></li><li><a href="about.html">About Us</a></li></ul>
                 </div>
             </div>
-
-            <div class="grid md:grid-cols-2 gap-24 items-center">
-                <div class="text-right md:pr-12">
-                    <h2 class="text-6xl font-bold text-slate-200 mb-4">03</h2>
-                    <h3 class="text-4xl font-bold text-slate-900 mb-6">Agile Execution</h3>
-                    <p class="text-slate-600 text-lg leading-relaxed">
-                        We work alongside your teams to implement the changes. Whether it's standing up a new data warehouse, training your sales team, or launching a new product line, we are in the trenches with you.
-                    </p>
-                </div>
-                <div class="md:pl-12">
-                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-md">
-                        <ul class="space-y-4 text-base text-slate-600">
-                            <li>• Sprint-based Implementation</li>
-                            <li>• Change Management</li>
-                            <li>• Regular Progress Reviews</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-24 items-center">
-                <div class="md:pr-12 md:text-right md:order-1 order-2">
-                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-md">
-                        <ul class="space-y-4 text-base text-slate-600">
-                            <li>• Automated Dashboards</li>
-                            <li>• Quarterly Business Reviews</li>
-                            <li>• New Opportunity Identification</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="md:pl-12 md:order-2 order-1">
-                    <h2 class="text-6xl font-bold text-slate-200 mb-4">04</h2>
-                    <h3 class="text-4xl font-bold text-slate-900 mb-6">Optimization Loop</h3>
-                    <p class="text-slate-600 text-lg leading-relaxed">
-                        Launch is just the beginning. We use the data generated from the execution phase to refine the strategy. This feedback loop ensures that your business becomes more efficient and more profitable with every cycle.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-32 bg-slate-900 border-t border-slate-800">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-5xl font-bold text-white mb-8">Ready to Scale?</h2>
-            <p class="text-slate-400 text-xl font-light mb-12">
-                Let's discuss how the Growth Loop methodology can turn insight into compounding growth for your business.
-            </p>
-            <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="inline-flex justify-center items-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg shadow-blue-500/25 transition-all transform hover:scale-[1.02] text-lg">
-                Book Free Consultation
-            </a>
-        </div>
-    </section>
-
-    <footer class="py-12 border-t border-slate-900 bg-slate-950 text-center text-xs text-slate-600">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div class="flex items-center gap-2">
-                <span class="font-bold text-slate-400 inline-flex items-center gap-2">
-                    <svg class="h-5 w-5 shrink-0 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></svg>
-                    GROWTH LOOP
-                </span>
-                <span>&copy; 2026. All rights reserved.</span>
-            </div>
-            <div class="flex gap-6 text-slate-500">
-                <a href="#" class="hover:text-slate-400 transition-colors">Privacy Policy</a>
-                <a href="#" class="hover:text-slate-400 transition-colors">Terms of Service</a>
+            <p class="st-wordmark" aria-hidden="true">Growth Loop</p>
+            <div class="st-footer-base">
+                <span>© 2026 Growth Loop. All rights reserved.</span>
+                <span>Published by <span class="author">Growth Loop</span>. Updated 21 October 2026.</span>
             </div>
         </div>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            lucide.createIcons();
+            if (window.lucide) lucide.createIcons();
+            // Highlight the current section in the sticky "on this page" bar
+            const links = [...document.querySelectorAll('.st-toc a')];
+            const byId = new Map(links.map((a) => [a.getAttribute('href').slice(1), a]));
+            const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+                if (!e.isIntersecting) return;
+                links.forEach((a) => a.classList.remove('is-active'));
+                const a = byId.get(e.target.id);
+                if (a) { a.classList.add('is-active'); const ul = a.closest('ul'); ul.scrollTo({ left: a.offsetLeft - ul.clientWidth / 2 + a.offsetWidth / 2, behavior: 'smooth' }); }
+            }), { rootMargin: '-45% 0px -50% 0px' });
+            byId.forEach((_, id) => { const el = document.getElementById(id); if (el) io.observe(el); });
         });
     </script>
 </body>

@@ -17,6 +17,14 @@
     <lastmod>2026-10-21</lastmod>
   </url>
   <url>
+    <loc>https://mygrowthloop.com/voice-agents</loc>
+    <lastmod>2026-10-25</lastmod>
+  </url>
+  <url>
+    <loc>https://mygrowthloop.com/ai-infrastructure</loc>
+    <lastmod>2026-10-25</lastmod>
+  </url>
+  <url>
     <loc>https://mygrowthloop.com/approach</loc>
     <lastmod>2026-10-21</lastmod>
   </url>
@@ -40,4 +48,14 @@
     <loc>https://mygrowthloop.com/ai-readiness-tool</loc>
     <lastmod>2026-10-21</lastmod>
   </url>
+<!-- blog:start -->
+  <url>
+    <loc>https://mygrowthloop.com/blog/</loc>
+    <lastmod>2026-10-25</lastmod>
+  </url>
+  <url>
+    <loc>https://mygrowthloop.com/blog/get-cited-in-chatgpt-ai-search</loc>
+    <lastmod>2026-10-25</lastmod>
+  </url>
+<!-- blog:end -->
 </urlset>

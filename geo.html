@@ -47,7 +47,7 @@
     {
       "@type": "WebSite",
       "@id": "https://mygrowthloop.com/#website",
-      "name": "Generative Engine Optimisation (GEO)",
+      "name": "Growth Loop",
       "url": "https://mygrowthloop.com/",
       "description": "Growth Loop helps brands get cited in ChatGPT, Perplexity, Gemini, and Google AI answers through a five-phase GEO framework.",
       "publisher": {
@@ -79,7 +79,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #FFFFFF; }
         .glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
@@ -100,8 +100,9 @@
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
         .animate-float { animation: float 6s ease-in-out infinite; }
     </style>
+    <link rel="stylesheet" href="studio.css">
 </head>
-<body class="text-slate-600 antialiased overflow-x-hidden bg-white">
+<body class="studio text-slate-600 antialiased overflow-x-hidden bg-white">
 
     <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -123,6 +124,8 @@
                                 <a href="inbound.html" class="dropdown-item">Inbound Optimisation</a>
                                 <a href="outbound.html" class="dropdown-item">Outbound Optimisation</a>
                                 <a href="geo.html" class="dropdown-item">Generative Engine Optimisation</a>
+                                <a href="voice-agents.html" class="dropdown-item">AI Voice Agents</a>
+                                <a href="ai-infrastructure.html" class="dropdown-item">Internal AI Infrastructure</a>
                             </div>
                         </div>
                         <div class="dropdown relative group inline-block">
@@ -146,7 +149,7 @@
                                 <a href="ai-readiness-tool.html" class="dropdown-item">AI Readiness Checker</a>
                             </div>
                         </div>
-                        <a href="index.html#about" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About Us</a>
+                        <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About Us</a><a href="blog/" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Blog</a>
                         <a href="approach.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Approach</a>
                         <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="cta-button bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-blue-500/20">Partner With Us</a>
                     </div>
@@ -166,6 +169,8 @@
                     <a href="inbound.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Inbound Optimisation</a>
                     <a href="outbound.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Outbound Optimisation</a>
                     <a href="geo.html" class="text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Generative Engine Optimisation</a>
+                    <a href="voice-agents.html" class="text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">AI Voice Agents</a>
+                    <a href="ai-infrastructure.html" class="text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Internal AI Infrastructure</a>
                 </div>
                 <div class="border-t border-slate-200 my-2 pt-2">
                     <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Who We Help</p>
@@ -178,340 +183,465 @@
                     <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Products</p>
                     <a href="ai-readiness-tool.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">AI Readiness Checker</a>
                 </div>
-                <a href="index.html#about" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="about.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About Us</a><a href="blog/" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Blog</a>
                 <a href="approach.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Approach</a>
                 <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium mt-4 text-center">Partner With Us</a>
             </div>
         </div>
     </nav>
 
-    <section class="relative pt-32 pb-24 md:pt-48 md:pb-40 overflow-hidden">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] pointer-events-none opacity-30 mix-blend-screen">
-            <div class="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-indigo-600/40 blur-[120px]"></div>
-            <div class="absolute top-[10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-violet-600/30 blur-[100px]"></div>
-        </div>
-        <div class="absolute inset-0 bg-[linear-gradient(to_right,#1f293710_1px,transparent_1px),linear-gradient(to_bottom,#1f293710_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
-        <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
-            <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-8 leading-[1.15]">
-                Get Cited in <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">AI-Generated Answers</span>
-            </h1>
-            <p class="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto mb-10 leading-relaxed">
-                Generative Engine Optimisation (GEO) is how your brand earns a footnote in ChatGPT, Perplexity, Gemini, and Google AI responses, not just a ranking on page one.
-            </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="group inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 font-semibold text-white transition-all duration-200 bg-blue-600 rounded-full hover:bg-blue-700 shadow-lg shadow-blue-500/20">
-                    Book a GEO Audit <i data-lucide="arrow-right" class="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"></i>
-                </a>
-                <a href="#framework" class="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 font-semibold text-slate-600 transition-all duration-200 bg-white border border-slate-200 rounded-full hover:bg-slate-50 hover:text-slate-900 hover:border-slate-300">
-                    See Our Framework
-                </a>
+    <main>
+
+        <!-- Hero -->
+        <section class="st-phero">
+            <div class="st-wrap">
+                <span class="st-label">AI Search Visibility (GEO)</span>
+                <h1>Get cited in <span class="st-mark"><span class="st-nowrap">AI-generated</span> answers.</span></h1>
+                <div class="st-hero-foot">
+                    <p class="st-muted">Generative Engine Optimisation (GEO) is how your brand earns a footnote in ChatGPT, Perplexity, Gemini and Google AI responses, not just a ranking on page one.</p>
+                    <div class="st-hero-ctas">
+                        <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="st-btn st-btn-ink">Book a GEO Audit <i data-lucide="arrow-right"></i></a>
+                        <a href="#framework" class="st-btn st-btn-line">See our framework</a>
+                    </div>
+                </div>
+                <div class="st-facts">
+                    <div class="st-fact"><b>5 phases</b><span>From baseline audit to ongoing monitoring</span></div>
+                    <div class="st-fact"><b>5 AI surfaces</b><span>ChatGPT, Perplexity, Gemini, AI Overviews, Claude</span></div>
+                    <div class="st-fact"><b>2–6 weeks</b><span>Typical shift in ChatGPT search answers</span></div>
+                    <div class="st-fact"><b>Monthly</b><span>Prompt panel re-runs to track citations</span></div>
+                </div>
             </div>
+        </section>
+
+        <nav class="st-toc" aria-label="On this page">
+            <div class="st-wrap">
+                <ul>
+                    <li><a href="#what">What it is</a></li>
+                    <li><a href="#why">Why it matters</a></li>
+                    <li><a href="#framework">Framework</a></li>
+                    <li><a href="#baseline">The baseline</a></li>
+                    <li><a href="#surfaces">AI surfaces</a></li>
+                    <li><a href="#compare">GEO vs SEO</a></li>
+                    <li><a href="#timing">Timing</a></li>
+                    <li><a href="#fit">Who it's for</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- What it is -->
+        <section id="what" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(01) What GEO is</span>
+                    <h2>SEO gets you found. GEO gets you quoted.</h2>
+                    <p class="st-muted">Search used to end in a list of links. Increasingly it ends in a single answer, and that answer names a few brands.</p>
+                </div>
+                <div class="st-split">
+                    <div class="st-prose">
+                        <p>Traditional SEO optimises for ten blue links. <strong>GEO optimises for the single answer a user reads without clicking.</strong> When someone asks an AI assistant which platform, vendor or approach to trust, you want your brand in that response, with a citation back to you.</p>
+                        <p>Research on generative answer engines shows that pages adding clear statistics, expert quotes and authoritative citations can see materially higher inclusion in AI responses, even when they do not rank first in classic search. GEO is how you capture that gap.</p>
+                        <p>In practice, that means making your site easy for AI crawlers to read, shaping your pages into passages a model can lift and quote, and building the third-party signals that tell a model your brand is a credible source.</p>
+                    </div>
+                    <div class="st-visual">
+                        <p class="st-visual-title"><span>Illustrative AI answer</span><span>Fig. 01</span></p>
+                        <div style="border:1px solid var(--ink);border-radius:6px;padding:14px 16px;background:var(--paper)">
+                            <small style="font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)">User prompt</small>
+                            <p style="margin:6px 0 0;font-weight:600">"What is the best way to improve B2B pipeline in 2026?"</p>
+                        </div>
+                        <div style="display:flex;gap:12px;margin-top:16px;align-items:flex-start">
+                            <span class="st-cell-icon" style="flex:none;width:36px;height:36px"><i data-lucide="sparkles"></i></span>
+                            <div>
+                                <small style="font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)">AI answer excerpt</small>
+                                <p style="margin:6px 0 0;line-height:1.55">Leading firms combine inbound discovery with structured outbound and AI visibility… <sup style="font-family:var(--mono);background:var(--lime);border:1px solid var(--ink);border-radius:4px;padding:0 4px">1</sup></p>
+                            </div>
+                        </div>
+                        <div style="margin-top:18px;border-top:1px solid var(--line);padding-top:14px">
+                            <small style="font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)">Sources</small>
+                            <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px">
+                                <span style="font-family:var(--mono);font-size:.8rem;background:var(--lime);border:1px solid var(--ink);border-radius:999px;padding:4px 12px">1 · yourbrand.com, cited source</span>
+                                <span style="font-family:var(--mono);font-size:.8rem;border:1px solid var(--line);border-radius:999px;padding:4px 12px;color:var(--muted)">2 · industry-review.com</span>
+                                <span style="font-family:var(--mono);font-size:.8rem;border:1px solid var(--line);border-radius:999px;padding:4px 12px;color:var(--muted)">3 · competitor.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why it matters -->
+        <section id="why" class="st-section st-dark">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(02) Why leadership should care</span>
+                    <h2>Buyers ask AI first</h2>
+                    <p>Buyers now research in AI before they ever hit your site. If you are absent from those answers, competitors define the category for you.</p>
+                </div>
+                <div class="st-split">
+                    <ol class="st-points">
+                        <li><span>01</span><div><h3>Citation is the new click</h3><p>Being named in an AI answer builds trust before a prospect visits your homepage.</p></div></li>
+                        <li><span>02</span><div><h3>Category ownership</h3><p>Brands cited early in a category tend to stay referenced as models refresh their source pools.</p></div></li>
+                        <li><span>03</span><div><h3>Compounds with SEO</h3><p>GEO sits on top of solid technical SEO. It does not replace crawlability, speed or structure; it builds on them.</p></div></li>
+                    </ol>
+                    <div class="st-callout">
+                        If you are not in the answer, a competitor is.
+                        <small>GEO is the AI visibility layer of our inbound system</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Framework -->
+        <section id="framework" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(03) Our methodology</span>
+                    <h2>The <span class="st-nowrap">five-phase</span> GEO framework</h2>
+                    <p class="st-muted">A repeatable process from baseline audit to ongoing citation monitoring. Each phase builds on the last.</p>
+                </div>
+                <div class="st-flow" style="--n:5;margin-bottom:56px">
+                    <div><small>Phase 01</small><b>Baseline</b><p>Measure where you appear today.</p></div>
+                    <div><small>Phase 02</small><b>Technical</b><p>Let AI crawlers in and help them parse.</p></div>
+                    <div><small>Phase 03</small><b>Content</b><p>Make the right facts easy to quote.</p></div>
+                    <div><small>Phase 04</small><b>Authority</b><p>Strengthen how the web describes you.</p></div>
+                    <div class="is-key"><small>Phase 05</small><b>Monitor</b><p>Re-test, refresh and repeat.</p></div>
+                </div>
+                <ol class="st-steps">
+                    <li><span>01</span><div>
+                        <h3>Baselining &amp; discovery</h3>
+                        <p>You cannot improve what you have not measured. We map the questions your buyers ask AI and record where you appear today across ChatGPT, Gemini, Perplexity and Google AI Overviews.</p>
+                        <ul class="st-checks" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:18px">
+                            <li style="display:block;padding:0 0 0 26px;border:0">Prompt universe mapping</li>
+                            <li style="display:block;padding:0 0 0 26px;border:0">Cross-platform citation scan</li>
+                            <li style="display:block;padding:0 0 0 26px;border:0">AI share of voice scoring</li>
+                            <li style="display:block;padding:0 0 0 26px;border:0">Competitive gap analysis</li>
+                        </ul>
+                    </div></li>
+                    <li><span>02</span><div>
+                        <h3>Technical foundation</h3>
+                        <p>AI systems can only cite content they can crawl, parse and trust. We fix the infrastructure first so your pages are accessible to GPTBot, ClaudeBot, PerplexityBot and Google-Extended.</p>
+                        <ul class="st-checks" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:18px">
+                            <li style="display:block;padding:0 0 0 26px;border:0">Crawlability &amp; Core Web Vitals</li>
+                            <li style="display:block;padding:0 0 0 26px;border:0">AI crawler access (robots.txt)</li>
+                            <li style="display:block;padding:0 0 0 26px;border:0">llms.txt manifest (optional)</li>
+                            <li style="display:block;padding:0 0 0 26px;border:0">Structured data / schema markup</li>
+                        </ul>
+                    </div></li>
+                    <li><span>03</span><div>
+                        <h3>Content structuring</h3>
+                        <p>AI models quote extractable passages, not marketing fluff. We reshape pages so the right facts are easy to lift, with clear headings, direct answers and the statistics models prefer to cite.</p>
+                        <ul class="st-checks" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:18px">
+                            <li style="display:block;padding:0 0 0 26px;border:0">Extractable answer blocks</li>
+                            <li style="display:block;padding:0 0 0 26px;border:0">Semantic H2/H3 formatting</li>
+                            <li style="display:block;padding:0 0 0 26px;border:0">Factual density &amp; expert quotes</li>
+                            <li style="display:block;padding:0 0 0 26px;border:0">Comparison &amp; FAQ pages</li>
+                            <li style="display:block;padding:0 0 0 26px;border:0">On-page credibility signals</li>
+                        </ul>
+                    </div></li>
+                    <li><span>04</span><div>
+                        <h3>Entity &amp; off-site authority</h3>
+                        <p>Models trust brands that exist beyond their own website. We strengthen how the web describes you through consistent entity profiles, third-party mentions and the reputation signals AI already references.</p>
+                        <ul class="st-checks" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:18px">
+                            <li style="display:block;padding:0 0 0 26px;border:0">Entity profile alignment</li>
+                            <li style="display:block;padding:0 0 0 26px;border:0">Earned media &amp; digital PR</li>
+                            <li style="display:block;padding:0 0 0 26px;border:0">Review &amp; reputation monitoring</li>
+                        </ul>
+                    </div></li>
+                    <li><span>05</span><div>
+                        <h3>Testing, monitoring &amp; iteration</h3>
+                        <p>GEO is not a one-time project. Models update, competitors publish and prompt behaviour shifts. We re-run citation scans, test content formats and keep your team aligned on a recurring cadence.</p>
+                        <ul class="st-checks" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:18px">
+                            <li style="display:block;padding:0 0 0 26px;border:0">Monthly prompt panel re-runs</li>
+                            <li style="display:block;padding:0 0 0 26px;border:0">Content format A/B testing</li>
+                            <li style="display:block;padding:0 0 0 26px;border:0">3–6 month refresh cadence</li>
+                            <li style="display:block;padding:0 0 0 26px;border:0">Cross-functional alignment</li>
+                        </ul>
+                    </div></li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Baseline report -->
+        <section id="baseline" class="st-section st-white">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(04) What the audit gives you</span>
+                    <h2>Your AI visibility, measured</h2>
+                    <p class="st-muted">Phase one ends with a clear picture: where you are cited, where competitors are, and what to fix first.</p>
+                </div>
+                <div class="st-split">
+                    <div class="st-prose">
+                        <p>We start by building a <strong>prompt panel</strong>: the real questions your buyers ask AI assistants when they research your category, compare vendors or look for a recommendation.</p>
+                        <p>We run that panel across ChatGPT, Gemini, Perplexity and Google AI Overviews, and record who gets named and who gets cited. That gives you an <strong>AI share of voice</strong> score against your competitors, and a gap analysis showing which questions they own and you don't.</p>
+                        <p>Alongside it, we check the technical basics: whether AI crawlers can reach your pages, how fast they load, and whether your structured data tells models what your business is. The result is a practical roadmap for the engines your buyers use most.</p>
+                        <ul class="st-checks" style="margin-top:8px">
+                            <li>Prompt panel built around your buyers' questions</li>
+                            <li>Citation scan across the major AI platforms</li>
+                            <li>AI share of voice versus named competitors</li>
+                            <li>Prioritised roadmap of technical, content and authority fixes</li>
+                        </ul>
+                    </div>
+                    <div class="st-visual">
+                        <p class="st-visual-title"><span>GEO baseline report · illustrative</span><span>Fig. 02</span></p>
+                        <p style="margin:0 0 14px;font-weight:700">AI share of voice across your prompt panel</p>
+                        <div class="st-meter">
+                            <div class="st-meter-row"><span>Competitor A</span><div class="st-meter-track"><div class="st-meter-fill" style="width:72%"></div></div><b>Often cited</b></div>
+                            <div class="st-meter-row"><span>Competitor B</span><div class="st-meter-track"><div class="st-meter-fill" style="width:46%"></div></div><b>Sometimes</b></div>
+                            <div class="st-meter-row is-key"><span>Your brand</span><div class="st-meter-track"><div class="st-meter-fill" style="width:14%"></div></div><b>Rarely</b></div>
+                        </div>
+                        <div style="margin-top:24px;border-top:1px solid var(--line);padding-top:18px">
+                            <p style="margin:0 0 12px;font-weight:700">Example gaps the audit can surface</p>
+                            <ul class="st-checks">
+                                <li>AI crawlers blocked or restricted in robots.txt</li>
+                                <li>No direct answer blocks on key service pages</li>
+                                <li>Missing comparison and FAQ pages for buyer questions</li>
+                                <li>Inconsistent company descriptions across profiles</li>
+                            </ul>
+                        </div>
+                        <p class="st-muted" style="font-size:.85rem;margin:18px 0 0">Illustrative example only. Your report shows your real citations and competitors.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Surfaces -->
+        <section id="surfaces" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(05) Surfaces we optimise for</span>
+                    <h2>Where your buyers ask AI today</h2>
+                    <p class="st-muted">Each engine finds and cites sources a little differently, so we track and optimise for each one.</p>
+                </div>
+                <div class="st-grid">
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>01</span><span class="st-cell-icon"><i data-lucide="message-square"></i></span></div>
+                        <h3>ChatGPT</h3>
+                        <p>Search-grounded answers via OAI-SearchBot.</p>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>02</span><span class="st-cell-icon"><i data-lucide="search"></i></span></div>
+                        <h3>Perplexity</h3>
+                        <p>Cited answers on every query; the fastest engine to measure.</p>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>03</span><span class="st-cell-icon"><i data-lucide="sparkles"></i></span></div>
+                        <h3>Google Gemini</h3>
+                        <p>Integrated AI across Search and Workspace.</p>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>04</span><span class="st-cell-icon"><i data-lucide="layout-list"></i></span></div>
+                        <h3>AI Overviews</h3>
+                        <p>Google's generative results, shown above the organic links.</p>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>05</span><span class="st-cell-icon"><i data-lucide="brain"></i></span></div>
+                        <h3>Claude</h3>
+                        <p>Enterprise research and evaluation queries.</p>
+                    </div>
+                    <a class="st-cell st-cell-auto" href="ai-readiness-tool.html" style="background:var(--lime)">
+                        <div class="st-cell-top"><span>Free tool</span><span class="st-cell-icon"><i data-lucide="gauge"></i></span></div>
+                        <h3>Check your site now</h3>
+                        <p style="color:var(--ink)">Our free AI readiness checker shows whether ChatGPT, Perplexity, Claude and Google AI can find, read and cite your website. No signup.</p>
+                        <span class="st-cell-more">Run the checker <i data-lucide="arrow-right"></i></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compare -->
+        <section id="compare" class="st-section st-white">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(06) GEO vs SEO</span>
+                    <h2>Built on SEO, not instead of it</h2>
+                    <p class="st-muted">You still need fast pages, clean URLs and indexability. GEO adds the layer that gets you quoted.</p>
+                </div>
+                <div class="st-table-wrap">
+                    <table class="st-compare">
+                        <thead><tr><th scope="col">&nbsp;</th><th scope="col">Traditional SEO</th><th scope="col">GEO</th></tr></thead>
+                        <tbody>
+                            <tr><th scope="row">Goal</th><td>Rankings in traditional search results</td><td>Inclusion and citation inside AI-generated answers</td></tr>
+                            <tr><th scope="row">What the buyer sees</th><td>Ten blue links to choose from</td><td>A single answer, read without clicking</td></tr>
+                            <tr><th scope="row">Technical</th><td>Fast pages, clean URLs, indexability</td><td>All of that, plus AI crawler access, schema markup and an optional llms.txt</td></tr>
+                            <tr><th scope="row">Content</th><td>Pages written around keywords</td><td>Extractable answer blocks, statistics, expert quotes, comparison and FAQ pages</td></tr>
+                            <tr><th scope="row">Authority</th><td>Links pointing to your site</td><td>Consistent entity profiles, third-party mentions and reviews</td></tr>
+                            <tr><th scope="row">Measurement</th><td>Keyword rank tracking</td><td>Prompt-level monitoring and AI share of voice</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timing -->
+        <section id="timing" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(07) Timing &amp; your part</span>
+                    <h2>When citations start to move</h2>
+                    <p class="st-muted">Each engine re-reads the web at its own pace, so results arrive in waves rather than all at once.</p>
+                </div>
+                <div class="st-split">
+                    <div class="st-prose">
+                        <p>Structural fixes show up first, because some engines cite their sources openly on every answer. Changes in search-grounded answers follow as crawlers re-index your updated pages. <strong>Off-site authority takes longest, but its impact is the most durable</strong>, because it changes how the whole web describes you.</p>
+                        <p>From your side, the time commitment is light. We need:</p>
+                        <ul class="st-checks" style="margin-bottom:18px">
+                            <li>A kickoff session on your buyers, competitors and the questions you want to own</li>
+                            <li>Access to your website or CMS, analytics and robots.txt</li>
+                            <li>Your expertise, data and opinions, so content carries real authority</li>
+                            <li>Approval of key content before it goes live, and a short recurring review</li>
+                        </ul>
+                    </div>
+                    <div class="st-visual">
+                        <p class="st-visual-title"><span>Typical timeline</span><span>Fig. 03</span></p>
+                        <ol class="st-timeline">
+                            <li><span class="st-dot"><i data-lucide="search"></i></span><div><small>Within days</small><b>Perplexity</b><p>Often reflects structural fixes quickly, because it cites transparently on every answer.</p></div></li>
+                            <li><span class="st-dot"><i data-lucide="message-square"></i></span><div><small>2–6 weeks</small><b>ChatGPT search answers</b><p>Typically shift as crawlers re-index updated pages.</p></div></li>
+                            <li><span class="st-dot"><i data-lucide="globe"></i></span><div><small>Longer term</small><b>Off-site authority</b><p>Takes longer, but has durable impact across all engines.</p></div></li>
+                            <li class="is-goal"><span class="st-dot"><i data-lucide="repeat"></i></span><div><small>Ongoing</small><b>Monitor and refresh</b><p>Monthly prompt panel re-runs and a 3–6 month content refresh cadence.</p></div></li>
+                        </ol>
+                        <p class="st-muted" style="font-size:.85rem;margin:18px 0 0">Typical ranges, not guarantees. Timing depends on your starting point and category.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fit -->
+        <section id="fit" class="st-section st-white">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(08) Who it's for</span>
+                    <h2>Best fit for</h2>
+                    <p class="st-muted">GEO matters most when buyers ask AI who to trust before they ever contact you.</p>
+                </div>
+                <div class="st-grid">
+                    <a class="st-cell st-cell-auto" href="b2b.html">
+                        <div class="st-cell-top"><span>01</span><span class="st-cell-icon"><i data-lucide="building-2"></i></span></div>
+                        <h3>B2B Teams</h3>
+                        <ul class="st-checks"><li>Named when buyers ask AI to shortlist vendors</li><li>Comparison and FAQ pages models can quote</li><li>Visibility early in long, research-heavy cycles</li></ul>
+                        <span class="st-cell-more">B2B growth <i data-lucide="arrow-right"></i></span>
+                    </a>
+                    <a class="st-cell st-cell-auto" href="ecommerce.html">
+                        <div class="st-cell-top"><span>02</span><span class="st-cell-icon"><i data-lucide="shopping-bag"></i></span></div>
+                        <h3>Ecommerce Brands</h3>
+                        <ul class="st-checks"><li>Product discovery through AI recommendations</li><li>Structured data that describes your products clearly</li><li>Reviews and reputation signals models reference</li></ul>
+                        <span class="st-cell-more">Ecommerce growth <i data-lucide="arrow-right"></i></span>
+                    </a>
+                    <a class="st-cell st-cell-auto" href="speaker.html">
+                        <div class="st-cell-top"><span>03</span><span class="st-cell-icon"><i data-lucide="mic"></i></span></div>
+                        <h3>Thought Leaders &amp; Lean Teams</h3>
+                        <ul class="st-checks"><li>Your expertise quoted as a cited source</li><li>A consistent entity profile across the web</li><li>Authority that works without a large team</li></ul>
+                        <span class="st-cell-more">Speakers &amp; founders <i data-lucide="arrow-right"></i></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(09) FAQ</span>
+                    <h2>Common GEO questions</h2>
+                    <p class="st-muted">Still unsure? Book a call and we'll answer them for your business specifically.</p>
+                </div>
+                <div class="st-faq">
+                    <details open>
+                        <summary>How is GEO different from SEO?</summary>
+                        <div class="st-faq-a"><p>SEO targets rankings in traditional search results. GEO targets inclusion and citation inside AI-generated answers. You still need fast pages, clean URLs and indexability, but GEO adds answer blocks, schema markup, entity authority and prompt-level monitoring on top.</p></div>
+                    </details>
+                    <details>
+                        <summary>How long until we see citation improvements?</summary>
+                        <div class="st-faq-a"><p>Perplexity often reflects structural fixes within days because it cites transparently on every answer. ChatGPT search-grounded responses typically shift over two to six weeks as crawlers re-index updated pages. Off-site authority work can take longer but has durable impact across all engines.</p></div>
+                    </details>
+                    <details>
+                        <summary>Do we need llms.txt?</summary>
+                        <div class="st-faq-a"><p>It is optional. llms.txt is a lightweight convention that points AI tools to your most important pages. It takes minutes to publish and may help as adoption grows, but it is not a replacement for robots.txt crawler rules, structured data, or high-quality crawlable content, which are the levers that matter most today.</p></div>
+                    </details>
+                    <details>
+                        <summary>How does GEO fit with your other services?</summary>
+                        <div class="st-faq-a"><p>GEO is the AI visibility layer inside our <a href="inbound.html">inbound system</a>. It works alongside SEO, content and performance marketing so discovery compounds. <a href="outbound.html">Outbound</a> then converts the demand GEO and inbound create. Most clients run GEO as part of a connected growth programme, not in isolation.</p></div>
+                    </details>
+                    <details>
+                        <summary>Can you guarantee we will be cited?</summary>
+                        <div class="st-faq-a"><p>No one can honestly guarantee what an AI model will say, because the engines decide what to cite and they change often. What we can do is remove the reasons you are being left out, build the signals models rely on, and measure your citations every month so you can see exactly what is moving.</p></div>
+                    </details>
+                    <details>
+                        <summary>What do you need from us?</summary>
+                        <div class="st-faq-a"><p>A kickoff session on your buyers and competitors, access to your website, analytics and robots.txt, and your expertise so content carries real authority. You approve key content before it goes live; we handle the rest and keep you aligned on a recurring cadence.</p></div>
+                    </details>
+                    <details>
+                        <summary>Can we check where we stand before talking to you?</summary>
+                        <div class="st-faq-a"><p>Yes. Our free <a href="ai-readiness-tool.html">AI readiness checker</a> shows whether ChatGPT, Perplexity, Claude and Google AI can find, read and cite your website, plus a classic SEO health check. It covers the technical side; a GEO audit adds the prompt panel and competitor citation picture.</p></div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next -->
+        <section class="st-section st-white" style="padding-top:72px;padding-bottom:72px">
+            <div class="st-wrap">
+                <span class="st-label" style="margin-bottom:24px">Pairs well with</span>
+                <div class="st-next">
+                    <a href="inbound.html"><small>Inbound Systems</small><b>Make the market find you</b><p>GEO is one pillar of a full inbound engine, alongside SEO, paid and lead capture.</p></a>
+                    <a href="outbound.html"><small>Outbound Systems</small><b>Go find your buyers</b><p>Convert the demand GEO creates with personalised, multi-channel outreach.</p></a>
+                    <a href="ai-readiness-tool.html"><small>Free tool</small><b>Check your AI readiness</b><p>See whether AI assistants can find, read and cite your website today.</p></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <section id="contact" class="st-dark st-section st-cta">
+        <div class="st-wrap">
+            <span class="st-label">Start a project</span>
+            <h2>Get into<br>the <span class="st-mark">answer.</span></h2>
+            <p class="st-muted">Book a GEO audit. We will baseline your AI citation share, identify gaps, and outline a practical roadmap for the engines your buyers use most.</p>
+            <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="st-btn st-btn-lime">Book a free consultation <i data-lucide="arrow-right"></i></a>
         </div>
     </section>
 
-    <section class="py-20 bg-white border-t border-slate-100">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
+    <footer class="st-footer">
+        <div class="st-wrap">
+            <div class="st-footer-grid">
                 <div>
-                    <span class="text-sm font-bold uppercase tracking-wider text-blue-600 block mb-3">What GEO Is</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">SEO Gets You Found. GEO Gets You Quoted.</h2>
-                    <p class="text-slate-600 leading-relaxed mb-4">
-                        Traditional SEO optimises for ten blue links. GEO optimises for the single answer a user reads without clicking. When someone asks an AI assistant which platform, vendor, or approach to trust, you want your brand in that response, with a citation back to you.
-                    </p>
-                    <p class="text-slate-600 leading-relaxed">
-                        Research on generative answer engines shows that pages adding clear statistics, expert quotes, and authoritative citations can see materially higher inclusion in AI responses, even when they do not rank first in classic search. GEO is how you capture that gap.
-                    </p>
+                    <h4>Growth Loop</h4>
+                    <p class="st-muted" style="max-width:34ch;line-height:1.55;margin:0 0 16px">We engineer automated systems that grow your revenue.</p>
+                    <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="st-btn st-btn-lime" style="padding:12px 20px">Book a call <i data-lucide="arrow-right"></i></a>
                 </div>
-                <div class="graphic-container flex flex-col justify-center">
-                    <div class="w-full space-y-4 px-2">
-                        <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 text-left">
-                            <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">User prompt</p>
-                            <p class="text-sm text-slate-700">"What is the best way to improve B2B pipeline in 2026?"</p>
-                        </div>
-                        <div class="bg-white border border-blue-200 rounded-xl p-5 shadow-lg shadow-blue-500/10 animate-float text-left">
-                            <p class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-3">AI answer excerpt</p>
-                            <p class="text-sm text-slate-600 leading-relaxed mb-3">Leading firms combine inbound discovery with structured outbound and AI visibility…</p>
-                            <p class="text-xs text-blue-600 font-semibold">yourbrand.com, cited source</p>
-                        </div>
-                    </div>
+                <div>
+                    <h4>Expertise</h4>
+                    <ul><li><a href="outbound.html">Outbound</a></li><li><a href="inbound.html">Inbound</a></li><li><a href="geo.html">AI Visibility (GEO)</a></li><li><a href="voice-agents.html">AI Voice Agents</a></li><li><a href="ai-infrastructure.html">AI Infrastructure</a></li><li><a href="approach.html">Approach</a></li></ul>
+                </div>
+                <div>
+                    <h4>Who we help</h4>
+                    <ul><li><a href="speaker.html">Speakers &amp; Founders</a></li><li><a href="ecommerce.html">Ecommerce</a></li><li><a href="b2b.html">B2B Teams</a></li><li><a href="investors.html">Investors</a></li></ul>
+                </div>
+                <div>
+                    <h4>Resources</h4>
+                    <ul><li><a href="blog/">Blog</a></li><li><a href="ai-readiness-tool.html">AI Readiness Checker</a></li><li><a href="about.html">About Us</a></li></ul>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-white border-t border-slate-100">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Why leadership should care</h2>
-            <p class="text-slate-500 max-w-2xl mx-auto mb-10">Buyers now research in AI before they ever hit your site. If you are absent from those answers, competitors define the category for you.</p>
-            <div class="grid sm:grid-cols-3 gap-6 text-left">
-                <div class="bg-white p-6 rounded-2xl border border-slate-200">
-                    <i data-lucide="message-square-quote" class="h-6 w-6 text-blue-600 mb-3"></i>
-                    <h3 class="font-bold text-slate-900 mb-2">Citation is the new click</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">Being named in an AI answer builds trust before a prospect visits your homepage.</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl border border-slate-200">
-                    <i data-lucide="shield-check" class="h-6 w-6 text-blue-600 mb-3"></i>
-                    <h3 class="font-bold text-slate-900 mb-2">Category ownership</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">Brands cited early in a category tend to stay referenced as models refresh their source pools.</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl border border-slate-200">
-                    <i data-lucide="layers" class="h-6 w-6 text-blue-600 mb-3"></i>
-                    <h3 class="font-bold text-slate-900 mb-2">Compounds with SEO</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">GEO sits on top of solid technical SEO, it does not replace crawlability, speed, or structure.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="framework" class="py-32 bg-slate-50 relative border-t border-slate-100">
-        <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-slate-200 z-0"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-24">
-                <span class="text-sm font-bold uppercase tracking-wider text-blue-600 block mb-2">Our Methodology</span>
-                <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">The Five-Phase GEO Framework</h2>
-                <p class="text-slate-500 text-lg font-light max-w-2xl mx-auto">A repeatable process from baseline audit to ongoing citation monitoring. Each phase builds on the last.</p>
-            </div>
-
-            <div class="space-y-32">
-                <div class="grid md:grid-cols-2 gap-24 items-center">
-                    <div class="text-right md:pr-12">
-                        <h2 class="text-6xl font-bold text-slate-200 mb-4">01</h2>
-                        <h3 class="text-4xl font-bold text-slate-900 mb-6">Baselining &amp; Discovery</h3>
-                        <p class="text-slate-600 text-lg leading-relaxed">
-                            You cannot improve what you have not measured. We map the questions your buyers ask AI and record where you appear today across ChatGPT, Gemini, Perplexity, and Google AI Overviews.
-                        </p>
-                    </div>
-                    <div class="md:pl-12">
-                        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-md">
-                            <ul class="space-y-4 text-base text-slate-600">
-                                <li>• Prompt universe mapping</li>
-                                <li>• Cross-platform citation scan</li>
-                                <li>• AI share of voice scoring</li>
-                                <li>• Competitive gap analysis</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-24 items-center">
-                    <div class="md:pr-12 md:text-right md:order-1 order-2">
-                        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-md">
-                            <ul class="space-y-4 text-base text-slate-600">
-                                <li>• Crawlability &amp; Core Web Vitals</li>
-                                <li>• AI crawler access (robots.txt)</li>
-                                <li>• llms.txt manifest (optional)</li>
-                                <li>• Structured data / schema markup</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="md:pl-12 md:order-2 order-1">
-                        <h2 class="text-6xl font-bold text-slate-200 mb-4">02</h2>
-                        <h3 class="text-4xl font-bold text-slate-900 mb-6">Technical Foundation</h3>
-                        <p class="text-slate-600 text-lg leading-relaxed">
-                            AI systems can only cite content they can crawl, parse, and trust. We fix the infrastructure first so your pages are accessible to GPTBot, ClaudeBot, PerplexityBot, and Google-Extended.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-24 items-center">
-                    <div class="text-right md:pr-12">
-                        <h2 class="text-6xl font-bold text-slate-200 mb-4">03</h2>
-                        <h3 class="text-4xl font-bold text-slate-900 mb-6">Content Structuring</h3>
-                        <p class="text-slate-600 text-lg leading-relaxed">
-                            AI models quote extractable passages, not marketing fluff. We reshape pages so the right facts are easy to lift, with clear headings, direct answers, and the statistics models prefer to cite.
-                        </p>
-                    </div>
-                    <div class="md:pl-12">
-                        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-md">
-                            <ul class="space-y-4 text-base text-slate-600">
-                                <li>• Extractable answer blocks</li>
-                                <li>• Semantic H2/H3 formatting</li>
-                                <li>• Factual density &amp; expert quotes</li>
-                                <li>• Comparison &amp; FAQ pages</li>
-                                <li>• On-page credibility signals</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-24 items-center">
-                    <div class="md:pr-12 md:text-right md:order-1 order-2">
-                        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-md">
-                            <ul class="space-y-4 text-base text-slate-600">
-                                <li>• Entity profile alignment</li>
-                                <li>• Earned media &amp; digital PR</li>
-                                <li>• Review &amp; reputation monitoring</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="md:pl-12 md:order-2 order-1">
-                        <h2 class="text-6xl font-bold text-slate-200 mb-4">04</h2>
-                        <h3 class="text-4xl font-bold text-slate-900 mb-6">Entity &amp; Off-Site Authority</h3>
-                        <p class="text-slate-600 text-lg leading-relaxed">
-                            Models trust brands that exist beyond their own website. We strengthen how the web describes you through consistent entity profiles, third-party mentions, and reputation signals AI already references.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-24 items-center">
-                    <div class="text-right md:pr-12">
-                        <h2 class="text-6xl font-bold text-slate-200 mb-4">05</h2>
-                        <h3 class="text-4xl font-bold text-slate-900 mb-6">Testing, Monitoring &amp; Iteration</h3>
-                        <p class="text-slate-600 text-lg leading-relaxed">
-                            GEO is not a one-time project. Models update, competitors publish, and prompt behaviour shifts. We re-run citation scans, test content formats, and keep your team aligned on a recurring cadence.
-                        </p>
-                    </div>
-                    <div class="md:pl-12">
-                        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-md">
-                            <ul class="space-y-4 text-base text-slate-600">
-                                <li>• Monthly prompt panel re-runs</li>
-                                <li>• Content format A/B testing</li>
-                                <li>• 3–6 month refresh cadence</li>
-                                <li>• Cross-functional alignment</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 bg-slate-50 border-t border-slate-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-14">
-                <span class="text-sm font-bold uppercase tracking-wider text-blue-600 block mb-2">Surfaces We Optimise For</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Where Your Buyers Ask AI Today</h2>
-            </div>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
-                <div class="bg-white border border-slate-200 rounded-2xl p-5 text-center">
-                    <p class="font-bold text-slate-900 mb-1">ChatGPT</p>
-                    <p class="text-xs text-slate-500 leading-relaxed">Search-grounded answers via OAI-SearchBot</p>
-                </div>
-                <div class="bg-white border border-slate-200 rounded-2xl p-5 text-center">
-                    <p class="font-bold text-slate-900 mb-1">Perplexity</p>
-                    <p class="text-xs text-slate-500 leading-relaxed">Cited answers on every query; fastest to measure</p>
-                </div>
-                <div class="bg-white border border-slate-200 rounded-2xl p-5 text-center">
-                    <p class="font-bold text-slate-900 mb-1">Google Gemini</p>
-                    <p class="text-xs text-slate-500 leading-relaxed">Integrated AI across Search and Workspace</p>
-                </div>
-                <div class="bg-white border border-slate-200 rounded-2xl p-5 text-center">
-                    <p class="font-bold text-slate-900 mb-1">AI Overviews</p>
-                    <p class="text-xs text-slate-500 leading-relaxed">Google's generative results above organic links</p>
-                </div>
-                <div class="bg-white border border-slate-200 rounded-2xl p-5 text-center sm:col-span-2 lg:col-span-1">
-                    <p class="font-bold text-slate-900 mb-1">Claude</p>
-                    <p class="text-xs text-slate-500 leading-relaxed">Enterprise research and evaluation queries</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="faq" class="py-24 bg-white border-t border-slate-100">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Common Questions</h2>
-            </div>
-            <div class="space-y-4">
-                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
-                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
-                        <span class="font-semibold text-base">How is GEO different from SEO?</span>
-                        <i data-lucide="chevron-down" class="h-4 w-4 text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
-                    </button>
-                    <div class="faq-content">
-                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
-                            <p class="text-sm text-slate-500 leading-relaxed">SEO targets rankings in traditional search results. GEO targets inclusion and citation inside AI-generated answers. You still need fast pages, clean URLs, and indexability, but GEO adds answer blocks, schema markup, entity authority, and prompt-level monitoring on top.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
-                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
-                        <span class="font-semibold text-base">How long until we see citation improvements?</span>
-                        <i data-lucide="chevron-down" class="h-4 w-4 text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
-                    </button>
-                    <div class="faq-content">
-                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
-                            <p class="text-sm text-slate-500 leading-relaxed">Perplexity often reflects structural fixes within days because it cites transparently on every answer. ChatGPT search-grounded responses typically shift over two to six weeks as crawlers re-index updated pages. Off-site authority work can take longer but has durable impact across all engines.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
-                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
-                        <span class="font-semibold text-base">Do we need llms.txt?</span>
-                        <i data-lucide="chevron-down" class="h-4 w-4 text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
-                    </button>
-                    <div class="faq-content">
-                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
-                            <p class="text-sm text-slate-500 leading-relaxed">It is optional. llms.txt is a lightweight convention that points AI tools to your most important pages. It takes minutes to publish and may help as adoption grows, but it is not a replacement for robots.txt crawler rules, structured data, or high-quality crawlable content, which are the levers that matter most today.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
-                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
-                        <span class="font-semibold text-base">How does GEO fit with your other services?</span>
-                        <i data-lucide="chevron-down" class="h-4 w-4 text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
-                    </button>
-                    <div class="faq-content">
-                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
-                            <p class="text-sm text-slate-500 leading-relaxed">GEO is the AI visibility layer inside our inbound system. It works alongside SEO, content, and performance marketing so discovery compounds. Outbound then converts the demand GEO and inbound create. Most clients run GEO as part of a connected growth programme, not in isolation.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-16 text-center bg-slate-50 border border-slate-200 rounded-3xl p-10">
-                <p class="text-slate-500 mb-4">GEO is one pillar of a full inbound engine.</p>
-                <a href="inbound.html" class="text-blue-600 font-bold hover:text-blue-700 transition-colors inline-flex items-center text-lg group">
-                    Explore Inbound Optimisation <i data-lucide="arrow-right" class="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-32 bg-slate-900 border-t border-slate-800">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-5xl font-bold text-white mb-8">Ready to Scale?</h2>
-            <p class="text-slate-400 text-xl font-light mb-12">
-                Book a GEO audit. We will baseline your AI citation share, identify gaps, and outline a practical roadmap for the engines your buyers use most.
-            </p>
-            <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="inline-flex justify-center items-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg shadow-blue-500/25 transition-all transform hover:scale-[1.02] text-lg">
-                Book Free Consultation
-            </a>
-        </div>
-    </section>
-
-    <footer class="py-12 border-t border-slate-900 bg-slate-950 text-center text-xs text-slate-600">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div class="flex items-center gap-2">
-                <span class="font-bold text-slate-400 inline-flex items-center gap-2">
-                    <svg class="h-5 w-5 shrink-0 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></svg>
-                    GROWTH LOOP
-                </span>
-                <span>&copy; 2026. All rights reserved.</span>
-            </div>
-            <div class="flex gap-6 text-slate-500">
-                <a href="#" class="hover:text-slate-400 transition-colors">Privacy Policy</a>
-                <a href="#" class="hover:text-slate-400 transition-colors">Terms of Service</a>
+            <p class="st-wordmark" aria-hidden="true">Growth Loop</p>
+            <div class="st-footer-base">
+                <span>© 2026 Growth Loop. All rights reserved.</span>
+                <span>Published by <span class="author">Growth Loop</span>. Updated 21 October 2026.</span>
             </div>
         </div>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            lucide.createIcons();
-            document.querySelectorAll('.faq-toggle').forEach(toggle => {
-                toggle.addEventListener('click', () => {
-                    const content = toggle.nextElementSibling;
-                    const icon = toggle.querySelector('i');
-                    const isOpen = content.classList.contains('faq-open');
-                    document.querySelectorAll('.faq-content').forEach(c => c.classList.remove('faq-open'));
-                    document.querySelectorAll('.faq-toggle i').forEach(ic => ic.style.transform = 'rotate(0deg)');
-                    if (!isOpen) {
-                        content.classList.add('faq-open');
-                        if (icon) icon.style.transform = 'rotate(180deg)';
-                    }
-                });
-            });
+            if (window.lucide) lucide.createIcons();
+            // Highlight the current section in the sticky "on this page" bar
+            const links = [...document.querySelectorAll('.st-toc a')];
+            const byId = new Map(links.map((a) => [a.getAttribute('href').slice(1), a]));
+            const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+                if (!e.isIntersecting) return;
+                links.forEach((a) => a.classList.remove('is-active'));
+                const a = byId.get(e.target.id);
+                if (a) { a.classList.add('is-active'); const ul = a.closest('ul'); ul.scrollTo({ left: a.offsetLeft - ul.clientWidth / 2 + a.offsetWidth / 2, behavior: 'smooth' }); }
+            }), { rootMargin: '-45% 0px -50% 0px' });
+            byId.forEach((_, id) => { const el = document.getElementById(id); if (el) io.observe(el); });
         });
     </script>
 </body>

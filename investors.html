@@ -48,7 +48,7 @@
     {
       "@type": "WebSite",
       "@id": "https://mygrowthloop.com/#website",
-      "name": "Investment Pipeline Infrastructure",
+      "name": "Growth Loop",
       "url": "https://mygrowthloop.com/",
       "description": "Growth Loop builds deal-sourcing systems for VCs, private equity, and family offices, from founder signals to outreach.",
       "publisher": {
@@ -80,7 +80,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
@@ -162,8 +162,9 @@
             max-height: 600px;
         }
     </style>
+    <link rel="stylesheet" href="studio.css">
 </head>
-<body class="text-slate-600 antialiased bg-white">
+<body class="studio text-slate-600 antialiased bg-white">
 
     <!-- NAV, identical to homepage -->
     <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
@@ -186,6 +187,8 @@
                                 <a href="inbound.html" class="dropdown-item">Inbound Optimisation</a>
                                 <a href="outbound.html" class="dropdown-item">Outbound Optimisation</a>
                                 <a href="geo.html" class="dropdown-item">Generative Engine Optimisation</a>
+                                <a href="voice-agents.html" class="dropdown-item">AI Voice Agents</a>
+                                <a href="ai-infrastructure.html" class="dropdown-item">Internal AI Infrastructure</a>
                             </div>
                         </div>
                         <div class="dropdown relative group inline-block">
@@ -209,9 +212,9 @@
                                 <a href="ai-readiness-tool.html" class="dropdown-item">AI Readiness Checker</a>
                             </div>
                         </div>
-                        <a href="index.html#about" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About Us</a>
+                        <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About Us</a><a href="blog/" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Blog</a>
                         <a href="index.html#approach" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Approach</a>
-                        <a href="https://calendly.com/prabal-panda-growthloopconsulting" target="_blank" class="cta-button bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-blue-500/20">
+                        <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="cta-button bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-blue-500/20">
                             Partner With Us
                         </a>
                     </div>
@@ -231,6 +234,8 @@
                     <a href="inbound.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Inbound Optimisation</a>
                     <a href="outbound.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Outbound Optimisation</a>
                     <a href="geo.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Generative Engine Optimisation</a>
+                    <a href="voice-agents.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">AI Voice Agents</a>
+                    <a href="ai-infrastructure.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Internal AI Infrastructure</a>
                 </div>
                 <div class="border-t border-slate-200 my-2 pt-2">
                     <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Who We Help</p>
@@ -243,354 +248,465 @@
                     <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Products</p>
                     <a href="ai-readiness-tool.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">AI Readiness Checker</a>
                 </div>
-                <a href="index.html#about" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="about.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About Us</a><a href="blog/" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Blog</a>
                 <a href="index.html#approach" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Approach</a>
-                <a href="https://calendly.com/prabal-panda-growthloopconsulting" target="_blank" class="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium mt-4 text-center">Partner With Us</a>
+                <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium mt-4 text-center">Partner With Us</a>
             </div>
         </div>
     </nav>
 
-    <!-- HERO -->
-    <section class="relative pt-32 pb-24 md:pt-48 md:pb-40 overflow-hidden">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] pointer-events-none opacity-30 mix-blend-screen">
-            <div class="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-indigo-600/40 blur-[120px]"></div>
-            <div class="absolute top-[10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-violet-600/30 blur-[100px]"></div>
-        </div>
-        <div class="absolute inset-0 bg-[linear-gradient(to_right,#1f293710_1px,transparent_1px),linear-gradient(to_bottom,#1f293710_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
-        <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
-            <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-8 leading-[1.15]">
-                Build a Smarter <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Investment Pipeline</span>
-            </h1>
-            <p class="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto mb-10 leading-relaxed">
-                We install proprietary startup intelligence systems, multi-layered deal filtration protocols, and automated sourcing models that help institutional investors find high-potential companies before markets price them in.
-            </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="https://calendly.com/prabal-panda-growthloopconsulting" target="_blank" rel="noopener" class="w-full sm:w-auto px-8 py-4 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-md shadow-blue-500/10 hover:-translate-y-0.5 transition-all duration-200 text-center">
-                    Book a Strategy Call <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
-                </a>
-                <a href="#allocators" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-slate-600 font-semibold border border-slate-200 hover:bg-slate-50 transition-all duration-200 text-center">
-                    View Sourcing Models
-                </a>
-            </div>
-        </div>
-    </section>
+    <main>
 
-    <!-- WHO WE SERVE -->
-    <section id="allocators" class="py-24 border-t border-slate-100 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-sm font-bold uppercase tracking-wider text-blue-600 block mb-2">Fund Allocation Focus</span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Sourcing Frameworks by Fund Type</h2>
-                <p class="text-slate-500 mt-2">Infrastructure mapped to your specific investment mandate and stage thesis.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-blue-200 hover:shadow-md transition-all duration-300">
-                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block mb-3">Venture Capital</span>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">Early Stage Sourcing</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">We track early founder signals and alternative market data to identify top-tier pipeline targets before competitive seed pricing escalates.</p>
+        <!-- Hero -->
+        <section class="st-phero">
+            <div class="st-wrap">
+                <span class="st-label">Investor Deal Sourcing</span>
+                <h1>Find the best companies <span class="st-mark">before the market does.</span></h1>
+                <div class="st-hero-foot">
+                    <p class="st-muted">We build startup intelligence systems that watch for early growth signals, filter deal flow against your thesis and reach out to founders automatically, so your fund finds high-potential companies before the market prices them in.</p>
+                    <div class="st-hero-ctas">
+                        <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="st-btn st-btn-ink">Book a Strategy Call <i data-lucide="arrow-right"></i></a>
+                        <a href="#components" class="st-btn st-btn-line">See the infrastructure</a>
+                    </div>
                 </div>
-                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-blue-200 hover:shadow-md transition-all duration-300">
-                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block mb-3">Private Equity</span>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">Proprietary Origination</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">We map business profiles against proven growth indicators to build direct outbound relationships, bypassing expensive banking intermediaries.</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-blue-200 hover:shadow-md transition-all duration-300">
-                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block mb-3">Family Offices</span>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">Direct Investments</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">We build private startup intelligence nodes matched to your direct investment criteria, with full confidentiality and zero network disclosure.</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-blue-200 hover:shadow-md transition-all duration-300">
-                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block mb-3">Angel Networks</span>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">Co-Investment Volume</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">We filter and score incoming applications against your thesis, surfacing the highest-signal deals for member review and reducing manual sorting load.</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-blue-200 hover:shadow-md transition-all duration-300">
-                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block mb-3">Strategic Funds</span>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">Corporate M&amp;A Synergy</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">We scan industry ecosystems to identify technology assets and business targets that complement your existing corporate structure and acquisition roadmap.</p>
+                <div class="st-facts">
+                    <div class="st-fact"><b>5 fund types</b><span>VC, PE, family offices, angels, strategics</span></div>
+                    <div class="st-fact"><b>8 components</b><span>In one sourcing system</span></div>
+                    <div class="st-fact"><b>Weeks → days</b><span>From signal to first founder conversation</span></div>
+                    <div class="st-fact"><b>100% yours</b><span>A deal flow engine your firm owns</span></div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CHALLENGES -->
-    <section id="challenges" class="py-24 bg-white border-t border-slate-100">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="max-w-3xl mx-auto text-center mb-16">
-                <span class="text-sm font-bold uppercase tracking-wider text-blue-600 block mb-2">Sourcing Bottlenecks</span>
-                <h2 class="text-3xl font-extrabold text-slate-900 mb-4">The Problem with Reactive Pipeline Models</h2>
-                <p class="text-slate-500 text-sm md:text-base">Relying on inbound decks, broker lists, and saturated institutional networks means discovering opportunities after competitive processes have already formed, paying higher multiples for lower alpha.</p>
+        <nav class="st-toc" aria-label="On this page">
+            <div class="st-wrap">
+                <ul>
+                    <li><a href="#what">What it is</a></li>
+                    <li><a href="#why">Why it matters</a></li>
+                    <li><a href="#funds">By fund type</a></li>
+                    <li><a href="#components">Infrastructure</a></li>
+                    <li><a href="#signals">Signals &amp; scoring</a></li>
+                    <li><a href="#inbound">Inbound triage</a></li>
+                    <li><a href="#compare">Compared</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
-                    <div class="w-8 h-8 rounded-lg bg-rose-50 text-rose-500 flex items-center justify-center font-bold mb-3 text-sm">1</div>
-                    <h3 class="text-sm font-bold text-slate-900 mb-2">Low Quality Volume Noise</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">Manually sorting hundreds of misaligned inbound decks drains analyst bandwidth and pulls focus away from high-conviction targets.</p>
-                </div>
-                <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
-                    <div class="w-8 h-8 rounded-lg bg-rose-50 text-rose-500 flex items-center justify-center font-bold mb-3 text-sm">2</div>
-                    <h3 class="text-sm font-bold text-slate-900 mb-2">Fragmented Intelligence</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">Separate database subscriptions and crawl lists operate in silos, making unified thesis-driven targeting slow and inconsistent.</p>
-                </div>
-                <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
-                    <div class="w-8 h-8 rounded-lg bg-rose-50 text-rose-500 flex items-center justify-center font-bold mb-3 text-sm">3</div>
-                    <h3 class="text-sm font-bold text-slate-900 mb-2">Delayed Growth Detection</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">Lagging self-reported financials mean high-growth companies are only visible once competitive rounds are already forming around them.</p>
-                </div>
-                <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
-                    <div class="w-8 h-8 rounded-lg bg-rose-50 text-rose-500 flex items-center justify-center font-bold mb-3 text-sm">4</div>
-                    <h3 class="text-sm font-bold text-slate-900 mb-2">Manual Qualification Load</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">Chasing founder metrics across disconnected channels slows conviction speed and delays execution on time-sensitive opportunities.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </nav>
 
-    <!-- INFRASTRUCTURE -->
-    <section id="infrastructure" class="py-24 bg-slate-50 border-t border-slate-100">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-sm font-bold uppercase tracking-wider text-blue-600 block mb-2">Engineered Deliverables</span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Sourcing Infrastructure Components</h2>
-                <p class="text-slate-500 mt-2 text-sm">Proprietary systems that shift your deal flow from reactive inbound to programmatic outbound.</p>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm glow-card transition-all duration-300 group">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
-                        <i class="fa-solid fa-bolt text-xl"></i>
-                    </div>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">AI-Powered Sourcing</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">Continuous monitoring across alternative datasets, tracking early structural growth signals before companies seek formal institutional backing.</p>
+        <!-- What it is -->
+        <section id="what" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(01) What it is</span>
+                    <h2>Deal flow that comes to you first</h2>
+                    <p class="st-muted">A system that moves your sourcing from waiting for decks to finding the companies yourself, on your thesis, ahead of the market.</p>
                 </div>
-                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm glow-card transition-all duration-300 group">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
-                        <i class="fa-solid fa-user-check text-xl"></i>
+                <div class="st-split">
+                    <div class="st-prose">
+                        <p>Most funds source the same way: inbound decks, broker lists and personal networks. All three are reactive, and all three are shared with every other fund in your market. By the time a company lands in your inbox, others are already looking at it.</p>
+                        <p>We replace that with <strong>continuous, programmatic sourcing</strong>. The system monitors early company signals across the web, hiring data, product usage and regulatory filings, and scores every company against your investment thesis.</p>
+                        <p>The strongest matches appear, ranked, in one dashboard. Qualified founders receive a personalised first message from you, often weeks or months before they look for formal institutional backing, giving you a direct, low-competition route to the first conversation.</p>
                     </div>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">Founder Signal Tracking</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">Algorithmic indexing of executive movements, technology stack changes, and stealth asset registrations to surface hidden momentum early.</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm glow-card transition-all duration-300 group">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
-                        <i class="fa-solid fa-chart-line text-xl"></i>
-                    </div>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">Growth Indicator Analysis</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">Correlation mapping that measures hiring depth, organic user footprint momentum, and early structural scale anomalies against your thesis.</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm glow-card transition-all duration-300 group">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
-                        <i class="fa-solid fa-server text-xl"></i>
-                    </div>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">Investment Dashboarding</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">A unified workspace consolidating all sourcing metrics, deal scores, and pipeline status into a single view for investment partners.</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm glow-card transition-all duration-300 group">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
-                        <i class="fa-solid fa-arrow-up-1-9 text-xl"></i>
-                    </div>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">Automated Lead Scoring</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">Custom ranking logic that grades companies against your investment parameters and prioritizes the highest-signal targets for internal review.</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm glow-card transition-all duration-300 group">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
-                        <i class="fa-solid fa-brain text-xl"></i>
-                    </div>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">Startup Intelligence Systems</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">Classification models that verify real underlying performance metrics from secondary market data before any deal origination path begins.</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm glow-card transition-all duration-300 group">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
-                        <i class="fa-solid fa-paper-plane text-xl"></i>
-                    </div>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">Outbound Founder Outreach</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">Automated outreach infrastructure that initiates targeted conversations with qualified founders ahead of formal fundraising cycles.</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm glow-card transition-all duration-300 group">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
-                        <i class="fa-solid fa-eye text-xl"></i>
-                    </div>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">Market Monitoring Systems</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">Persistent data harvesting that maps entire vertical niches to detect emerging macro patterns and category leaders before they're broadly visible.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FRAMEWORK -->
-    <section id="framework" class="py-24 bg-white border-t border-slate-100">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto mb-20">
-                <span class="text-sm font-bold uppercase tracking-wider text-blue-600 block mb-2">Operational Execution</span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Four Steps to Programmatic Origination</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="relative group">
-                    <div class="absolute -top-5 left-6 text-7xl font-extrabold text-slate-100 pointer-events-none z-0">01</div>
-                    <div class="p-6 rounded-2xl bg-white border border-slate-200 relative z-10 hover:-translate-y-1 hover:border-blue-200 hover:shadow-md transition-all duration-300 shadow-sm">
-                        <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 font-bold mb-4">I</div>
-                        <h3 class="text-base font-bold text-slate-900 mb-2">Thesis Mapping</h3>
-                        <p class="text-xs text-slate-500 leading-relaxed">We codify your investment mandate (target size, sector focus, stage preference, and deal structure) into system-level filtering rules.</p>
-                    </div>
-                </div>
-                <div class="relative group">
-                    <div class="absolute -top-5 left-6 text-7xl font-extrabold text-slate-100 pointer-events-none z-0">02</div>
-                    <div class="p-6 rounded-2xl bg-white border border-slate-200 relative z-10 hover:-translate-y-1 hover:border-blue-200 hover:shadow-md transition-all duration-300 shadow-sm">
-                        <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 font-bold mb-4">II</div>
-                        <h3 class="text-base font-bold text-slate-900 mb-2">Infrastructure Deployment</h3>
-                        <p class="text-xs text-slate-500 leading-relaxed">We install alternative data harvesting nodes, configure extraction pipelines, and set up your investment dashboarding environment.</p>
-                    </div>
-                </div>
-                <div class="relative group">
-                    <div class="absolute -top-5 left-6 text-7xl font-extrabold text-slate-100 pointer-events-none z-0">03</div>
-                    <div class="p-6 rounded-2xl bg-white border border-slate-200 relative z-10 hover:-translate-y-1 hover:border-blue-200 hover:shadow-md transition-all duration-300 shadow-sm">
-                        <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 font-bold mb-4">III</div>
-                        <h3 class="text-base font-bold text-slate-900 mb-2">Signal Calibration</h3>
-                        <p class="text-xs text-slate-500 leading-relaxed">Tracking modules evaluate real-time growth indicators, company footprints, and founder actions to generate scored, prioritized internal alerts.</p>
-                    </div>
-                </div>
-                <div class="relative group">
-                    <div class="absolute -top-5 left-6 text-7xl font-extrabold text-slate-100 pointer-events-none z-0">04</div>
-                    <div class="p-6 rounded-2xl bg-white border border-slate-200 relative z-10 hover:-translate-y-1 hover:border-blue-200 hover:shadow-md transition-all duration-300 shadow-sm">
-                        <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 font-bold mb-4">IV</div>
-                        <h3 class="text-base font-bold text-slate-900 mb-2">Automated Outreach</h3>
-                        <p class="text-xs text-slate-500 leading-relaxed">Verified targets receive personalised outreach, logging deal pathways and scheduling first conversations directly into your investment workflow.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="py-24 bg-slate-50 border-t border-slate-100">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="text-sm font-bold uppercase tracking-wider text-blue-600 block mb-2">Common Questions</span>
-                <h2 class="text-3xl font-extrabold text-slate-900">Frequently Asked Questions</h2>
-            </div>
-            <div class="space-y-4">
-
-                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
-                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
-                        <span class="font-semibold text-sm md:text-base">What is AI-powered deal sourcing and how is it different from traditional methods?</span>
-                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
-                    </button>
-                    <div class="faq-content">
-                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
-                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed">Traditional deal origination relies on inbound pitch decks, broker-intermediated processes, and personal network referrals, all of which are reactive, slow, and shared across the entire market simultaneously. By the time a company reaches your inbox through conventional channels, multiple competing funds are already evaluating the same opportunity, compressing your negotiating position and driving up entry multiples.</p>
-                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed mt-3">AI-powered deal sourcing replaces this reactive posture with continuous, programmatic data capture. We install active monitoring systems that track early-stage company signals across web infrastructure, hiring databases, product usage footprints, and regulatory filings. This surfaces high-potential targets weeks or months before they seek formal institutional backing, giving your fund a direct, low-competition path to first conversation. The result is a proprietary deal flow engine that runs independently of market noise and belongs entirely to your firm.</p>
+                    <div class="st-visual">
+                        <p class="st-visual-title"><span>How the system flows</span><span>Fig. 01</span></p>
+                        <div class="st-flow st-flow-v">
+                            <div><small>Step 1</small><b>Watch for signals</b><p>Hiring, web traffic, product momentum, filings and founder moves.</p></div>
+                            <div><small>Step 2</small><b>Score against your thesis</b><p>Size, sector, stage and deal structure turned into filtering rules.</p></div>
+                            <div><small>Step 3</small><b>Rank in your dashboard</b><p>One view of deal scores and pipeline status for partners.</p></div>
+                            <div><small>Step 4</small><b>Reach out to founders</b><p>Personalised outreach, logged in your deal pipeline.</p></div>
+                            <div class="is-key"><small>Outcome</small><b>First conversation, before the round forms</b><p>A proprietary pipeline that belongs entirely to your firm.</p></div>
                         </div>
                     </div>
                 </div>
-
-                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
-                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
-                        <span class="font-semibold text-sm md:text-base">How does startup intelligence work in practice?</span>
-                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
-                    </button>
-                    <div class="faq-content">
-                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
-                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed">Our startup intelligence framework monitors secondary indicators across fragmented data sources that most investment teams do not have the infrastructure to track systematically. This includes corporate filings, job posting velocity and seniority patterns, technology stack migrations, domain registration activity, app store momentum, and organic web traffic growth, all of which reveal real operational traction before any financial metrics are self-reported or audited.</p>
-                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed mt-3">These raw signals are cross-referenced and scored against your specific investment thesis parameters in real time. The output is a continuously refreshed, ranked list of companies exhibiting the growth characteristics your mandate is looking for, presented through a unified dashboard rather than scattered across spreadsheets. Your investment team receives actionable intelligence, not raw data, allowing analysts to spend time on high-conviction diligence rather than manual research and scanning.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
-                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
-                        <span class="font-semibold text-sm md:text-base">Can Growth Loop help filter and prioritise inbound deal flow as well?</span>
-                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
-                    </button>
-                    <div class="faq-content">
-                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
-                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed">Yes. Inbound deal flow management is a significant part of what we build. Most funds receive far more applications than their team can meaningfully evaluate, leading to either blanket rejections that damage founder relationships or indiscriminate deep dives that burn analyst capacity on misaligned opportunities. Neither approach scales.</p>
-                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed mt-3">We deploy custom AI filtering layers that automatically score every incoming submission against your thesis parameters: geography, sector, revenue stage, business model, team background, and technology alignment. High-signal submissions are flagged and queued for partner review. Mid-tier opportunities are logged and monitored for future relevance. Clearly misaligned submissions are filtered out without manual intervention. This allows your team to focus institutional attention precisely where conviction is highest, while maintaining a professional, structured process for every inbound founder interaction.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
-                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
-                        <span class="font-semibold text-sm md:text-base">How do automated outreach workflows improve deal sourcing velocity?</span>
-                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
-                    </button>
-                    <div class="faq-content">
-                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
-                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed">Speed is a competitive advantage in early-stage deal sourcing. Even when a fund identifies a strong target ahead of the market, delays in initial outreach, caused by manual research, CRM data entry, or partner availability, can allow competing funds to establish the first relationship. First mover in founder conversations correlates directly with better deal terms and allocation priority.</p>
-                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed mt-3">Our automated outreach infrastructure triggers personalised, contextually relevant messages to qualified targets the moment growth signals cross your scoring threshold. These are not generic templated emails. They reference specific company milestones, product developments, or market events that make the outreach feel researched and credible. All interactions are logged directly into your deal pipeline, with responses routed to the appropriate partner or analyst for follow-up. This compresses the time from signal detection to first founder conversation from weeks to days.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
-                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
-                        <span class="font-semibold text-sm md:text-base">What types of investment firms does this infrastructure work for?</span>
-                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
-                    </button>
-                    <div class="faq-content">
-                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
-                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed">The infrastructure is mandate-agnostic and configures to match the specific sourcing requirements of each fund type. Early-stage venture capital funds use our startup intelligence and founder signal tracking to identify breakthrough companies at pre-seed and seed stage, before round pricing becomes competitive. Growth equity and private equity firms deploy our outbound origination systems to find off-market acquisition and minority investment targets, avoiding auction processes entirely.</p>
-                            <p class="text-xs md:text-sm text-slate-500 leading-relaxed mt-3">Family offices leverage our private market monitoring to build long-term direct investment positions aligned to specific wealth preservation and sector concentration rules, with full confidentiality. Angel networks and syndicates use our filtering and scoring layers to manage high application volume efficiently and surface the strongest co-investment opportunities for member review. Strategic corporate venture and M&amp;A teams configure our market scanning to track synergistic technology assets and emerging category leaders relevant to their core business roadmap.</p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
+        </section>
+
+        <!-- Why it matters -->
+        <section id="why" class="st-section st-dark">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(02) Why it matters</span>
+                    <h2>Reactive pipelines cost you</h2>
+                    <p>If you rely on inbound decks, broker lists and crowded networks, you find opportunities after competitive processes have formed, and pay higher multiples for lower returns.</p>
+                </div>
+                <div class="st-split">
+                    <ol class="st-points">
+                        <li><span>01</span><div><h3>Too much noise</h3><p>Sorting through hundreds of off-thesis decks by hand drains analyst time and pulls focus from the high-conviction targets.</p></div></li>
+                        <li><span>02</span><div><h3>Scattered intelligence</h3><p>Separate database subscriptions and lists run in silos, so targeting against your thesis is slow and inconsistent.</p></div></li>
+                        <li><span>03</span><div><h3>Growth spotted too late</h3><p>Self-reported financials lag reality. Fast-growing companies only become visible once competitive rounds are already forming.</p></div></li>
+                        <li><span>04</span><div><h3>Manual qualification</h3><p>Chasing founder metrics across disconnected channels slows conviction and delays you on time-sensitive deals.</p></div></li>
+                    </ol>
+                    <div class="st-callout">
+                        By the time a deck reaches your inbox, other funds are usually reading it too.
+                        <small>Being first to the founder protects your terms and allocation</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fund types -->
+        <section id="funds" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(03) By fund type</span>
+                    <h2>Built around your mandate</h2>
+                    <p class="st-muted">The same infrastructure, configured to your investment mandate and stage thesis.</p>
+                </div>
+                <div class="st-grid">
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>01 · Venture capital</span><span class="st-cell-icon"><i data-lucide="rocket"></i></span></div>
+                        <h3>Early-stage sourcing</h3>
+                        <p>We track early founder signals and alternative data to find the strongest pre-seed and seed companies before round pricing gets competitive.</p>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>02 · Private equity</span><span class="st-cell-icon"><i data-lucide="briefcase"></i></span></div>
+                        <h3>Proprietary origination</h3>
+                        <p>We match companies against proven growth indicators and build direct relationships, finding off-market acquisition and minority targets without expensive banking intermediaries or auctions.</p>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>03 · Family offices</span><span class="st-cell-icon"><i data-lucide="landmark"></i></span></div>
+                        <h3>Direct investments</h3>
+                        <p>Private market monitoring matched to your direct investment criteria, wealth preservation and sector concentration rules, with full confidentiality and no network disclosure.</p>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>04 · Angel networks</span><span class="st-cell-icon"><i data-lucide="users"></i></span></div>
+                        <h3>Co-investment volume</h3>
+                        <p>We filter and score incoming applications against your thesis and surface the strongest deals for member review, cutting the manual sorting load.</p>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>05 · Strategic funds</span><span class="st-cell-icon"><i data-lucide="building-2"></i></span></div>
+                        <h3>Corporate M&amp;A synergy</h3>
+                        <p>We scan your industry for technology assets, emerging category leaders and business targets that fit your existing structure and acquisition roadmap.</p>
+                    </div>
+                    <a class="st-cell st-cell-auto" href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" style="background:var(--lime)">
+                        <div class="st-cell-top"><span>06 · Your mandate</span><span class="st-cell-icon"><i data-lucide="sliders-horizontal"></i></span></div>
+                        <h3>Something else?</h3>
+                        <p>The infrastructure works for any mandate. Tell us your thesis and we'll show you how it would be configured.</p>
+                        <span class="st-cell-more">Book a call <i data-lucide="arrow-right"></i></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Components -->
+        <section id="components" class="st-section st-white">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(04) The infrastructure</span>
+                    <h2>Eight components, one pipeline</h2>
+                    <p class="st-muted">What we build for you: systems that move your deal flow from waiting for inbound to finding companies on purpose.</p>
+                </div>
+                <div class="st-visual" style="margin-bottom:56px">
+                    <p class="st-visual-title"><span>How the components fit together</span><span>Fig. 02</span></p>
+                    <div class="st-flow" style="--n:4">
+                        <div><small>Find · 01, 02, 08</small><b>Discover</b><p>AI-powered sourcing, founder signal tracking and market monitoring spot companies early.</p></div>
+                        <div><small>Verify · 03, 06</small><b>Check the traction</b><p>Growth indicator analysis and startup intelligence confirm the signals are real.</p></div>
+                        <div><small>Rank · 04, 05</small><b>Prioritise</b><p>Automated lead scoring ranks every company and the dashboard shows it all in one place.</p></div>
+                        <div class="is-key"><small>Engage · 07</small><b>Start the conversation</b><p>Outbound founder outreach books first conversations ahead of the round.</p></div>
+                    </div>
+                </div>
+                <div class="st-grid st-grid-4">
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>01</span><span class="st-cell-icon"><i data-lucide="radar"></i></span></div>
+                        <h3 style="font-size:1.4rem">AI-powered sourcing</h3>
+                        <p>Continuous monitoring of alternative data sources to catch early growth signals before companies seek formal institutional backing.</p>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>02</span><span class="st-cell-icon"><i data-lucide="user-search"></i></span></div>
+                        <h3 style="font-size:1.4rem">Founder signal tracking</h3>
+                        <p>Tracks executive moves, technology stack changes and stealth company registrations to surface hidden momentum early.</p>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>03</span><span class="st-cell-icon"><i data-lucide="trending-up"></i></span></div>
+                        <h3 style="font-size:1.4rem">Growth indicator analysis</h3>
+                        <p>Measures hiring depth, organic user growth and unusual early scaling patterns against your thesis.</p>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>04</span><span class="st-cell-icon"><i data-lucide="layout-dashboard"></i></span></div>
+                        <h3 style="font-size:1.4rem">Investment dashboarding</h3>
+                        <p>One workspace for partners that brings together sourcing metrics, deal scores and pipeline status.</p>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>05</span><span class="st-cell-icon"><i data-lucide="list-ordered"></i></span></div>
+                        <h3 style="font-size:1.4rem">Automated lead scoring</h3>
+                        <p>Custom ranking that grades each company against your investment criteria and puts the strongest at the top of the review queue.</p>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>06</span><span class="st-cell-icon"><i data-lucide="shield-check"></i></span></div>
+                        <h3 style="font-size:1.4rem">Startup intelligence</h3>
+                        <p>Models that check real underlying performance from secondary data before any outreach begins.</p>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>07</span><span class="st-cell-icon"><i data-lucide="send"></i></span></div>
+                        <h3 style="font-size:1.4rem">Outbound founder outreach</h3>
+                        <p>Automated, targeted conversations with qualified founders ahead of their formal fundraising.</p>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>08</span><span class="st-cell-icon"><i data-lucide="scan-search"></i></span></div>
+                        <h3 style="font-size:1.4rem">Market monitoring</h3>
+                        <p>Ongoing data collection that maps whole sectors to spot emerging patterns and category leaders before they're widely visible.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Signals -->
+        <section id="signals" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(05) Signals &amp; scoring</span>
+                    <h2>Traction before the deck</h2>
+                    <p class="st-muted">Real operating momentum shows up in public signals long before any financials are self-reported or audited.</p>
+                </div>
+                <div class="st-split">
+                    <div class="st-prose">
+                        <p>Our startup intelligence monitors signals spread across sources most investment teams can't track systematically:</p>
+                        <ul class="st-checks" style="margin:0 0 20px">
+                            <li>Corporate and regulatory filings</li>
+                            <li>Job posting velocity and the seniority of new hires</li>
+                            <li>Technology stack changes</li>
+                            <li>Domain registrations and executive moves</li>
+                            <li>App store momentum and organic web traffic growth</li>
+                        </ul>
+                        <p>These signals are cross-checked and <strong>scored against your thesis in real time</strong>. The output is a continuously updated, ranked list of companies showing the growth characteristics your mandate looks for, in one dashboard rather than scattered spreadsheets.</p>
+                        <p>Your team gets actionable intelligence, not raw data, so analysts spend their time on high-conviction diligence instead of manual research.</p>
+                    </div>
+                    <div class="st-visual">
+                        <p class="st-visual-title"><span>Example deal score card</span><span>Fig. 03</span></p>
+                        <p style="margin:0 0 4px;font-family:var(--display);font-weight:700;font-size:1.2rem">Example Co.</p>
+                        <p class="st-muted" style="margin:0 0 20px;font-size:.9rem">B2B software · Seed stage · Not yet raising</p>
+                        <div class="st-meter">
+                            <div class="st-meter-row"><span>Hiring velocity</span><div class="st-meter-track"><div class="st-meter-fill" style="width:82%"></div></div><b>Strong</b></div>
+                            <div class="st-meter-row"><span>Web traffic growth</span><div class="st-meter-track"><div class="st-meter-fill" style="width:70%"></div></div><b>Rising</b></div>
+                            <div class="st-meter-row"><span>Product momentum</span><div class="st-meter-track"><div class="st-meter-fill" style="width:64%"></div></div><b>Rising</b></div>
+                            <div class="st-meter-row"><span>Founder signals</span><div class="st-meter-track"><div class="st-meter-fill" style="width:76%"></div></div><b>Strong</b></div>
+                            <div class="st-meter-row is-key"><span>Thesis fit</span><div class="st-meter-track"><div class="st-meter-fill" style="width:90%"></div></div><b>Match</b></div>
+                        </div>
+                        <ul class="st-checks" style="margin-top:22px">
+                            <li>Flagged for partner review</li>
+                            <li>Personalised outreach drafted, referencing recent milestones</li>
+                        </ul>
+                        <p class="st-muted" style="font-size:.85rem;margin:18px 0 0">Illustrative mock-up, not a real company. Your score card uses the signals and weightings that match your thesis.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Inbound triage -->
+        <section id="inbound" class="st-section st-white">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(06) Inbound triage</span>
+                    <h2>Every deck, sorted for you</h2>
+                    <p class="st-muted">The same scoring works on the applications you already receive, so partners only see what deserves their time.</p>
+                </div>
+                <div class="st-split">
+                    <div class="st-visual">
+                        <p class="st-visual-title"><span>How an inbound submission is handled</span><span>Fig. 04</span></p>
+                        <div class="st-flow st-flow-v">
+                            <div><small>In</small><b>Submission arrives</b><p>Deck, form or referral, from any channel.</p></div>
+                            <div><small>Score</small><b>Checked against your thesis</b><p>Geography, sector, revenue stage, business model, team background and technology fit.</p></div>
+                            <div class="is-key"><small>Route</small><b>Sent to the right queue</b><p>Automatically, with no manual sorting.</p></div>
+                        </div>
+                        <ul class="st-checks" style="margin-top:22px">
+                            <li><strong>High signal:</strong> flagged and queued for partner review</li>
+                            <li><strong>Mid-tier:</strong> logged and monitored for future relevance</li>
+                            <li><strong>Clearly off-thesis:</strong> filtered out without manual work</li>
+                        </ul>
+                    </div>
+                    <div class="st-prose">
+                        <p>Most funds receive far more applications than they can properly review. That forces a bad choice: blanket rejections that damage founder relationships, or deep dives into off-thesis deals that burn analyst capacity. Neither scales.</p>
+                        <p>We add <strong>AI filtering that scores every submission</strong> against your criteria the moment it arrives. Strong deals go straight to partners, promising ones are kept on watch, and clear misfits are handled without anyone opening the deck.</p>
+                        <p>Your team's attention goes where conviction is highest, and every founder still gets a professional, structured process.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compare -->
+        <section id="compare" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(07) Compared</span>
+                    <h2>Reactive vs programmatic</h2>
+                    <p class="st-muted">How an engineered sourcing system differs from the way most funds find deals today.</p>
+                </div>
+                <div class="st-table-wrap">
+                    <table class="st-compare">
+                        <thead><tr><th scope="col">&nbsp;</th><th scope="col">Traditional sourcing</th><th scope="col">Growth Loop sourcing</th></tr></thead>
+                        <tbody>
+                            <tr><th scope="row">Where deals come from</th><td>Inbound decks, brokers and personal networks</td><td>Continuous monitoring of the whole market against your thesis</td></tr>
+                            <tr><th scope="row">Timing</th><td>When the company starts raising</td><td>Weeks or months before formal fundraising</td></tr>
+                            <tr><th scope="row">Competition</th><td>Shared with every fund in the market</td><td>A direct, low-competition route to the founder</td></tr>
+                            <tr><th scope="row">Evidence</th><td>Self-reported, lagging financials</td><td>Live signals: hiring, traffic, product usage, filings</td></tr>
+                            <tr><th scope="row">Qualification</th><td>Analysts sorting decks by hand</td><td>Automated scoring, with the strongest deals flagged for partners</td></tr>
+                            <tr><th scope="row">Outreach</th><td>Manual, delayed by research and partner availability</td><td>Personalised messages sent when a company crosses your threshold</td></tr>
+                            <tr><th scope="row">Ownership</th><td>Spread across subscriptions and spreadsheets</td><td>A proprietary engine that belongs entirely to your firm</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process -->
+        <section id="process" class="st-section st-white">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(08) How we set it up</span>
+                    <h2>Four steps to programmatic sourcing</h2>
+                    <p class="st-muted">You define the thesis; we turn it into a system that finds, scores and contacts companies for you.</p>
+                </div>
+                <div class="st-loop">
+                    <ol class="st-steps">
+                        <li><span>01</span><div><h3>Thesis mapping</h3><p>We turn your investment mandate (target size, sector focus, stage preference and deal structure) into precise filtering rules the system can apply.</p></div></li>
+                        <li><span>02</span><div><h3>Infrastructure setup</h3><p>We connect the alternative data sources, build the pipelines that pull and clean the data, and set up your investment dashboard.</p></div></li>
+                        <li><span>03</span><div><h3>Signal calibration</h3><p>The tracking evaluates real-time growth indicators, company footprints and founder activity, producing scored, prioritised alerts for your team.</p></div></li>
+                        <li><span>04</span><div><h3>Automated outreach</h3><p>Verified targets receive personalised outreach. Every interaction is logged and first conversations are booked straight into your investment workflow.</p></div></li>
+                    </ol>
+                    <div class="st-visual">
+                        <p class="st-visual-title"><span>What we need from you</span><span>Fig. 05</span></p>
+                        <ul class="st-checks">
+                            <li>Your mandate: target size, sectors, stage and deal structure</li>
+                            <li>Access to your CRM or deal pipeline so everything is logged in one place</li>
+                            <li>Approval of outreach messaging before it goes live</li>
+                            <li>Who should receive which alerts and replies</li>
+                            <li>Partner feedback on early scores, so we can calibrate the signals</li>
+                        </ul>
+                        <p class="st-muted" style="font-size:.85rem;margin:18px 0 0">Sourcing stays confidential. Your thesis, targets and pipeline belong to your firm, with no network disclosure.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(09) FAQ</span>
+                    <h2>Investor questions we get most</h2>
+                    <p class="st-muted">Still unsure? Book a call and we'll answer them for your fund specifically.</p>
+                </div>
+                <div class="st-faq">
+                    <details open>
+                        <summary>What is AI-powered deal sourcing, and how is it different?</summary>
+                        <div class="st-faq-a">
+                            <p>Traditional origination relies on inbound decks, broker-led processes and personal referrals. All are reactive, slow and shared with the whole market at once. By the time a company reaches your inbox, several competing funds are already evaluating it, which weakens your negotiating position and pushes up entry multiples.</p>
+                            <p>AI-powered sourcing replaces this with continuous, programmatic data capture. We set up monitoring that tracks early company signals across the web, hiring databases, product usage and regulatory filings. It surfaces high-potential targets weeks or months before they seek formal institutional backing, giving you a direct, low-competition path to the first conversation. The result is a proprietary deal flow engine that runs independently of market noise and belongs entirely to your firm.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>How does startup intelligence work in practice?</summary>
+                        <div class="st-faq-a">
+                            <p>It monitors secondary indicators across scattered sources that most investment teams can't track systematically: corporate filings, job posting velocity and seniority, technology stack changes, domain registrations, app store momentum and organic web traffic growth. Together these reveal real traction before any financials are self-reported or audited.</p>
+                            <p>The signals are cross-checked and scored against your thesis in real time. You get a continuously refreshed, ranked list of companies that fit your mandate, in one dashboard rather than scattered spreadsheets, so analysts spend their time on high-conviction diligence instead of manual research.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Can you help filter and prioritise inbound deal flow too?</summary>
+                        <div class="st-faq-a">
+                            <p>Yes, it's a significant part of what we build. Most funds get far more applications than they can properly evaluate, which leads either to blanket rejections that damage founder relationships or to deep dives that burn analyst time on misaligned deals.</p>
+                            <ul><li>Every submission is scored against your criteria: geography, sector, revenue stage, business model, team background and technology fit.</li><li>High-signal submissions are flagged and queued for partner review.</li><li>Mid-tier ones are logged and monitored for future relevance.</li><li>Clearly misaligned ones are filtered out without manual work.</li></ul>
+                            <p>Your team focuses where conviction is highest, and every founder still gets a professional, structured process.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>How does automated outreach speed up sourcing?</summary>
+                        <div class="st-faq-a">
+                            <p>Speed is a competitive advantage. Even when you spot a strong company early, delays from manual research, CRM data entry or partner availability can let another fund build the first relationship, and being first to the founder conversation goes hand in hand with better terms and allocation priority.</p>
+                            <p>Our outreach sends personalised, relevant messages the moment a company crosses your scoring threshold. They aren't generic templates: they reference specific milestones, product developments or market events, so they read as researched and credible. Every interaction is logged in your deal pipeline and replies go to the right partner or analyst. This cuts the time from signal to first founder conversation from weeks to days.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>What types of investment firms is this for?</summary>
+                        <div class="st-faq-a">
+                            <p>The infrastructure works for any mandate and is configured to each fund type:</p>
+                            <ul>
+                                <li><strong>Early-stage VC:</strong> startup intelligence and founder signal tracking to find breakthrough companies at pre-seed and seed, before pricing gets competitive.</li>
+                                <li><strong>Growth equity and PE:</strong> outbound origination to find off-market acquisition and minority targets, avoiding auctions entirely.</li>
+                                <li><strong>Family offices:</strong> private market monitoring for long-term direct positions aligned to wealth preservation and sector concentration rules, with full confidentiality.</li>
+                                <li><strong>Angel networks and syndicates:</strong> filtering and scoring to manage high application volume and surface the strongest co-investments for members.</li>
+                                <li><strong>Strategic corporate venture and M&amp;A teams:</strong> market scanning to track complementary technology assets and emerging category leaders relevant to your roadmap.</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Is our sourcing kept confidential?</summary>
+                        <div class="st-faq-a"><p>Yes. The system is built for your firm alone and belongs entirely to you. Your thesis, targets and pipeline are not disclosed to any network, which is why family offices use it for direct investments that require full confidentiality.</p></div>
+                    </details>
+                    <details>
+                        <summary>Will founders see this as spam?</summary>
+                        <div class="st-faq-a"><p>No. Outreach only goes to verified companies that match your thesis, and each message references something specific to that company, such as a milestone, product launch or market event. It reads as researched interest from your fund, not a template, and the reply comes straight to a partner or analyst.</p></div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next -->
+        <section class="st-section st-white" style="padding-top:72px;padding-bottom:72px;border-top:1px solid var(--ink)">
+            <div class="st-wrap">
+                <span class="st-label" style="margin-bottom:24px">Pairs well with</span>
+                <div class="st-next">
+                    <a href="outbound.html"><small>Outbound Systems</small><b>Go find the people who need you</b><p>Personalised, multi-channel outreach to founders and co-investors.</p></a>
+                    <a href="ai-infrastructure.html"><small>Internal AI Infrastructure</small><b>AI inside your workflow</b><p>Internal AI systems that take repetitive work off your team.</p></a>
+                    <a href="b2b.html"><small>B2B Growth</small><b>Growth for your portfolio</b><p>Pipeline systems your portfolio companies can put to work.</p></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <section id="contact" class="st-dark st-section st-cta">
+        <div class="st-wrap">
+            <span class="st-label">Start a project</span>
+            <h2>Build a smarter<br><span class="st-mark">investment pipeline.</span></h2>
+            <p class="st-muted">Tell us your thesis. We'll show you how a startup intelligence and deal filtering system would be set up for your fund.</p>
+            <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="st-btn st-btn-lime">Book a free consultation <i data-lucide="arrow-right"></i></a>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section id="contact" class="py-24 relative overflow-hidden bg-slate-900">
-        <div class="absolute inset-0 bg-gradient-to-t from-blue-950/30 via-transparent to-transparent pointer-events-none"></div>
-        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
-            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">
-                Build a Smarter Investment Pipeline
-            </h2>
-            <p class="text-slate-400 max-w-xl mx-auto mb-10 text-sm md:text-base leading-relaxed">
-                Connect with our team to configure direct deal filtering architecture and integrate startup intelligence into your fund sourcing engine.
-            </p>
-            <div class="flex justify-center">
-                <a href="https://calendly.com/prabal-panda-growthloopconsulting" target="_blank" rel="noopener" class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold text-base shadow-xl shadow-blue-500/20 hover:-translate-y-0.5 transition-all duration-200">
-                    <i class="fa-solid fa-calendar-days mr-2.5 text-sm"></i> Book a Strategy Call
-                </a>
+    <footer class="st-footer">
+        <div class="st-wrap">
+            <div class="st-footer-grid">
+                <div>
+                    <h4>Growth Loop</h4>
+                    <p class="st-muted" style="max-width:34ch;line-height:1.55;margin:0 0 16px">We engineer automated systems that grow your revenue.</p>
+                    <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="st-btn st-btn-lime" style="padding:12px 20px">Book a call <i data-lucide="arrow-right"></i></a>
+                </div>
+                <div>
+                    <h4>Expertise</h4>
+                    <ul><li><a href="outbound.html">Outbound</a></li><li><a href="inbound.html">Inbound</a></li><li><a href="geo.html">AI Visibility (GEO)</a></li><li><a href="voice-agents.html">AI Voice Agents</a></li><li><a href="ai-infrastructure.html">AI Infrastructure</a></li><li><a href="approach.html">Approach</a></li></ul>
+                </div>
+                <div>
+                    <h4>Who we help</h4>
+                    <ul><li><a href="speaker.html">Speakers &amp; Founders</a></li><li><a href="ecommerce.html">Ecommerce</a></li><li><a href="b2b.html">B2B Teams</a></li><li><a href="investors.html">Investors</a></li></ul>
+                </div>
+                <div>
+                    <h4>Resources</h4>
+                    <ul><li><a href="blog/">Blog</a></li><li><a href="ai-readiness-tool.html">AI Readiness Checker</a></li><li><a href="about.html">About Us</a></li></ul>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- FOOTER, identical to homepage -->
-    <footer class="py-12 border-t border-slate-900 bg-slate-950 text-center text-xs text-slate-600">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div class="flex items-center gap-2">
-                <span class="font-bold text-slate-400 inline-flex items-center gap-2">
-                    <svg class="h-5 w-5 shrink-0 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></svg>
-                    GROWTH LOOP
-                </span>
-                <span>&copy; 2026. All rights reserved.</span>
-            </div>
-            <div class="flex gap-6 text-slate-500">
-                <a href="#" class="hover:text-slate-400 transition-colors">Privacy Policy</a>
-                <a href="#" class="hover:text-slate-400 transition-colors">Terms of Service</a>
+            <p class="st-wordmark" aria-hidden="true">Growth Loop</p>
+            <div class="st-footer-base">
+                <span>© 2026 Growth Loop. All rights reserved.</span>
+                <span>Published by <span class="author">Growth Loop</span>. Updated 21 October 2026.</span>
             </div>
         </div>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            lucide.createIcons();
-            const toggles = document.querySelectorAll('.faq-toggle');
-            toggles.forEach(toggle => {
-                toggle.addEventListener('click', () => {
-                    const content = toggle.nextElementSibling;
-                    const icon = toggle.querySelector('i');
-                    const isOpen = content.classList.contains('faq-open');
-
-                    document.querySelectorAll('.faq-content').forEach(c => c.classList.remove('faq-open'));
-                    document.querySelectorAll('.faq-toggle i').forEach(ic => ic.style.transform = 'rotate(0deg)');
-
-                    if (!isOpen) {
-                        content.classList.add('faq-open');
-                        icon.style.transform = 'rotate(180deg)';
-                    }
-                });
-            });
+            if (window.lucide) lucide.createIcons();
+            // Highlight the current section in the sticky "on this page" bar
+            const links = [...document.querySelectorAll('.st-toc a')];
+            const byId = new Map(links.map((a) => [a.getAttribute('href').slice(1), a]));
+            const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+                if (!e.isIntersecting) return;
+                links.forEach((a) => a.classList.remove('is-active'));
+                const a = byId.get(e.target.id);
+                if (a) { a.classList.add('is-active'); const ul = a.closest('ul'); ul.scrollTo({ left: a.offsetLeft - ul.clientWidth / 2 + a.offsetWidth / 2, behavior: 'smooth' }); }
+            }), { rootMargin: '-45% 0px -50% 0px' });
+            byId.forEach((_, id) => { const el = document.getElementById(id); if (el) io.observe(el); });
         });
     </script>
 </body>

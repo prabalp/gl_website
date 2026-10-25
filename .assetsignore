@@ -5,3 +5,5 @@ worker.js
 .git/
 .gitignore
 .DS_Store
+tools/
+blog/posts/

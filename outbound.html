@@ -47,7 +47,7 @@
     {
       "@type": "WebSite",
       "@id": "https://mygrowthloop.com/#website",
-      "name": "Outbound Optimisation",
+      "name": "Growth Loop",
       "url": "https://mygrowthloop.com/",
       "description": "Growth Loop runs personalised outbound across email, LinkedIn, calling, and CRM so you reach decision-makers without a blast.",
       "publisher": {
@@ -79,7 +79,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #FFFFFF; }
         .glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
@@ -103,8 +103,9 @@
         .animate-float-delayed { animation: float 6s ease-in-out 3s infinite; }
         .animate-spin-slow { animation: spin 12s linear infinite; }
     </style>
+    <link rel="stylesheet" href="studio.css">
 </head>
-<body class="text-slate-600 antialiased overflow-x-hidden bg-white">
+<body class="studio text-slate-600 antialiased overflow-x-hidden bg-white">
 
     <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -126,6 +127,8 @@
                                 <a href="inbound.html" class="dropdown-item">Inbound Optimisation</a>
                                 <a href="outbound.html" class="dropdown-item">Outbound Optimisation</a>
                                 <a href="geo.html" class="dropdown-item">Generative Engine Optimisation</a>
+                                <a href="voice-agents.html" class="dropdown-item">AI Voice Agents</a>
+                                <a href="ai-infrastructure.html" class="dropdown-item">Internal AI Infrastructure</a>
                             </div>
                         </div>
                         <div class="dropdown relative group inline-block">
@@ -149,7 +152,7 @@
                                 <a href="ai-readiness-tool.html" class="dropdown-item">AI Readiness Checker</a>
                             </div>
                         </div>
-                        <a href="index.html#about" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About Us</a>
+                        <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About Us</a><a href="blog/" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Blog</a>
                         <a href="index.html#approach" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Approach</a>
                         <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="cta-button bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-blue-500/20">Partner With Us</a>
                     </div>
@@ -169,6 +172,8 @@
                     <a href="inbound.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Inbound Optimisation</a>
                     <a href="outbound.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Outbound Optimisation</a>
                     <a href="geo.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Generative Engine Optimisation</a>
+                    <a href="voice-agents.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">AI Voice Agents</a>
+                    <a href="ai-infrastructure.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Internal AI Infrastructure</a>
                 </div>
                 <div class="border-t border-slate-200 my-2 pt-2">
                     <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Who We Help</p>
@@ -181,320 +186,381 @@
                     <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Products</p>
                     <a href="ai-readiness-tool.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">AI Readiness Checker</a>
                 </div>
-                <a href="index.html#about" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="about.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About Us</a><a href="blog/" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Blog</a>
                 <a href="index.html#approach" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Approach</a>
                 <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium mt-4 text-center">Partner With Us</a>
             </div>
         </div>
     </nav>
 
-        <section class="relative pt-32 pb-24 md:pt-48 md:pb-40 overflow-hidden">
-            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] pointer-events-none opacity-30 mix-blend-screen">
-                <div class="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-indigo-600/40 blur-[120px]"></div>
-                <div class="absolute top-[10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-violet-600/30 blur-[100px]"></div>
-            </div>
-            <div class="absolute inset-0 bg-[linear-gradient(to_right,#1f293710_1px,transparent_1px),linear-gradient(to_bottom,#1f293710_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
-            <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
-            <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-8 leading-[1.15]">Go Find the People Who Need You</h1>
-            <p class="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto mb-10 leading-relaxed">
-                Personalised, multi-channel outreach that puts your business directly in front of decision-makers, without ever feeling like a mass blast.
-            </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="group inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 font-semibold text-white transition-all duration-200 bg-blue-600 rounded-full hover:bg-blue-700 shadow-lg shadow-blue-500/20">
-                    Book a Pipeline Call <i data-lucide="arrow-right" class="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"></i>
-                </a>
-                <a href="inbound.html" class="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 font-semibold text-slate-600 transition-all duration-200 bg-white border border-slate-200 rounded-full hover:bg-slate-50 hover:text-slate-900 focus:outline-none hover:border-slate-300">
-                    See Inbound Instead
-                </a>
-            </div>
-            </div>
-        </section>
+    <main>
 
-        <!-- Why Outbound -->
-        <section class="py-20 bg-white border-t border-slate-100">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-8">Why it matters to leadership</h2>
-                <div class="grid sm:grid-cols-3 gap-6 text-left">
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
-                        <i data-lucide="zap" class="h-6 w-6 text-blue-600 mb-3"></i>
-                        <p class="text-slate-600 text-sm leading-relaxed">It produces the fastest first conversations, often within the first two weeks.</p>
+        <!-- Hero -->
+        <section class="st-phero">
+            <div class="st-wrap">
+                <span class="st-label">Outbound Systems</span>
+                <h1>Go find the people who <span class="st-mark">need you.</span></h1>
+                <div class="st-hero-foot">
+                    <p class="st-muted">Personalised, multi-channel outreach that puts your business directly in front of decision-makers, without ever feeling like a mass blast. We build it, run it and log every conversation in your CRM.</p>
+                    <div class="st-hero-ctas">
+                        <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="st-btn st-btn-ink">Book a Pipeline Call <i data-lucide="arrow-right"></i></a>
+                        <a href="#sequence" class="st-btn st-btn-line">See a sequence</a>
                     </div>
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
-                        <i data-lucide="crosshair" class="h-6 w-6 text-blue-600 mb-3"></i>
-                        <p class="text-slate-600 text-sm leading-relaxed">You choose exactly who gets contacted, no waiting on algorithms to decide.</p>
-                    </div>
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
-                        <i data-lucide="calendar-check" class="h-6 w-6 text-blue-600 mb-3"></i>
-                        <p class="text-slate-600 text-sm leading-relaxed">It fills the pipeline gap while inbound assets are still ramping up.</p>
-                    </div>
+                </div>
+                <div class="st-facts">
+                    <div class="st-fact"><b>~1 week</b><span>To build lists and sequences</span></div>
+                    <div class="st-fact"><b>Week 2</b><span>When first replies typically arrive</span></div>
+                    <div class="st-fact"><b>4 channels</b><span>Email, LinkedIn, calls, WhatsApp</span></div>
+                    <div class="st-fact"><b>100% yours</b><span>Every contact and reply in your CRM</span></div>
                 </div>
             </div>
         </section>
 
-        <!-- 4 CHANNELS: card grid layout (distinct from Inbound's zigzag) -->
-        <section class="py-24 bg-slate-50 border-t border-slate-100">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-20">
-                    <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Four Outbound Channels</h2>
-                    <p class="max-w-2xl mx-auto text-slate-500 text-lg font-light">Sequenced together, so a prospect sees your name more than once before you ever ask for their time.</p>
+        <nav class="st-toc" aria-label="On this page">
+            <div class="st-wrap">
+                <ul>
+                    <li><a href="#what">What it is</a></li>
+                    <li><a href="#why">Why it matters</a></li>
+                    <li><a href="#channels">Channels</a></li>
+                    <li><a href="#sequence">A sequence</a></li>
+                    <li><a href="#compare">Compared</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#fit">Who it's for</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- What it is -->
+        <section id="what" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(01) What it is</span>
+                    <h2>A system, not a campaign</h2>
+                    <p class="st-muted">Outbound works when every step is connected: the right list, a message worth reading, and follow-up that never drops.</p>
                 </div>
-
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Cold Email -->
-                    <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
-                        <div class="flex items-center mb-5">
-                            <div class="bg-blue-100 p-3 rounded-xl mr-4 text-blue-600"><i data-lucide="mail" class="h-6 w-6"></i></div>
-                            <h3 class="text-xl font-bold text-slate-900">Cold Email</h3>
-                        </div>
-                        <ul class="text-slate-600 text-sm space-y-2.5">
-                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0"></i> Verified, ICP-matched prospect lists</li>
-                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0"></i> Researched, personalised sequences</li>
-                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0"></i> Deliverability protection and warmup</li>
-                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0"></i> Reply handling and meeting booking</li>
-                        </ul>
+                <div class="st-split">
+                    <div class="st-prose">
+                        <p>Most outbound fails for one of three reasons: the list is wrong, the message is generic, or nobody follows up. An <strong>outbound system</strong> fixes all three at once.</p>
+                        <p>We start from your ideal customer profile (ICP), build a verified list of the people who match it, and enrich each contact with real context: their role, their company's recent news, and the trigger that makes your offer relevant now.</p>
+                        <p>Then we run sequenced touches across email, LinkedIn, calls and messaging. Every reply is routed to you and every touch is logged in your CRM, so you can see exactly what produces meetings.</p>
                     </div>
-
-                    <!-- LinkedIn -->
-                    <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
-                        <div class="flex items-center mb-5">
-                            <div class="bg-blue-100 p-3 rounded-xl mr-4 text-blue-600"><i data-lucide="linkedin" class="h-6 w-6"></i></div>
-                            <h3 class="text-xl font-bold text-slate-900">LinkedIn Outreach</h3>
+                    <div class="st-visual">
+                        <p class="st-visual-title"><span>How the system flows</span><span>Fig. 01</span></p>
+                        <div class="st-flow st-flow-v">
+                            <div><small>Step 1</small><b>Define the ICP</b><p>Industries, company size, roles and buying triggers.</p></div>
+                            <div><small>Step 2</small><b>Build &amp; enrich the list</b><p>Verified contacts with real, usable context.</p></div>
+                            <div><small>Step 3</small><b>Run the sequence</b><p>Email, LinkedIn, calls and messages in a planned order.</p></div>
+                            <div class="is-key"><small>Outcome</small><b>Meetings in your calendar</b><p>Replies routed to you, everything logged in your CRM.</p></div>
                         </div>
-                        <ul class="text-slate-600 text-sm space-y-2.5">
-                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0"></i> Personalised connection sequences</li>
-                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0"></i> Profile and content positioning for authority</li>
-                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0"></i> Context-aware messaging, not templates</li>
-                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0"></i> Warm handoff into direct conversation</li>
-                        </ul>
-                    </div>
-
-                    <!-- Cold Calling -->
-                    <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
-                        <div class="flex items-center mb-5">
-                            <div class="bg-blue-100 p-3 rounded-xl mr-4 text-blue-600"><i data-lucide="phone-call" class="h-6 w-6"></i></div>
-                            <h3 class="text-xl font-bold text-slate-900">Cold Calling</h3>
-                        </div>
-                        <ul class="text-slate-600 text-sm space-y-2.5">
-                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0"></i> Researched calling lists and scripts</li>
-                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0"></i> Sequenced after a prior email or LinkedIn touch</li>
-                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0"></i> Lands as a follow-up, not an interruption</li>
-                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0"></i> Outcomes logged directly into your CRM</li>
-                        </ul>
-                    </div>
-
-                    <!-- CRM -->
-                    <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
-                        <div class="flex items-center mb-5">
-                            <div class="bg-blue-100 p-3 rounded-xl mr-4 text-blue-600"><i data-lucide="workflow" class="h-6 w-6"></i></div>
-                            <h3 class="text-xl font-bold text-slate-900">CRM Campaigns: WhatsApp & Messaging</h3>
-                        </div>
-                        <ul class="text-slate-600 text-sm space-y-2.5">
-                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0"></i> WhatsApp and SMS nurture sequences</li>
-                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0"></i> CRM automation and lead scoring</li>
-                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0"></i> Timely, relevant follow-up on the channel they check daily</li>
-                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0"></i> Re-engagement flows for cold, stalled leads</li>
-                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- HOW A SEQUENCE RUNS -->
-        <section class="py-24 bg-white border-t border-slate-100">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">How a sequence runs</h2>
+        <!-- Why it matters -->
+        <section id="why" class="st-section st-dark">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(02) Why it matters to leadership</span>
+                    <h2>The fastest route to a first conversation</h2>
+                    <p>Inbound compounds over months. Outbound starts conversations this month, with exactly the accounts you choose.</p>
                 </div>
-                <div class="grid md:grid-cols-4 gap-8">
-                    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200">
-                        <div class="text-blue-600 font-bold text-sm uppercase tracking-widest mb-4">01</div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-3">List Building</h3>
-                        <ul class="text-slate-600 text-sm space-y-2">
-                            <li>• Verified contacts matched to your ICP</li>
-                            <li>• Enriched with real, usable context</li>
+                <div class="st-split">
+                    <ol class="st-points">
+                        <li><span>01</span><div><h3>Speed</h3><p>It produces the fastest first conversations, often within the first two weeks of launch.</p></div></li>
+                        <li><span>02</span><div><h3>Control</h3><p>You choose exactly who gets contacted. No waiting on algorithms or ad auctions to decide who sees you.</p></div></li>
+                        <li><span>03</span><div><h3>Coverage</h3><p>It fills the pipeline gap while inbound assets such as SEO and AI visibility are still ramping up.</p></div></li>
+                    </ol>
+                    <div class="st-callout">
+                        Outbound is the only growth channel where you pick the customer before they pick you.
+                        <small>Pair it with inbound for a pipeline that is both fast and compounding</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Channels -->
+        <section id="channels" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(03) Four channels</span>
+                    <h2>Sequenced together, never in isolation</h2>
+                    <p class="st-muted">A prospect sees your name more than once, on the channels they actually use, before you ever ask for their time.</p>
+                </div>
+                <div class="st-grid st-grid-2">
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>01</span><span class="st-cell-icon"><i data-lucide="mail"></i></span></div>
+                        <h3>Cold Email</h3>
+                        <ul class="st-checks">
+                            <li>Verified, ICP-matched prospect lists</li>
+                            <li>Researched, personalised sequences</li>
+                            <li>Deliverability protection and domain warmup</li>
+                            <li>Reply handling and meeting booking</li>
                         </ul>
                     </div>
-                    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200">
-                        <div class="text-blue-600 font-bold text-sm uppercase tracking-widest mb-4">02</div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-3">Sequence Design</h3>
-                        <ul class="text-slate-600 text-sm space-y-2">
-                            <li>• Email, LinkedIn, and call touches ordered</li>
-                            <li>• Messaging personalised, not templated</li>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>02</span><span class="st-cell-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></span></div>
+                        <h3>LinkedIn Outreach</h3>
+                        <ul class="st-checks">
+                            <li>Personalised connection sequences</li>
+                            <li>Profile and content positioning for authority</li>
+                            <li>Context-aware messaging, not templates</li>
+                            <li>Warm handoff into direct conversation</li>
                         </ul>
                     </div>
-                    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200">
-                        <div class="text-blue-600 font-bold text-sm uppercase tracking-widest mb-4">03</div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-3">Launch & Reply</h3>
-                        <ul class="text-slate-600 text-sm space-y-2">
-                            <li>• Outreach goes live across channels</li>
-                            <li>• Replies routed straight to you</li>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>03</span><span class="st-cell-icon"><i data-lucide="phone-call"></i></span></div>
+                        <h3>Cold Calling</h3>
+                        <ul class="st-checks">
+                            <li>Researched calling lists and scripts</li>
+                            <li>Sequenced after a prior email or LinkedIn touch</li>
+                            <li>Lands as a follow-up, not an interruption</li>
+                            <li>Run by your team or by <a href="voice-agents.html">AI voice agents</a>, with outcomes logged in your CRM</li>
                         </ul>
                     </div>
-                    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200">
-                        <div class="text-blue-600 font-bold text-sm uppercase tracking-widest mb-4">04</div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-3">Log & Optimise</h3>
-                        <ul class="text-slate-600 text-sm space-y-2">
-                            <li>• Every touch logged in your CRM</li>
-                            <li>• Weekly tuning on what gets replies</li>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>04</span><span class="st-cell-icon"><i data-lucide="message-circle"></i></span></div>
+                        <h3>WhatsApp &amp; CRM Campaigns</h3>
+                        <ul class="st-checks">
+                            <li>WhatsApp and SMS nurture sequences</li>
+                            <li>CRM automation and lead scoring</li>
+                            <li>Timely follow-up on the channel they check daily</li>
+                            <li>Re-engagement flows for cold, stalled leads</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- WHO ITS FOR -->
-        <section class="py-24 bg-slate-50 border-t border-slate-100">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-14">
-                    <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Best fit for</h2>
+        <!-- Sequence -->
+        <section id="sequence" class="st-section st-white">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(04) Anatomy of a sequence</span>
+                    <h2>Every touch feels like a <span class="st-nowrap">follow-up</span></h2>
+                    <p class="st-muted">Here is what a typical multi-channel sequence looks like. Timing and channels are tuned to your buyers.</p>
                 </div>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-                        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-5 text-blue-600"><i data-lucide="mic" class="h-6 w-6"></i></div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3">Thought Leaders & Lean Teams</h3>
-                        <ul class="text-slate-600 text-sm space-y-2">
-                            <li>• Direct access to decision-makers, no gatekeepers</li>
-                            <li>• Speaking, partnership, and client conversations</li>
-                            <li>• Pipeline that does not depend on your calendar alone</li>
-                        </ul>
+                <div class="st-split">
+                    <div class="st-prose">
+                        <p>Cold outreach feels cold when it arrives out of nowhere. A sequence changes that: by the time we call, the prospect has already seen a relevant email and a LinkedIn request from you.</p>
+                        <p><strong>Each message references something specific</strong> to that person or company, such as a hiring push, a product launch or a funding round, so it reads like research, not a merge tag.</p>
+                        <p>When someone replies, the sequence stops for them automatically and the conversation is routed straight to you, with the full history in your CRM.</p>
+                        <a href="#process" class="st-btn st-btn-line" style="margin-top:8px">How we set it up <i data-lucide="arrow-right"></i></a>
                     </div>
-                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-                        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-5 text-blue-600"><i data-lucide="shopping-bag" class="h-6 w-6"></i></div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3">Ecommerce Brands</h3>
-                        <ul class="text-slate-600 text-sm space-y-2">
-                            <li>• Wholesale and B2B partnership outreach</li>
-                            <li>• Direct lines to affiliates, press, and collaborators</li>
-                            <li>• CRM re-engagement for lapsed customers</li>
-                        </ul>
+                    <div class="st-visual">
+                        <p class="st-visual-title"><span>Example sequence</span><span>Fig. 02</span></p>
+                        <ol class="st-timeline">
+                            <li><span class="st-dot"><i data-lucide="mail"></i></span><div><small>Day 1 · Email</small><b>Personalised opener</b><p>A short note tied to a real trigger at their company.</p></div></li>
+                            <li><span class="st-dot"><i data-lucide="user-plus"></i></span><div><small>Day 3 · LinkedIn</small><b>Connection request</b><p>No pitch. Just context and a familiar name.</p></div></li>
+                            <li><span class="st-dot"><i data-lucide="reply"></i></span><div><small>Day 5 · Email</small><b>Value follow-up</b><p>A useful insight, case or resource for their role.</p></div></li>
+                            <li><span class="st-dot"><i data-lucide="phone"></i></span><div><small>Day 8 · Call</small><b>Warm call</b><p>By your team or an AI voice agent, referencing the earlier touches.</p></div></li>
+                            <li><span class="st-dot"><i data-lucide="message-circle"></i></span><div><small>Day 11 · Message</small><b>Light nudge</b><p>A brief check-in on LinkedIn or WhatsApp.</p></div></li>
+                            <li class="is-goal"><span class="st-dot"><i data-lucide="calendar-check"></i></span><div><small>Goal</small><b>Meeting booked</b><p>Logged in your CRM with the full conversation history.</p></div></li>
+                        </ol>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- FAQ -->
-        <section class="py-24 bg-white border-t border-slate-100">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-14">
-                    <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Outbound questions we get most</h2>
+        <!-- Compare -->
+        <section id="compare" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(05) Compared</span>
+                    <h2>Not another mass blast</h2>
+                    <p class="st-muted">How an engineered outbound system differs from the volume-first approach most buyers have learned to ignore.</p>
                 </div>
-                <div class="space-y-4">
-                    <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
-                        <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-base">How do you keep this from feeling like spam?</span>
-                            <i data-lucide="chevron-down" class="h-4 w-4 text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
-                        </button>
-                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                            <div class="px-6 pb-6 border-t border-slate-100 pt-4">
-                                <ul class="text-sm text-slate-500 space-y-2 leading-relaxed">
-                                    <li>• Every list is filtered against your actual ICP first</li>
-                                    <li>• Messaging references real, specific context, never a merge tag</li>
-                                    <li>• Channels are sequenced so a touch always feels like a follow-up</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
-                        <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-base">How fast can we expect conversations to start?</span>
-                            <i data-lucide="chevron-down" class="h-4 w-4 text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
-                        </button>
-                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                            <div class="px-6 pb-6 border-t border-slate-100 pt-4">
-                                <ul class="text-sm text-slate-500 space-y-2 leading-relaxed">
-                                    <li>• List building and sequence setup take about one week</li>
-                                    <li>• First replies typically arrive within the second week</li>
-                                    <li>• Volume and quality improve every week as sequences are tuned</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
-                        <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-base">Who owns the leads and data generated?</span>
-                            <i data-lucide="chevron-down" class="h-4 w-4 text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
-                        </button>
-                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                            <div class="px-6 pb-6 border-t border-slate-100 pt-4">
-                                <ul class="text-sm text-slate-500 space-y-2 leading-relaxed">
-                                    <li>• You do, fully and always</li>
-                                    <li>• Every contact and reply is logged in your own CRM</li>
-                                    <li>• Nothing sits in a system you cannot access</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                <div class="st-table-wrap">
+                    <table class="st-compare">
+                        <thead><tr><th scope="col">&nbsp;</th><th scope="col">Typical mass outreach</th><th scope="col">Growth Loop outbound</th></tr></thead>
+                        <tbody>
+                            <tr><th scope="row">Targeting</th><td>Large bought lists, loosely filtered</td><td>Verified contacts filtered against your actual ICP first</td></tr>
+                            <tr><th scope="row">Messaging</th><td>One template with a first-name merge tag</td><td>Researched context for each company and role</td></tr>
+                            <tr><th scope="row">Channels</th><td>Email only, sent at volume</td><td>Email, LinkedIn, calls and messaging, sequenced</td></tr>
+                            <tr><th scope="row">Deliverability</th><td>Main domain at risk, high spam rates</td><td>Protected sending setup with warmup and volume limits</td></tr>
+                            <tr><th scope="row">Follow-up</th><td>Manual, inconsistent, often forgotten</td><td>Automatic, stops the moment someone replies</td></tr>
+                            <tr><th scope="row">Data</th><td>Lives in the agency's tools</td><td>Every contact and reply logged in your own CRM</td></tr>
+                            <tr><th scope="row">Optimisation</th><td>Monthly report of sends and opens</td><td>Weekly tuning on what actually gets replies and meetings</td></tr>
+                        </tbody>
+                    </table>
                 </div>
+            </div>
+        </section>
 
-                <div class="mt-16 text-center bg-slate-50 border border-slate-200 rounded-3xl p-10">
-                    <p class="text-slate-500 mb-4">Want to pair this with a compounding inbound engine?</p>
-                    <a href="inbound.html" class="text-blue-600 font-bold hover:text-blue-700 transition-colors inline-flex items-center text-lg group">
-                        Explore Inbound Optimisation <i data-lucide="arrow-right" class="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"></i>
+        <!-- Process -->
+        <section id="process" class="st-section st-white">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(06) How we run it</span>
+                    <h2>From list to live in about a week</h2>
+                    <p class="st-muted">Four stages, then a weekly loop of tuning. You approve the direction; we handle the execution.</p>
+                </div>
+                <div class="st-loop">
+                    <ol class="st-steps">
+                        <li><span>01</span><div><h3>List building</h3><p>Verified contacts matched to your ICP, enriched with real, usable context such as role, company news and buying triggers.</p></div></li>
+                        <li><span>02</span><div><h3>Sequence design</h3><p>Email, LinkedIn and call touches ordered for your buyers. Messaging is personalised, not templated, and approved by you before launch.</p></div></li>
+                        <li><span>03</span><div><h3>Launch &amp; reply</h3><p>Outreach goes live across channels. Replies are routed straight to you, or meetings are booked directly into your calendar.</p></div></li>
+                        <li><span>04</span><div><h3>Log &amp; optimise</h3><p>Every touch is logged in your CRM. Each week we review what gets replies and refine targeting and messaging.</p></div></li>
+                    </ol>
+                    <div class="st-visual">
+                        <p class="st-visual-title"><span>What we track every week</span><span>Fig. 03</span></p>
+                        <div class="st-meter">
+                            <div class="st-meter-row"><span>Contacts reached</span><div class="st-meter-track"><div class="st-meter-fill" style="width:100%"></div></div><b>Volume</b></div>
+                            <div class="st-meter-row"><span>Delivered</span><div class="st-meter-track"><div class="st-meter-fill" style="width:88%"></div></div><b>Health</b></div>
+                            <div class="st-meter-row"><span>Replies</span><div class="st-meter-track"><div class="st-meter-fill" style="width:48%"></div></div><b>Interest</b></div>
+                            <div class="st-meter-row"><span>Positive replies</span><div class="st-meter-track"><div class="st-meter-fill" style="width:30%"></div></div><b>Intent</b></div>
+                            <div class="st-meter-row is-key"><span>Meetings booked</span><div class="st-meter-track"><div class="st-meter-fill" style="width:20%"></div></div><b>Outcome</b></div>
+                        </div>
+                        <p class="st-muted" style="font-size:.85rem;margin:18px 0 0">Illustrative funnel. Your weekly report shows your real numbers at every stage, so we can see exactly where to improve.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fit -->
+        <section id="fit" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(07) Who it's for</span>
+                    <h2>Best fit for</h2>
+                    <p class="st-muted">Outbound works for any business that can name its ideal customer. These are the teams we build it for most.</p>
+                </div>
+                <div class="st-grid st-grid-2">
+                    <a class="st-cell st-cell-auto" href="speaker.html">
+                        <div class="st-cell-top"><span>01</span><span class="st-cell-icon"><i data-lucide="mic"></i></span></div>
+                        <h3>Thought Leaders &amp; Lean Teams</h3>
+                        <ul class="st-checks"><li>Direct access to decision-makers, no gatekeepers</li><li>Speaking, partnership and client conversations</li><li>A pipeline that doesn't depend on your calendar alone</li></ul>
+                        <span class="st-cell-more">Speakers &amp; founders <i data-lucide="arrow-right"></i></span>
+                    </a>
+                    <a class="st-cell st-cell-auto" href="b2b.html">
+                        <div class="st-cell-top"><span>02</span><span class="st-cell-icon"><i data-lucide="building-2"></i></span></div>
+                        <h3>B2B Teams</h3>
+                        <ul class="st-checks"><li>Account lists built around your ICP and buying triggers</li><li>Warmer entry points into long sales cycles</li><li>Meetings your sales team can actually work</li></ul>
+                        <span class="st-cell-more">B2B growth <i data-lucide="arrow-right"></i></span>
+                    </a>
+                    <a class="st-cell st-cell-auto" href="ecommerce.html">
+                        <div class="st-cell-top"><span>03</span><span class="st-cell-icon"><i data-lucide="shopping-bag"></i></span></div>
+                        <h3>Ecommerce Brands</h3>
+                        <ul class="st-checks"><li>Wholesale and B2B partnership outreach</li><li>Direct lines to affiliates, press and collaborators</li><li>CRM re-engagement for lapsed customers</li></ul>
+                        <span class="st-cell-more">Ecommerce growth <i data-lucide="arrow-right"></i></span>
+                    </a>
+                    <a class="st-cell st-cell-auto" href="investors.html">
+                        <div class="st-cell-top"><span>04</span><span class="st-cell-icon"><i data-lucide="line-chart"></i></span></div>
+                        <h3>Investors</h3>
+                        <ul class="st-checks"><li>Founder outreach ahead of formal fundraising</li><li>Personalised messages triggered by growth signals</li><li>Every conversation logged in your deal pipeline</li></ul>
+                        <span class="st-cell-more">Investment pipeline <i data-lucide="arrow-right"></i></span>
                     </a>
                 </div>
             </div>
         </section>
 
-    <section id="contact" class="py-32 bg-slate-900 border-t border-slate-800">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-5xl font-bold text-white mb-8">Ready to Scale?</h2>
-            <p class="text-slate-400 text-xl font-light mb-12">
-                Let's discuss how we can build your outbound pipeline and put your business directly in front of the decision-makers who need you.
-            </p>
-            <form class="max-w-md mx-auto space-y-6 text-left bg-slate-800 p-10 rounded-3xl border border-slate-700 shadow-2xl">
-                <div>
-                    <label for="email" class="block text-sm font-medium text-slate-400 mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" required class="w-full bg-slate-700 border border-slate-600 rounded-xl px-6 py-4 text-white focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all" placeholder="you@company.com">
+        <!-- FAQ -->
+        <section id="faq" class="st-section st-white">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(08) FAQ</span>
+                    <h2>Outbound questions we get most</h2>
+                    <p class="st-muted">Still unsure? Book a call and we'll answer them for your business specifically.</p>
                 </div>
-                <div>
-                    <label for="interest" class="block text-sm font-medium text-slate-400 mb-2">Area of Interest</label>
-                    <select id="interest" name="interest" class="w-full bg-slate-700 border border-slate-600 rounded-xl px-6 py-4 text-white focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all">
-                        <option value="Inbound Optimisation">Inbound Optimisation</option>
-                        <option value="Outbound Optimisation" selected>Outbound Optimisation</option>
-                        <option value="Cold Email">Cold Email</option>
-                        <option value="LinkedIn Outreach">LinkedIn Outreach</option>
-                        <option value="Cold Calling">Cold Calling</option>
-                        <option value="CRM Campaigns">CRM Campaigns</option>
-                    </select>
+                <div class="st-faq">
+                    <details open>
+                        <summary>How do you keep this from feeling like spam?</summary>
+                        <div class="st-faq-a"><ul><li>Every list is filtered against your actual ICP first, so we only contact people who could genuinely benefit.</li><li>Messaging references real, specific context, never just a merge tag.</li><li>Channels are sequenced so each touch reads as a follow-up, not a cold interruption.</li></ul></div>
+                    </details>
+                    <details>
+                        <summary>How fast can we expect conversations to start?</summary>
+                        <div class="st-faq-a"><ul><li>List building and sequence setup take about one week.</li><li>First replies typically arrive within the second week.</li><li>Volume and quality improve every week as we tune targeting and messaging.</li></ul></div>
+                    </details>
+                    <details>
+                        <summary>Will outbound damage our email domain's reputation?</summary>
+                        <div class="st-faq-a"><p>Not when it's set up properly. We protect your main domain with a dedicated sending setup, warm it up gradually, keep daily volumes within safe limits and monitor deliverability continuously. Bounces and unsubscribes are handled automatically.</p></div>
+                    </details>
+                    <details>
+                        <summary>What do you need from us?</summary>
+                        <div class="st-faq-a"><p>A kickoff session to define your ideal customer and offer, approval of the messaging before launch, and access to your calendar and CRM so meetings and replies land in the right place. After that, expect a short weekly review. We handle the rest.</p></div>
+                    </details>
+                    <details>
+                        <summary>Who owns the leads and data generated?</summary>
+                        <div class="st-faq-a"><ul><li>You do, fully and always.</li><li>Every contact and reply is logged in your own CRM.</li><li>Nothing sits in a system you cannot access.</li></ul></div>
+                    </details>
+                    <details>
+                        <summary>Can AI make the calls?</summary>
+                        <div class="st-faq-a"><p>Yes. The calling step can be run by your team, by an <a href="voice-agents.html">AI voice agent</a>, or both: for example, AI handles first-touch qualification and books qualified prospects straight into your team's calendar.</p></div>
+                    </details>
+                    <details>
+                        <summary>How do you measure success?</summary>
+                        <div class="st-faq-a"><p>By meetings booked and the pipeline they create, not by emails sent. Each week you see the full funnel, from contacts reached to positive replies to meetings, so it's clear what's working and what we're changing.</p></div>
+                    </details>
                 </div>
-                <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="w-full inline-flex justify-center items-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-blue-500/25 transition-all transform hover:scale-[1.02] text-lg">
-                    Book Free Consultation
-                </a>
-            </form>
+            </div>
+        </section>
+
+        <!-- Next -->
+        <section class="st-section" style="padding-top:72px;padding-bottom:72px;border-top:1px solid var(--ink)">
+            <div class="st-wrap">
+                <span class="st-label" style="margin-bottom:24px">Pairs well with</span>
+                <div class="st-next">
+                    <a href="inbound.html"><small>Inbound Systems</small><b>Make the market find you</b><p>A compounding engine that turns search and AI into qualified traffic.</p></a>
+                    <a href="voice-agents.html"><small>AI Voice Agents</small><b>Calls that never stop</b><p>AI agents that qualify, follow up and book meetings around the clock.</p></a>
+                    <a href="geo.html"><small>AI Visibility</small><b>Get cited by AI</b><p>Show up when buyers ask ChatGPT and Perplexity who to trust.</p></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <section id="contact" class="st-dark st-section st-cta">
+        <div class="st-wrap">
+            <span class="st-label">Start a project</span>
+            <h2>Let's fill your<br><span class="st-mark">calendar.</span></h2>
+            <p class="st-muted">Tell us who you want to reach. In 30 minutes we'll map your ideal customer, the channels to use and what your first sequence should say.</p>
+            <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="st-btn st-btn-lime">Book a free consultation <i data-lucide="arrow-right"></i></a>
         </div>
     </section>
 
-    <footer class="py-12 border-t border-slate-900 bg-slate-950 text-center text-xs text-slate-600">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div class="flex items-center gap-2">
-                <span class="font-bold text-slate-400 inline-flex items-center gap-2">
-                    <svg class="h-5 w-5 shrink-0 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></svg>
-                    GROWTH LOOP
-                </span>
-                <span>&copy; 2026. All rights reserved.</span>
+    <footer class="st-footer">
+        <div class="st-wrap">
+            <div class="st-footer-grid">
+                <div>
+                    <h4>Growth Loop</h4>
+                    <p class="st-muted" style="max-width:34ch;line-height:1.55;margin:0 0 16px">We engineer automated systems that grow your revenue.</p>
+                    <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="st-btn st-btn-lime" style="padding:12px 20px">Book a call <i data-lucide="arrow-right"></i></a>
+                </div>
+                <div>
+                    <h4>Expertise</h4>
+                    <ul><li><a href="outbound.html">Outbound</a></li><li><a href="inbound.html">Inbound</a></li><li><a href="geo.html">AI Visibility (GEO)</a></li><li><a href="voice-agents.html">AI Voice Agents</a></li><li><a href="ai-infrastructure.html">AI Infrastructure</a></li><li><a href="approach.html">Approach</a></li></ul>
+                </div>
+                <div>
+                    <h4>Who we help</h4>
+                    <ul><li><a href="speaker.html">Speakers &amp; Founders</a></li><li><a href="ecommerce.html">Ecommerce</a></li><li><a href="b2b.html">B2B Teams</a></li><li><a href="investors.html">Investors</a></li></ul>
+                </div>
+                <div>
+                    <h4>Resources</h4>
+                    <ul><li><a href="blog/">Blog</a></li><li><a href="ai-readiness-tool.html">AI Readiness Checker</a></li><li><a href="about.html">About Us</a></li></ul>
+                </div>
             </div>
-            <div class="flex gap-6 text-slate-500">
-                <a href="#" class="hover:text-slate-400 transition-colors">Privacy Policy</a>
-                <a href="#" class="hover:text-slate-400 transition-colors">Terms of Service</a>
+            <p class="st-wordmark" aria-hidden="true">Growth Loop</p>
+            <div class="st-footer-base">
+                <span>© 2026 Growth Loop. All rights reserved.</span>
+                <span>Published by <span class="author">Growth Loop</span>. Updated 21 October 2026.</span>
             </div>
         </div>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            lucide.createIcons();
-            document.querySelectorAll('.faq-toggle').forEach(toggle => {
-                toggle.addEventListener('click', () => {
-                    const content = toggle.nextElementSibling;
-                    const icon = toggle.querySelector('i');
-                    const isOpen = content.classList.contains('faq-open');
-                    document.querySelectorAll('.faq-content').forEach(c => c.classList.remove('faq-open'));
-                    document.querySelectorAll('.faq-toggle i').forEach(ic => ic.style.transform = 'rotate(0deg)');
-                    if (!isOpen) {
-                        content.classList.add('faq-open');
-                        if (icon) icon.style.transform = 'rotate(180deg)';
-                    }
-                });
-            });
+            if (window.lucide) lucide.createIcons();
+            // Highlight the current section in the sticky "on this page" bar
+            const links = [...document.querySelectorAll('.st-toc a')];
+            const byId = new Map(links.map((a) => [a.getAttribute('href').slice(1), a]));
+            const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+                if (!e.isIntersecting) return;
+                links.forEach((a) => a.classList.remove('is-active'));
+                const a = byId.get(e.target.id);
+                if (a) { a.classList.add('is-active'); const ul = a.closest('ul'); ul.scrollTo({ left: a.offsetLeft - ul.clientWidth / 2 + a.offsetWidth / 2, behavior: 'smooth' }); }
+            }), { rootMargin: '-45% 0px -50% 0px' });
+            byId.forEach((_, id) => { const el = document.getElementById(id); if (el) io.observe(el); });
         });
     </script>
 </body>

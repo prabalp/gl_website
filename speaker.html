@@ -48,7 +48,7 @@
     {
       "@type": "WebSite",
       "@id": "https://mygrowthloop.com/#website",
-      "name": "Speakers & Experts Pipeline",
+      "name": "Growth Loop",
       "url": "https://mygrowthloop.com/",
       "description": "Growth Loop helps speakers, coaches, and thought leaders build a B2B pipeline and book corporate work beyond word of mouth.",
       "publisher": {
@@ -81,7 +81,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
@@ -168,8 +168,9 @@
             color: #475569;
         }
     </style>
+    <link rel="stylesheet" href="studio.css">
 </head>
-<body class="text-slate-600 antialiased overflow-x-hidden bg-white">
+<body class="studio text-slate-600 antialiased overflow-x-hidden bg-white">
 
     <!-- NAV, pixel-perfect match to homepage -->
     <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
@@ -195,6 +196,8 @@
                                 <a href="inbound.html" class="dropdown-item">Inbound Optimisation</a>
                                 <a href="outbound.html" class="dropdown-item">Outbound Optimisation</a>
                                 <a href="geo.html" class="dropdown-item">Generative Engine Optimisation</a>
+                                <a href="voice-agents.html" class="dropdown-item">AI Voice Agents</a>
+                                <a href="ai-infrastructure.html" class="dropdown-item">Internal AI Infrastructure</a>
                             </div>
                         </div>
                         <div class="dropdown relative group inline-block">
@@ -218,9 +221,9 @@
                                 <a href="ai-readiness-tool.html" class="dropdown-item">AI Readiness Checker</a>
                             </div>
                         </div>
-                        <a href="index.html#about" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About Us</a>
+                        <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About Us</a><a href="blog/" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Blog</a>
                         <a href="index.html#approach" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Approach</a>
-                        <a href="https://calendly.com/prabal-panda-growthloopconsulting" target="_blank" class="cta-button bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-blue-500/20">
+                        <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="cta-button bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-blue-500/20">
                             Partner With Us
                         </a>
                     </div>
@@ -244,6 +247,8 @@
                     <a href="inbound.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Inbound Optimisation</a>
                     <a href="outbound.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Outbound Optimisation</a>
                     <a href="geo.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Generative Engine Optimisation</a>
+                    <a href="voice-agents.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">AI Voice Agents</a>
+                    <a href="ai-infrastructure.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Internal AI Infrastructure</a>
                 </div>
                 <div class="border-t border-slate-200 my-2 pt-2">
                     <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Who We Help</p>
@@ -256,441 +261,486 @@
                     <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Products</p>
                     <a href="ai-readiness-tool.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">AI Readiness Checker</a>
                 </div>
-                <a href="index.html#about" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="about.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About Us</a><a href="blog/" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Blog</a>
                 <a href="index.html#approach" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Approach</a>
-                <a href="https://calendly.com/prabal-panda-growthloopconsulting" target="_blank" class="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium mt-4 text-center">Partner With Us</a>
+                <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium mt-4 text-center">Partner With Us</a>
             </div>
         </div>
     </nav>
 
+    <main>
 
-    <!-- HERO -->
-    <section class="relative pt-32 pb-24 md:pt-48 md:pb-40 overflow-hidden">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] pointer-events-none opacity-30 mix-blend-screen">
-            <div class="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-indigo-600/40 blur-[120px]"></div>
-            <div class="absolute top-[10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-violet-600/30 blur-[100px]"></div>
-        </div>
-        <div class="absolute inset-0 bg-[linear-gradient(to_right,#1f293710_1px,transparent_1px),linear-gradient(to_bottom,#1f293710_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
-        <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
-            <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-8 leading-[1.15]">
-                Scale Your Expertise <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Beyond Word-of-Mouth</span>
-            </h1>
-            <p class="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto mb-10 leading-relaxed">
-                We help speakers, domain experts, leadership coaches, wellness experts, and thought leaders build scalable pipelines, omnipresent visibility, and high-value qualified opportunities consistently.
-            </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-lg shadow-blue-500/20 hover:-translate-y-0.5 transition-all duration-200 text-center">
-                    Build Your Pipeline <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
-                </a>
-                <a href="#how-we-help" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-slate-600 font-semibold border border-slate-200 hover:bg-slate-50 hover:text-slate-900 transition-all duration-200 text-center">
-                    Explore Solutions
-                </a>
+        <!-- Hero -->
+        <section class="st-phero">
+            <div class="st-wrap">
+                <span class="st-label">Speakers &amp; Experts</span>
+                <h1>Grow beyond <span class="st-mark st-nowrap">word-of-mouth.</span></h1>
+                <div class="st-hero-foot">
+                    <p class="st-muted">For speakers, domain experts, coaches, trainers and thought leaders. We build a pipeline that puts your expertise in front of the corporate buyers who hold speaking, training and coaching budgets, every week, so your bookings stop depending on who happens to remember you.</p>
+                    <div class="st-hero-ctas">
+                        <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="st-btn st-btn-ink">Book a Strategy Call <i data-lucide="arrow-right"></i></a>
+                        <a href="#buyers" class="st-btn st-btn-line">See who we reach</a>
+                    </div>
+                </div>
+                <div class="st-facts">
+                    <div class="st-fact"><b>21–30 days</b><span>To set up and warm up the system</span></div>
+                    <div class="st-fact"><b>30–60 days</b><span>Typical window for first qualified replies</span></div>
+                    <div class="st-fact"><b>60–90 days</b><span>To a full pipeline of booked engagements</span></div>
+                    <div class="st-fact"><b>100% yours</b><span>Every contact, relationship and record</span></div>
+                </div>
             </div>
+        </section>
+
+        <nav class="st-toc" aria-label="On this page">
+            <div class="st-wrap">
+                <ul>
+                    <li><a href="#what">What it is</a></li>
+                    <li><a href="#why">Why it matters</a></li>
+                    <li><a href="#buyers">Who we reach</a></li>
+                    <li><a href="#deliver">What you get</a></li>
+                    <li><a href="#message">A message</a></li>
+                    <li><a href="#compare">Vs. bureaus</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#fit">Who it's for</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- What it is -->
+        <section id="what" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(01) What it is</span>
+                    <h2>Your own business development team</h2>
+                    <p class="st-muted">We turn what you know into an offer companies buy, then go out and find the people who buy it.</p>
+                </div>
+                <div class="st-split">
+                    <div class="st-prose">
+                        <p>Most speakers and experts are brilliant on stage and in the room, and almost nobody is out there selling them. Work arrives when someone remembers your name, sees a talk or passes on a referral.</p>
+                        <p>Growth Loop replaces that waiting with a <strong>proactive pipeline</strong>. We shape your expertise into clear programmes that match what corporate buyers need, build a database of the people who hold the budget, and reach out to them personally on your behalf, every single week.</p>
+                        <p>The aim is not one more booking. It is a steady flow of keynotes, workshops, training programmes and coaching engagements, and over time, moving standalone bookings into <strong>long-term retainers and annual partnerships</strong>.</p>
+                    </div>
+                    <div class="st-visual">
+                        <p class="st-visual-title"><span>How your expertise becomes bookings</span><span>Fig. 01</span></p>
+                        <div class="st-flow st-flow-v">
+                            <div><small>Start</small><b>Your expertise</b><p>Your talks, frameworks, methods and track record.</p></div>
+                            <div><small>Step 1</small><b>A clear corporate offer</b><p>Packaged around a specific business problem a buyer has budget to solve.</p></div>
+                            <div><small>Step 2</small><b>The right buyers</b><p>HR, learning, events and business unit leaders at companies that fit.</p></div>
+                            <div><small>Step 3</small><b>Personal outreach</b><p>Tailored ideas sent to each buyer, never a mass blast.</p></div>
+                            <div class="is-key"><small>Outcome</small><b>Bookings, then retainers</b><p>Discovery calls that turn into engagements and long-term partnerships.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why it matters -->
+        <section id="why" class="st-section st-dark">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(02) Why it matters</span>
+                    <h2>Escape the network trap</h2>
+                    <p>Referrals and word-of-mouth are lovely when they come. But your income should not depend on them alone.</p>
+                </div>
+                <div class="st-split">
+                    <div>
+                        <ol class="st-points">
+                            <li><span>01</span><div><h3>The old way</h3><p>Waiting for contacts to get in touch. Cash flow that swings from month to month. A calendar that rises and falls with the events season. Your reach is capped by the size of your personal network.</p></div></li>
+                            <li><span>02</span><div><h3>The Growth Loop way</h3><p>A clear map of who you should be in front of, connected to a business development system that runs every week. You can see your pipeline at any time, and new conversations keep starting whether or not anyone thinks to refer you.</p></div></li>
+                            <li><span>03</span><div><h3>Both directions at once</h3><p>Structured outbound reaches buyers directly, while authority and inbound work keeps you visible, so recurring enterprise work comes from more than one source.</p></div></li>
+                        </ol>
+                    </div>
+                    <div class="st-proof">
+                        <p class="st-label" style="margin:0">Pipeline metrics</p>
+                        <div class="st-proof-row"><b>94%</b><span>Systematised outbound stability</span></div>
+                        <div class="st-proof-row"><b>&lt;15%</b><span>Reliance on word-of-mouth, down to under 15%</span></div>
+                        <div class="st-proof-row"><b>3.5X</b><span>Average increase in enterprise deal scale</span></div>
+                        <p style="margin:0;color:var(--muted-dark);font-size:.95rem">Predictable client acquisition takes the spikes and dry spells out of your income.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buyers -->
+        <section id="buyers" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(03) Who we reach</span>
+                    <h2>The people who hold the budget</h2>
+                    <p class="st-muted">Corporate speaking, training and coaching is bought by a handful of roles inside mid-market and enterprise companies. We go straight to them.</p>
+                </div>
+                <div class="st-visual" style="margin-bottom:56px">
+                    <p class="st-visual-title"><span>Corporate buyer map</span><span>Fig. 02</span></p>
+                    <div class="st-grid st-grid-4">
+                        <div class="st-cell st-cell-auto">
+                            <div class="st-cell-top"><span>People &amp; HR</span><span class="st-cell-icon"><i data-lucide="users"></i></span></div>
+                            <h3>People leaders</h3>
+                            <ul class="st-checks"><li>Chief Human Resources Officers</li><li>Directors of People Operations</li><li>Employee Experience Leaders</li></ul>
+                        </div>
+                        <div class="st-cell st-cell-auto">
+                            <div class="st-cell-top"><span>Learning</span><span class="st-cell-icon"><i data-lucide="graduation-cap"></i></span></div>
+                            <h3>Learning leaders</h3>
+                            <ul class="st-checks"><li>Chief Learning Officers</li><li>Learning &amp; Development Managers</li></ul>
+                        </div>
+                        <div class="st-cell st-cell-auto">
+                            <div class="st-cell-top"><span>Events</span><span class="st-cell-icon"><i data-lucide="presentation"></i></span></div>
+                            <h3>Event owners</h3>
+                            <ul class="st-checks"><li>Event Marketing Directors</li><li>Organisers of internal and client-facing events</li></ul>
+                        </div>
+                        <div class="st-cell st-cell-auto">
+                            <div class="st-cell-top"><span>Business</span><span class="st-cell-icon"><i data-lucide="briefcase"></i></span></div>
+                            <h3>Business unit heads</h3>
+                            <ul class="st-checks"><li>Enterprise Business Unit Heads</li><li>Responsible for performance and programme purchasing</li></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="st-split">
+                    <div class="st-prose">
+                        <p>A job title alone is not enough. A Chief Learning Officer at a company that has just doubled in size needs you far more than one at a company standing still.</p>
+                        <p>So we <strong>layer the targeting</strong>: role first, then company size and industry, then signals such as technology stack and recent hiring, and finally the change triggers that create urgent need, like rapid headcount growth, leadership transitions or a culture transformation.</p>
+                        <p>The result: every message lands with the right person at the right time, which lifts reply rates and shortens the path to your first paid engagement.</p>
+                    </div>
+                    <div class="st-visual">
+                        <p class="st-visual-title"><span>How we narrow the list</span><span>Fig. 03</span></p>
+                        <div class="st-flow st-flow-v">
+                            <div><small>Filter 1 · Role</small><b>Holds the budget</b><p>HR, learning, events or business unit leadership.</p></div>
+                            <div><small>Filter 2 · Company</small><b>Fits your offer</b><p>Company size and industry vertical.</p></div>
+                            <div><small>Filter 3 · Signals</small><b>Shows activity</b><p>Technology stack signals and recent hiring.</p></div>
+                            <div><small>Filter 4 · Trigger</small><b>Needs you now</b><p>Headcount growth, leadership change, culture transformation.</p></div>
+                            <div class="is-key"><small>Result</small><b>Right person, right time</b><p>A short list of buyers most likely to say yes.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deliverables -->
+        <section id="deliver" class="st-section st-white">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(04) What you get</span>
+                    <h2>Four parts, one system</h2>
+                    <p class="st-muted">Everything needed to turn your authority in your field into a steady stream of corporate opportunities.</p>
+                </div>
+                <div class="st-grid st-grid-2">
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>01</span><span class="st-cell-icon"><i data-lucide="send"></i></span></div>
+                        <h3>Outreach pipelines</h3>
+                        <p class="st-muted">Personalised, multi-channel outreach that goes directly to the people who sign off the spend.</p>
+                        <ul class="st-checks"><li>Prospect identification and a clean, qualified database</li><li>Multi-channel lead generation aimed at economic buyers</li><li>Sequences built around your ideas, not generic pitches</li></ul>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>02</span><span class="st-cell-icon"><i data-lucide="megaphone"></i></span></div>
+                        <h3>Authority engines</h3>
+                        <p class="st-muted">Keep you visible to corporate audiences between conversations, so your name is familiar before you ask.</p>
+                        <ul class="st-checks"><li>Thought leadership content</li><li>Authority positioning around your niche</li><li>A consistent presence buyers recognise</li></ul>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>03</span><span class="st-cell-icon"><i data-lucide="handshake"></i></span></div>
+                        <h3>B2B monetisation</h3>
+                        <p class="st-muted">Move from occasional one-off workshops to high-value annual corporate partnerships.</p>
+                        <ul class="st-checks"><li>Corporate partnership offers</li><li>Retainer structures</li><li>Proposals built for how companies buy</li></ul>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>04</span><span class="st-cell-icon"><i data-lucide="globe"></i></span></div>
+                        <h3>Global ecosystem</h3>
+                        <p class="st-muted">Grow your wider audience and your list of qualified targets at the same time, across markets.</p>
+                        <ul class="st-checks"><li>Audience growth</li><li>Speaker visibility</li><li>Reach into international corporate event organisers</li></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Message -->
+        <section id="message" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(05) Anatomy of a message</span>
+                    <h2>An idea, not a brochure</h2>
+                    <p class="st-muted">Buyers ignore "available for bookings". They reply to a specific idea for their specific situation.</p>
+                </div>
+                <div class="st-split">
+                    <div class="st-prose">
+                        <p>Every outreach message presents <strong>a tailored concept</strong>: what you would do for this company, tied to something real that is happening there. No mass platform spam, no copy-and-paste speaker sheets.</p>
+                        <p>Because we know the trigger, such as fast hiring, a new leader or a culture programme, the message reads like it was written for one person. Because it was.</p>
+                        <p>When a buyer replies, the conversation is passed to you to run the discovery call. You do what you do best; we keep the pipeline full.</p>
+                        <a href="#process" class="st-btn st-btn-line" style="margin-top:8px">How we set it up <i data-lucide="arrow-right"></i></a>
+                    </div>
+                    <div class="st-visual">
+                        <p class="st-visual-title"><span>Example outreach (illustrative)</span><span>Fig. 04</span></p>
+                        <div style="background:var(--white);border:1px solid var(--ink);border-radius:6px;overflow:hidden">
+                            <div style="padding:14px 18px;border-bottom:1px solid var(--ink);font-size:.88rem;line-height:1.7">
+                                <div><span class="st-muted">To:</span> Chief Learning Officer, [Company]</div>
+                                <div><span class="st-muted">From:</span> You</div>
+                                <div><span class="st-muted">Subject:</span> <b>Leading teams through rapid growth</b></div>
+                            </div>
+                            <div style="padding:18px;font-size:.95rem;line-height:1.6">
+                                <p style="margin:0 0 12px">Hi [Name],</p>
+                                <p style="margin:0 0 12px">I saw [Company] has grown its team quickly this year. That usually means many first-time managers leading people they hired last quarter.</p>
+                                <p style="margin:0 0 12px">I run a half-day programme on exactly that transition, built on my framework for [your method]. Happy to share how it could fit your leadership calendar.</p>
+                                <p style="margin:0">Worth a 20-minute call?</p>
+                            </div>
+                            <div style="padding:12px 18px;border-top:1px solid var(--ink);background:var(--paper);font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;display:flex;gap:16px;flex-wrap:wrap">
+                                <span>Trigger: headcount growth</span><span>Role: learning leader</span><span>Offer: tailored programme</span>
+                            </div>
+                        </div>
+                        <p class="st-muted" style="font-size:.85rem;margin:14px 0 0">Illustrative only. Your messages are written around your real expertise and approved by you before anything is sent.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compare -->
+        <section id="compare" class="st-section st-white">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(06) Compared</span>
+                    <h2>Not a speaker bureau</h2>
+                    <p class="st-muted">Bureaus and talent agencies list you and wait. We go out and create the opportunities.</p>
+                </div>
+                <div class="st-table-wrap">
+                    <table class="st-compare">
+                        <thead><tr><th scope="col">&nbsp;</th><th scope="col">Speaker bureau or talent agency</th><th scope="col">Growth Loop</th></tr></thead>
+                        <tbody>
+                            <tr><th scope="row">How work arrives</th><td>Passive: waits for event organisers to call in</td><td>Proactive: we contact corporate decision-makers on your behalf every week</td></tr>
+                            <tr><th scope="row">Who they focus on</th><td>Dozens or hundreds of speakers at once</td><td>A dedicated pipeline built only for you</td></tr>
+                            <tr><th scope="row">Your visibility</th><td>Depends on how prominently you appear in their catalogue</td><td>Personalised outreach puts you directly in front of buyers</td></tr>
+                            <tr><th scope="row">How they are paid</th><td>A commission on every booking, often 20 to 30 percent</td><td>A fixed pilot, then flexible monthly agreements</td></tr>
+                            <tr><th scope="row">Your positioning</th><td>Little control over how you are presented</td><td>Built with you, around the problems you solve best</td></tr>
+                            <tr><th scope="row">Data and relationships</th><td>Belong to the agency</td><td>Belong entirely to you</td></tr>
+                            <tr><th scope="row">What you end up with</th><td>A listing competing with hundreds of others</td><td>A predictable system for winning engagements</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="st-callout" style="margin-top:32px">
+                    This is not speaker representation. It is speaker business development at scale.
+                    <small>You keep your relationships, your data and your brand</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process -->
+        <section id="process" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(07) How it works</span>
+                    <h2>The <span class="st-nowrap">four-step</span> velocity engine</h2>
+                    <p class="st-muted">A clear sequence that turns your expertise into an offer, a target list, conversations and, finally, repeat business.</p>
+                </div>
+                <div class="st-loop">
+                    <ol class="st-steps">
+                        <li><span>01</span><div><h3>Positioning</h3><p>We refine your core capabilities into programmes that match the specific needs of enterprise buyers, through deep positioning workshops and a clear ideal client profile.</p></div></li>
+                        <li><span>02</span><div><h3>Targeting</h3><p>We build a detailed, clean database of qualified event buyers and corporate executives who could become long-term partners.</p></div></li>
+                        <li><span>03</span><div><h3>Personalised outreach</h3><p>We launch tailored, relationship-led outreach that presents a specific idea to each buyer, never generic mass messaging.</p></div></li>
+                        <li><span>04</span><div><h3>Scaling opportunities</h3><p>We build recurring work on top of first bookings, turning standalone engagements into long-term retainers.</p></div></li>
+                    </ol>
+                    <div class="st-visual">
+                        <p class="st-visual-title"><span>From kickoff to booked engagements</span><span>Fig. 05</span></p>
+                        <ol class="st-timeline">
+                            <li><span class="st-dot"><i data-lucide="flag"></i></span><div><small>Kickoff</small><b>Positioning workshops</b><p>We define your offer and your ideal corporate client together.</p></div></li>
+                            <li><span class="st-dot"><i data-lucide="database"></i></span><div><small>First 21–30 days</small><b>Build and warm up</b><p>Prospect database, multi-channel sequences and technical warmup, so messages reach inboxes before the first send.</p></div></li>
+                            <li><span class="st-dot"><i data-lucide="send"></i></span><div><small>Go live</small><b>Outreach begins</b><p>Personalised messages start reaching decision-makers every week.</p></div></li>
+                            <li><span class="st-dot"><i data-lucide="message-square-reply"></i></span><div><small>30–60 days after launch</small><b>First qualified replies</b><p>Most clients start booking discovery calls in this window.</p></div></li>
+                            <li><span class="st-dot"><i data-lucide="file-signature"></i></span><div><small>30–90 day sales cycles</small><b>Proposals and contracts</b><p>Corporate deals typically take 30 to 90 days from first contact to signature.</p></div></li>
+                            <li class="is-goal"><span class="st-dot"><i data-lucide="calendar-check"></i></span><div><small>60–90 days after launch</small><b>A full pipeline</b><p>Engagements booked consistently, and it compounds the longer it runs.</p></div></li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="st-split" style="margin-top:48px">
+                    <div class="st-prose">
+                        <h3 style="margin-top:0;font-size:1.6rem;letter-spacing:-0.02em">What we need from you</h3>
+                        <p>Less than you might think. You bring the expertise; we run the system.</p>
+                    </div>
+                    <ul class="st-checks">
+                        <li>Time for the positioning workshops at kickoff</li>
+                        <li>Your existing material: talks, frameworks, programmes and past engagements</li>
+                        <li>Approval of your offers and messaging before anything is sent</li>
+                        <li>Your time on discovery calls once buyers reply</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fit -->
+        <section id="fit" class="st-section st-white">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(08) Who it's for</span>
+                    <h2>Built for expert voices</h2>
+                    <p class="st-muted">If companies could benefit from what you know, we can build a pipeline around it. These are the experts we work with most.</p>
+                </div>
+                <div class="st-grid st-grid-4">
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>01</span><span class="st-cell-icon"><i data-lucide="brain"></i></span></div>
+                        <h3>Domain experts</h3>
+                        <p class="st-muted">Turn deep, niche knowledge into structured programmes enterprises can buy.</p>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>02</span><span class="st-cell-icon"><i data-lucide="mic"></i></span></div>
+                        <h3>Motivational speakers</h3>
+                        <p class="st-muted">Land high-visibility main stages and large-arena keynotes on a regular basis.</p>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>03</span><span class="st-cell-icon"><i data-lucide="compass"></i></span></div>
+                        <h3>Leadership coaches</h3>
+                        <p class="st-muted">Fill a long-term pipeline of high-ticket executive retainers with Fortune 500 accounts.</p>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>04</span><span class="st-cell-icon"><i data-lucide="heart-pulse"></i></span></div>
+                        <h3>Wellness experts</h3>
+                        <p class="st-muted">Bring science-based wellbeing and mindful health programmes into modern companies.</p>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>05</span><span class="st-cell-icon"><i data-lucide="cpu"></i></span></div>
+                        <h3>AI &amp; technology experts</h3>
+                        <p class="st-muted">Get your technical insight in front of the boardrooms leading digital change.</p>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>06</span><span class="st-cell-icon"><i data-lucide="rocket"></i></span></div>
+                        <h3>Founders &amp; entrepreneurs</h3>
+                        <p class="st-muted">Use your personal brand to bring inbound deal flow to your core business.</p>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>07</span><span class="st-cell-icon"><i data-lucide="graduation-cap"></i></span></div>
+                        <h3>Corporate trainers</h3>
+                        <p class="st-muted">Roll out repeatable multi-day learning programmes across business divisions.</p>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>08</span><span class="st-cell-icon"><i data-lucide="presentation"></i></span></div>
+                        <h3>Keynote speakers</h3>
+                        <p class="st-muted">Get in front of premium corporate event organisers internationally, consistently.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(09) FAQ</span>
+                    <h2>Questions experts ask us</h2>
+                    <p class="st-muted">Still unsure? Book a call and we'll answer them for your practice specifically.</p>
+                </div>
+                <div class="st-faq">
+                    <details open>
+                        <summary>How is this different from a speaker bureau or talent agency?</summary>
+                        <div class="st-faq-a">
+                            <p>Bureaus and talent agencies work as passive listings. They wait for event organisers to call, represent dozens or hundreds of speakers at once and take a significant commission on every booking, often 20 to 30 percent. Your visibility depends on how prominently they feature you, so you have little control over your pipeline or your positioning.</p>
+                            <p>We work as your dedicated, proactive business development engine. We build your prospect database, write personalised outreach and contact corporate decision-makers on your behalf every week. The data, relationships and pipeline belong entirely to you. This is not speaker representation; it is speaker business development at scale.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Which corporate buyers do you target?</summary>
+                        <div class="st-faq-a">
+                            <p>The roles that hold speaking, training and coaching budgets in mid-market and enterprise companies:</p>
+                            <ul><li>Chief Human Resources Officers and Directors of People Operations</li><li>Chief Learning Officers and Learning &amp; Development Managers</li><li>Employee Experience Leaders and Event Marketing Directors</li><li>Enterprise Business Unit Heads responsible for performance and programme purchasing</li></ul>
+                            <p>We then layer in company size, industry, technology stack signals, recent hiring and change triggers such as rapid headcount growth, leadership transitions or culture transformation, so each message reaches the right person at the right time. That lifts response rates and shortens the path to your first paid engagement.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Do I need to be famous or have a big social following?</summary>
+                        <div class="st-faq-a">
+                            <p>No. You don't need to be a household name, a bestselling author or have hundreds of thousands of followers. Corporate buyers don't buy fame; they buy relevance, credibility and a proven ability to solve a specific business problem. A well-defined niche and a clear, results-focused message are worth far more to them than a large public audience.</p>
+                            <p>Wherever you are in your career, we package your existing knowledge into proposals built for how companies buy. We have helped emerging speakers land their first five-figure corporate keynote, and established experts move from one-off bookings to multi-year enterprise retainers. Your expertise is the asset; we build the system that earns from it consistently.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>How quickly does it go live, and when will opportunities arrive?</summary>
+                        <div class="st-faq-a">
+                            <ul>
+                                <li><strong>21 to 30 days</strong> to set up: positioning workshops, ideal client profile, prospect database, multi-channel sequences and technical warmup so messages reach inboxes.</li>
+                                <li><strong>30 to 60 days</strong> of live outreach: most clients start receiving qualified replies and booking discovery calls.</li>
+                                <li><strong>60 to 90 days</strong> after launch: a full pipeline with engagements booked consistently. Corporate sales cycles usually run 30 to 90 days from first contact to signed contract.</li>
+                            </ul>
+                            <p>The pipeline compounds: the longer it runs, the more touchpoints build up with key decision-makers and the better each outreach cycle converts.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Is there a long-term contract, or can I start with a pilot?</summary>
+                        <div class="st-faq-a">
+                            <p>You start with a fixed pilot programme covering the full system setup, technical launch and first phase of active outreach. It lets you see the pipeline working, judge the quality of replies from corporate buyers and assess early momentum before committing further.</p>
+                            <p>Once the pilot hits the response and qualified-call targets we agree together at the start, we move to flexible monthly agreements with clear, transparent renewal terms. No high-pressure, multi-year lock-ins. Our results should earn your partnership every month; we grow when you grow.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>What do you need from me?</summary>
+                        <div class="st-faq-a"><p>Time for the positioning workshops at kickoff, your existing material such as talks, frameworks and programmes, approval of your offers and messaging before launch, and your time on discovery calls once buyers reply. We handle the database, the outreach and the follow-up.</p></div>
+                    </details>
+                    <details>
+                        <summary>Who owns the contacts and relationships?</summary>
+                        <div class="st-faq-a"><p>You do, entirely. Unlike an agency arrangement, the prospect data, the relationships and the pipeline we build belong to you, not to us.</p></div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next -->
+        <section class="st-section st-white" style="padding-top:72px;padding-bottom:72px;border-top:1px solid var(--ink)">
+            <div class="st-wrap">
+                <span class="st-label" style="margin-bottom:24px">Pairs well with</span>
+                <div class="st-next" style="--n:3">
+                    <a href="outbound.html"><small>Outbound Systems</small><b>Go find the people who need you</b><p>The multi-channel outreach engine behind your speaker pipeline.</p></a>
+                    <a href="inbound.html"><small>Inbound Systems</small><b>Make the market find you</b><p>Content and search that keep your authority growing between conversations.</p></a>
+                    <a href="geo.html"><small>AI Visibility</small><b>Get cited by AI</b><p>Show up when buyers ask ChatGPT and Perplexity who to book.</p></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <section id="contact" class="st-dark st-section st-cta">
+        <div class="st-wrap">
+            <span class="st-label">Start a project</span>
+            <h2>Ready to grow your<br><span class="st-mark">speaking pipeline?</span></h2>
+            <p class="st-muted">Book a strategy session. We will review how you are positioned today, show you which corporate buyers to reach, and map out your dedicated pipeline.</p>
+            <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="st-btn st-btn-lime">Book a free consultation <i data-lucide="arrow-right"></i></a>
         </div>
     </section>
 
-    <!-- WHO WE WORK WITH, grid is now a direct child of the outer container, full width -->
-    <section id="who-we-work-with" class="py-24 border-t border-slate-100 relative bg-slate-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <p class="text-blue-600 font-bold tracking-wide uppercase text-sm mb-3">Who We Serve</p>
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Tailored for Elite Voices</h2>
-                <p class="text-slate-500">We partner with the world's most impactful speakers and experts to systematically grow their corporate opportunities.</p>
-            </div>
-            <!-- Full-width grid, not nested inside the narrow text div -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="voice-card p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-200 hover:shadow-md transition-all duration-300">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600">
-                        <i class="fa-solid fa-brain text-xl"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">Domain Experts</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed">Turn niche complex knowledge into commercially structured enterprise programs.</p>
-                </div>
-                <div class="voice-card p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-200 hover:shadow-md transition-all duration-300">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600">
-                        <i class="fa-solid fa-fire text-xl"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">Motivational Speakers</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed">Secure high-visibility mainstages and stadium keynotes systematically.</p>
-                </div>
-                <div class="voice-card p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-200 hover:shadow-md transition-all duration-300">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600">
-                        <i class="fa-solid fa-chart-line text-xl"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">Leadership Coaches</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed">Fill long-term high-ticket executive retainer pipelines with Fortune 500 accounts.</p>
-                </div>
-                <div class="voice-card p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-200 hover:shadow-md transition-all duration-300">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600">
-                        <i class="fa-solid fa-heart-pulse text-xl"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">Wellness Experts</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed">Connect scientific wellbeing and mindful health architecture to modern corporate structures.</p>
-                </div>
-                <div class="voice-card p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-200 hover:shadow-md transition-all duration-300">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600">
-                        <i class="fa-solid fa-microchip text-xl"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">AI & Technology Experts</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed">Position your technical insights at the forefront of boardrooms leading digital revolution.</p>
-                </div>
-                <div class="voice-card p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-200 hover:shadow-md transition-all duration-300">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600">
-                        <i class="fa-solid fa-lightbulb text-xl"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">Founders & Entrepreneurs</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed">Leverage personal brand systems to drive organic incoming dealflow to your core startup business.</p>
-                </div>
-                <div class="voice-card p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-200 hover:shadow-md transition-all duration-300">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600">
-                        <i class="fa-solid fa-chalkboard-user text-xl"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">Corporate Trainers</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed">Build repeatable multi-day learning frameworks scaled across internal business divisions.</p>
-                </div>
-                <div class="voice-card p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-200 hover:shadow-md transition-all duration-300">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600">
-                        <i class="fa-solid fa-microphone-lines text-xl"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">Keynote Speakers</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed">Consistently align booking profiles with premium corporate event organizers internationally.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- HOW WE HELP -->
-    <section id="how-we-help" class="py-24 bg-white border-t border-slate-100">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto mb-20">
-                <p class="text-blue-600 font-bold tracking-wide uppercase text-sm mb-3">Our Infrastructure</p>
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Complete Growth Infrastructure</h2>
-                <p class="text-slate-500">Everything required to convert specialized domain authority into an active corporate opportunity stream.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-200 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
-                    <div>
-                        <div class="text-blue-200 text-4xl font-bold mb-6">01</div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3">Outreach Pipelines</h3>
-                        <p class="text-sm text-slate-500 leading-relaxed mb-6">Personalized B2B multi-channel client generation systems directly target economic buyers.</p>
-                    </div>
-                    <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-200 pt-4">
-                        <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Prospect Identification</li>
-                        <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Lead Generation</li>
-                    </ul>
-                </div>
-                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-200 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
-                    <div>
-                        <div class="text-blue-200 text-4xl font-bold mb-6">02</div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3">Authority Engines</h3>
-                        <p class="text-sm text-slate-500 leading-relaxed mb-6">Elevate your insight delivery matrix to stay highly visible with core corporate audiences.</p>
-                    </div>
-                    <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-200 pt-4">
-                        <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Thought Leadership</li>
-                        <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Authority Positioning</li>
-                    </ul>
-                </div>
-                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-200 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
-                    <div>
-                        <div class="text-blue-200 text-4xl font-bold mb-6">03</div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3">B2B Monetization</h3>
-                        <p class="text-sm text-slate-500 leading-relaxed mb-6">Transition from irregular single workshops to high-value annual corporate partnerships.</p>
-                    </div>
-                    <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-200 pt-4">
-                        <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Corporate Partnerships</li>
-                        <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Retainer Structures</li>
-                    </ul>
-                </div>
-                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-200 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
-                    <div>
-                        <div class="text-blue-200 text-4xl font-bold mb-6">04</div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3">Global Ecosystem</h3>
-                        <p class="text-sm text-slate-500 leading-relaxed mb-6">Consistently scale macro audience visibility numbers alongside qualified individual target loops.</p>
-                    </div>
-                    <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-200 pt-4">
-                        <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Audience Growth</li>
-                        <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Speaker Visibility</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- WHY US -->
-    <section id="why-us" class="py-24 relative overflow-hidden bg-slate-50 border-t border-slate-100">
-        <div class="absolute right-0 top-1/2 -translate-y-1/2 w-96 h-96 bg-blue-600/5 blur-[100px] pointer-events-none"></div>
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <footer class="st-footer">
+        <div class="st-wrap">
+            <div class="st-footer-grid">
                 <div>
-                    <p class="text-blue-600 font-bold tracking-wide uppercase text-sm mb-3">
-                        Systematized Growth Model
-                    </p>
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
-                        We Help Experts Scale Beyond the "Network Trap"
-                    </h2>
-                    <p class="text-slate-500 mb-8 leading-relaxed">
-                        Relying purely on referrals, unpredictable word-of-mouth recommendations, and finite immediate personal networks caps your scalability limits. Growth Loop develops robust inbound and structured outbound models engineered for recurring elite enterprise engagement.
-                    </p>
-                    <div class="space-y-4">
-                        <div class="flex items-start gap-4">
-                            <div class="w-6 h-6 rounded-full bg-rose-500/10 text-rose-400 flex items-center justify-center shrink-0 mt-1">
-                                <i class="fa-solid fa-xmark text-xs"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-slate-900 font-semibold">The Old Way</h3>
-                                <p class="text-sm text-slate-500">Waiting for connections to ping your inbox, variable cashflow, and seasonal event dependency.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="w-6 h-6 rounded-full bg-emerald-500/10 text-emerald-500 flex items-center justify-center shrink-0 mt-1">
-                                <i class="fa-solid fa-check text-xs"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-slate-900 font-semibold">The Growth Loop Way</h3>
-                                <p class="text-sm text-slate-500">Data-driven target positioning maps coupled to a programmatic business development setup for constant pipeline visibility.</p>
-                            </div>
-                        </div>
-                    </div>
+                    <h4>Growth Loop</h4>
+                    <p class="st-muted" style="max-width:34ch;line-height:1.55;margin:0 0 16px">We engineer automated systems that grow your revenue.</p>
+                    <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="st-btn st-btn-lime" style="padding:12px 20px">Book a call <i data-lucide="arrow-right"></i></a>
                 </div>
-
-                <div class="bg-white border border-slate-200 p-8 rounded-3xl relative shadow-sm">
-                    <h3 class="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
-                        <i class="fa-solid fa-chart-pie text-blue-600"></i> Pipeline Architecture Metrics
-                    </h3>
-                    <div class="space-y-6">
-                        <div>
-                            <div class="flex justify-between text-xs font-medium text-slate-500 mb-2">
-                                <span>SYSTEMATIZED OUTBOUND STABILITY</span>
-                                <span class="text-slate-900 font-bold">94%</span>
-                            </div>
-                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-                                <div class="bg-gradient-to-r from-blue-500 to-indigo-500 h-full rounded-full" style="width: 94%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between text-xs font-medium text-slate-500 mb-2">
-                                <span>RELIANCE ON WORD-OF-MOUTH</span>
-                                <span class="text-slate-900 font-bold">DOWN TO &lt;15%</span>
-                            </div>
-                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-                                <div class="bg-rose-500 h-full rounded-full" style="width: 15%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between text-xs font-medium text-slate-500 mb-2">
-                                <span>ENTERPRISE DEAL SCALE</span>
-                                <span class="text-slate-900 font-bold">3.5X AVERAGE INCREASE</span>
-                            </div>
-                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-                                <div class="bg-gradient-to-r from-blue-500 to-indigo-500 h-full rounded-full" style="width: 85%"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-8 p-4 rounded-xl bg-blue-50 border border-blue-100 text-xs text-blue-700 leading-relaxed">
-                        <i class="fa-solid fa-circle-info mr-1 text-blue-500"></i> Predictable customer acquisition infrastructure eliminates income volatility spikes entirely.
-                    </div>
+                <div>
+                    <h4>Expertise</h4>
+                    <ul><li><a href="outbound.html">Outbound</a></li><li><a href="inbound.html">Inbound</a></li><li><a href="geo.html">AI Visibility (GEO)</a></li><li><a href="voice-agents.html">AI Voice Agents</a></li><li><a href="ai-infrastructure.html">AI Infrastructure</a></li><li><a href="approach.html">Approach</a></li></ul>
+                </div>
+                <div>
+                    <h4>Who we help</h4>
+                    <ul><li><a href="speaker.html">Speakers &amp; Founders</a></li><li><a href="ecommerce.html">Ecommerce</a></li><li><a href="b2b.html">B2B Teams</a></li><li><a href="investors.html">Investors</a></li></ul>
+                </div>
+                <div>
+                    <h4>Resources</h4>
+                    <ul><li><a href="blog/">Blog</a></li><li><a href="ai-readiness-tool.html">AI Readiness Checker</a></li><li><a href="about.html">About Us</a></li></ul>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- PROCESS -->
-    <section id="process" class="py-24 bg-white border-t border-slate-100">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto mb-20">
-                <p class="text-blue-600 font-bold tracking-wide uppercase text-sm mb-3">How It Works</p>
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">The 4-Step Velocity Engine</h2>
-                <p class="text-slate-500">Our structured progression sequence converts complex abstract expertise assets into standardized market revenue metrics.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
-                <div class="relative group">
-                    <div class="absolute -top-5 left-6 text-7xl font-extrabold text-slate-100 pointer-events-none z-0">01</div>
-                    <div class="p-6 rounded-2xl bg-white border border-slate-200 relative z-10 hover:-translate-y-1 transition-all duration-300 hover:shadow-md hover:border-blue-200">
-                        <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 font-bold mb-4">I</div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">Positioning</h3>
-                        <p class="text-xs text-slate-500 leading-relaxed">Refining raw core capabilities framework blueprints directly matching specific enterprise buyer corporate needs profiles.</p>
-                    </div>
-                </div>
-                <div class="relative group">
-                    <div class="absolute -top-5 left-6 text-7xl font-extrabold text-slate-100 pointer-events-none z-0">02</div>
-                    <div class="p-6 rounded-2xl bg-white border border-slate-200 relative z-10 hover:-translate-y-1 transition-all duration-300 hover:shadow-md hover:border-blue-200">
-                        <div class="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-indigo-600 font-bold mb-4">II</div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">Targeting</h3>
-                        <p class="text-xs text-slate-500 leading-relaxed">Building hyper-granular clean database registers identifying qualified event buyers and continuous corporate executive partners.</p>
-                    </div>
-                </div>
-                <div class="relative group">
-                    <div class="absolute -top-5 left-6 text-7xl font-extrabold text-slate-100 pointer-events-none z-0">03</div>
-                    <div class="p-6 rounded-2xl bg-white border border-slate-200 relative z-10 hover:-translate-y-1 transition-all duration-300 hover:shadow-md hover:border-blue-200">
-                        <div class="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600 font-bold mb-4">III</div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">Personalized Outreach</h3>
-                        <p class="text-xs text-slate-500 leading-relaxed">Launching targeted relational interactions presenting specific tailored concept structures avoiding generic mass platform spam.</p>
-                    </div>
-                </div>
-                <div class="relative group">
-                    <div class="absolute -top-5 left-6 text-7xl font-extrabold text-slate-100 pointer-events-none z-0">04</div>
-                    <div class="p-6 rounded-2xl bg-white border border-slate-200 relative z-10 hover:-translate-y-1 transition-all duration-300 hover:shadow-md hover:border-blue-200">
-                        <div class="w-10 h-10 rounded-xl bg-rose-50 border border-rose-100 flex items-center justify-center text-rose-500 font-bold mb-4">IV</div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">Scaling Opportunities</h3>
-                        <p class="text-xs text-slate-500 leading-relaxed">Securing recurrent baseline structures converting standalone bookings directly into long term retainers.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA 1 -->
-    <section id="contact" class="py-24 relative overflow-hidden bg-slate-900">
-        <div class="absolute inset-0 bg-gradient-to-t from-blue-950/30 via-transparent to-transparent pointer-events-none"></div>
-        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
-            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">
-                Ready to Scale Your Speaking Opportunities?
-            </h2>
-            <p class="text-slate-400 max-w-xl mx-auto mb-10 text-sm md:text-base leading-relaxed">
-                Schedule a customized framework session to audit your current market positioning matrix and deploy your dedicated pipeline infrastructure.
-            </p>
-            <div class="flex justify-center">
-                <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold text-base shadow-xl shadow-blue-500/20 hover:-translate-y-0.5 transition-all duration-200">
-                    <i class="fa-solid fa-calendar-days mr-2.5 text-sm"></i> Book a Strategy Call
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ, 120+ word SEO-optimised answers -->
-    <section id="faq" class="py-24 bg-white border-t border-slate-100">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <p class="text-blue-600 font-bold tracking-wide uppercase text-sm mb-3">Common Questions</p>
-                <h2 class="text-3xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
-                <p class="text-slate-500 text-sm">Clear operational clarifications regarding pipeline architecture building execution models.</p>
-            </div>
-
-            <div class="space-y-4">
-
-                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
-                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
-                        <span class="font-semibold text-sm md:text-base">How does this differ from traditional talent management agencies or speaker bureaus?</span>
-                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
-                    </button>
-                    <div class="faq-content">
-                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
-                            <p class="text-sm text-slate-500 leading-relaxed">Traditional speaker bureaus and talent management agencies operate as passive listing directories. They wait for inbound calls from event organizers, represent dozens or hundreds of speakers simultaneously, and earn a significant commission cut on every single booking, often 20 to 30 percent. Your visibility depends entirely on how prominently they feature you in their catalog, which means you have little control over your own pipeline or brand positioning.</p>
-                            <p class="text-sm text-slate-500 leading-relaxed mt-3">Growth Loop operates completely differently. We function as your dedicated proactive outbound business development engine. We build proprietary prospect databases, craft personalized outreach sequences, and target corporate decision-makers on your behalf every single week. The data, relationships, and pipeline we build belong entirely to you, not to an agency. You gain a predictable, scalable speaking engagement system rather than a passive listing competing for attention among hundreds of other speakers. This is not speaker representation; it is speaker business development at scale.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
-                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
-                        <span class="font-semibold text-sm md:text-base">What specific corporate buyer profiles and decision-makers do you target?</span>
-                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
-                    </button>
-                    <div class="faq-content">
-                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
-                            <p class="text-sm text-slate-500 leading-relaxed">We design precision outreach targeting the exact roles that hold speaking, training, and coaching budgets inside mid-market and enterprise organizations. Our campaigns reach Chief Human Resources Officers, Directors of People Operations, Chief Learning Officers, Learning and Development Managers, Employee Experience Leaders, Event Marketing Directors, and Enterprise Business Unit Heads who are responsible for performance and program purchasing decisions throughout the year.</p>
-                            <p class="text-sm text-slate-500 leading-relaxed mt-3">We go well beyond job titles. Our targeting methodology layers in company size, industry vertical, technology stack signals, recent hiring activity, and organizational change triggers, such as rapid headcount growth, leadership transitions, or culture transformation initiatives, to identify accounts most likely to need your expertise right now. Every outreach message lands in front of the right person at the right time, significantly improving response rates and shortening the sales cycle to your first paid corporate speaking or coaching engagement.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
-                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
-                        <span class="font-semibold text-sm md:text-base">Do I need to already be a well-known speaker or have a large social media following?</span>
-                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
-                    </button>
-                    <div class="faq-content">
-                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
-                            <p class="text-sm text-slate-500 leading-relaxed">No. You do not need to be a globally recognized speaker, a bestselling author, or have hundreds of thousands of social media followers to generate consistent corporate speaking income. The B2B corporate market does not buy based on fame, it buys based on relevance, credibility, and the demonstrated ability to solve a specific business problem. A well-defined niche expertise combined with a clear, results-oriented message is far more valuable to a corporate buyer than a large public following.</p>
-                            <p class="text-sm text-slate-500 leading-relaxed mt-3">Our strategic positioning transformation process takes your existing knowledge frameworks, regardless of where you are in your speaking career, and packages them into commercially structured proposals optimized for corporate purchasing decisions. We have helped emerging speakers land their first five-figure corporate keynote, and we have helped established experts move from one-off bookings to multi-year enterprise retainer arrangements. Your concrete domain expertise is the asset. We build the pipeline system that consistently monetizes it.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
-                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
-                        <span class="font-semibold text-sm md:text-base">How quickly does the system go live and when can I expect speaking opportunities?</span>
-                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
-                    </button>
-                    <div class="faq-content">
-                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
-                            <p class="text-sm text-slate-500 leading-relaxed">Our baseline system configuration and setup phase takes approximately 21 to 30 days from kickoff. This foundation phase includes deep positioning workshops, ideal client profile definition, prospect database construction, multi-channel outreach sequence architecture, and full technical infrastructure warmup, all designed to ensure deliverability and maximize open rates before the first outbound message is sent to any corporate buyer.</p>
-                            <p class="text-sm text-slate-500 leading-relaxed mt-3">Once the system is live, most clients begin receiving qualified responses and booking discovery calls within the first 30 to 60 days of active outreach. The pipeline compounds over time: the longer the system runs, the more relationship touchpoints accumulate with key decision-makers, increasing conversion rates with every outreach cycle. Corporate sales cycles for speaking and training engagements typically run 30 to 90 days from first contact to signed contract, so a full pipeline with consistently booked engagements is typically visible within 60 to 90 days of the system going live.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
-                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
-                        <span class="font-semibold text-sm md:text-base">Is there a long-term contract requirement or can I start with a pilot program?</span>
-                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
-                    </button>
-                    <div class="faq-content">
-                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
-                            <p class="text-sm text-slate-500 leading-relaxed">We offer flexible engagement models designed to build confidence before committing to longer-term arrangements. New clients begin with a fixed initial pilot program that covers the full system setup, technical infrastructure launch, and first active outreach phase. This gives you the opportunity to see the pipeline working, evaluate response quality from corporate buyers, and assess early momentum before making any extended commitment or additional investment.</p>
-                            <p class="text-sm text-slate-500 leading-relaxed mt-3">Once the pilot validates pipeline traction, defined by specific response volume and qualified call targets we set together at the start, engagements transition into flexible monthly optimization agreements with clear and transparent renewal terms. There are no high-pressure, multi-year lock-in contracts. We believe our results should earn your continued partnership every single month. Our incentive is to keep your pipeline consistently producing qualified speaking, coaching, and corporate training opportunities, which means our success is directly tied to yours. We grow when you grow.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA 2 -->
-    <section class="py-24 relative overflow-hidden bg-slate-900">
-        <div class="absolute inset-0 bg-gradient-to-t from-blue-950/30 via-transparent to-transparent pointer-events-none"></div>
-        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
-            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">
-                Ready to Scale Your Speaking Opportunities?
-            </h2>
-            <p class="text-slate-400 max-w-xl mx-auto mb-10 text-sm md:text-base leading-relaxed">
-                Schedule a customized framework session to audit your current market positioning matrix and deploy your dedicated pipeline infrastructure.
-            </p>
-            <div class="flex justify-center">
-                <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold text-base shadow-xl shadow-blue-500/20 hover:-translate-y-0.5 transition-all duration-200">
-                    <i class="fa-solid fa-calendar-days mr-2.5 text-sm"></i> Book a Strategy Call
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER, matches homepage -->
-    <footer class="py-12 border-t border-slate-900 bg-slate-950 text-center text-xs text-slate-600">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div class="flex items-center gap-2">
-                <span class="font-bold text-slate-400 inline-flex items-center gap-2">
-                    <svg class="h-5 w-5 shrink-0 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></svg>
-                    GROWTH LOOP
-                </span>
-                <span>&copy; 2026. All rights reserved.</span>
-            </div>
-            <div class="flex gap-6 text-slate-500">
-                <a href="#" class="hover:text-slate-400 transition-colors">Privacy Policy</a>
-                <a href="#" class="hover:text-slate-400 transition-colors">Terms of Service</a>
+            <p class="st-wordmark" aria-hidden="true">Growth Loop</p>
+            <div class="st-footer-base">
+                <span>© 2026 Growth Loop. All rights reserved.</span>
+                <span>Published by <span class="author">Growth Loop</span>. Updated 21 October 2026.</span>
             </div>
         </div>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            lucide.createIcons();
-            const toggles = document.querySelectorAll('.faq-toggle');
-            toggles.forEach(toggle => {
-                toggle.addEventListener('click', () => {
-                    const content = toggle.nextElementSibling;
-                    const icon = toggle.querySelector('i');
-                    const isOpen = content.classList.contains('faq-open');
-
-                    document.querySelectorAll('.faq-content').forEach(c => c.classList.remove('faq-open'));
-                    document.querySelectorAll('.faq-toggle i').forEach(ic => ic.style.transform = 'rotate(0deg)');
-
-                    if (!isOpen) {
-                        content.classList.add('faq-open');
-                        icon.style.transform = 'rotate(180deg)';
-                    }
-                });
-            });
+            if (window.lucide) lucide.createIcons();
+            // Highlight the current section in the sticky "on this page" bar
+            const links = [...document.querySelectorAll('.st-toc a')];
+            const byId = new Map(links.map((a) => [a.getAttribute('href').slice(1), a]));
+            const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+                if (!e.isIntersecting) return;
+                links.forEach((a) => a.classList.remove('is-active'));
+                const a = byId.get(e.target.id);
+                if (a) { a.classList.add('is-active'); const ul = a.closest('ul'); ul.scrollTo({ left: a.offsetLeft - ul.clientWidth / 2 + a.offsetWidth / 2, behavior: 'smooth' }); }
+            }), { rootMargin: '-45% 0px -50% 0px' });
+            byId.forEach((_, id) => { const el = document.getElementById(id); if (el) io.observe(el); });
         });
     </script>
 </body>

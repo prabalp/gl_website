@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Voice Agents | Growth Loop</title>
+    <meta name="description" content="Growth Loop builds AI voice agents that answer inbound calls, qualify leads, book appointments and follow up around the clock, with every call logged in your CRM.">
+    <link rel="canonical" href="https://mygrowthloop.com/voice-agents">
+    <meta property="og:site_name" content="Growth Loop">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mygrowthloop.com/voice-agents">
+    <meta property="og:title" content="AI Voice Agents | Growth Loop">
+    <meta property="og:description" content="Growth Loop builds AI voice agents that answer inbound calls, qualify leads, book appointments and follow up around the clock, with every call logged in your CRM.">
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta property="og:image" content="https://mygrowthloop.com/og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Voice Agents | Growth Loop">
+    <meta name="twitter:description" content="Growth Loop builds AI voice agents that answer inbound calls, qualify leads, book appointments and follow up around the clock, with every call logged in your CRM.">
+    <meta name="twitter:image" content="https://mygrowthloop.com/og.png">
+    <meta property="article:modified_time" content="2026-10-21T00:00:00+00:00">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "dateModified": "2026-10-21",
+  "datePublished": "2026-10-21",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://mygrowthloop.com/#org",
+      "name": "Growth Loop",
+      "url": "https://mygrowthloop.com/",
+      "logo": "https://mygrowthloop.com/apple-touch-icon.png",
+      "sameAs": [
+        "https://calendly.com/prabal-growthloopconsulting/30min"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "url": "https://calendly.com/prabal-growthloopconsulting/30min"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://mygrowthloop.com/#website",
+      "name": "Growth Loop",
+      "url": "https://mygrowthloop.com/",
+      "description": "Growth Loop builds AI voice agents that answer inbound calls, qualify leads, book appointments and follow up around the clock, with every call logged in your CRM.",
+      "publisher": {
+        "@id": "https://mygrowthloop.com/#org"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://mygrowthloop.com/voice-agents#webpage",
+      "url": "https://mygrowthloop.com/voice-agents",
+      "name": "AI Voice Agents | Growth Loop",
+      "description": "Growth Loop builds AI voice agents that answer inbound calls, qualify leads, book appointments and follow up around the clock, with every call logged in your CRM.",
+      "isPartOf": {
+        "@id": "https://mygrowthloop.com/#website"
+      },
+      "about": {
+        "@id": "https://mygrowthloop.com/#org"
+      },
+      "author": {
+        "@id": "https://mygrowthloop.com/#org"
+      },
+      "datePublished": "2026-10-21",
+      "dateModified": "2026-10-21"
+    }
+  ]
+}
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #FFFFFF; }
+        .glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+        .cta-button { position: relative; overflow: hidden; }
+        .cta-button::after { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent); transition: 0.5s; }
+        .cta-button:hover::after { left: 100%; }
+        .dropdown-content { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: #ffffff; min-width: 260px; box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.1); border: 1px solid #e2e8f0; border-radius: 12px; padding: 8px; z-index: 60; opacity: 0; transition: opacity 0.3s ease; }
+        .dropdown:hover .dropdown-content { display: block; opacity: 1; animation: fadeIn 0.3s ease forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateX(-50%) translateY(10px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
+        .dropdown-item { display: block; padding: 12px 16px; color: #475569; text-decoration: none; transition: all 0.2s; border-radius: 8px; }
+        .dropdown-item:hover { background: #eff6ff; color: #1d4ed8; padding-left: 20px; }
+        .faq-content { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+        .faq-content.faq-open { max-height: 600px; }
+        .graphic-container { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 40px; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; box-shadow: 0 10px 30px -10px rgba(0,0,0,0.08); min-height: 280px; position: relative; overflow: hidden; }
+        .shimmer-effect { position: relative; overflow: hidden; }
+        .shimmer-effect::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent); transform: translateX(-100%); animation: shimmer 3s infinite; }
+        @keyframes shimmer { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        .animate-float-delayed { animation: float 6s ease-in-out 3s infinite; }
+        .animate-spin-slow { animation: spin 12s linear infinite; }
+    </style>
+    <link rel="stylesheet" href="studio.css">
+</head>
+<body class="studio text-slate-600 antialiased overflow-x-hidden bg-white">
+
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex-shrink-0 cursor-pointer group no-underline">
+                    <span class="text-2xl font-bold tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors inline-flex items-center gap-2">
+                        <svg class="h-7 w-7 shrink-0 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></svg>
+                        GROWTH LOOP
+                    </span>
+                </a>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <div class="dropdown relative group inline-block">
+                            <button class="text-sm font-medium text-slate-600 group-hover:text-blue-600 transition-colors flex items-center gap-1 py-4">
+                                Our Expertise
+                                <i data-lucide="chevron-down" class="h-4 w-4 transition-transform group-hover:rotate-180"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="inbound.html" class="dropdown-item">Inbound Optimisation</a>
+                                <a href="outbound.html" class="dropdown-item">Outbound Optimisation</a>
+                                <a href="geo.html" class="dropdown-item">Generative Engine Optimisation</a>
+                                <a href="voice-agents.html" class="dropdown-item">AI Voice Agents</a>
+                                <a href="ai-infrastructure.html" class="dropdown-item">Internal AI Infrastructure</a>
+                            </div>
+                        </div>
+                        <div class="dropdown relative group inline-block">
+                            <button class="text-sm font-medium text-slate-600 group-hover:text-blue-600 transition-colors flex items-center gap-1 py-4">
+                                Who We Help
+                                <i data-lucide="chevron-down" class="h-4 w-4 transition-transform group-hover:rotate-180"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="speaker.html" class="dropdown-item">Thought Leaders &amp; Speakers</a>
+                                <a href="ecommerce.html" class="dropdown-item">Ecommerce Brands</a>
+                                <a href="b2b.html" class="dropdown-item">B2B Teams</a>
+                                <a href="investors.html" class="dropdown-item">Investors</a>
+                            </div>
+                        </div>
+                        <div class="dropdown relative group inline-block">
+                            <button class="text-sm font-medium text-slate-600 group-hover:text-blue-600 transition-colors flex items-center gap-1 py-4">
+                                Products
+                                <i data-lucide="chevron-down" class="h-4 w-4 transition-transform group-hover:rotate-180"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="ai-readiness-tool.html" class="dropdown-item">AI Readiness Checker</a>
+                            </div>
+                        </div>
+                        <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About Us</a><a href="blog/" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Blog</a>
+                        <a href="index.html#approach" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Approach</a>
+                        <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="cta-button bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-blue-500/20">Partner With Us</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="hidden md:hidden bg-white border-b border-slate-200" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <div class="border-t border-slate-200 my-2 pt-2">
+                    <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Our Expertise</p>
+                    <a href="inbound.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Inbound Optimisation</a>
+                    <a href="outbound.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Outbound Optimisation</a>
+                    <a href="geo.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Generative Engine Optimisation</a>
+                    <a href="voice-agents.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">AI Voice Agents</a>
+                    <a href="ai-infrastructure.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Internal AI Infrastructure</a>
+                </div>
+                <div class="border-t border-slate-200 my-2 pt-2">
+                    <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Who We Help</p>
+                    <a href="speaker.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Thought Leaders &amp; Speakers</a>
+                    <a href="ecommerce.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Ecommerce Brands</a>
+                    <a href="b2b.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">B2B Teams</a>
+                    <a href="investors.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Investors</a>
+                </div>
+                <div class="border-t border-slate-200 my-2 pt-2">
+                    <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Products</p>
+                    <a href="ai-readiness-tool.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">AI Readiness Checker</a>
+                </div>
+                <a href="about.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About Us</a><a href="blog/" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Blog</a>
+                <a href="index.html#approach" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Approach</a>
+                <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium mt-4 text-center">Partner With Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- Hero -->
+        <section class="st-phero">
+            <div class="st-wrap">
+                <span class="st-label">AI Voice Agents</span>
+                <h1>AI agents that <span class="st-mark">pick up the phone.</span></h1>
+                <div class="st-hero-foot">
+                    <p class="st-muted">Inbound answering, outbound qualification, appointment booking and follow-ups, available around the clock and connected to your CRM. We design the conversations, build the agent, connect it to your tools and hand the right calls to your team.</p>
+                    <div class="st-hero-ctas">
+                        <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="st-btn st-btn-ink">Book a Voice Agent Call <i data-lucide="arrow-right"></i></a>
+                        <a href="#call" class="st-btn st-btn-line">See an example call</a>
+                    </div>
+                </div>
+                <div class="st-facts">
+                    <div class="st-fact"><b>24/7</b><span>Answers every call</span></div>
+                    <div class="st-fact"><b>Your CRM</b><span>Every call logged</span></div>
+                    <div class="st-fact"><b>Human handoff</b><span>When it matters</span></div>
+                    <div class="st-fact"><b>Your data</b><span>Stays yours</span></div>
+                </div>
+            </div>
+        </section>
+
+        <nav class="st-toc" aria-label="On this page">
+            <div class="st-wrap">
+                <ul>
+                    <li><a href="#what">What it is</a></li>
+                    <li><a href="#use-cases">Use cases</a></li>
+                    <li><a href="#call">An example call</a></li>
+                    <li><a href="#how">How it works</a></li>
+                    <li><a href="#handoff">Human handoff</a></li>
+                    <li><a href="#integrations">Integrations</a></li>
+                    <li><a href="#control">Security &amp; control</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#fit">Who it's for</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- What it is -->
+        <section id="what" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(01) What it is</span>
+                    <h2>A phone line that never goes unanswered</h2>
+                    <p class="st-muted">An AI voice agent holds a natural spoken conversation, does the routine work of the call and writes everything back to your systems.</p>
+                </div>
+                <div class="st-split">
+                    <div class="st-prose">
+                        <p>Most businesses lose calls in the gaps: after hours, at lunch, when the team is already on another line, or when a new lead waits days for a callback. Each of those is a conversation someone wanted to have with you.</p>
+                        <p>An <strong>AI voice agent</strong> answers or places those calls for you. It listens, understands what the caller needs, answers from information you have approved, asks your qualifying questions and takes the next step: booking a meeting, sending a confirmation or passing the call to a person.</p>
+                        <p>It is not a phone menu and it is not a replacement for your team. It handles the repeatable parts of a call consistently, every time, and <strong>hands over to a human</strong> when the conversation needs judgement, care or a decision.</p>
+                    </div>
+                    <div class="st-visual">
+                        <p class="st-visual-title"><span>What happens on every call</span><span>Fig. 01</span></p>
+                        <div class="st-flow st-flow-v">
+                            <div><small>Ring</small><b>Answered straight away</b><p>Day or night, including when every line is busy.</p></div>
+                            <div><small>Understand</small><b>Works out why they called</b><p>New enquiry, booking, question, or something for a person.</p></div>
+                            <div><small>Qualify or resolve</small><b>Asks your questions</b><p>Your criteria, in your order, in a natural conversation.</p></div>
+                            <div><small>Act</small><b>Books, confirms or transfers</b><p>Into your calendar, or to the right person with context.</p></div>
+                            <div class="is-key"><small>Outcome</small><b>Logged in your CRM</b><p>Summary, answers, outcome and next step on the record.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Use cases -->
+        <section id="use-cases" class="st-section st-white">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(02) Use cases</span>
+                    <h2>What a voice agent can do</h2>
+                    <p class="st-muted">Start with one job, prove it works, then extend. These are the calls voice agents handle best.</p>
+                </div>
+                <div class="st-grid">
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>01</span><span class="st-cell-icon"><i data-lucide="phone-incoming"></i></span></div>
+                        <h3>Inbound answering</h3>
+                        <ul class="st-checks">
+                            <li>Picks up every call, including after hours</li>
+                            <li>Answers common questions from approved information</li>
+                            <li>Captures caller details and reason for calling</li>
+                        </ul>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>02</span><span class="st-cell-icon"><i data-lucide="phone-outgoing"></i></span></div>
+                        <h3>Outbound qualification</h3>
+                        <ul class="st-checks">
+                            <li>Calls new leads soon after they enquire</li>
+                            <li>Asks your qualifying questions, in your order</li>
+                            <li>Passes qualified prospects to your team</li>
+                        </ul>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>03</span><span class="st-cell-icon"><i data-lucide="calendar-check"></i></span></div>
+                        <h3>Appointment booking</h3>
+                        <ul class="st-checks">
+                            <li>Checks live availability in your calendar</li>
+                            <li>Books, reschedules and cancels on the call</li>
+                            <li>Sends a confirmation by email or text</li>
+                        </ul>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>04</span><span class="st-cell-icon"><i data-lucide="bell-ring"></i></span></div>
+                        <h3>Follow-ups &amp; reminders</h3>
+                        <ul class="st-checks">
+                            <li>Reminder calls before appointments</li>
+                            <li>Follow-up after a proposal or a missed meeting</li>
+                            <li>Post-service check-ins and feedback</li>
+                        </ul>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>05</span><span class="st-cell-icon"><i data-lucide="moon"></i></span></div>
+                        <h3>Overflow &amp; after hours</h3>
+                        <ul class="st-checks">
+                            <li>Steps in only when your team is busy or closed</li>
+                            <li>Takes structured messages, not voicemails</li>
+                            <li>Flags urgent calls to an on-call person</li>
+                        </ul>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>06</span><span class="st-cell-icon"><i data-lucide="rotate-ccw"></i></span></div>
+                        <h3>Lead reactivation</h3>
+                        <ul class="st-checks">
+                            <li>Re-contacts cold or stalled leads in your CRM</li>
+                            <li>Checks whether the need is still there</li>
+                            <li>Books those who are ready back in</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Example call -->
+        <section id="call" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(03) An example call</span>
+                    <h2>Natural, brief and to the point</h2>
+                    <p class="st-muted">Here is the shape of a typical inbound enquiry. Your agent's script, questions and tone are designed with you.</p>
+                </div>
+                <div class="st-split">
+                    <div class="st-prose">
+                        <p>A good voice agent sounds like a capable member of your front-desk team: friendly, clear and focused on helping the caller get what they need.</p>
+                        <p><strong>It follows your playbook.</strong> The questions it asks, what it is allowed to say, which slots it can offer and when it must hand over are all agreed before launch.</p>
+                        <p><strong>It says what it is.</strong> The agent can introduce itself as an AI assistant, and if the call is recorded it tells the caller where disclosure is required.</p>
+                        <p>When the call ends, your team does not need to listen back. A short summary, the answers given and the booking land in your CRM straight away.</p>
+                        <a href="#how" class="st-btn st-btn-line" style="margin-top:8px">How it works underneath <i data-lucide="arrow-right"></i></a>
+                    </div>
+                    <div class="st-visual">
+                        <p class="st-visual-title"><span>Example transcript · Illustrative</span><span>Fig. 02</span></p>
+                        <ol class="st-timeline">
+                            <li><span class="st-dot"><i data-lucide="bot"></i></span><div><small>Agent · 0:00</small><p>"Thanks for calling Northfield Clinic, this is the clinic's AI assistant. Calls may be recorded. How can I help today?"</p></div></li>
+                            <li><span class="st-dot"><i data-lucide="user"></i></span><div><small>Caller · 0:06</small><p>"Hi, I'd like to book a first consultation, ideally later this week."</p></div></li>
+                            <li><span class="st-dot"><i data-lucide="bot"></i></span><div><small>Agent · 0:11</small><p>"Happy to help. Is this for you, and have you visited us before?"</p></div></li>
+                            <li><span class="st-dot"><i data-lucide="user"></i></span><div><small>Caller · 0:15</small><p>"Yes, it's for me, and no, it's my first time."</p></div></li>
+                            <li><span class="st-dot"><i data-lucide="bot"></i></span><div><small>Agent · 0:19</small><p>"Thanks. I have Thursday at 10:30 or Friday at 14:00. Which suits you better?"</p></div></li>
+                            <li><span class="st-dot"><i data-lucide="user"></i></span><div><small>Caller · 0:24</small><p>"Thursday works."</p></div></li>
+                            <li class="is-goal"><span class="st-dot"><i data-lucide="calendar-check"></i></span><div><small>Outcome · 0:52</small><b>Booked, confirmed and logged</b><p>Calendar event created, confirmation text sent, new contact and call summary added to the CRM.</p></div></li>
+                        </ol>
+                        <p class="st-muted" style="font-size:.85rem;margin:18px 0 0">Fictional business and caller, shown for illustration only.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How it works -->
+        <section id="how" class="st-section st-white">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(04) How it works</span>
+                    <h2>Five parts working in real time</h2>
+                    <p class="st-muted">Under the hood, a voice agent is a chain of components that listen, think, speak and act, fast enough to feel like a normal conversation.</p>
+                </div>
+                <div class="st-visual" style="margin-bottom:56px">
+                    <p class="st-visual-title"><span>The voice agent stack, in plain words</span><span>Fig. 03</span></p>
+                    <div class="st-flow" style="--n:5">
+                        <div><small>01 · Phone line</small><b>Connects the call</b><p>Your existing number forwards to the agent, or we set up a new one.</p></div>
+                        <div><small>02 · Listening</small><b>Speech to text</b><p>The caller's words are transcribed as they speak.</p></div>
+                        <div class="is-key"><small>03 · Thinking</small><b>Language model + your playbook</b><p>Decides what to say next, using only your approved knowledge and rules.</p></div>
+                        <div><small>04 · Speaking</small><b>Text to speech</b><p>A natural voice replies, in the tone and language you choose.</p></div>
+                        <div><small>05 · Acting</small><b>Tools &amp; integrations</b><p>Checks calendars, books slots, updates the CRM, transfers calls.</p></div>
+                    </div>
+                </div>
+                <div class="st-split">
+                    <ol class="st-points">
+                        <li><span>01</span><div><h3>A playbook, not a free-for-all</h3><p>We write the agent's goals, questions, approved answers and hard limits with you. It does not improvise prices, promises or policy.</p></div></li>
+                        <li><span>02</span><div><h3>Knowledge you control</h3><p>Opening hours, services, FAQs and booking rules come from a source you can update, so the agent stays current without a rebuild.</p></div></li>
+                        <li><span>03</span><div><h3>Real actions, not just talk</h3><p>The agent uses defined tools: look up a slot, create a booking, update a record, send a text, transfer a call. Nothing outside that list.</p></div></li>
+                    </ol>
+                    <div class="st-callout">
+                        The model is the voice. The playbook, the knowledge and the integrations are what make it useful to your business.
+                        <small>That is the part we engineer with you</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Human handoff -->
+        <section id="handoff" class="st-section st-dark">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(05) Human handoff</span>
+                    <h2>Built to hand over, not hold on</h2>
+                    <p>The agent handles the routine. Your people handle anything that needs judgement, empathy or a decision, with the context already in hand.</p>
+                </div>
+                <div class="st-split">
+                    <ol class="st-points">
+                        <li><span>01</span><div><h3>The caller asks for a person</h3><p>They are offered a transfer or a callback straight away. Nobody gets trapped in a loop.</p></div></li>
+                        <li><span>02</span><div><h3>The call is complex or sensitive</h3><p>Complaints, distress, negotiations or anything outside the playbook goes to your team.</p></div></li>
+                        <li><span>03</span><div><h3>The opportunity is high value</h3><p>You set the rules, for example: any qualified enterprise lead is transferred live to sales.</p></div></li>
+                        <li><span>04</span><div><h3>The agent is not sure</h3><p>Rather than guess, it says it will get the right person and takes the details.</p></div></li>
+                    </ol>
+                    <div class="st-visual" style="background:var(--white);color:var(--ink)">
+                        <p class="st-visual-title"><span>A warm transfer · Illustrative</span><span>Fig. 04</span></p>
+                        <ol class="st-timeline">
+                            <li><span class="st-dot"><i data-lucide="ear"></i></span><div><small>Trigger</small><b>Handoff rule met</b><p>Caller asks about a custom contract outside the playbook.</p></div></li>
+                            <li><span class="st-dot"><i data-lucide="message-square"></i></span><div><small>Agent to caller</small><b>Sets expectations</b><p>"That's one for our team. I'll put you through now."</p></div></li>
+                            <li><span class="st-dot"><i data-lucide="file-text"></i></span><div><small>Agent to team</small><b>Shares the context</b><p>A short summary reaches the person picking up, so the caller never repeats themselves.</p></div></li>
+                            <li class="is-goal"><span class="st-dot"><i data-lucide="headphones"></i></span><div><small>Outcome</small><b>Human takes over</b><p>Or, if nobody is free, a callback is booked and the team is alerted.</p></div></li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="st-table-wrap" style="margin-top:72px">
+                    <table class="st-compare" style="color:var(--ink)">
+                        <thead><tr><th scope="col">&nbsp;</th><th scope="col">Your team</th><th scope="col">AI voice agent</th></tr></thead>
+                        <tbody>
+                            <tr><th scope="row">Availability</th><td>Working hours, one call at a time each</td><td>Around the clock, including busy periods</td></tr>
+                            <tr><th scope="row">Routine questions</th><td>Repeated many times a day</td><td>Answered consistently from approved information</td></tr>
+                            <tr><th scope="row">Qualification</th><td>Varies with who answers and how busy they are</td><td>The same questions, in the same order, every call</td></tr>
+                            <tr><th scope="row">Complex or sensitive calls</th><td>Where their time and judgement matter most</td><td>Recognised and handed over with a summary</td></tr>
+                            <tr><th scope="row">Record keeping</th><td>Notes when there is time</td><td>Summary and outcome written to the CRM after every call</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Integrations -->
+        <section id="integrations" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(06) Integrations</span>
+                    <h2>Connected to the tools you use</h2>
+                    <p class="st-muted">A voice agent is only as useful as what it can see and update. We connect it to your existing systems rather than adding another inbox.</p>
+                </div>
+                <div class="st-grid st-grid-2 st-grid-4" style="margin-bottom:56px">
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>01</span><span class="st-cell-icon"><i data-lucide="contact"></i></span></div>
+                        <h3>CRM</h3>
+                        <ul class="st-checks"><li>Look up existing contacts</li><li>Create and update records</li><li>Log summaries and outcomes</li></ul>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>02</span><span class="st-cell-icon"><i data-lucide="calendar"></i></span></div>
+                        <h3>Calendars</h3>
+                        <ul class="st-checks"><li>Live availability</li><li>Bookings and reschedules</li><li>Routing to the right person</li></ul>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>03</span><span class="st-cell-icon"><i data-lucide="phone-forwarded"></i></span></div>
+                        <h3>Telephony</h3>
+                        <ul class="st-checks"><li>Your existing numbers</li><li>Overflow and after-hours rules</li><li>Live transfer to your team</li></ul>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>04</span><span class="st-cell-icon"><i data-lucide="send"></i></span></div>
+                        <h3>Messaging</h3>
+                        <ul class="st-checks"><li>Text and email confirmations</li><li>WhatsApp follow-ups</li><li>Alerts to your team's chat</li></ul>
+                    </div>
+                </div>
+                <div class="st-split">
+                    <div class="st-prose">
+                        <p>We work with mainstream CRMs, calendars and phone systems, and with most tools that offer an API. We confirm exactly what connects, and how, during discovery, before anything is built.</p>
+                        <p><strong>Every call leaves a clean record.</strong> Instead of a voicemail to transcribe or a sticky note to chase, your team sees who called, what they needed, what was agreed and what happens next, in the place they already work.</p>
+                        <p>Because outcomes are structured, they also feed your reporting, so voice becomes a measurable part of your pipeline rather than a black box.</p>
+                    </div>
+                    <div class="st-visual">
+                        <p class="st-visual-title"><span>Example CRM entry · Illustrative</span><span>Fig. 05</span></p>
+                        <table class="st-compare">
+                            <thead><tr><th scope="col">Field</th><th scope="col">Written by the agent</th></tr></thead>
+                            <tbody>
+                                <tr><th scope="row">Contact</th><td>New contact, name and mobile captured</td></tr>
+                                <tr><th scope="row">Reason</th><td>First consultation enquiry</td></tr>
+                                <tr><th scope="row">Qualification</th><td>New patient, self-referral, prefers mornings</td></tr>
+                                <tr><th scope="row">Outcome</th><td>Booked: Thursday 10:30</td></tr>
+                                <tr><th scope="row">Next step</th><td>Reminder call the day before</td></tr>
+                                <tr><th scope="row">Record</th><td>Summary, plus transcript and recording where enabled</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Security & control -->
+        <section id="control" class="st-section st-white">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(07) Security &amp; control</span>
+                    <h2>Your rules, your data</h2>
+                    <p class="st-muted">You decide what the agent can say, what it can do and what happens to every recording and transcript.</p>
+                </div>
+                <div class="st-grid st-grid-2">
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>01</span><span class="st-cell-icon"><i data-lucide="megaphone"></i></span></div>
+                        <h3>Disclosure &amp; consent</h3>
+                        <ul class="st-checks">
+                            <li>The agent can identify itself as an AI assistant</li>
+                            <li>Calls recorded only with disclosure where required</li>
+                            <li>Outbound calling designed around consent, opt-outs and do-not-call lists</li>
+                        </ul>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>02</span><span class="st-cell-icon"><i data-lucide="database"></i></span></div>
+                        <h3>Data you own</h3>
+                        <ul class="st-checks">
+                            <li>Call records written to systems you control</li>
+                            <li>Only the details the call needs are collected</li>
+                            <li>Retention periods agreed with you up front</li>
+                        </ul>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>03</span><span class="st-cell-icon"><i data-lucide="shield-check"></i></span></div>
+                        <h3>Guardrails</h3>
+                        <ul class="st-checks">
+                            <li>Answers limited to approved information</li>
+                            <li>No improvised prices, promises or advice</li>
+                            <li>Clear limits on which actions it can take</li>
+                        </ul>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>04</span><span class="st-cell-icon"><i data-lucide="key-round"></i></span></div>
+                        <h3>Access &amp; oversight</h3>
+                        <ul class="st-checks">
+                            <li>Access controls on recordings and transcripts</li>
+                            <li>A log of every call and every action taken</li>
+                            <li>Regular call reviews to catch and fix issues</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process -->
+        <section id="process" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(08) How we launch it</span>
+                    <h2>From first call to live line</h2>
+                    <p class="st-muted">Five stages, then ongoing tuning. Timelines depend on the use case and integrations, and are scoped with you on the first call.</p>
+                </div>
+                <div class="st-loop">
+                    <ol class="st-steps">
+                        <li><span>01</span><div><h3>Discovery</h3><p>We map the calls you get or want to make, what a good outcome looks like, and which systems the agent needs to reach.</p></div></li>
+                        <li><span>02</span><div><h3>Design &amp; scripts</h3><p>We write the playbook: greeting, questions, approved answers, handoff rules and tone of voice. You review and approve it.</p></div></li>
+                        <li><span>03</span><div><h3>Build &amp; integrate</h3><p>We build the agent, choose the voice, and connect your phone line, calendar, CRM and messaging.</p></div></li>
+                        <li><span>04</span><div><h3>Test &amp; launch</h3><p>We run test calls, including awkward ones, with your team before going live, often starting with overflow or after-hours calls.</p></div></li>
+                        <li><span>05</span><div><h3>Monitor &amp; improve</h3><p>We review calls and outcomes regularly, fix gaps in knowledge, refine the script and extend to new use cases.</p></div></li>
+                    </ol>
+                    <div class="st-visual">
+                        <p class="st-visual-title"><span>What we track</span><span>Fig. 06</span></p>
+                        <div class="st-meter">
+                            <div class="st-meter-row"><span>Calls answered</span><div class="st-meter-track"><div class="st-meter-fill" style="width:100%"></div></div><b>Coverage</b></div>
+                            <div class="st-meter-row"><span>Resolved by agent</span><div class="st-meter-track"><div class="st-meter-fill" style="width:62%"></div></div><b>Handled</b></div>
+                            <div class="st-meter-row"><span>Handed to team</span><div class="st-meter-track"><div class="st-meter-fill" style="width:24%"></div></div><b>Handoff</b></div>
+                            <div class="st-meter-row"><span>Qualified leads</span><div class="st-meter-track"><div class="st-meter-fill" style="width:40%"></div></div><b>Intent</b></div>
+                            <div class="st-meter-row is-key"><span>Meetings booked</span><div class="st-meter-track"><div class="st-meter-fill" style="width:28%"></div></div><b>Outcome</b></div>
+                        </div>
+                        <p class="st-muted" style="font-size:.85rem;margin:18px 0 0">Illustrative only. Your reports show your real numbers, alongside call reviews, so we know exactly what to improve.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fit -->
+        <section id="fit" class="st-section st-white">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(09) Who it's for</span>
+                    <h2>Best fit for</h2>
+                    <p class="st-muted">Voice agents make sense wherever calls matter to revenue and the phone is not always answered as fast as it should be.</p>
+                </div>
+                <div class="st-grid st-grid-2">
+                    <a class="st-cell st-cell-auto" href="speaker.html">
+                        <div class="st-cell-top"><span>01</span><span class="st-cell-icon"><i data-lucide="mic"></i></span></div>
+                        <h3>Thought Leaders &amp; Lean Teams</h3>
+                        <ul class="st-checks"><li>Booking and speaking enquiries answered while you are on stage</li><li>First-pass screening before calls reach your diary</li><li>No assistant needed to keep the phone covered</li></ul>
+                        <span class="st-cell-more">Speakers &amp; founders <i data-lucide="arrow-right"></i></span>
+                    </a>
+                    <a class="st-cell st-cell-auto" href="b2b.html">
+                        <div class="st-cell-top"><span>02</span><span class="st-cell-icon"><i data-lucide="building-2"></i></span></div>
+                        <h3>B2B Teams</h3>
+                        <ul class="st-checks"><li>Fast callbacks on demo requests and form fills</li><li>Consistent qualification before sales gets involved</li><li>Reactivation of stalled opportunities in your CRM</li></ul>
+                        <span class="st-cell-more">B2B growth <i data-lucide="arrow-right"></i></span>
+                    </a>
+                    <a class="st-cell st-cell-auto" href="ecommerce.html">
+                        <div class="st-cell-top"><span>03</span><span class="st-cell-icon"><i data-lucide="shopping-bag"></i></span></div>
+                        <h3>Ecommerce Brands</h3>
+                        <ul class="st-checks"><li>Order, delivery and returns questions answered by phone</li><li>Wholesale and trade enquiries qualified and routed</li><li>Follow-up calls to high-value customers</li></ul>
+                        <span class="st-cell-more">Ecommerce growth <i data-lucide="arrow-right"></i></span>
+                    </a>
+                    <a class="st-cell st-cell-auto" href="investors.html">
+                        <div class="st-cell-top"><span>04</span><span class="st-cell-icon"><i data-lucide="line-chart"></i></span></div>
+                        <h3>Investors</h3>
+                        <ul class="st-checks"><li>Structured intake for inbound founder calls</li><li>Partner meetings booked with the basics already captured</li><li>Every conversation logged in your deal pipeline</li></ul>
+                        <span class="st-cell-more">Investment pipeline <i data-lucide="arrow-right"></i></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(10) FAQ</span>
+                    <h2>Voice agent questions we get most</h2>
+                    <p class="st-muted">Still unsure? Book a call and we'll answer them for your business specifically.</p>
+                </div>
+                <div class="st-faq">
+                    <details open>
+                        <summary>Will it sound robotic?</summary>
+                        <div class="st-faq-a"><p>Modern voice agents sound natural, respond quickly and cope with interruptions far better than older phone systems. We choose the voice, pace and wording with you and test with real calls before launch. Callers can still tell it is an assistant, which is why we recommend the agent says so openly.</p></div>
+                    </details>
+                    <details>
+                        <summary>Will it replace my team?</summary>
+                        <div class="st-faq-a"><ul><li>No. It takes the repetitive, high-volume parts of calls: answering, routine questions, qualifying and booking.</li><li>Complex, sensitive or high-value calls are handed to your people with a summary.</li><li>Your team spends more time on the conversations that need them.</li></ul></div>
+                    </details>
+                    <details>
+                        <summary>What happens when it doesn't know the answer?</summary>
+                        <div class="st-faq-a"><p>It does not guess. It tells the caller it will get the right person, then transfers the call or takes the details and books a callback. Each of these moments is reviewed afterwards, so we can add the missing information or adjust the rules.</p></div>
+                    </details>
+                    <details>
+                        <summary>Which CRMs and phone systems does it work with?</summary>
+                        <div class="st-faq-a"><p>Most mainstream CRMs, calendars and phone setups, plus many tools that offer an API. You can usually keep your existing number and forward calls to the agent. We confirm the exact integrations in discovery, before you commit to a build.</p></div>
+                    </details>
+                    <details>
+                        <summary>Are calls recorded, and is that allowed?</summary>
+                        <div class="st-faq-a"><p>Recording is optional. Where calls are recorded, the agent tells the caller where disclosure is required, and recordings and transcripts are stored in systems you control with the retention you choose. For outbound calling, we design around consent, opt-outs and do-not-call lists. You should confirm the specific rules that apply in your markets with your own advisers.</p></div>
+                    </details>
+                    <details>
+                        <summary>How long does it take to launch?</summary>
+                        <div class="st-faq-a"><p>It depends on the use case and how many systems the agent needs to connect to. A single, well-defined job, such as after-hours answering and booking, is much quicker than a multi-step qualification flow across several tools. We scope a realistic timeline with you on the first call.</p></div>
+                    </details>
+                    <details>
+                        <summary>What do you need from us?</summary>
+                        <div class="st-faq-a"><p>A discovery session on the calls you get and the outcomes you want, the information the agent should answer from (services, hours, FAQs, booking rules), access to your calendar, CRM and phone setup, and someone to review the script and test calls. After launch, a short regular review.</p></div>
+                    </details>
+                    <details>
+                        <summary>How do you measure success?</summary>
+                        <div class="st-faq-a"><p>By outcomes, not minutes: calls answered that would have been missed, leads qualified, meetings booked, issues resolved, and how cleanly calls are handed to your team. We pair the numbers with regular reviews of real calls, because quality matters as much as volume.</p></div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next -->
+        <section class="st-section st-white" style="padding-top:72px;padding-bottom:72px;border-top:1px solid var(--ink)">
+            <div class="st-wrap">
+                <span class="st-label" style="margin-bottom:24px">Pairs well with</span>
+                <div class="st-next" style="--n:3">
+                    <a href="outbound.html"><small>Outbound Systems</small><b>Go find the people who need you</b><p>Multi-channel outreach where AI calls can qualify and book prospects.</p></a>
+                    <a href="inbound.html"><small>Inbound Systems</small><b>Make the market find you</b><p>More enquiries coming in, and a voice agent ready to answer every one.</p></a>
+                    <a href="ai-infrastructure.html"><small>Internal AI Infrastructure</small><b>Put AI to work inside</b><p>Private assistants, knowledge bases and automations on your own data.</p></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <section id="contact" class="st-dark st-section st-cta">
+        <div class="st-wrap">
+            <span class="st-label">Start a project</span>
+            <h2>Never miss<br>another <span class="st-mark">call.</span></h2>
+            <p class="st-muted">Tell us which calls you are missing or want to make. We'll show you how a voice agent would handle them and what it would connect to.</p>
+            <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="st-btn st-btn-lime">Book a free consultation <i data-lucide="arrow-right"></i></a>
+        </div>
+    </section>
+
+    <footer class="st-footer">
+        <div class="st-wrap">
+            <div class="st-footer-grid">
+                <div>
+                    <h4>Growth Loop</h4>
+                    <p class="st-muted" style="max-width:34ch;line-height:1.55;margin:0 0 16px">We engineer automated systems that grow your revenue.</p>
+                    <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="st-btn st-btn-lime" style="padding:12px 20px">Book a call <i data-lucide="arrow-right"></i></a>
+                </div>
+                <div>
+                    <h4>Expertise</h4>
+                    <ul><li><a href="outbound.html">Outbound</a></li><li><a href="inbound.html">Inbound</a></li><li><a href="geo.html">AI Visibility (GEO)</a></li><li><a href="voice-agents.html">AI Voice Agents</a></li><li><a href="ai-infrastructure.html">AI Infrastructure</a></li><li><a href="approach.html">Approach</a></li></ul>
+                </div>
+                <div>
+                    <h4>Who we help</h4>
+                    <ul><li><a href="speaker.html">Speakers &amp; Founders</a></li><li><a href="ecommerce.html">Ecommerce</a></li><li><a href="b2b.html">B2B Teams</a></li><li><a href="investors.html">Investors</a></li></ul>
+                </div>
+                <div>
+                    <h4>Resources</h4>
+                    <ul><li><a href="blog/">Blog</a></li><li><a href="ai-readiness-tool.html">AI Readiness Checker</a></li><li><a href="about.html">About Us</a></li></ul>
+                </div>
+            </div>
+            <p class="st-wordmark" aria-hidden="true">Growth Loop</p>
+            <div class="st-footer-base">
+                <span>© 2026 Growth Loop. All rights reserved.</span>
+                <span>Published by <span class="author">Growth Loop</span>. Updated 21 October 2026.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) lucide.createIcons();
+            // Highlight the current section in the sticky "on this page" bar
+            const links = [...document.querySelectorAll('.st-toc a')];
+            const byId = new Map(links.map((a) => [a.getAttribute('href').slice(1), a]));
+            const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+                if (!e.isIntersecting) return;
+                links.forEach((a) => a.classList.remove('is-active'));
+                const a = byId.get(e.target.id);
+                if (a) { a.classList.add('is-active'); const ul = a.closest('ul'); ul.scrollTo({ left: a.offsetLeft - ul.clientWidth / 2 + a.offsetWidth / 2, behavior: 'smooth' }); }
+            }), { rootMargin: '-45% 0px -50% 0px' });
+            byId.forEach((_, id) => { const el = document.getElementById(id); if (el) io.observe(el); });
+        });
+    </script>
+</body>
+</html>

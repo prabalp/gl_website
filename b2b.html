@@ -47,7 +47,7 @@
     {
       "@type": "WebSite",
       "@id": "https://mygrowthloop.com/#website",
-      "name": "B2B Growth Infrastructure",
+      "name": "Growth Loop",
       "url": "https://mygrowthloop.com/",
       "description": "Growth Loop helps B2B teams build predictable pipeline by connecting inbound discovery, outbound outreach, AI visibility, and CRM-ready demand systems.",
       "publisher": {
@@ -79,7 +79,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #FFFFFF; }
@@ -97,8 +97,9 @@
         .glow-card { transition: box-shadow 0.3s ease, border-color 0.3s ease; }
         .glow-card:hover { box-shadow: 0 10px 30px -5px rgba(37, 99, 235, 0.06); border-color: rgba(37, 99, 235, 0.2); }
     </style>
+    <link rel="stylesheet" href="studio.css">
 </head>
-<body class="text-slate-600 antialiased overflow-x-hidden bg-white">
+<body class="studio text-slate-600 antialiased overflow-x-hidden bg-white">
 
     <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -120,6 +121,8 @@
                                 <a href="inbound.html" class="dropdown-item">Inbound Optimisation</a>
                                 <a href="outbound.html" class="dropdown-item">Outbound Optimisation</a>
                                 <a href="geo.html" class="dropdown-item">Generative Engine Optimisation</a>
+                                <a href="voice-agents.html" class="dropdown-item">AI Voice Agents</a>
+                                <a href="ai-infrastructure.html" class="dropdown-item">Internal AI Infrastructure</a>
                             </div>
                         </div>
                         <div class="dropdown relative group inline-block">
@@ -143,7 +146,7 @@
                                 <a href="ai-readiness-tool.html" class="dropdown-item">AI Readiness Checker</a>
                             </div>
                         </div>
-                        <a href="index.html#about" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About Us</a>
+                        <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About Us</a><a href="blog/" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Blog</a>
                         <a href="approach.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Approach</a>
                         <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="cta-button bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-blue-500/20">Partner With Us</a>
                     </div>
@@ -163,6 +166,8 @@
                     <a href="inbound.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Inbound Optimisation</a>
                     <a href="outbound.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Outbound Optimisation</a>
                     <a href="geo.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Generative Engine Optimisation</a>
+                    <a href="voice-agents.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">AI Voice Agents</a>
+                    <a href="ai-infrastructure.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">Internal AI Infrastructure</a>
                 </div>
                 <div class="border-t border-slate-200 my-2 pt-2">
                     <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Who We Help</p>
@@ -175,292 +180,335 @@
                     <p class="px-3 text-xs uppercase text-slate-400 font-bold mb-2">Products</p>
                     <a href="ai-readiness-tool.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm pl-6">AI Readiness Checker</a>
                 </div>
-                <a href="index.html#about" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="about.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About Us</a><a href="blog/" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Blog</a>
                 <a href="approach.html" class="text-slate-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Approach</a>
                 <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" class="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium mt-4 text-center">Partner With Us</a>
             </div>
         </div>
     </nav>
 
-    <section class="relative pt-32 pb-24 md:pt-48 md:pb-40 overflow-hidden">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] pointer-events-none opacity-30 mix-blend-screen">
-            <div class="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-indigo-600/40 blur-[120px]"></div>
-            <div class="absolute top-[10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-violet-600/30 blur-[100px]"></div>
-        </div>
-        <div class="absolute inset-0 bg-[linear-gradient(to_right,#1f293710_1px,transparent_1px),linear-gradient(to_bottom,#1f293710_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
-        <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
-            <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-8 leading-[1.15]">
-                Build Predictable <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">B2B Pipeline</span>
-            </h1>
-            <p class="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto mb-10 leading-relaxed">
-                We help B2B teams connect inbound discovery, outbound outreach, and AI visibility into one demand system so sales talks to the right accounts at the right time.
-            </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="w-full sm:w-auto px-8 py-4 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-lg shadow-blue-500/20 hover:-translate-y-0.5 transition-all duration-200 text-center">
-                    Book a Strategy Call <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
-                </a>
-                <a href="#teams" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-slate-600 font-semibold border border-slate-200 hover:bg-slate-50 transition-all duration-200 text-center">
-                    See Who We Help
-                </a>
+    <main>
+
+        <!-- Hero -->
+        <section class="st-phero">
+            <div class="st-wrap">
+                <span class="st-label">B2B Growth</span>
+                <h1>Build <span class="st-mark">predictable</span> B2B pipeline.</h1>
+                <div class="st-hero-foot">
+                    <p class="st-muted">We help B2B teams connect inbound discovery, outbound outreach, and AI visibility into one demand system so sales talks to the right accounts at the right time.</p>
+                    <div class="st-hero-ctas">
+                        <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="st-btn st-btn-ink">Book a Strategy Call <i data-lucide="arrow-right"></i></a>
+                        <a href="#who" class="st-btn st-btn-line">See who we help</a>
+                    </div>
+                </div>
+                <div class="st-facts">
+                    <div class="st-fact"><b>1 ICP</b><span>Shared by marketing and sales</span></div>
+                    <div class="st-fact"><b>4 parts</b><span>Inbound, outbound, AI visibility, data</span></div>
+                    <div class="st-fact"><b>1 CRM workflow</b><span>Every lead, one place sales can use</span></div>
+                    <div class="st-fact"><b>Monthly</b><span>Targeting and messaging refined</span></div>
+                </div>
             </div>
+        </section>
+
+        <nav class="st-toc" aria-label="On this page">
+            <div class="st-wrap">
+                <ul>
+                    <li><a href="#who">Who we help</a></li>
+                    <li><a href="#bottlenecks">Bottlenecks</a></li>
+                    <li><a href="#system">The system</a></li>
+                    <li><a href="#connect">How it connects</a></li>
+                    <li><a href="#compare">Compared</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Who we help -->
+        <section id="who" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(01) Who we work with</span>
+                    <h2>Built for B2B revenue teams</h2>
+                    <p class="st-muted">Whether you sell software, services, or complex solutions, the goal is the same: qualified conversations that close.</p>
+                </div>
+                <div class="st-grid st-grid-2">
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>01</span><span class="st-cell-icon"><i data-lucide="app-window"></i></span></div>
+                        <h3>SaaS Companies</h3>
+                        <p class="st-muted" style="margin:0 0 18px;line-height:1.55">Turn product expertise into demand from accounts that match your ICP and buying stage.</p>
+                        <ul class="st-checks"><li>Content and AI visibility that answer the questions buyers research first</li><li>Outbound aimed at accounts showing real buying triggers</li><li>Reporting that ties channels to pipeline, not sign-ups alone</li></ul>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>02</span><span class="st-cell-icon"><i data-lucide="briefcase"></i></span></div>
+                        <h3>Professional Services</h3>
+                        <p class="st-muted" style="margin:0 0 18px;line-height:1.55">Replace feast-or-famine referrals with a repeatable way to reach decision-makers who need your expertise now.</p>
+                        <ul class="st-checks"><li>A steady flow of conversations alongside referrals</li><li>Authority content that shows your expertise before the first call</li><li>Outreach that reads as researched, never bulk</li></ul>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>03</span><span class="st-cell-icon"><i data-lucide="building-2"></i></span></div>
+                        <h3>Enterprise Sales Teams</h3>
+                        <p class="st-muted" style="margin:0 0 18px;line-height:1.55">Give reps better-targeted accounts, clearer messaging, and warmer entry points into long-cycle deals.</p>
+                        <ul class="st-checks"><li>Account lists built around firmographics, triggers and buyer roles</li><li>Multi-threaded outreach into buying committees</li><li>Signals and follow-up that keep deals moving between meetings</li></ul>
+                    </div>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>04</span><span class="st-cell-icon"><i data-lucide="git-merge"></i></span></div>
+                        <h3>RevOps-Led Orgs</h3>
+                        <p class="st-muted" style="margin:0 0 18px;line-height:1.55">Unify marketing and sales data so pipeline reporting reflects reality, not platform guesswork.</p>
+                        <ul class="st-checks"><li>One set of pipeline definitions for every team</li><li>Inbound and outbound captured in one CRM workflow</li><li>Clear attribution from first touch to closed deal</li></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottlenecks -->
+        <section id="bottlenecks" class="st-section st-dark">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(02) Common bottlenecks</span>
+                    <h2>Why B2B pipeline stalls</h2>
+                    <p>Most teams have activity. Few have a system that consistently produces qualified opportunities.</p>
+                </div>
+                <div class="st-split">
+                    <ol class="st-points">
+                        <li><span>01</span><div><h3>Weak ICP focus</h3><p>Broad targeting fills the CRM with names that never convert, wasting SDR and AE time.</p></div></li>
+                        <li><span>02</span><div><h3>Siloed channels</h3><p>Inbound, outbound, and paid run separately, so no one sees the full path from first touch to closed deal.</p></div></li>
+                        <li><span>03</span><div><h3>Long sales cycles</h3><p>Without the right signals and follow-up, promising accounts go quiet before a second meeting happens.</p></div></li>
+                        <li><span>04</span><div><h3>Invisible in AI search</h3><p>Buyers now research in ChatGPT and answer engines. If you are not cited there, you are not in the shortlist.</p></div></li>
+                    </ol>
+                    <div class="st-callout">
+                        More activity rarely fixes a pipeline. Connecting the activity you already have usually does.
+                        <small>Each bottleneck above is a symptom of channels working without a shared target</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The system -->
+        <section id="system" class="st-section st-white">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(03) What we build</span>
+                    <h2>One connected demand system</h2>
+                    <p class="st-muted">Inbound brings them in. Outbound starts the conversation. AI visibility keeps you discoverable. Data ties it together.</p>
+                </div>
+                <div class="st-grid st-grid-2 st-grid-4">
+                    <a class="st-cell st-cell-auto" href="inbound.html">
+                        <div class="st-cell-top"><span>01</span><span class="st-cell-icon"><i data-lucide="magnet"></i></span></div>
+                        <h3>Inbound Discovery</h3>
+                        <p class="st-muted" style="margin:0;line-height:1.55">SEO, content, lead magnets, and landing pages that attract buyers already searching for your category.</p>
+                        <span class="st-cell-more">Explore inbound <i data-lucide="arrow-right"></i></span>
+                    </a>
+                    <a class="st-cell st-cell-auto" href="outbound.html">
+                        <div class="st-cell-top"><span>02</span><span class="st-cell-icon"><i data-lucide="send"></i></span></div>
+                        <h3>Outbound Outreach</h3>
+                        <p class="st-muted" style="margin:0;line-height:1.55">Cold email, LinkedIn, and CRM campaigns that reach decision-makers with messaging that feels researched, not bulk.</p>
+                        <span class="st-cell-more">Explore outbound <i data-lucide="arrow-right"></i></span>
+                    </a>
+                    <a class="st-cell st-cell-auto" href="geo.html">
+                        <div class="st-cell-top"><span>03</span><span class="st-cell-icon"><i data-lucide="sparkles"></i></span></div>
+                        <h3>AI Visibility</h3>
+                        <p class="st-muted" style="margin:0;line-height:1.55">GEO and authority content so your brand shows up when buyers ask AI tools who to trust in your space.</p>
+                        <span class="st-cell-more">Explore GEO <i data-lucide="arrow-right"></i></span>
+                    </a>
+                    <div class="st-cell st-cell-auto">
+                        <div class="st-cell-top"><span>04</span><span class="st-cell-icon"><i data-lucide="bar-chart-3"></i></span></div>
+                        <h3>Pipeline Intelligence</h3>
+                        <p class="st-muted" style="margin:0;line-height:1.55">Clear reporting on which accounts, messages, and channels produce meetings and revenue, not vanity metrics.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How it connects -->
+        <section id="connect" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(04) How it connects</span>
+                    <h2>Every channel, one target</h2>
+                    <p class="st-muted">The four parts only work as a system when they share the same ICP, the same message and the same pipeline data.</p>
+                </div>
+                <div class="st-split">
+                    <div class="st-prose">
+                        <p>Everything starts with the <strong>ideal customer profile</strong>: firmographics, triggers and buyer roles. Once that is agreed, every channel points at the same target accounts.</p>
+                        <p>Inbound assets, outbound sequences and AI visibility work all reinforce the <strong>same positioning</strong>. A buyer who reads your content, gets a researched email and then asks ChatGPT about your category hears one consistent story.</p>
+                        <p>Every response, inbound or outbound, lands in <strong>one CRM workflow</strong> that sales can actually use. Pipeline intelligence then shows which accounts, messages and channels produce meetings and revenue, and that feeds back into targeting.</p>
+                        <a href="#process" class="st-btn st-btn-line" style="margin-top:8px">How we set it up <i data-lucide="arrow-right"></i></a>
+                    </div>
+                    <div class="st-visual">
+                        <p class="st-visual-title"><span>The connected demand system</span><span>Fig. 01</span></p>
+                        <div class="st-flow st-flow-v">
+                            <div><small>Shared target</small><b>Defined ICP</b><p>Firmographics, triggers and buyer roles agreed by marketing and sales.</p></div>
+                            <div><small>Channels, one message</small><b>Inbound · Outbound · AI visibility</b><p>Content and search, researched outreach, and citations in AI answers.</p></div>
+                            <div><small>Capture</small><b>One CRM workflow</b><p>Inbound interest and outbound replies routed to sales in the same place.</p></div>
+                            <div class="is-key"><small>Feedback</small><b>Pipeline intelligence</b><p>What produces meetings and revenue goes back into targeting and messaging.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compared -->
+        <section id="compare" class="st-section st-white">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(05) Compared</span>
+                    <h2>The old way vs. a system</h2>
+                    <p class="st-muted">Random lists, generic outreach, and marketing numbers that never match what sales actually closes, compared with a pipeline your team can forecast against.</p>
+                </div>
+                <div class="st-table-wrap">
+                    <table class="st-compare">
+                        <thead><tr><th scope="col">&nbsp;</th><th scope="col">The old way</th><th scope="col">The Growth Loop way</th></tr></thead>
+                        <tbody>
+                            <tr><th scope="row">Targeting</th><td>Random lists and broad targeting</td><td>A defined ICP every channel points at</td></tr>
+                            <tr><th scope="row">Outreach</th><td>Generic, bulk messaging</td><td>Researched messaging built on real buying triggers</td></tr>
+                            <tr><th scope="row">Channels</th><td>Inbound, outbound and paid run separately</td><td>Connected channels reinforcing the same positioning</td></tr>
+                            <tr><th scope="row">AI search</th><td>Absent from ChatGPT and answer engines</td><td>Cited when buyers ask AI tools who to trust</td></tr>
+                            <tr><th scope="row">Sales and marketing</th><td>Leads sales won't touch; outreach off-message</td><td>Same ICP, messaging and pipeline definitions for both</td></tr>
+                            <tr><th scope="row">Reporting</th><td>Marketing numbers that never match closed revenue</td><td>Accounts, messages and channels tied to meetings and revenue</td></tr>
+                            <tr><th scope="row">What you buy</th><td>Leads or ad management in isolation</td><td>The full demand engine, built and improved with you</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process -->
+        <section id="process" class="st-section">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(06) How we work</span>
+                    <h2>From ICP to qualified meetings</h2>
+                    <p class="st-muted">We start with who you should sell to, then build the channels and workflows that reach those accounts consistently. No disconnected campaigns. No guessing what worked.</p>
+                </div>
+                <div class="st-loop">
+                    <ol class="st-steps">
+                        <li><span>01</span><div><h3>Define the ICP</h3><p>Clarify firmographics, triggers, and buyer roles so every channel points at the same target accounts.</p></div></li>
+                        <li><span>02</span><div><h3>Build the channels</h3><p>Stand up inbound assets, outbound sequences, and AI visibility work that reinforce the same positioning.</p></div></li>
+                        <li><span>03</span><div><h3>Activate pipeline</h3><p>Launch outreach and capture inbound interest into one CRM workflow sales can actually use.</p></div></li>
+                        <li><span>04</span><div><h3>Improve what converts</h3><p>Review meeting quality, reply rates, and deal progression, then refine targeting and messaging monthly.</p></div></li>
+                    </ol>
+                    <div class="st-visual">
+                        <p class="st-visual-title"><span>Mock: pipeline intelligence view</span><span>Fig. 02</span></p>
+                        <div class="st-meter">
+                            <div class="st-meter-row"><span>Target accounts</span><div class="st-meter-track"><div class="st-meter-fill" style="width:100%"></div></div><b>ICP</b></div>
+                            <div class="st-meter-row"><span>Engaged accounts</span><div class="st-meter-track"><div class="st-meter-fill" style="width:58%"></div></div><b>Reach</b></div>
+                            <div class="st-meter-row"><span>Qualified meetings</span><div class="st-meter-track"><div class="st-meter-fill" style="width:30%"></div></div><b>Quality</b></div>
+                            <div class="st-meter-row"><span>Opportunities</span><div class="st-meter-track"><div class="st-meter-fill" style="width:20%"></div></div><b>Progress</b></div>
+                            <div class="st-meter-row is-key"><span>Closed revenue</span><div class="st-meter-track"><div class="st-meter-fill" style="width:10%"></div></div><b>Outcome</b></div>
+                        </div>
+                        <p class="st-muted" style="font-size:.85rem;margin:18px 0 0">Illustrative funnel. Your reporting shows real numbers at each stage, split by source (inbound, outbound, AI search), so the monthly review knows exactly where to focus.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="st-section st-white">
+            <div class="st-wrap">
+                <div class="st-head">
+                    <span class="st-label">(07) FAQ</span>
+                    <h2>Questions B2B teams ask</h2>
+                    <p class="st-muted">Still unsure? Book a call and we'll answer them for your pipeline specifically.</p>
+                </div>
+                <div class="st-faq">
+                    <details open>
+                        <summary>Do you work with both marketing and sales teams?</summary>
+                        <div class="st-faq-a"><p>Yes. B2B growth breaks when marketing generates leads sales will not touch, or sales runs outreach with no alignment to positioning. We design the system so both teams work from the same ICP, messaging, and pipeline definitions.</p></div>
+                    </details>
+                    <details>
+                        <summary>Can you help if we already have a CRM and SDR team?</summary>
+                        <div class="st-faq-a"><p>That is often the best starting point. We are not replacing your stack. We improve targeting, messaging, channel mix, and reporting so the team you already have produces better meetings and shorter cycles.</p></div>
+                    </details>
+                    <details>
+                        <summary>How is this different from a typical lead gen agency?</summary>
+                        <div class="st-faq-a"><p>Most agencies sell leads or ad management in isolation. We build the full demand engine: discovery, outreach, AI visibility, and pipeline clarity. The goal is predictable revenue conversations, not a spreadsheet of unqualified contacts.</p></div>
+                    </details>
+                    <details>
+                        <summary>Do we need all four parts from day one?</summary>
+                        <div class="st-faq-a"><p>No. We start by defining the ICP and finding where your pipeline is most constrained. Some teams need outbound to start conversations quickly; others need inbound or AI visibility to be found. The parts are designed to connect, so you can add them in the order that makes sense.</p></div>
+                    </details>
+                    <details>
+                        <summary>Why does AI visibility matter for B2B?</summary>
+                        <div class="st-faq-a"><p>Buyers now research in ChatGPT and answer engines before they speak to sales. If you are not cited there, you are not in the shortlist. GEO and authority content make sure your brand shows up when buyers ask AI tools who to trust in your space.</p></div>
+                    </details>
+                    <details>
+                        <summary>What do you need from us?</summary>
+                        <div class="st-faq-a"><p>Input from sales and marketing leaders to define the ICP, approval of positioning and messaging, and access to your CRM so inbound and outbound land in one workflow. After launch, expect a regular review of meeting quality and deal progression.</p></div>
+                    </details>
+                    <details>
+                        <summary>How do you measure success?</summary>
+                        <div class="st-faq-a"><ul><li>By meeting quality, reply rates and deal progression, not vanity metrics.</li><li>Reporting shows which accounts, messages and channels produce meetings and revenue.</li><li>Targeting and messaging are refined monthly based on what converts.</li></ul></div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next -->
+        <section class="st-section" style="padding-top:72px;padding-bottom:72px;border-top:1px solid var(--ink)">
+            <div class="st-wrap">
+                <span class="st-label" style="margin-bottom:24px">Pairs well with</span>
+                <div class="st-next">
+                    <a href="outbound.html"><small>Outbound Systems</small><b>Reach the right accounts</b><p>Personalised, multi-channel outreach to the accounts you choose.</p></a>
+                    <a href="inbound.html"><small>Inbound Systems</small><b>Make the market find you</b><p>A compounding engine that turns search and AI into qualified traffic.</p></a>
+                    <a href="geo.html"><small>AI Visibility</small><b>Get cited by AI</b><p>Show up when buyers ask ChatGPT and Perplexity who to trust.</p></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <section id="contact" class="st-dark st-section st-cta">
+        <div class="st-wrap">
+            <span class="st-label">Start a project</span>
+            <h2>Build pipeline you<br>can <span class="st-mark">forecast.</span></h2>
+            <p class="st-muted">Let's map your ICP, review your current pipeline gaps, and outline a B2B growth system your team can run with confidence.</p>
+            <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="st-btn st-btn-lime">Book a free consultation <i data-lucide="arrow-right"></i></a>
         </div>
     </section>
 
-    <section id="teams" class="py-24 border-t border-slate-100 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-sm font-bold uppercase tracking-wider text-blue-600 block mb-2">Who We Work With</span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Built for B2B Revenue Teams</h2>
-                <p class="text-slate-500 mt-2">Whether you sell software, services, or complex solutions, the goal is the same: qualified conversations that close.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-blue-200 hover:shadow-md transition-all duration-300">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600">
-                        <i class="fa-solid fa-cloud text-xl"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">SaaS Companies</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed">Turn product expertise into demand from accounts that match your ICP and buying stage.</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-blue-200 hover:shadow-md transition-all duration-300">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600">
-                        <i class="fa-solid fa-briefcase text-xl"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">Professional Services</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed">Replace feast-or-famine referrals with a repeatable way to reach decision-makers who need your expertise now.</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-blue-200 hover:shadow-md transition-all duration-300">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600">
-                        <i class="fa-solid fa-building text-xl"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">Enterprise Sales Teams</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed">Give reps better-targeted accounts, clearer messaging, and warmer entry points into long-cycle deals.</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-blue-200 hover:shadow-md transition-all duration-300">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600">
-                        <i class="fa-solid fa-chart-line text-xl"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">RevOps-Led Orgs</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed">Unify marketing and sales data so pipeline reporting reflects reality, not platform guesswork.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="challenges" class="py-24 bg-white border-t border-slate-100">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="max-w-3xl mx-auto text-center mb-16">
-                <span class="text-sm font-bold uppercase tracking-wider text-blue-600 block mb-2">Common Bottlenecks</span>
-                <h2 class="text-3xl font-extrabold text-slate-900 mb-4">Why B2B Pipeline Stalls</h2>
-                <p class="text-slate-500 text-sm md:text-base">Most teams have activity. Few have a system that consistently produces qualified opportunities.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
-                    <h3 class="text-sm font-bold text-slate-900 mb-2">Weak ICP Focus</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">Broad targeting fills the CRM with names that never convert, wasting SDR and AE time.</p>
-                </div>
-                <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
-                    <h3 class="text-sm font-bold text-slate-900 mb-2">Siloed Channels</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">Inbound, outbound, and paid run separately, so no one sees the full path from first touch to closed deal.</p>
-                </div>
-                <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
-                    <h3 class="text-sm font-bold text-slate-900 mb-2">Long Sales Cycles</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">Without the right signals and follow-up, promising accounts go quiet before a second meeting happens.</p>
-                </div>
-                <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
-                    <h3 class="text-sm font-bold text-slate-900 mb-2">Invisible in AI Search</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">Buyers now research in ChatGPT and answer engines. If you are not cited there, you are not in the shortlist.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="systems" class="py-24 bg-slate-50 border-t border-slate-100">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-sm font-bold uppercase tracking-wider text-blue-600 block mb-2">What We Build</span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">One Connected Demand System</h2>
-                <p class="text-slate-500 mt-2">Inbound brings them in. Outbound starts the conversation. AI visibility keeps you discoverable. Data ties it together.</p>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm glow-card">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600">
-                        <i class="fa-solid fa-magnet text-xl"></i>
-                    </div>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">Inbound Discovery</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">SEO, content, lead magnets, and landing pages that attract buyers already searching for your category.</p>
-                    <a href="inbound.html" class="inline-block mt-4 text-xs font-semibold text-blue-600 hover:text-blue-700">Explore inbound →</a>
-                </div>
-                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm glow-card">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600">
-                        <i class="fa-solid fa-paper-plane text-xl"></i>
-                    </div>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">Outbound Outreach</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">Cold email, LinkedIn, and CRM campaigns that reach decision-makers with messaging that feels researched, not bulk.</p>
-                    <a href="outbound.html" class="inline-block mt-4 text-xs font-semibold text-blue-600 hover:text-blue-700">Explore outbound →</a>
-                </div>
-                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm glow-card">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600">
-                        <i class="fa-solid fa-eye text-xl"></i>
-                    </div>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">AI Visibility</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">GEO and authority content so your brand shows up when buyers ask AI tools who to trust in your space.</p>
-                    <a href="geo.html" class="inline-block mt-4 text-xs font-semibold text-blue-600 hover:text-blue-700">Explore GEO →</a>
-                </div>
-                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm glow-card">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-5 text-blue-600">
-                        <i class="fa-solid fa-filter text-xl"></i>
-                    </div>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">Pipeline Intelligence</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">Clear reporting on which accounts, messages, and channels produce meetings and revenue, not vanity metrics.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="approach" class="py-24 bg-white border-t border-slate-100">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <footer class="st-footer">
+        <div class="st-wrap">
+            <div class="st-footer-grid">
                 <div>
-                    <span class="text-sm font-bold uppercase tracking-wider text-blue-600 block mb-2">How We Work</span>
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6">From ICP to Qualified Meetings</h2>
-                    <p class="text-slate-500 mb-6 leading-relaxed">
-                        We start with who you should sell to, then build the channels and workflows that reach those accounts consistently. No disconnected campaigns. No guessing what worked.
-                    </p>
-                    <div class="space-y-4">
-                        <div class="flex items-start gap-4">
-                            <div class="w-6 h-6 rounded-full bg-rose-500/10 text-rose-400 flex items-center justify-center shrink-0 mt-1">
-                                <i class="fa-solid fa-xmark text-xs"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-slate-900 font-semibold">The Old Way</h3>
-                                <p class="text-sm text-slate-500">Random lists, generic outreach, and marketing numbers that never match what sales actually closes.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="w-6 h-6 rounded-full bg-emerald-500/10 text-emerald-500 flex items-center justify-center shrink-0 mt-1">
-                                <i class="fa-solid fa-check text-xs"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-slate-900 font-semibold">The Growth Loop Way</h3>
-                                <p class="text-sm text-slate-500">Defined ICP, connected inbound and outbound, and a pipeline your team can forecast against.</p>
-                            </div>
-                        </div>
-                    </div>
+                    <h4>Growth Loop</h4>
+                    <p class="st-muted" style="max-width:34ch;line-height:1.55;margin:0 0 16px">We engineer automated systems that grow your revenue.</p>
+                    <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="st-btn st-btn-lime" style="padding:12px 20px">Book a call <i data-lucide="arrow-right"></i></a>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
-                        <div class="text-blue-200 text-3xl font-bold mb-4">01</div>
-                        <h3 class="text-base font-bold text-slate-900 mb-2">Define the ICP</h3>
-                        <p class="text-xs text-slate-500 leading-relaxed">Clarify firmographics, triggers, and buyer roles so every channel points at the same target accounts.</p>
-                    </div>
-                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
-                        <div class="text-blue-200 text-3xl font-bold mb-4">02</div>
-                        <h3 class="text-base font-bold text-slate-900 mb-2">Build the Channels</h3>
-                        <p class="text-xs text-slate-500 leading-relaxed">Stand up inbound assets, outbound sequences, and AI visibility work that reinforce the same positioning.</p>
-                    </div>
-                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
-                        <div class="text-blue-200 text-3xl font-bold mb-4">03</div>
-                        <h3 class="text-base font-bold text-slate-900 mb-2">Activate Pipeline</h3>
-                        <p class="text-xs text-slate-500 leading-relaxed">Launch outreach and capture inbound interest into one CRM workflow sales can actually use.</p>
-                    </div>
-                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
-                        <div class="text-blue-200 text-3xl font-bold mb-4">04</div>
-                        <h3 class="text-base font-bold text-slate-900 mb-2">Improve What Converts</h3>
-                        <p class="text-xs text-slate-500 leading-relaxed">Review meeting quality, reply rates, and deal progression, then refine targeting and messaging monthly.</p>
-                    </div>
+                <div>
+                    <h4>Expertise</h4>
+                    <ul><li><a href="outbound.html">Outbound</a></li><li><a href="inbound.html">Inbound</a></li><li><a href="geo.html">AI Visibility (GEO)</a></li><li><a href="voice-agents.html">AI Voice Agents</a></li><li><a href="ai-infrastructure.html">AI Infrastructure</a></li><li><a href="approach.html">Approach</a></li></ul>
+                </div>
+                <div>
+                    <h4>Who we help</h4>
+                    <ul><li><a href="speaker.html">Speakers &amp; Founders</a></li><li><a href="ecommerce.html">Ecommerce</a></li><li><a href="b2b.html">B2B Teams</a></li><li><a href="investors.html">Investors</a></li></ul>
+                </div>
+                <div>
+                    <h4>Resources</h4>
+                    <ul><li><a href="blog/">Blog</a></li><li><a href="ai-readiness-tool.html">AI Readiness Checker</a></li><li><a href="about.html">About Us</a></li></ul>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="faq" class="py-24 bg-slate-50 border-t border-slate-100">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="text-sm font-bold uppercase tracking-wider text-blue-600 block mb-2">FAQ</span>
-                <h2 class="text-3xl font-extrabold text-slate-900">Questions B2B Teams Ask</h2>
-            </div>
-            <div class="space-y-4">
-                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
-                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
-                        <span class="font-bold text-sm md:text-base">Do you work with both marketing and sales teams?</span>
-                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
-                    </button>
-                    <div class="faq-content">
-                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
-                            <p class="text-sm text-slate-500 leading-relaxed">Yes. B2B growth breaks when marketing generates leads sales will not touch, or sales runs outreach with no alignment to positioning. We design the system so both teams work from the same ICP, messaging, and pipeline definitions.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
-                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
-                        <span class="font-bold text-sm md:text-base">Can you help if we already have a CRM and SDR team?</span>
-                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
-                    </button>
-                    <div class="faq-content">
-                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
-                            <p class="text-sm text-slate-500 leading-relaxed">That is often the best starting point. We are not replacing your stack. We improve targeting, messaging, channel mix, and reporting so the team you already have produces better meetings and shorter cycles.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="border border-slate-200 rounded-xl bg-white shadow-sm">
-                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center text-slate-900 hover:bg-slate-50 transition-colors">
-                        <span class="font-bold text-sm md:text-base">How is this different from a typical lead gen agency?</span>
-                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300 shrink-0 ml-4"></i>
-                    </button>
-                    <div class="faq-content">
-                        <div class="px-6 pb-6 border-t border-slate-100 pt-4">
-                            <p class="text-sm text-slate-500 leading-relaxed">Most agencies sell leads or ad management in isolation. We build the full demand engine: discovery, outreach, AI visibility, and pipeline clarity. The goal is predictable revenue conversations, not a spreadsheet of unqualified contacts.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-32 bg-slate-900 border-t border-slate-800">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-5xl font-bold text-white mb-8">Ready to Scale?</h2>
-            <p class="text-slate-400 text-xl font-light mb-12">
-                Let's map your ICP, review your current pipeline gaps, and outline a B2B growth system your team can run with confidence.
-            </p>
-            <a href="https://calendly.com/prabal-growthloopconsulting/30min" target="_blank" rel="noopener" class="inline-flex justify-center items-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg shadow-blue-500/25 transition-all transform hover:scale-[1.02] text-lg">
-                Book Free Consultation
-            </a>
-        </div>
-    </section>
-
-    <footer class="py-12 border-t border-slate-900 bg-slate-950 text-center text-xs text-slate-600">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div class="flex items-center gap-2">
-                <span class="font-bold text-slate-400 inline-flex items-center gap-2">
-                    <svg class="h-5 w-5 shrink-0 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></svg>
-                    GROWTH LOOP
-                </span>
-                <span>&copy; 2026. All rights reserved.</span>
-            </div>
-            <div class="flex gap-6 text-slate-500">
-                <a href="#" class="hover:text-slate-400 transition-colors">Privacy Policy</a>
-                <a href="#" class="hover:text-slate-400 transition-colors">Terms of Service</a>
+            <p class="st-wordmark" aria-hidden="true">Growth Loop</p>
+            <div class="st-footer-base">
+                <span>© 2026 Growth Loop. All rights reserved.</span>
+                <span>Published by <span class="author">Growth Loop</span>. Updated 21 October 2026.</span>
             </div>
         </div>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            lucide.createIcons();
-            document.querySelectorAll('.faq-toggle').forEach(toggle => {
-                toggle.addEventListener('click', () => {
-                    const content = toggle.nextElementSibling;
-                    const icon = toggle.querySelector('i');
-                    const isOpen = content.classList.contains('faq-open');
-                    document.querySelectorAll('.faq-content').forEach(c => c.classList.remove('faq-open'));
-                    document.querySelectorAll('.faq-toggle i').forEach(ic => ic.style.transform = 'rotate(0deg)');
-                    if (!isOpen) {
-                        content.classList.add('faq-open');
-                        if (icon) icon.style.transform = 'rotate(180deg)';
-                    }
-                });
-            });
+            if (window.lucide) lucide.createIcons();
+            // Highlight the current section in the sticky "on this page" bar
+            const links = [...document.querySelectorAll('.st-toc a')];
+            const byId = new Map(links.map((a) => [a.getAttribute('href').slice(1), a]));
+            const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+                if (!e.isIntersecting) return;
+                links.forEach((a) => a.classList.remove('is-active'));
+                const a = byId.get(e.target.id);
+                if (a) { a.classList.add('is-active'); const ul = a.closest('ul'); ul.scrollTo({ left: a.offsetLeft - ul.clientWidth / 2 + a.offsetWidth / 2, behavior: 'smooth' }); }
+            }), { rootMargin: '-45% 0px -50% 0px' });
+            byId.forEach((_, id) => { const el = document.getElementById(id); if (el) io.observe(el); });
         });
     </script>
 </body>
