@@ -3,4 +3,5 @@ deploy.sh
 wrangler.toml
 worker.js
 .git/
+.gitignore
 .DS_Store

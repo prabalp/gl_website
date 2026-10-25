@@ -1,0 +1,20 @@
+# Growth Loop
+
+> Growth Loop is a growth consulting practice. It connects inbound optimisation (generative engine optimisation, SEO, performance marketing, lead magnets, and website chatbots) with outbound optimisation (cold email, LinkedIn, cold calling, and CRM campaigns). The work is for thought leaders, ecommerce brands, B2B teams, and investors who want pipeline that compounds instead of a one-off campaign.
+
+## Key pages
+
+- [Home](https://mygrowthloop.com/): who Growth Loop works with, the services, and how to book a call
+- [Inbound Optimisation](https://mygrowthloop.com/inbound): discovery systems across GEO, SEO, paid media, lead magnets, and chatbots
+- [Outbound Optimisation](https://mygrowthloop.com/outbound): personalised outreach across email, LinkedIn, calling, and CRM
+- [Generative Engine Optimisation](https://mygrowthloop.com/geo): a five-phase framework for getting cited in AI answers
+- [Approach](https://mygrowthloop.com/approach): discovery, architecture, execution, and continuous optimisation
+- [B2B teams](https://mygrowthloop.com/b2b): pipeline systems that connect inbound discovery with outbound outreach
+- [Speakers and thought leaders](https://mygrowthloop.com/speaker): booking and pipeline systems beyond word of mouth
+- [Ecommerce brands](https://mygrowthloop.com/ecommerce): acquisition, retention, and revenue infrastructure
+- [Investors](https://mygrowthloop.com/investors): deal sourcing, founder signals, and outreach for funds
+- [AI Readiness Checker](https://mygrowthloop.com/ai-readiness-tool): a free check of whether AI assistants can find, read, and cite a website
+
+## Optional
+
+- [Book a call](https://calendly.com/prabal-growthloopconsulting/30min): a 30-minute conversation about the first growth loop
