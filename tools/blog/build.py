@@ -172,9 +172,12 @@ def markdown(md, toc=None):
                 rows.append([c.strip() for c in lines[i].strip().strip("|").split("|")])
                 i += 1
             head, body = rows[0], [r for r in rows[1:] if not all(re.match(r"^:?-+:?$", c) for c in r)]
-            t = "<table><thead><tr>" + "".join(f"<th>{inline(c)}</th>" for c in head) + "</tr></thead><tbody>"
-            t += "".join("<tr>" + "".join(f"<td>{inline(c)}</td>" for c in r) + "</tr>" for r in body)
-            out.append(t + "</tbody></table>")
+            # Columns whose body cells are all numbers are right-aligned
+            numeric = [all(re.match(r"^[\d.,%x×+-]+$", r[c]) for r in body if c < len(r)) and body for c in range(len(head))]
+            cls = lambda c: ' class="num"' if c < len(numeric) and numeric[c] else ""
+            t = '<div class="st-article-table"><table><thead><tr>' + "".join(f"<th{cls(c)}>{inline(x)}</th>" for c, x in enumerate(head)) + "</tr></thead><tbody>"
+            t += "".join("<tr>" + "".join(f"<td{cls(c)}>{inline(x)}</td>" for c, x in enumerate(r)) + "</tr>" for r in body)
+            out.append(t + "</tbody></table></div>")
             continue
         if re.match(r"^([-*]|\d+\.)\s+", s):
             ordered = bool(re.match(r"^\d+\.", s))

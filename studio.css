@@ -434,7 +434,10 @@ html { scroll-padding-top: 140px; }
 .st-article blockquote { margin: 28px 0; padding: 22px 26px; background: var(--ink); color: var(--white); border-left: 6px solid var(--lime); border-radius: 0 6px 6px 0; font-family: var(--display); font-size: 1.15rem; font-weight: 600; line-height: 1.45; letter-spacing: -0.01em; }
 .st-article blockquote p { margin: 0; }
 .st-article blockquote a { color: var(--lime); text-decoration-color: var(--lime); }
-.st-article table { width: 100%; border-collapse: collapse; margin: 0 0 26px; font-size: 0.95rem; line-height: 1.5; background: var(--white); border: 1px solid var(--ink); display: block; overflow-x: auto; }
+.st-article-table { overflow-x: auto; margin: 0 0 26px; border: 1px solid var(--ink); background: var(--white); }
+.st-article table { width: 100%; border-collapse: collapse; font-size: 0.95rem; line-height: 1.5; }
+.st-article tbody tr:last-child td { border-bottom: 0; }
+.st-article th.num, .st-article td.num { text-align: right; font-family: var(--mono); white-space: nowrap; }
 .st-article thead th { background: var(--ink); color: var(--white); font-family: var(--mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 500; }
 .st-article th, .st-article td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 1px solid var(--line); min-width: 120px; }
 .st-article hr { border: 0; border-top: 1px solid var(--ink); margin: 48px 0; }
