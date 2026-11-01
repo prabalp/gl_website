@@ -21,6 +21,7 @@
 ## Blog
 
 - [Blog](https://mygrowthloop.com/blog/): researched answers about growth systems, AI search and automation
+- [GEO Case Study: How Webflow Grew AI Search Signups From 2% to 10%](https://mygrowthloop.com/blog/webflow-geo-case-study): A sourced breakdown of Webflow's generative engine optimization (AEO) programme, covering the tests it ran, the page changes, the Reddit strategy, how it measures AI visibility and what didn't work.
 - [How to Get Your Brand Cited in ChatGPT, Perplexity and Google AI Overviews](https://mygrowthloop.com/blog/get-cited-in-chatgpt-ai-search): The questions founders actually ask about showing up in AI answers, answered with what OpenAI, Google and Perplexity document, and what the research shows.
 
 <!-- blog:end -->

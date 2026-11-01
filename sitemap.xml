@@ -51,7 +51,11 @@
 <!-- blog:start -->
   <url>
     <loc>https://mygrowthloop.com/blog/</loc>
-    <lastmod>2026-10-25</lastmod>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://mygrowthloop.com/blog/webflow-geo-case-study</loc>
+    <lastmod>2026-11-01</lastmod>
   </url>
   <url>
     <loc>https://mygrowthloop.com/blog/get-cited-in-chatgpt-ai-search</loc>
