@@ -20,6 +20,29 @@ function visitorScheme(request) {
   return new URL(request.url).protocol.replace(":", "");
 }
 
+// While true, every route returns the 404 page and only the assets the 404 page needs are served.
+const SITE_LOCKED = true;
+const LOCKED_ALLOWED_ASSETS = new Set([
+  "/404.html",
+  "/studio.css",
+  "/favicon.ico",
+  "/favicon.svg",
+  "/favicon-32.png",
+  "/apple-touch-icon.png",
+]);
+
+async function lockedResponse(request, env) {
+  const url = new URL(request.url);
+  if (LOCKED_ALLOWED_ASSETS.has(url.pathname) && url.pathname !== "/404.html") {
+    return env.ASSETS.fetch(request);
+  }
+  const page = await env.ASSETS.fetch(new Request(new URL("/404.html", url), { method: "GET" }));
+  const headers = new Headers(page.headers);
+  headers.set("x-robots-tag", "noindex, nofollow");
+  headers.set("cache-control", "no-store");
+  return new Response(request.method === "HEAD" ? null : page.body, { status: 404, headers });
+}
+
 const CHECKER_ORIGIN = "https://check.mygrowthloop.com";
 
 async function proxyAudit(request) {
@@ -61,6 +84,8 @@ export default {
         return Response.redirect(url.toString(), 301);
       }
     }
+
+    if (SITE_LOCKED) return lockedResponse(request, env);
 
     if (url.pathname === "/api/audit" && request.method === "POST") {
       return proxyAudit(request);
