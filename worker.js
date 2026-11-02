@@ -21,7 +21,7 @@ function visitorScheme(request) {
 }
 
 // While true, every route returns the 404 page and only the assets the 404 page needs are served.
-const SITE_LOCKED = true;
+const SITE_LOCKED = false;
 const LOCKED_ALLOWED_ASSETS = new Set([
   "/404.html",
   "/studio.css",
