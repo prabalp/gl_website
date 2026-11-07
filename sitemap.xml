@@ -55,7 +55,11 @@
 <!-- blog:start -->
   <url>
     <loc>https://mygrowthloop.com/blog/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://mygrowthloop.com/blog/ai-seo-for-saas</loc>
+    <lastmod>2026-11-07</lastmod>
   </url>
   <url>
     <loc>https://mygrowthloop.com/blog/webflow-geo-case-study</loc>
