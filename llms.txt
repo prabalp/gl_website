@@ -21,6 +21,7 @@
 ## Blog
 
 - [Blog](https://mygrowthloop.com/blog/): researched answers about growth systems, AI search and automation
+- [AI SEO for Local Businesses: What the 2026 Data Says About Getting Recommended](https://mygrowthloop.com/blog/ai-seo-for-local-businesses): Nearly half of consumers now ask AI for local business recommendations, but ChatGPT names only about 1% of local locations. What the BrightLocal and SOCi studies show, and what a local business can do about it.
 - [Is AI SEO Worth It for SaaS? 4 Case Studies and the 2026 Data](https://mygrowthloop.com/blog/ai-seo-for-saas): Is AI SEO (GEO/AEO) worth it for a SaaS company? Sourced case studies from Vercel, Tally, Ahrefs and Webflow, the buyer research behind them, what it costs, and when it isn't worth it.
 - [GEO Case Study: How Webflow Grew AI Search Signups From 2% to 10%](https://mygrowthloop.com/blog/webflow-geo-case-study): A sourced breakdown of Webflow's generative engine optimization (AEO) programme, covering the tests it ran, the page changes, the Reddit strategy, how it measures AI visibility and what didn't work.
 - [How to Get Your Brand Cited in ChatGPT, Perplexity and Google AI Overviews](https://mygrowthloop.com/blog/get-cited-in-chatgpt-ai-search): The questions founders actually ask about showing up in AI answers, answered with what OpenAI, Google and Perplexity document, and what the research shows.
